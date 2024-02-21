@@ -1,0 +1,23 @@
+{
+  "name": "mnlnk/telegram-bot-api",
+  "description": "Библиотека для работы с Telegram Bot API.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "mnlnk",
+      "email": "u.mnlnk@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Manuylenko\\Telegram\\Bot\\Api\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "mnlnk/curl-wrapper": "^0.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
