@@ -46,6 +46,13 @@ abstract class UpdateType
     const BUSINESS_CONNECTION = 'business_connection';
 
     /**
+     * Сообщение от подключенного бизнес-аккаунта.
+     *
+     * @var string
+     */
+    const BUSINESS_MESSAGE = 'business_message';
+
+    /**
      * Изменение реакции на сообщении пользователем.
      *
      * @var string
@@ -158,6 +165,7 @@ abstract class UpdateType
             static::CHANNEL_POST,
             static::EDITED_CHANNEL_POST,
             static::BUSINESS_CONNECTION,
+            static::BUSINESS_MESSAGE,
             static::MESSAGE_REACTION,
             static::MESSAGE_REACTION_COUNT,
             static::INLINE_QUERY,

@@ -32,6 +32,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
  * @method                     Message|null getChannelPost()          (+) Объект новой публикации на канале (текст, фото, стикер и т.д.).
  * @method                     Message|null getEditedChannelPost()    (+) Объект отредактированной публикации на канале.
  * @method          BusinessConnection|null getBusinessConnection()   (+) Объект соединения бизнес-аккаунта с ботом (подключение, отключение, редактирование).
+ * @method                     Message|null getBusinessMessage()      (+) Объект сообщения от подключенного бизнес-аккаунта.
  * @method      MessageReactionUpdated|null getMessageReaction()      (+) Объект измененной реакции на сообщение.
  * @method MessageReactionCountUpdated|null getMessageReactionCount() (+) Объект измененной реакции на сообщение с анонимными реакциями.
  * @method                 InlineQuery|null getInlineQuery()          (+) Объект входящего встроенного запроса.
@@ -56,6 +57,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
     'channel_post' => Message::class,
     'edited_channel_post' => Message::class,
     'business_connection' => BusinessConnection::class,
+    'business_message' => Message::class,
     'message_reaction' => MessageReactionUpdated::class,
     'message_reaction_count' => MessageReactionCountUpdated::class,
     'inline_query' => InlineQuery::class,
@@ -121,6 +123,14 @@ class Update extends Entity
     public function isBusinessConnection(): bool
     {
         return $this->getType() == UpdateType::BUSINESS_CONNECTION;
+    }
+
+    /**
+     * Сообщение от подключенного бизнес-аккаунта.
+     */
+    public function isBusinessMessage(): bool
+    {
+        return $this->getType() == UpdateType::BUSINESS_MESSAGE;
     }
 
     /**
