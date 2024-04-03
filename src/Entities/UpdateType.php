@@ -53,6 +53,13 @@ abstract class UpdateType
     const BUSINESS_MESSAGE = 'business_message';
 
     /**
+     * Отредактированное сообщение от подключенного бизнес-аккаунта.
+     *
+     * @var string
+     */
+    const EDITED_BUSINESS_MESSAGE = 'edited_business_message';
+
+    /**
      * Изменение реакции на сообщении пользователем.
      *
      * @var string
@@ -166,6 +173,7 @@ abstract class UpdateType
             static::EDITED_CHANNEL_POST,
             static::BUSINESS_CONNECTION,
             static::BUSINESS_MESSAGE,
+            static::EDITED_BUSINESS_MESSAGE,
             static::MESSAGE_REACTION,
             static::MESSAGE_REACTION_COUNT,
             static::INLINE_QUERY,

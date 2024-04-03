@@ -26,27 +26,28 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
  *
  * @link https://core.telegram.org/bots/api#update
  *
- * @method                              int getUpdateId()                 Уникальный идентификатор обновления.
- * @method                     Message|null getMessage()              (+) Объект нового сообщения (текст, фото, стикер и т.д.).
- * @method                     Message|null getEditedMessage()        (+) Объект отредактированного сообщения.
- * @method                     Message|null getChannelPost()          (+) Объект новой публикации на канале (текст, фото, стикер и т.д.).
- * @method                     Message|null getEditedChannelPost()    (+) Объект отредактированной публикации на канале.
- * @method          BusinessConnection|null getBusinessConnection()   (+) Объект соединения бизнес-аккаунта с ботом (подключение, отключение, редактирование).
- * @method                     Message|null getBusinessMessage()      (+) Объект сообщения от подключенного бизнес-аккаунта.
- * @method      MessageReactionUpdated|null getMessageReaction()      (+) Объект измененной реакции на сообщение.
- * @method MessageReactionCountUpdated|null getMessageReactionCount() (+) Объект измененной реакции на сообщение с анонимными реакциями.
- * @method                 InlineQuery|null getInlineQuery()          (+) Объект входящего встроенного запроса.
- * @method          ChosenInlineResult|null getChosenInlineResult()   (+) Объект результата встроенного запроса, который был выбран пользователем и отправлен его собеседнику.
- * @method               CallbackQuery|null getCallbackQuery()        (+) Объект входящего запроса обратного вызова.
- * @method               ShippingQuery|null getShippingQuery()        (+) Объект входящего запроса на доставку.
- * @method            PreCheckoutQuery|null getPreCheckoutQuery()     (+) Объект входящего запроса предварительной проверки заказа.
- * @method                        Poll|null getPoll()                 (+) Объект нового состояние опроса.
- * @method                  PollAnswer|null getPollAnswer()           (+) Объект измененного ответа пользователя в не анонимном опросе.
- * @method           ChatMemberUpdated|null getMyChatMember()         (+) Объект обновленного статуса участника чата (самого бота).
- * @method           ChatMemberUpdated|null getChatMember()           (+) Объект обновленного статуса участника чата.
- * @method             ChatJoinRequest|null getChatJoinRequest()      (+) Объект запроса на вступление в чат.
- * @method            ChatBoostUpdated|null getChatBoost()            (+) Объект добавления или измененения буста чата.
- * @method            ChatBoostRemoved|null getRemovedChatBoost()     (+) Объект удаления буста из чата.
+ * @method                              int getUpdateId()                  Уникальный идентификатор обновления.
+ * @method                     Message|null getMessage()               (+) Объект нового сообщения (текст, фото, стикер и т.д.).
+ * @method                     Message|null getEditedMessage()         (+) Объект отредактированного сообщения.
+ * @method                     Message|null getChannelPost()           (+) Объект новой публикации на канале (текст, фото, стикер и т.д.).
+ * @method                     Message|null getEditedChannelPost()     (+) Объект отредактированной публикации на канале.
+ * @method          BusinessConnection|null getBusinessConnection()    (+) Объект соединения бизнес-аккаунта с ботом (подключение, отключение, редактирование).
+ * @method                     Message|null getBusinessMessage()       (+) Объект сообщения от подключенного бизнес-аккаунта.
+ * @method                     Message|null getEditedBusinessMessage() (+) Объект отредактированного сообщения от подключенного бизнес-аккаунта.
+ * @method      MessageReactionUpdated|null getMessageReaction()       (+) Объект измененной реакции на сообщение.
+ * @method MessageReactionCountUpdated|null getMessageReactionCount()  (+) Объект измененной реакции на сообщение с анонимными реакциями.
+ * @method                 InlineQuery|null getInlineQuery()           (+) Объект входящего встроенного запроса.
+ * @method          ChosenInlineResult|null getChosenInlineResult()    (+) Объект результата встроенного запроса, который был выбран пользователем и отправлен его собеседнику.
+ * @method               CallbackQuery|null getCallbackQuery()         (+) Объект входящего запроса обратного вызова.
+ * @method               ShippingQuery|null getShippingQuery()         (+) Объект входящего запроса на доставку.
+ * @method            PreCheckoutQuery|null getPreCheckoutQuery()      (+) Объект входящего запроса предварительной проверки заказа.
+ * @method                        Poll|null getPoll()                  (+) Объект нового состояние опроса.
+ * @method                  PollAnswer|null getPollAnswer()            (+) Объект измененного ответа пользователя в не анонимном опросе.
+ * @method           ChatMemberUpdated|null getMyChatMember()          (+) Объект обновленного статуса участника чата (самого бота).
+ * @method           ChatMemberUpdated|null getChatMember()            (+) Объект обновленного статуса участника чата.
+ * @method             ChatJoinRequest|null getChatJoinRequest()       (+) Объект запроса на вступление в чат.
+ * @method            ChatBoostUpdated|null getChatBoost()             (+) Объект добавления или измененения буста чата.
+ * @method            ChatBoostRemoved|null getRemovedChatBoost()      (+) Объект удаления буста из чата.
  */
 #[Required([
     'update_id'
@@ -58,6 +59,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
     'edited_channel_post' => Message::class,
     'business_connection' => BusinessConnection::class,
     'business_message' => Message::class,
+    'edited_business_message' => Message::class,
     'message_reaction' => MessageReactionUpdated::class,
     'message_reaction_count' => MessageReactionCountUpdated::class,
     'inline_query' => InlineQuery::class,
@@ -131,6 +133,14 @@ class Update extends Entity
     public function isBusinessMessage(): bool
     {
         return $this->getType() == UpdateType::BUSINESS_MESSAGE;
+    }
+
+    /**
+     * Отредактированное сообщение от подключенного бизнес-аккаунта.
+     */
+    public function isEditedBusinessMessage(): bool
+    {
+        return $this->getType() == UpdateType::EDITED_BUSINESS_MESSAGE;
     }
 
     /**
