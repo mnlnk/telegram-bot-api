@@ -6,6 +6,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Business;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
+use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 
 /**
@@ -31,7 +32,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
 #[Depends([
     'user' => User::class
 ])]
-class BusinessConnection extends Entity
+class BusinessConnection extends Entity implements UpdateContext
 {
     //
 }
