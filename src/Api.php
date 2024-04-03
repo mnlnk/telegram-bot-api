@@ -9,6 +9,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Bot\BotShortDescription;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\Commands\BotCommand;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\Commands\Scope\BotCommandScope;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\Menu\MenuButton;
+use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessConnection;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\UserChatBoosts;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatAdministratorRights;
@@ -2171,6 +2172,18 @@ class Api
         return $this->call(func_get_args(), [
             'scope'
         ]);
+    }
+
+    /**
+     * Получает информацию о подключении бота к бизнес-аккаунту.
+     *
+     * @link https://core.telegram.org/bots/api#getbusinessconnection
+     */
+    public function getBusinessConnection(
+        string $businessConnectionId
+    ): BusinessConnection
+    {
+        return EntityFactory::make(BusinessConnection::class, $this->call(func_get_args()));
     }
 
     #endregion

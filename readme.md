@@ -176,6 +176,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [setMyCommands()](https://core.telegram.org/bots/api#setmycommands) - Устанавливает список команд бота.
 + [setMyDefaultAdministratorRights()](https://core.telegram.org/bots/api#getmydefaultadministratorrights) - Устанавливает права администратора по умолчанию, запрашиваемые ботом.
 + [deleteMyCommands()](https://core.telegram.org/bots/api#deletemycommands) - Удаляет список команд бота.
++ [getBusinessConnection()](https://core.telegram.org/bots/api#getbusinessconnection) - Получает информацию о подключеннии бота к бизнес-аккаунту.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
