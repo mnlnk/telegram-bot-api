@@ -39,6 +39,13 @@ abstract class UpdateType
     const EDITED_CHANNEL_POST = 'edited_channel_post';
 
     /**
+     * Соединение бота с бизнес-аккаунтом.
+     *
+     * @var string
+     */
+    const BUSINESS_CONNECTION = 'business_connection';
+
+    /**
      * Изменение реакции на сообщении пользователем.
      *
      * @var string
@@ -150,6 +157,7 @@ abstract class UpdateType
             static::EDITED_MESSAGE,
             static::CHANNEL_POST,
             static::EDITED_CHANNEL_POST,
+            static::BUSINESS_CONNECTION,
             static::MESSAGE_REACTION,
             static::MESSAGE_REACTION_COUNT,
             static::INLINE_QUERY,
