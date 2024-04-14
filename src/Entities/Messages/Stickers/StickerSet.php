@@ -16,8 +16,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
  * @method         string getName()            Имя набора стикеров.
  * @method         string getTitle()           Название набора стикеров.
  * @method         string getStickerType()     Тип стикеров в наборе.
- * @method           bool getIsAnimated()      Это набор анимированных стикеров.
- * @method           bool getIsVideo()         Это набор видео-стикеров.
  * @method      Sticker[] getStickers()        Массив объектов всех стикеров этого набора.
  * @method PhotoSize|null getThumbnail()   (+) Объект миниатюры (превью) набора стикеров.
  */
