@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Chat;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessIntro;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
@@ -23,6 +24,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method            bool|null getIsForum()                            (+) Супергруппа является форумом (с включенными темами).
  * @method       ChatPhoto|null getPhoto()                              (+) Объект фото чата.
  * @method        string[]|null getActiveUsernames()                    (+) Список всех активных пользователей чата; для приватных чатов, супергрупп и каналов.
+ * @method   BusinessIntro|null getBusinessIntro()                      (+) Объект бизнес-приветствия.
  * @method  ReactionType[]|null getAvailableReactions()                 (+) Массив объектов доступных реакций, разрешенных в чате.
  * @method             int|null getAccentColorId()                      (+) Идентификатор цвета акцента для имени чата и фона фотографии чата, заголовка ответа и предварительного просмотра ссылки.
  * @method          string|null getBackgroundCustomEmojiId()            (+) Пользовательский идентификатор эмоджи, выбранного чатом для заголовка ответа и фона предварительного просмотра ссылки.
@@ -58,6 +60,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 ])]
 #[Depends([
     'photo' => ChatPhoto::class,
+    'business_intro' => BusinessIntro::class,
     'available_reactions' => [ReactionType::class],
     'pinned_message' => Message::class,
     'permissions' => ChatPermissions::class,
