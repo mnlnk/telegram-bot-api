@@ -23,6 +23,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Button;
  * @method ChatAdministratorRights|null getUserAdministratorRights() (+) Объект с перечислением необходимых прав администратора (пользователя) в чате.
  * @method ChatAdministratorRights|null getBotAdministratorRights()  (+) Объект с перечислением необходимых прав администратора (бота) в чате.
  * @method                    bool|null getBotIsMember()             (+) Бот является участником чата.
+ * @method                    bool|null getRequestTitle()            (+) Запрашивать название чата.
+ * @method                    bool|null getRequestUsername()         (+) Запрашивать юзернейм чата.
+ * @method                    bool|null getRequestPhoto()            (+) Запрашивать фото чата.
  *
  * @method $this setRequestId(int $requestId)                                                 32-битный (signed) идентификатор запроса.
  * @method $this setChatIsChannel(bool $chatIsChannel)                                        Чат является каналом (true) или группой/супергруппой (false).
@@ -32,6 +35,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Button;
  * @method $this setUserAdministratorRights(ChatAdministratorRights $userAdministratorRights) Объект с перечислением необходимых прав администратора (пользователя) в чате.
  * @method $this setBotAdministratorRights(ChatAdministratorRights $botAdministratorRights)   Объект с перечислением необходимых прав администратора (бота) в чате.
  * @method $this setBotIsMember(bool $botIsMember)                                            Бот является участником чата.
+ * @method $this setRequestTitle(bool $requestTitle)                                          Запрашивать название чата.
+ * @method $this setRequestUsername(bool $requestUsername)                                    Запрашивать юзернейм чата.
+ * @method $this setRequestPhoto(bool $requestPhoto)                                          Запрашивать фото чата.
  *
  * @see https://core.telegram.org/bots/features#chat-and-user-selection
  */
@@ -56,7 +62,10 @@ class KeyboardButtonRequestChat extends Button
         ?bool $chatIsCreated = null,
         ?ChatAdministratorRights $userAdministratorRights = null,
         ?ChatAdministratorRights $botAdministratorRights = null,
-        ?bool $botIsMember = null
+        ?bool $botIsMember = null,
+        ?bool $requestTitle = null,
+        ?bool $requestUsername = null,
+        ?bool $requestPhoto = null
     ): static
     {
         return static::fromArgs(func_get_args());
