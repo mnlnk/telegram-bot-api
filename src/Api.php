@@ -1573,7 +1573,8 @@ class Api
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?ReplyParameters $replyParameters = null,
-        ?KeyboardMarkup $replyMarkup = null
+        ?KeyboardMarkup $replyMarkup = null,
+        ?string $businessConnectionId = null
     ): Message
     {
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
