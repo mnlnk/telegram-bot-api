@@ -10,9 +10,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  *
  * @link https://core.telegram.org/bots/api#birthdate
  *
- * @method int getDay()       День.
- * @method int getMonth()     Месяц.
- * @method int getYear()  (+) Год.
+ * @method      int getDay()       День.
+ * @method      int getMonth()     Месяц.
+ * @method int|null getYear()  (+) Год.
  */
 #[Required([
     'day',
