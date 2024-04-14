@@ -3,6 +3,7 @@ declare(strict_types = 1);
 
 namespace Manuylenko\Telegram\Bot\Api\Entities;
 
+use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButtonRequestUsers;
 
@@ -11,12 +12,15 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButto
  *
  * @link https://core.telegram.org/bots/api#usersshared
  *
- * @method   int getRequestId() Идентификатор запроса.
- * @method int[] getUserIds()   Идентификаторы пользователей.
+ * @method          int getRequestId() Идентификатор запроса.
+ * @method SharedUser[] getUsers()     Массив объектов пользователей, которые были переданы боту.
  */
 #[Required([
     'request_id',
-    'user_ids'
+    'users'
+])]
+#[Depends([
+    'users' => [SharedUser::class]
 ])]
 class UsersShared extends Entity
 {
