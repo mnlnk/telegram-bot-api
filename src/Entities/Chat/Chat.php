@@ -29,6 +29,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method        BusinessIntro|null getBusinessIntro()                      (+) Объект бизнес-приветствия.
  * @method     BusinessLocation|null getBusinessLocation()                   (+) Объект местоположения бизнеса.
  * @method BusinessOpeningHours|null getBusinessOpeningHours()               (+) Объект часов работы бизнеса.
+ * @method                 Chat|null getPersonalChat()                       (+) Объект чата личного канала пользователя; для приватных чатов. Возвращается только в Api::getChat().
  * @method       ReactionType[]|null getAvailableReactions()                 (+) Массив объектов доступных реакций, разрешенных в чате.
  * @method                  int|null getAccentColorId()                      (+) Идентификатор цвета акцента для имени чата и фона фотографии чата, заголовка ответа и предварительного просмотра ссылки.
  * @method               string|null getBackgroundCustomEmojiId()            (+) Пользовательский идентификатор эмоджи, выбранного чатом для заголовка ответа и фона предварительного просмотра ссылки.
