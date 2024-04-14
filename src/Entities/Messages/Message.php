@@ -51,6 +51,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                          Chat|null getSenderChat()                    (+) Объект чата отправителя сообщения, отправленного от имени чата.
  * @method                           int|null getSenderBoostCount()              (+) Количество бустов, добавленных пользователем, если отправитель сообщения бустил чат.
  * @method                                int getDate()                              Дата отправки сообщения (Unix).
+ * @method                        string|null getBusinessConnectionId()          (+) Уникальный идентификатор бизнес-соединения, от которого было получено сообщение.
  * @method                               Chat getChat()                              Объект чата, которому принадлежит сообщение.
  * @method                 MessageOrigin|null getForwardOrigin()                 (+) Объект с информацией об исходном сообщении для пересылаемых сообщений.
  * @method                          bool|null getIsTopicMessage()                (+) Сообщение отправлено в тему форума.
