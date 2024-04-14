@@ -1027,7 +1027,8 @@ class Api
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?int $messageThreadId = null,
-        ?ReplyParameters $replyParameters = null
+        ?ReplyParameters $replyParameters = null,
+        ?string $businessConnectionId = null
     ): array
     {
         return EntityFactory::makeArray(Message::class, $this->call(func_get_args(), [
