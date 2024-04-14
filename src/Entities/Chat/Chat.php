@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Chat;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Birthdate;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessIntro;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessLocation;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessOpeningHours;
@@ -26,6 +27,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method                 bool|null getIsForum()                            (+) Супергруппа является форумом (с включенными темами).
  * @method            ChatPhoto|null getPhoto()                              (+) Объект фото чата. Возвращается только в Api::getChat().
  * @method             string[]|null getActiveUsernames()                    (+) Список всех активных пользователей чата; для приватных чатов, супергрупп и каналов. Возвращается только в Api::getChat().
+ * @method            Birthdate|null getBirthdate()                          (+) Объект даты рождения пользователя; для приватных чатов. Возвращается только в Api::getChat().
  * @method        BusinessIntro|null getBusinessIntro()                      (+) Объект бизнес-приветствия. Возвращается только в Api::getChat().
  * @method     BusinessLocation|null getBusinessLocation()                   (+) Объект местоположения бизнеса. Возвращается только в Api::getChat().
  * @method BusinessOpeningHours|null getBusinessOpeningHours()               (+) Объект часов работы бизнеса. Возвращается только в Api::getChat().
@@ -65,6 +67,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 ])]
 #[Depends([
     'photo' => ChatPhoto::class,
+    'birthdate' => Birthdate::class,
     'business_intro' => BusinessIntro::class,
     'business_location' => BusinessLocation::class,
     'business_opening_hours' => BusinessOpeningHours::class,
