@@ -1577,7 +1577,7 @@ class Api
      */
     public function sendSticker(
         int|string $chatId,
-        InputFile|string $sticker, // WEBP|TGS
+        InputFile|string $sticker, // WEBP|TGS|WEBM
         ?string $emoji = null,
         ?int $messageThreadId = null,
         ?bool $disableNotification = null,
