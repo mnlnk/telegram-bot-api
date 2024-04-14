@@ -1647,7 +1647,6 @@ class Api
         string $name, // 1-64, [A-Za-z0-9_]+_by_<bot_username>
         string $title, // 1-64
         array $stickers, // 1-50
-        string $stickerFormat, // StickerFormat:class
         ?string $stickerType = null, // StickerType:class
         ?bool $needsRepainting = null
     ): bool
