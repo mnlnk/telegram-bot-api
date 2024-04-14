@@ -1789,6 +1789,23 @@ class Api
     }
 
     /**
+     * Заменяет существующий стикер в наборе стикеров на новый.
+     *
+     * @link https://core.telegram.org/bots/api#replacestickerinset
+     */
+    public function replaceStickerInSet(
+        int $userId,
+        string $name,
+        string $oldSticker,
+        InputSticker $sticker
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'sticker'
+        ]);
+    }
+
+    /**
      * Удаляет стикер из набора, созданного ботом.
      *
      * @link https://core.telegram.org/bots/api#deletestickerfromset

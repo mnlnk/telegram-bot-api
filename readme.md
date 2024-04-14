@@ -148,6 +148,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [setStickerEmojiList()](https://core.telegram.org/bots/api#setstickeremojilist) - Устанавливавет список смайлов, связанных со стикером.
 + [setStickerKeywords()](https://core.telegram.org/bots/api#setstickerkeywords) - Устанавливает ключевые слова для поиска, связанные со стикером.
 + [setStickerMaskPosition()](https://core.telegram.org/bots/api#setstickermaskposition) - Устанавливает положение маски стикера.
++ [replaceStickerInSet()](https://core.telegram.org/bots/api#replacestickerinset) - Заменяет существующий стикер в наборе стикеров на новый.
 + [deleteStickerFromSet()](https://core.telegram.org/bots/api#deletestickerfromset) - Удаляет стикер из набора.
 + [deleteStickerSet()](https://core.telegram.org/bots/api#deletestickerset) - Удаляет набор стикеров, созданный ботом.
 + [deleteChatStickerSet()](https://core.telegram.org/bots/api#deletechatstickerset) - Удаляет набор стикеров для группы или супергруппы.
