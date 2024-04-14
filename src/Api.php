@@ -235,7 +235,8 @@ class Api
     public function sendChatAction(
         int|string $chatId,
         string $action, // ChatAction::class
-        ?int $messageThreadId = null
+        ?int $messageThreadId = null,
+        ?string $businessConnectionId = null
     ): bool
     {
         return $this->call(func_get_args());
