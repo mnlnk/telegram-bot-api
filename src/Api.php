@@ -1693,6 +1693,7 @@ class Api
     public function setStickerSetThumbnail(
         string $name,
         int $userId,
+        string $format, // StickerFormat:class
         InputFile|string|null $thumbnail = null // WEBP|PNG, <= 128kB или TGS|WEBM, <= 32kB, <= 3s : W=100, H=100
     ): bool
     {
