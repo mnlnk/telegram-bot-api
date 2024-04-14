@@ -13,6 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @link https://core.telegram.org/bots/api#inputsticker
  *
  * @method            string getSticker()          Отправляемый стикер.
+ * @method            string getFormat()           Формат стикера.
  * @method          string[] getEmojiList()        Массив эмоджи, связанных со стикером.
  * @method MaskPosition|null getMaskPosition() (+) Объект расположения маски на лице.
  * @method     string[]|null getKeywords()     (+) Массив ключевых слов для поиска стикера.
@@ -24,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  */
 #[Required([
     'sticker',
+    'format',
     'emoji_list'
 ])]
 #[Depends([
@@ -39,6 +41,7 @@ class InputSticker extends Entity
      */
     public static function make(
         string $sticker, // "file_id" или "url" файла (в документации сказано, что допустимо использовать объект "InputFile" вместо строки, но сервер ТГ требует только строку)
+        string $format, // StickerFormat::class
         array $emojiList,
         ?MaskPosition $maskPosition = null,
         ?array $keywords = null
