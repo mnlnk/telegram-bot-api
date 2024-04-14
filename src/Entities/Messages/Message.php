@@ -64,6 +64,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                          User|null getViaBot()                        (+) Объект пользователя (бота), через которого было отправлено сообщение.
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
+ * @method                          bool|null getIsFromOffline()                 (+) Сообщение было отправлено неявным действием, например, как бизнес-сообщение об отъезде или приветствие.
  * @method                        string|null getMediaGroupId()                  (+) Уникальный идентификатор группы мультимедийных сообщений, к которой принадлежит это сообщение.
  * @method                        string|null getAuthorSignature()               (+) Подпись автора поста для сообщений в каналах или пользовательский заголовок анонимного администратора группы.
  * @method                        string|null getText()                          (+) Текст сообщения в формате UTF-8; для текстовых сообщений.
