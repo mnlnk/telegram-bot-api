@@ -50,6 +50,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                          User|null getFrom()                          (+) Объект отправителя сообщения (пусто для сообщений, отправленных на каналы).
  * @method                          Chat|null getSenderChat()                    (+) Объект чата отправителя сообщения, отправленного от имени чата.
  * @method                           int|null getSenderBoostCount()              (+) Количество бустов, добавленных пользователем, если отправитель сообщения бустил чат.
+ * @method                          User|null getSenderBusinessBot()             (+) Объект пользователя-бота отправшего сообщение от имени бизнес-аккаунта.
  * @method                                int getDate()                              Дата отправки сообщения (Unix).
  * @method                        string|null getBusinessConnectionId()          (+) Уникальный идентификатор бизнес-соединения, от которого было получено сообщение.
  * @method                               Chat getChat()                              Объект чата, которому принадлежит сообщение.
@@ -132,6 +133,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
 #[Depends([
     'from' => User::class,
     'sender_chat' => Chat::class,
+    'sender_business_bot' => User::class,
     'chat' => Chat::class,
     'forward_origin' => MessageOrigin::class,
     'reply_to_message' => Message::class,
