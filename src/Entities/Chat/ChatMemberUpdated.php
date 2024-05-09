@@ -21,6 +21,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method          ChatMember getOldChatMember()               Старая информация об участнике чата.
  * @method          ChatMember getNewChatMember()               Новая информация об участнике чата.
  * @method ChatInviteLink|null getInviteLink()              (+) Объект ссылки-приглашения в чат, по которой пользователь присоединился к чату.
+ * @method           bool|null getViaJoinRequest()          (+) Пользователь присоединился к чату после отправки запроса на прямое присоединение без использования ссылки для приглашения и получил одобрение администратора.
  * @method           bool|null getViaChatFolderInviteLink() (+) Пользователь присоединился к чату по ссылке-приглашению из папки чата.
  */
 #[Required([
