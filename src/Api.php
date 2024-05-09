@@ -1183,6 +1183,7 @@ class Api
      * @link https://core.telegram.org/bots/api#sendpoll
      *
      * @param string[] $options
+     * @param ?MessageEntity[] $questionEntities
      * @param ?MessageEntity[] $explanationEntities
      */
     public function sendPoll(
@@ -1190,6 +1191,8 @@ class Api
         string $question, // 1-300
         array $options, // 2-10 [1-100]
         ?bool $isAnonymous = null,
+        ?string $questionParseMode = null, // ParseMode::class
+        ?array $questionEntities = null,
         ?string $type = null, // PollType::class
         ?bool $allowsMultipleAnswers = null,
         ?int $correctOptionId = null, // 0..
@@ -1209,6 +1212,7 @@ class Api
     {
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
             'options',
+            'question_entities',
             'explanation_entities',
             'reply_parameters',
             'reply_markup'
