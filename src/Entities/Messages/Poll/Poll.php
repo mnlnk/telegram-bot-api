@@ -16,6 +16,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  *
  * @method               string getId()                        Уникальный идентификатор опроса.
  * @method               string getQuestion()                  Вопрос опроса.
+ * @method MessageEntity[]|null getQuestionEntities()      (+) Массив специальных сущностей, которые появляются в вопросе (только пользовательские эмодзи).
  * @method         PollOption[] getOptions()                   Массив объектов вариантов ответа.
  * @method                  int getTotalVoterCount()           Общее количество пользователей, проголосовавших в опросе.
  * @method                 bool getIsClosed()                  Опрос был закрыт.
@@ -24,7 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method                 bool getAllowsMultipleAnswers()     Опрос допускает выбор нескольких ответов.
  * @method             int|null getCorrectOptionId()       (+) Отсчитываемый от 0 идентификатор правильного варианта ответа.
  * @method          string|null getExplanation()           (+) Текст (подсказка), отображается когда пользователь выбирает неправильный ответ или нажимает значок лампы в викторине.
- * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении. (имена пользователей, URL-адреса, команды ботов и т.д.).
+ * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении (имена пользователей, URL-адреса, команды ботов и т.д.).
  * @method             int|null getOpenPeriod()            (+) Время в секундах, в течение которого опрос будет активен после создания.
  * @method             int|null getCloseDate()             (+) Метка времени (Unix), когда опрос будет автоматически закрыт.
  */
@@ -39,6 +40,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
     'allows_multiple_answers'
 ])]
 #[Depends([
+    'question_entities' => [MessageEntity::class],
     'options' => [PollOption::class],
     'explanation_entities' => [MessageEntity::class]
 ])]
