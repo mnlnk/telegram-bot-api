@@ -1407,6 +1407,7 @@ class Api
         int|string|null $chatId = null, // !$inlineMessageId
         ?int $messageId = null, // !$inlineMessageId
         ?string $inlineMessageId = null, // !$chatId && !$messageId
+        ?int $livePeriod = null, // <= 24 * 60 * 60 (24 часа)
         ?float $horizontalAccuracy = null, // 0-1500
         ?int $heading = null, // 1-360
         ?int $proximityAlertRadius = null, // 1-100000
