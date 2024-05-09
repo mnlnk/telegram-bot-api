@@ -28,6 +28,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\LinkPreviewOptions;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageId;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\InputPollOption;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Replies\ReplyParameters;
@@ -1182,14 +1183,14 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendpoll
      *
-     * @param string[] $options
+     * @param InputPollOption[] $options
      * @param ?MessageEntity[] $questionEntities
      * @param ?MessageEntity[] $explanationEntities
      */
     public function sendPoll(
         int|string $chatId,
         string $question, // 1-300
-        array $options, // 2-10 [1-100]
+        array $options, // 2-10
         ?bool $isAnonymous = null,
         ?string $questionParseMode = null, // ParseMode::class
         ?array $questionEntities = null,
