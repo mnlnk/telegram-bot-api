@@ -15,7 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @method               string getText()             Текст опции.
  * @method MessageEntity[]|null getTextEntities() (+) Массив специальных сущностей, которые появляются в тексте варианта (только пользовательские эмодзи).
- * @method               string getVoterCount()       Количество пользователей, проголосовавших за этот вариант.
+ * @method                  int getVoterCount()       Количество пользователей, проголосовавших за этот вариант.
  */
 #[Required([
     'text',
