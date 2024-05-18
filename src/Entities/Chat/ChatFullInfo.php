@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method               string|null getFirstName()                          (+) Имя собеседника в приватном чате.
  * @method               string|null getLastName()                           (+) Фамилия собеседника в приватном чате.
  * @method                 bool|null getIsForum()                            (+) Супергруппа является форумом (с включенными темами).
+ * @method                       int getMaxReactionCount()                       Максимальное количество реакций, которое можно установить на сообщение в чате.
  * @method            ChatPhoto|null getPhoto()                              (+) Объект фото чата.
  * @method             string[]|null getActiveUsernames()                    (+) Список всех активных пользователей чата; для приватных чатов, супергрупп и каналов.
  * @method            Birthdate|null getBirthdate()                          (+) Объект даты рождения пользователя; для приватных чатов.
