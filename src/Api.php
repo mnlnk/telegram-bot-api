@@ -13,6 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessConnection;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\UserChatBoosts;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatAdministratorRights;
+use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatFullInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatInviteLink;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatPermissions;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\ForumTopic;
@@ -210,9 +211,9 @@ class Api
      */
     public function getChat(
         int|string $chatId
-    ): Chat
+    ): ChatFullInfo
     {
-        return EntityFactory::make(Chat::class, $this->call(func_get_args()));
+        return EntityFactory::make(ChatFullInfo::class, $this->call(func_get_args()));
     }
 
     /**
