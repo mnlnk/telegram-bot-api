@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Chat\Background\ChatBackground;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostAdded;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatShared;
@@ -109,6 +110,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                  PassportData|null getPassportData()                  (+) Объект данных Телеграм Паспорт.
  * @method       ProximityAlertTriggered|null getProximityAlertTriggered()       (+) Объект сервисного сообщения: пользователь в чате активировал оповещение о приближении другого пользователя во время
  * @method                ChatBoostAdded|null getBoostAdded()                    (+) Объект сервисного сообщения: пользователь забустил чат.
+ * @method                ChatBackground|null getChatBackgroundSet()             (+) Объект сервисного сообщения: пользователь установил фон чата.
  * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Объект сервисного сообщения: тема форума создана.
  * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Объект сервисного сообщения: тема форума отредактирована.
  * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Объект сервисного сообщения: тема форума закрыта.
@@ -173,6 +175,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'passport_data' => PassportData::class,
     'proximity_alert_triggered' => ProximityAlertTriggered::class,
     'boost_added' => ChatBoostAdded::class,
+    'chat_background_set' => ChatBackground::class,
     'forum_topic_created' => ForumTopicCreated::class,
     'forum_topic_edited' => ForumTopicEdited::class,
     'forum_topic_closed' => ForumTopicClosed::class,
@@ -488,6 +491,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isBoostAdded(): bool
     {
         return $this->getType() == MessageType::BOOST_ADDED;
+    }
+
+    /**
+     * Сервисное сообщение: пользователь установил фон чата.
+     */
+    public function isChatBackgroundSet(): bool
+    {
+        return $this->getType() == MessageType::CHAT_BACKGROUND_SET;
     }
 
     /**
