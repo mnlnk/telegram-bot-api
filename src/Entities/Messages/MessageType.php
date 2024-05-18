@@ -263,6 +263,13 @@ abstract class MessageType
     const BOOST_ADDED = 'boost_added';
 
     /**
+     * Сервисное сообщение: пользователь установил фон чата.
+     *
+     * @var string
+     */
+    const CHAT_BACKGROUND_SET = 'chat_background_set';
+
+    /**
      * Сервисное сообщение: тема форума создана.
      *
      * @var string
@@ -413,6 +420,7 @@ abstract class MessageType
             static::WRITE_ACCESS_ALLOWED,
             static::PROXIMITY_ALERT_TRIGGERED,
             static::BOOST_ADDED,
+            static::CHAT_BACKGROUND_SET,
             static::FORUM_TOPIC_CREATED,
             static::FORUM_TOPIC_EDITED,
             static::FORUM_TOPIC_CLOSED,
