@@ -859,6 +859,7 @@ class Api
         InputFile|string|null $thumbnail = null, // JPEG, <= 200kB, <= 320x320
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
