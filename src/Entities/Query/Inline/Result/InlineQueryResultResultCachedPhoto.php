@@ -15,16 +15,17 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  *
  * @link https://core.telegram.org/bots/api#inlinequeryresultcachedphoto
  *
- * @method                    string getType()                    Тип результата.
- * @method                    string getId()                      Уникальный идентификатор результата.
- * @method                    string getPhotoFileId()             Идентификатор файла.
- * @method               string|null getTitle()               (+) Название результата.
- * @method               string|null getDescription()         (+) Короткое описание результата.
- * @method               string|null getCaption()             (+) Подпись к отправляемому файлу изображения.
- * @method               string|null getParseMode()           (+) Режим разбора специальных сущностей в подписи.
- * @method      MessageEntity[]|null getCaptionEntities()     (+) Массив объектов специальных сущностей, появляющихся в подписи.
- * @method InlineKeyboardMarkup|null getReplyMarkup()         (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
- * @method  InputMessageContent|null getInputMessageContent() (+) Объект содержимого сообщения, которое будет отправлено вместо изображения (фото).
+ * @method                    string getType()                      Тип результата.
+ * @method                    string getId()                        Уникальный идентификатор результата.
+ * @method                    string getPhotoFileId()               Идентификатор файла.
+ * @method               string|null getTitle()                 (+) Название результата.
+ * @method               string|null getDescription()           (+) Короткое описание результата.
+ * @method               string|null getCaption()               (+) Подпись к отправляемому файлу изображения.
+ * @method               string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.
+ * @method      MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method                 bool|null getShowCaptionAboveMedia() (+) Показывать подпись над медиа.
+ * @method InlineKeyboardMarkup|null getReplyMarkup()           (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
+ * @method  InputMessageContent|null getInputMessageContent()   (+) Объект содержимого сообщения, которое будет отправлено вместо изображения (фото).
  *
  * @method $this setId(string $id)                                                Уникальный идентификатор результата.
  * @method $this setPhotoFileId(string $photoFileId)                              Идентификатор файла.
@@ -33,6 +34,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  * @method $this setCaption(string $caption)                                      Подпись к отправляемому файлу изображения.
  * @method $this setParseMode(string $parseMode)                                  Режим разбора специальных сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)             Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method $this setShowCaptionAboveMedia(bool $showCaptionAboveMedia)            Показывать подпись над медиа.
  * @method $this setReplyMarkup(InlineKeyboardMarkup $replyMarkup)                Объект встроенной клавиатуры, прикрепленной к сообщению.
  * @method $this setInputMessageContent(InputMessageContent $inputMessageContent) Объект содержимого сообщения, которое будет отправлено вместо изображения (фото).
  */
@@ -73,6 +75,7 @@ class InlineQueryResultResultCachedPhoto extends InlineQueryResult
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?InlineKeyboardMarkup $replyMarkup = null,
         ?InputMessageContent $inputMessageContent = null
     ): static
