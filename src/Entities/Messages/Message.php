@@ -83,6 +83,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                         Voice|null getVoice()                         (+) Объект с информацией о голосовом сообщении.
  * @method                        string|null getCaption()                       (+) Подпись к анимации, аудио, документу, фото, видео или голосовой заметке.
  * @method               MessageEntity[]|null getCaptionEntities()               (+) Массив объектов с информацией о специальных сущностях в подписи; для сообщений с подписью.
+ * @method                          bool|null getShowCaptionAboveMedia()         (+) Показывать подпись над медиа в сообщении.
  * @method                          bool|null getHasMediaSpoiler()               (+) Медиа сообщение закрыто анимацией спойлера.
  * @method                       Contact|null getContact()                       (+) Объект с информацией о телефонном контакте.
  * @method                          Dice|null getDice()                          (+) Объект с информацией об игральной кости (кубик со случайным значением).
