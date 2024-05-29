@@ -71,6 +71,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                        string|null getText()                          (+) Текст сообщения в формате UTF-8; для текстовых сообщений.
  * @method               MessageEntity[]|null getEntities()                      (+) Массив объектов специальных сущностей; для текстовых сообщений.
  * @method            LinkPreviewOptions|null getLinkPreviewOptions()            (+) Объект параметров, используемых для создания предварительного просмотра ссылки в сообщении.
+ * @method                        string|null getEffectId()                      (+) Уникальный идентификатор эффекта сообщения.
  * @method                     Animation|null getAnimation()                     (+) Объект с информацией об анимации.
  * @method                         Audio|null getAudio()                         (+) Объект с информацией о звуковом файле.
  * @method                      Document|null getDocument()                      (+) Объект с информация о документе (простом файле).
