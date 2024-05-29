@@ -1217,6 +1217,7 @@ class Api
         ?bool $isClosed = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
