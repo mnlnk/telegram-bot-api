@@ -1957,6 +1957,7 @@ class Api
         ?bool $isFlexible = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?string $messageEffectId = null,
         ?ReplyParameters $replyParameters = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message
