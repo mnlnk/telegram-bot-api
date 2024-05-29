@@ -1375,6 +1375,7 @@ class Api
         ?string $inlineMessageId = null, // !$chatId && !$messageId
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message|bool
     {
