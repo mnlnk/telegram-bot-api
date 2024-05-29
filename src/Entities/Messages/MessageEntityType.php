@@ -102,6 +102,13 @@ abstract class MessageEntityType
     const BLOCKQUOTE = 'blockquote';
 
     /**
+     * Блочная цитата (свернутая по умолчанию).
+     *
+     * @var string
+     */
+    const EXPANDABLE_BLOCKQUOTE = 'expandable_blockquote';
+
+    /**
      * Моноширинная строка кода.
      *
      * @var string
@@ -159,6 +166,7 @@ abstract class MessageEntityType
             static::STRIKETHROUGH,
             static::SPOILER,
             static::BLOCKQUOTE,
+            static::EXPANDABLE_BLOCKQUOTE,
             static::CODE,
             static::PRE,
             static::TEXT_LINK,
