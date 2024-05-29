@@ -2027,6 +2027,19 @@ class Api
         ]);
     }
 
+    /**
+     * Возвращает успешный платеж в Telegram Stars.
+     *
+     * @link https://core.telegram.org/bots/api#refundstarpayment
+     */
+    public function refundStarPayment(
+        int $userId,
+        string $telegramPaymentChargeId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Passport

@@ -163,6 +163,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [createInvoiceLink()](https://core.telegram.org/bots/api#createinvoicelink) - Создает ссылку для счета-фактуры.
 + [answerPreCheckoutQuery()](https://core.telegram.org/bots/api#answerprecheckoutquery) - Отправляет ответ на запросы предварительной проверки заказа.
 + [answerShippingQuery()](https://core.telegram.org/bots/api#answershippingquery) - Отправляет ответ на запрос доставки.
++ [refundStarPayment()](https://core.telegram.org/bots/api#refundstarpayment) - Возвращает успешный платеж в Telegram Stars.
 
 ##### Конфигурация бота
 + [getMe()](https://core.telegram.org/bots/api#getme) - Получает основную информацию о боте.
