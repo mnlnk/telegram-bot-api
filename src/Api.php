@@ -1922,9 +1922,9 @@ class Api
         string $title, // 1-32
         string $description, // 1-255
         string $payload, // 1-128b
-        string $providerToken,
         string $currency, // https://core.telegram.org/bots/payments#supported-currencies
         array $prices,
+        ?string $providerToken = null,
         ?int $messageThreadId = null,
         ?int $maxTipAmount = null, // https://core.telegram.org/bots/payments/currencies.json
         ?array $suggestedTipAmounts = null, // 1-4
@@ -1968,9 +1968,9 @@ class Api
         string $title, // 1-32
         string $description, // 1-128b
         string $payload,
-        string $providerToken,
         string $currency, // https://core.telegram.org/bots/payments#supported-currencies
         array $prices,
+        ?string $providerToken = null,
         ?int $maxTipAmount = null, // https://core.telegram.org/bots/payments/currencies.json
         ?array $suggestedTipAmounts = null, // 1-4
         ?string $providerData = null,
