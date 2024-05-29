@@ -15,21 +15,22 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  *
  * @link https://core.telegram.org/bots/api#inlinequeryresultvideo
  *
- * @method                    string getType()                    Тип результата.
- * @method                    string getId()                      Уникальный идентификатор результата.
- * @method                    string getVideoUrl()                Url-адрес видео-файла.
- * @method                    string getMimeType()                Mime-тип содержимого Url-адреса.
- * @method                    string getThumbnailUrl()            Url-адрес миниатюры результата.
- * @method                    string getTitle()                   Название результата.
- * @method               string|null getCaption()             (+) Подпись к отправляемому файлу.
- * @method               string|null getParseMode()           (+) Режим разбора специальных сущностей в подписи.
- * @method      MessageEntity[]|null getCaptionEntities()     (+) Массив объектов специальных сущностей, появляющихся в подписи.
- * @method                  int|null getVideoWidth()          (+) Ширина видео.
- * @method                  int|null getVideoHeight()         (+) Высота видео.
- * @method                  int|null getVideoDuration()       (+) Продолжительность видео в секундах.
- * @method               string|null getDescription()         (+) Короткое описание результата.
- * @method InlineKeyboardMarkup|null getReplyMarkup()         (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
- * @method  InputMessageContent|null getInputMessageContent() (+) Объект содержимого сообщения, которое будет отправлено вместо видео.
+ * @method                    string getType()                      Тип результата.
+ * @method                    string getId()                        Уникальный идентификатор результата.
+ * @method                    string getVideoUrl()                  Url-адрес видео-файла.
+ * @method                    string getMimeType()                  Mime-тип содержимого Url-адреса.
+ * @method                    string getThumbnailUrl()              Url-адрес миниатюры результата.
+ * @method                    string getTitle()                     Название результата.
+ * @method               string|null getCaption()               (+) Подпись к отправляемому файлу.
+ * @method               string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.
+ * @method      MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method                 bool|null getShowCaptionAboveMedia() (+) Показывать подпись над медиа.
+ * @method                  int|null getVideoWidth()            (+) Ширина видео.
+ * @method                  int|null getVideoHeight()           (+) Высота видео.
+ * @method                  int|null getVideoDuration()         (+) Продолжительность видео в секундах.
+ * @method               string|null getDescription()           (+) Короткое описание результата.
+ * @method InlineKeyboardMarkup|null getReplyMarkup()           (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
+ * @method  InputMessageContent|null getInputMessageContent()   (+) Объект содержимого сообщения, которое будет отправлено вместо видео.
  *
  * @method $this setId(string $id)                                                Уникальный идентификатор результата.
  * @method $this setVideoUrl(string $videoUrl)                                    Url-адрес видео-файла.
@@ -39,6 +40,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  * @method $this setCaption(string $caption)                                      Подпись к отправляемому файлу.
  * @method $this setParseMode(string $parseMode)                                  Режим разбора специальных сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)             Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method $this setShowCaptionAboveMedia(bool $showCaptionAboveMedia)            Показывать подпись над медиа.
  * @method $this setVideoWidth(int $videoWidth)                                   Ширина видео.
  * @method $this setVideoHeight(int $videoHeight)                                 Высота видео.
  * @method $this setVideoDuration(int $videoDuration)                             Продолжительность видео в секундах.
@@ -87,6 +89,7 @@ class InlineQueryResultResultVideo extends InlineQueryResult
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?int $videoWidth = null,
         ?int $videoHeight = null,
         ?int $videoDuration = null,
