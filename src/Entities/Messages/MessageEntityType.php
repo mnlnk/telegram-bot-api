@@ -95,6 +95,13 @@ abstract class MessageEntityType
     const SPOILER = 'spoiler';
 
     /**
+     * Блочная цитата.
+     *
+     * @var string
+     */
+    const BLOCKQUOTE = 'blockquote';
+
+    /**
      * Моноширинная строка кода.
      *
      * @var string
@@ -151,6 +158,7 @@ abstract class MessageEntityType
             static::UNDERLINE,
             static::STRIKETHROUGH,
             static::SPOILER,
+            static::BLOCKQUOTE,
             static::CODE,
             static::PRE,
             static::TEXT_LINK,
