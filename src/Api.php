@@ -925,6 +925,7 @@ class Api
         ?string $caption = null, // 0-1024
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?bool $hasSpoiler = null,
         ?bool $supportsStreaming = null,
         ?bool $disableNotification = null,
@@ -1293,6 +1294,7 @@ class Api
         ?string $caption = null, // 0-1024
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?ReplyParameters $replyParameters = null,
