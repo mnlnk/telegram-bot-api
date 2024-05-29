@@ -15,19 +15,20 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  *
  * @link https://core.telegram.org/bots/api#inlinequeryresultphoto
  *
- * @method                    string getType()                    Тип результата.
- * @method                    string getId()                      Уникальный идентификатор результата.
- * @method                    string getPhotoUrl()                Url-адрес файла изображения.
- * @method                    string getThumbnailUrl()            Url-адрес миниатюры результата.
- * @method                  int|null getPhotoWidth()          (+) Ширина изображения.
- * @method                  int|null getPhotoHeight()         (+) Высота изображения.
- * @method               string|null getTitle()               (+) Название результата.
- * @method               string|null getDescription()         (+) Короткое описание результата.
- * @method               string|null getCaption()             (+) Подпись к отправляемого изображения.
- * @method               string|null getParseMode()           (+) Режим разбора сущностей в подписи.
- * @method      MessageEntity[]|null getCaptionEntities()     (+) Массив объектов специальных сущностей, появляющихся в подписи.
- * @method InlineKeyboardMarkup|null getReplyMarkup()         (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
- * @method  InputMessageContent|null getInputMessageContent() (+) Объект содержимого сообщения, которое будет отправлено вместо изображения (фото).
+ * @method                    string getType()                      Тип результата.
+ * @method                    string getId()                        Уникальный идентификатор результата.
+ * @method                    string getPhotoUrl()                  Url-адрес файла изображения.
+ * @method                    string getThumbnailUrl()              Url-адрес миниатюры результата.
+ * @method                  int|null getPhotoWidth()            (+) Ширина изображения.
+ * @method                  int|null getPhotoHeight()           (+) Высота изображения.
+ * @method               string|null getTitle()                 (+) Название результата.
+ * @method               string|null getDescription()           (+) Короткое описание результата.
+ * @method               string|null getCaption()               (+) Подпись к отправляемого изображения.
+ * @method               string|null getParseMode()             (+) Режим разбора сущностей в подписи.
+ * @method      MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method                 bool|null getShowCaptionAboveMedia() (+) Показывать подпись над медиа.
+ * @method InlineKeyboardMarkup|null getReplyMarkup()           (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
+ * @method  InputMessageContent|null getInputMessageContent()   (+) Объект содержимого сообщения, которое будет отправлено вместо изображения (фото).
  *
  * @method $this setId(string $id)                                                Уникальный идентификатор результата.
  * @method $this setPhotoUrl(string $photoUrl)                                    Url-адрес файла изображения.
@@ -39,6 +40,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  * @method $this setCaption(string $caption)                                      Подпись к отправляемого изображения.
  * @method $this setParseMode(string $parseMode)                                  Режим разбора сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)             Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method $this setShowCaptionAboveMedia(bool $showCaptionAboveMedia)            Показывать подпись над медиа.
  * @method $this setReplyMarkup(InlineKeyboardMarkup $replyMarkup)                Объект встроенной клавиатуры, прикрепленной к сообщению.
  * @method $this setInputMessageContent(InputMessageContent $inputMessageContent) Объект содержимого сообщения, который необходимо отправить вместо изображения (фото).
  */
@@ -83,6 +85,7 @@ class InlineQueryResultResultPhoto extends InlineQueryResult
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?InlineKeyboardMarkup $replyMarkup = null,
         ?InputMessageContent $inputMessageContent = null
     ): static
