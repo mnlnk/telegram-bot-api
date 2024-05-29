@@ -15,7 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\LabeledPrice;
  * @method         string getTitle()                         Наименование товара.
  * @method         string getDescription()                   Описание товара.
  * @method         string getPayload()                       Полезная нагрузка счета. Эти данные используются для своих внутренних процессов бота.
- * @method         string getProviderToken()                 Токен платежной системы, полученный через "@BotFather".
+ * @method    string|null getProviderToken()             (+) Токен платежной системы, полученный через "@BotFather".
  * @method         string getCurrency()                      Трех-буквенный код валюты ISO 4217.
  * @method LabeledPrice[] getPrices()                        Массив объектов цены (например, цена товара, налог, скидка, стоимость доставки, налог на доставку, бонус и т.д.).
  * @method       int|null getMaxTipAmount()              (+) Максимальная допустимая сумма чаевых в наименьших единицах валюты (целое число, а не число с плавающей запятой/удвоение).
@@ -60,7 +60,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\LabeledPrice;
     'title',
     'description',
     'payload',
-    'provider_token',
     'currency',
     'prices'
 ])]
@@ -79,9 +78,9 @@ class InputInvoiceMessageContent extends InputMessageContent
         string $title, // 1-32
         string $description, // 1-255
         string $payload, // 1-128
-        string $providerToken,
         string $currency, // ISO 4217
         array $prices,
+        ?string $providerToken = null,
         ?int $maxTipAmount = null,
         ?array $suggestedTipAmounts = null,
         ?string $providerData = null,
