@@ -154,6 +154,22 @@ class MessageEntity extends Entity
     }
 
     /**
+     * Блочная цитата.
+     */
+    public function isBlockquote(): bool
+    {
+        return $this->getType() == MessageEntityType::BLOCKQUOTE;
+    }
+
+    /**
+     * Блочная цитата.
+     */
+    public function isExpandableBlockquote(): bool
+    {
+        return $this->getType() == MessageEntityType::EXPANDABLE_BLOCKQUOTE;
+    }
+
+    /**
      * Строкой программного кода.
      */
     public function isCode(): bool
