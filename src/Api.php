@@ -1148,6 +1148,7 @@ class Api
         ?string $googlePlaceType = null, // https://developers.google.com/maps/documentation/places/web-service/supported_types
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
