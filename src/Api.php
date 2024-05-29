@@ -1036,6 +1036,7 @@ class Api
         array $media, // 2-10
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
         ?string $businessConnectionId = null
