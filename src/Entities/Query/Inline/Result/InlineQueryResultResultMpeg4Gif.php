@@ -15,20 +15,21 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  *
  * @link https://core.telegram.org/bots/api#inlinequeryresultmpeg4gif
  *
- * @method                    string getType()                    Тип результата.
- * @method                    string getId()                      Уникальный идентификатор результата.
- * @method                    string getMpeg4Url()                Url-адрес файла видео-анимации.
- * @method                  int|null getMpeg4Width()          (+) Ширина видео-анимации.
- * @method                  int|null getMpeg4Height()         (+) Высота видео-анимации.
- * @method                  int|null getMpeg4Duration()       (+) Продолжительность видео-анимации в секундах.
- * @method                    string getThumbnailUrl()            Url-адрес миниатюры результата.
- * @method               string|null getThumbnailMimeType()   (+) Mime-тип миниатюры результата.
- * @method               string|null getTitle()               (+) Название результата.
- * @method               string|null getCaption()             (+) Подпись к отправляемому файлу видео-анимации.
- * @method               string|null getParseMode()           (+) Режим разбора специальных сущностей в подписи.
- * @method      MessageEntity[]|null getCaptionEntities()     (+) Массив объектов специальных сущностей, появляющихся в подписи.
- * @method InlineKeyboardMarkup|null getReplyMarkup()         (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
- * @method  InputMessageContent|null getInputMessageContent() (+) Объект содержимого сообщения, которое будет отправлено вместо видео-анимации.
+ * @method                    string getType()                      Тип результата.
+ * @method                    string getId()                        Уникальный идентификатор результата.
+ * @method                    string getMpeg4Url()                  Url-адрес файла видео-анимации.
+ * @method                  int|null getMpeg4Width()            (+) Ширина видео-анимации.
+ * @method                  int|null getMpeg4Height()           (+) Высота видео-анимации.
+ * @method                  int|null getMpeg4Duration()         (+) Продолжительность видео-анимации в секундах.
+ * @method                    string getThumbnailUrl()              Url-адрес миниатюры результата.
+ * @method               string|null getThumbnailMimeType()     (+) Mime-тип миниатюры результата.
+ * @method               string|null getTitle()                 (+) Название результата.
+ * @method               string|null getCaption()               (+) Подпись к отправляемому файлу видео-анимации.
+ * @method               string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.
+ * @method      MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method                 bool|null getShowCaptionAboveMedia() (+) Показывать подпись над медиа.
+ * @method InlineKeyboardMarkup|null getReplyMarkup()           (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
+ * @method  InputMessageContent|null getInputMessageContent()   (+) Объект содержимого сообщения, которое будет отправлено вместо видео-анимации.
  *
  * @method $this setId(string $id)                                                Уникальный идентификатор результата.
  * @method $this setMpeg4Url(string $mpeg4Url)                                    Url-адрес файла видео-анимации.
@@ -41,6 +42,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\InlineQueryResultType;
  * @method $this setCaption(string $caption)                                      Подпись к отправляемому файлу видео-анимации.
  * @method $this setParseMode(string $parseMode)                                  Режим разбора специальных сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)             Массив объектов специальных сущностей, появляющихся в подписи.
+ * @method $this setShowCaptionAboveMedia(bool $showCaptionAboveMedia)            Показывать подпись над медиа.
  * @method $this setReplyMarkup(InlineKeyboardMarkup $replyMarkup)                Объект встроенной клавиатуры, прикрепленной к сообщению.
  * @method $this setInputMessageContent(InputMessageContent $inputMessageContent) Объект содержимого сообщения, которое будет отправлено вместо видео-анимации.
  */
@@ -86,6 +88,7 @@ class InlineQueryResultResultMpeg4Gif extends InlineQueryResult
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
         ?InlineKeyboardMarkup $replyMarkup = null,
         ?InputMessageContent $inputMessageContent = null
     ): static
