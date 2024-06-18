@@ -1470,7 +1470,8 @@ class Api
     public function stopPoll(
         int|string $chatId,
         int $messageId,
-        ?InlineKeyboardMarkup $replyMarkup = null
+        ?InlineKeyboardMarkup $replyMarkup = null,
+        ?string $businessConnectionId = null
     ): Poll
     {
         return EntityFactory::make(Poll::class, $this->call(func_get_args(), [
