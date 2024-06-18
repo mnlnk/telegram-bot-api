@@ -40,6 +40,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\StickerSet;
 use Manuylenko\Telegram\Bot\Api\Entities\Passport\Elements\Errors\PassportElementError;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\LabeledPrice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingOption;
+use Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\StarTransactions;
 use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\SentWebAppMessage;
@@ -2047,6 +2048,19 @@ class Api
         return $this->call(func_get_args(), [
             'shipping_options'
         ]);
+    }
+
+    /**
+     * Получает транзакции Telegram Star в хронологическом порядке.
+     *
+     * @link https://core.telegram.org/bots/api#refundstarpayment
+     */
+    public function getStarTransactions(
+        ?int $offset = null,
+        ?int $limit = null // 1-100 (100)
+    ): StarTransactions
+    {
+        return EntityFactory::make(StarTransactions::class, $this->call(func_get_args()));
     }
 
     /**
