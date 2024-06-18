@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Transaction\Partners;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Partners;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Transaction\Withdrawal\RevenueWithdrawalState;
+use Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Withdrawal\RevenueWithdrawalState;
 
 /**
  * Представляет транзакцию вывода средств с помощью Fragment.

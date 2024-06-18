@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Transaction\Partners;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Partners;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 

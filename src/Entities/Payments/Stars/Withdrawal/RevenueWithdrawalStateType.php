@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Transaction\Withdrawal;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Withdrawal;
 
 /**
  * Представляет тип состояния.
