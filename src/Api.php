@@ -1377,6 +1377,7 @@ class Api
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
         ?bool $showCaptionAboveMedia = null,
+        ?string $businessConnectionId = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message|bool
     {
