@@ -1457,6 +1457,7 @@ class Api
         int|string|null $chatId = null, // !$inlineMessageId
         ?int $messageId = null, // !$inlineMessageId
         ?string $inlineMessageId = null, // !$chatId && !$messageId
+        ?string $businessConnectionId = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message|bool
     {
