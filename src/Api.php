@@ -11,7 +11,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Bot\Commands\Scope\BotCommandScope;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\Menu\MenuButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessConnection;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\UserChatBoosts;
-use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatAdministratorRights;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatFullInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatInviteLink;
