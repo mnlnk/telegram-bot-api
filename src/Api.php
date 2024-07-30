@@ -1439,6 +1439,7 @@ class Api
         ?float $horizontalAccuracy = null, // 0-1500
         ?int $heading = null, // 1-360
         ?int $proximityAlertRadius = null, // 1-100000
+        ?string $businessConnectionId = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message|bool
     {
