@@ -1350,6 +1350,7 @@ class Api
         ?string $inlineMessageId = null, // !$chatId && !$messageId
         ?string $parseMode = null, // ParseMode::class
         ?array $entities = null,
+        ?string $businessConnectionId = null,
         ?LinkPreviewOptions $linkPreviewOptions  = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message|bool
