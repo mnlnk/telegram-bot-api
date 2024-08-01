@@ -75,7 +75,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                        string|null getEffectId()                      (+) Уникальный идентификатор эффекта сообщения.
  * @method                     Animation|null getAnimation()                     (+) Объект с информацией об анимации.
  * @method                         Audio|null getAudio()                         (+) Объект с информацией о звуковом файле.
- * @method                      Document|null getDocument()                      (+) Объект с информация о документе (простом файле).
+ * @method                      Document|null getDocument()                      (+) Объект с информацией о документе (простом файле).
  * @method                 PaidMediaInfo|null getPaidMedia()                     (+) Объект с информацией о платном медиафайле.
  * @method                   PhotoSize[]|null getPhoto()                         (+) Массив объектов с информацией о фото (доступные размеры фото).
  * @method                       Sticker|null getSticker()                       (+) Объект с информацией о стикере.
