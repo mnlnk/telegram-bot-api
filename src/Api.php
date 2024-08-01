@@ -267,7 +267,8 @@ class Api
      */
     public function unpinChatMessage(
         int|string $chatId,
-        int $messageId
+        int $messageId,
+        ?string $businessConnectionId = null
     ): bool
     {
         return $this->call(func_get_args());
