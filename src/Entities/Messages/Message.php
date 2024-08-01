@@ -32,6 +32,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\MessageAutoDeleteTime
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\ProximityAlertTriggered;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\WriteAccessAllowed;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Passport\PassportData;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\SuccessfulPayment;
@@ -75,6 +76,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                     Animation|null getAnimation()                     (+) Объект с информацией об анимации.
  * @method                         Audio|null getAudio()                         (+) Объект с информацией о звуковом файле.
  * @method                      Document|null getDocument()                      (+) Объект с информация о документе (простом файле).
+ * @method                 PaidMediaInfo|null getPaidMedia()                     (+) Объект с информацией о платном медиафайле.
  * @method                   PhotoSize[]|null getPhoto()                         (+) Массив объектов с информацией о фото (доступные размеры фото).
  * @method                       Sticker|null getSticker()                       (+) Объект с информацией о стикере.
  * @method                         Story|null getStory()                         (+) Объект с информацией о пересланной истории.
@@ -151,6 +153,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'animation' => Animation::class,
     'audio' => Audio::class,
     'document' => Document::class,
+    'paid_media' => PaidMediaInfo::class,
     'photo' => [PhotoSize::class],
     'sticker' => Sticker::class,
     'story' => Story::class,
@@ -229,6 +232,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isDocument(): bool
     {
         return $this->getType() == MessageType::DOCUMENT;
+    }
+
+    /**
+     * Платный медиафайл.
+     */
+    public function isPaidMedia(): bool
+    {
+        return $this->getType() == MessageType::PAID_MEDIA;
     }
 
     /**

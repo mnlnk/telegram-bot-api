@@ -39,6 +39,13 @@ abstract class MessageType
     const DOCUMENT = 'document';
 
     /**
+     * Платный медиафайл
+     *
+     * @var string
+     */
+    const PAID_MEDIA = 'paid_media';
+
+    /**
      * Игра.
      *
      * @var string
@@ -388,6 +395,7 @@ abstract class MessageType
             static::AUDIO,
             static::ANIMATION,
             static::DOCUMENT,
+            static::PAID_MEDIA,
             static::GAME ,
             static::PHOTO,
             static::STICKER,
