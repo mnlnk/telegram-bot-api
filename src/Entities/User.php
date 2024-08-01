@@ -22,6 +22,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  * @method   bool|null getCanReadAllGroupMessages() (+) Для бота отключен режим приватности. Возвращается только в Api::getMe().
  * @method   bool|null getSupportsInlineQueries()   (+) Бот поддерживает встроенные запросы. Возвращается только в Api::getMe().
  * @method   bool|null getCanConnectToBusiness()    (+) Бота можно подключить к аккаунту Телеграм Бизнес для получения его сообщений. Возвращается только в Api::getMe().
+ * @method   bool|null getHasMainWebApp()           (+) У бота есть основное веб-приложение. Возвращается только в Api::getMe().
  *
  * @method $this setId(int $id)                                        Уникальный идентификатор пользователя или бота.
  * @method $this setIsBot(bool $isBot)                                 Пользователь ботом.
