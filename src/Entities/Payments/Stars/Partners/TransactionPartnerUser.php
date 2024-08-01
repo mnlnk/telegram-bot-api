@@ -12,8 +12,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#transactionpartneruser
  *
- * @method string getType() Тип партнера по транзакции.
- * @method   User getUser() Объект с информация о пользователе.
+ * @method      string getType()               Тип партнера по транзакции.
+ * @method        User getUser()               Объект с информация о пользователе.
+ * @method string|null getInvoicePayload() (+) Полезная нагрузка счет-фактуры, указанная ботом.
  */
 #[Required([
     'type',
