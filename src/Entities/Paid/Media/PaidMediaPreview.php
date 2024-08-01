@@ -20,5 +20,13 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 ])]
 class PaidMediaPreview extends PaidMedia
 {
-    //
+    /**
+     * @inheritDoc
+     */
+    public function __construct(array $data)
+    {
+        $data['type'] = PaidMediaType::PREVIEW;
+
+        parent::__construct($data);
+    }
 }
