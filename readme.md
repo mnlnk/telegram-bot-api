@@ -1,4 +1,4 @@
-## Telegram Bot Api v2.3.0 ([7.8](https://core.telegram.org/bots/api#july-31-2024))
+## Telegram Bot Api v2.4.0 ([7.8](https://core.telegram.org/bots/api#july-31-2024))
 
 #### Описание:
 Библиотека для работы с [Bot API](https://core.telegram.org/api#bot-api) Telegram.
