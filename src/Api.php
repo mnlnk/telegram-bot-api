@@ -253,7 +253,8 @@ class Api
     public function pinChatMessage(
         int|string $chatId,
         int $messageId,
-        ?bool $disableNotification = null
+        ?bool $disableNotification = null,
+        ?string $businessConnectionId = null
     ): bool
     {
         return $this->call(func_get_args());
