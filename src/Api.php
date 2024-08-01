@@ -23,6 +23,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Media\InputMedia;
+use Manuylenko\Telegram\Bot\Api\Entities\Media\InputPaidMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\GameHighScore;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\LinkPreviewOptions;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
@@ -1018,6 +1019,36 @@ class Api
     ): Message
     {
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
+            'caption_entities',
+            'reply_parameters',
+            'reply_markup'
+        ]));
+    }
+
+    /**
+     * Отправляет платные медиа в чат канала.
+     *
+     * @link https://core.telegram.org/bots/api#sendpaidmedia
+     *
+     * @param InputPaidMedia[] $media
+     * @param MessageEntity[]|null $captionEntities
+     */
+    public function sendPaidMedia(
+        int|string $chatId,
+        int $starCount,
+        array $media, // <= 10
+        ?string $caption = null, // 0-1024
+        ?string $parseMode = null, // ParseMode::class
+        ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
+        ?bool $disableNotification = null,
+        ?bool $protectContent = null,
+        ?ReplyParameters $replyParameters = null,
+        ?KeyboardMarkup $replyMarkup = null
+    ): Message
+    {
+        return EntityFactory::make(Message::class, $this->call(func_get_args(), [
+            'media',
             'caption_entities',
             'reply_parameters',
             'reply_markup'

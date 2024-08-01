@@ -102,6 +102,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [sendContact()](https://core.telegram.org/bots/api#sendcontact) - Отправляет телефонный контакт.
 + [sendDice()](https://core.telegram.org/bots/api#senddice) - Отправляет игральную кость.
 + [sendDocument()](https://core.telegram.org/bots/api#senddocument) - Отправляет документ (файл).
++ [sendPaidMedia()](https://core.telegram.org/bots/api#sendpaidmedia) - Отправляет платные медиа в чат канала.
 + [sendMediaGroup()](https://core.telegram.org/bots/api#sendmediagroup) - Отправляет группу фотографий или видео в виде альбома.
 + [sendPhoto()](https://core.telegram.org/bots/api#sendphoto) - Отправляет фотографию.
 + [sendVideoNote()](https://core.telegram.org/bots/api#sendvideonote) - Отправляет видеозаметку.
