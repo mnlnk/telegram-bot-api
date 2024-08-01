@@ -13,6 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @see TransactionPartnerFragment
  * @see TransactionPartnerUser
+ * @see TransactionPartnerTelegramAds
  * @see TransactionPartnerOther
  */
 #[Concrete]
@@ -24,10 +25,11 @@ abstract class TransactionPartner extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            TransactionPartnerType::FRAGMENT => new TransactionPartnerFragment($data),
-            TransactionPartnerType::USER     => new TransactionPartnerUser($data),
-            TransactionPartnerType::OTHER    => new TransactionPartnerOther($data),
-            default                          => null
+            TransactionPartnerType::FRAGMENT     => new TransactionPartnerFragment($data),
+            TransactionPartnerType::USER         => new TransactionPartnerUser($data),
+            TransactionPartnerType::TELEGRAM_ADS => new TransactionPartnerTelegramAds($data),
+            TransactionPartnerType::OTHER        => new TransactionPartnerOther($data),
+            default                              => null
         };
     }
 }
