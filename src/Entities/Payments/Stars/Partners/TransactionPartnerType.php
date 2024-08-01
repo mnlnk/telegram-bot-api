@@ -25,6 +25,13 @@ abstract class TransactionPartnerType
     const USER = 'user';
 
     /**
+     * Транзакция с платформой Telegram Ads.
+     *
+     * @var string
+     */
+    const TELEGRAM_ADS = 'telegram_ads';
+
+    /**
      * Транзакция с неизвестным источником или получателем.
      *
      * @var string
@@ -43,6 +50,7 @@ abstract class TransactionPartnerType
         return [
             static::FRAGMENT,
             static::USER,
+            static::TELEGRAM_ADS,
             static::OTHER
         ];
     }
