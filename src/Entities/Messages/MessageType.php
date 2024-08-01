@@ -137,6 +137,13 @@ abstract class MessageType
     const SUCCESSFUL_PAYMENT = 'successful_payment';
 
     /**
+     * Сервисное сообщение о возвращенном платеже.
+     *
+     * @var string
+     */
+    const REFUNDED_PAYMENT = 'refunded_payment';
+
+    /**
      * Закрепленное сообщение.
      *
      * @var string
@@ -409,6 +416,7 @@ abstract class MessageType
             static::DICE,
             static::INVOICE,
             static::SUCCESSFUL_PAYMENT,
+            static::REFUNDED_PAYMENT,
             static::PINNED_MESSAGE,
             static::PASSPORT_DATA,
             static::WEB_APP_DATA,
