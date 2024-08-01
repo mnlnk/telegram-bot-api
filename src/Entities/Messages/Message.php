@@ -35,6 +35,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Passport\PassportData;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
+use Manuylenko\Telegram\Bot\Api\Entities\Payments\RefundedPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\SuccessfulPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
@@ -107,6 +108,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method      MaybeInaccessibleMessage|null getPinnedMessage()                 (+) Объект закрепленного сообщения.
  * @method                       Invoice|null getInvoice()                       (+) Объект с информацией о счете на оплату.
  * @method             SuccessfulPayment|null getSuccessfulPayment()             (+) Объект с информацией об успешном платеже.
+ * @method               RefundedPayment|null getRefundedPayment()               (+) Объект с информацией о возвращенном платеже.
  * @method                   UsersShared|null getUsersShared()                   (+) Объект с информацией о пользователях, которыми поделись с ботом.
  * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
@@ -174,6 +176,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'pinned_message' => MaybeInaccessibleMessage::class,
     'invoice' => Invoice::class,
     'successful_payment' => SuccessfulPayment::class,
+    'refunded_payment' => RefundedPayment::class,
     'users_shared' => UsersShared::class,
     'chat_shared' => ChatShared::class,
     'write_access_allowed' => WriteAccessAllowed::class,
@@ -352,6 +355,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isSuccessfulPayment(): bool
     {
         return $this->getType() == MessageType::SUCCESSFUL_PAYMENT;
+    }
+
+    /**
+     * Сервисное сообщение о возвращенном платеже.
+     */
+    public function isRefundedPayment(): bool
+    {
+        return $this->getType() == MessageType::REFUNDED_PAYMENT;
     }
 
     /**
