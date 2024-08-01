@@ -24,5 +24,13 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Video;
 ])]
 class PaidMediaVideo extends PaidMedia
 {
-    //
+    /**
+     * @inheritDoc
+     */
+    public function __construct(array $data)
+    {
+        $data['type'] = PaidMediaType::VIDEO;
+
+        parent::__construct($data);
+    }
 }
