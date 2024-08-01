@@ -49,6 +49,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method               string|null getInviteLink()                         (+) Основная ссылка-приглашение; для групп, супергрупп и чатов каналов.
  * @method              Message|null getPinnedMessage()                      (+) Объект самого последнего закрепленного сообщения (по дате отправки).
  * @method      ChatPermissions|null getPermissions()                        (+) Объект разрешений (прав) участников чата по умолчанию для групп и супергрупп.
+ * @method                 bool|null getCanSendPaidMedia()                   (+) Разрешено отправлять или пересылать платные медиа-сообщения в чат канала.
  * @method                  int|null getSlowModeDelay()                      (+) Минимально допустимая задержка между последовательными сообщениями, отправляемыми каждым непривилегированным пользователем; в секундах.
  * @method                  int|null getUnrestrictBoostCount()               (+) Минимальное количество бустов, которое необходимо добавить пользователю, не являющемуся администратором, чтобы игнорировать медленный режим и разрешения чата; для супергрупп.
  * @method                  int|null getMessageAutoDeleteTime()              (+) Время, по истечении которого все отправленные в чат сообщения будут автоматически удаляться; в секундах.
