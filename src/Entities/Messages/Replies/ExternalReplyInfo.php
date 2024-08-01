@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Venue;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Video;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\VideoNote;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Voice;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 
@@ -40,6 +41,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
  * @method          Animation|null getAnimation()          (+) Объект анимации.
  * @method              Audio|null getAudio()              (+) Объект аудиофайла.
  * @method           Document|null getDocument()           (+) Объект документа (файла).
+ * @method      PaidMediaInfo|null getPaidMedia()          (+) Объект платного медиафайла.
  * @method        PhotoSize[]|null getPhoto()              (+) Массив объектов фотографии, доступные размеры фотографии.
  * @method            Sticker|null getSticker()            (+) Объект стикера.
  * @method              Story|null getStory()              (+) Объект пересланной истории.
@@ -67,6 +69,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
     'animation' => Animation::class,
     'audio' => Audio::class,
     'document' => Document::class,
+    'paid_media' => PaidMediaInfo::class,
     'photo' => [PhotoSize::class],
     'sticker' => Sticker::class,
     'story' => Story::class,
