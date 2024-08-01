@@ -267,7 +267,7 @@ class Api
      */
     public function unpinChatMessage(
         int|string $chatId,
-        int $messageId,
+        ?int $messageId = null,
         ?string $businessConnectionId = null
     ): bool
     {
