@@ -24,5 +24,13 @@ use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 ])]
 class PaidMediaPhoto extends PaidMedia
 {
-    //
+    /**
+     * @inheritDoc
+     */
+    public function __construct(array $data)
+    {
+        $data['type'] = PaidMediaType::PHOTO;
+
+        parent::__construct($data);
+    }
 }
