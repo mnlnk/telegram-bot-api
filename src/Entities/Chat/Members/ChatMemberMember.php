@@ -12,8 +12,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#chatmembermember
  *
- * @method string getStatus() Статус участника чата.
- * @method   User getUser()   Объект с информацией о пользователе.
+ * @method   string getStatus()        Статус участника чата.
+ * @method     User getUser()          Объект с информацией о пользователе.
+ * @method int|null getUntilDate() (+) Дата истечения срока действия подписки пользователя; Unix-время.
  */
 #[Required([
     'status',
