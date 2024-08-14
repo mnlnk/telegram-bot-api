@@ -360,6 +360,20 @@ class Api
     }
 
     /**
+     * Редактирует ссылку-приглашение на подписку для канала.
+     *
+     * @link https://core.telegram.org/bots/api#editchatsubscriptioninvitelink
+     */
+    public function editChatSubscriptionInviteLink(
+        int|string $chatId,
+        string $inviteLink,
+        ?string $name = null // 0-32
+    ): ChatInviteLink
+    {
+        return EntityFactory::make(ChatInviteLink::class, $this->call(func_get_args()));
+    }
+
+    /**
      * Одобряет запрос на присоединение пользователя к чату.
      *
      * @link https://core.telegram.org/bots/api#approvechatjoinrequest

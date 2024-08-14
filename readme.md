@@ -55,6 +55,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [createChatInviteLink()](https://core.telegram.org/bots/api#createchatinvitelink) - Создает дополнительную ссылку для приглашения в чат.
 + [editChatInviteLink()](https://core.telegram.org/bots/api#editchatinvitelink) - Редактирует дополнительную пригласительную ссылку.
 + [createChatSubscriptionInviteLink()](https://core.telegram.org/bots/api#createchatsubscriptioninvitelink) - Создает ссылку-приглашение на подписку для канала.
++ [editChatSubscriptionInviteLink()](https://core.telegram.org/bots/api#editchatsubscriptioninvitelink) - Редактирует ссылку-приглашение на подписку для канала.
 + [approveChatJoinRequest()](https://core.telegram.org/bots/api#approvechatjoinrequest) - Одобряет запрос на присоединение пользователя к чату.
 + [declineChatJoinRequest()](https://core.telegram.org/bots/api#declinechatjoinrequest) - Отклоняет запрос на присоединение пользователя к чату.
 + [leaveChat()](https://core.telegram.org/bots/api#leavechat) - Выходит из группы, супергруппы или канала.
