@@ -31,6 +31,13 @@ abstract class ReactionType extends Entity
      */
     const CUSTOM_EMOJI = 'custom_emoji';
 
+    /**
+     * Платная реакция.
+     *
+     * @var string
+     */
+    const PAID = 'paid';
+
     # # #
 
     /**
@@ -41,6 +48,7 @@ abstract class ReactionType extends Entity
         return match ($data['type']) {
             ReactionType::EMOJI        => new ReactionTypeEmoji($data),
             ReactionType::CUSTOM_EMOJI => new ReactionTypeCustomEmoji($data),
+            ReactionType::PAID         => new ReactionTypePaid($data),
             default                    => null
         };
     }
