@@ -52,4 +52,20 @@ abstract class ReactionType extends Entity
             default                    => null
         };
     }
+
+    # # #
+
+    /**
+     * Типы реакций.
+     *
+     * @return string[]
+     */
+    public static function all(): array
+    {
+        return [
+            static::EMOJI,
+            static::CUSTOM_EMOJI,
+            static::PAID
+        ];
+    }
 }
