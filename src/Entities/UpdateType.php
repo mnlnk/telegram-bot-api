@@ -109,6 +109,13 @@ abstract class UpdateType
     const PRE_CHECKOUT_QUERY = 'pre_checkout_query';
 
     /**
+     * Покупка платного медиа.
+     *
+     * @var string
+     */
+    const PURCHASED_PAID_MEDIA = 'purchased_paid_media';
+
+    /**
      * Новое состояние опроса.
      *
      * @var string
@@ -181,6 +188,7 @@ abstract class UpdateType
             static::CALLBACK_QUERY,
             static::SHIPPING_QUERY,
             static::PRE_CHECKOUT_QUERY,
+            static::PURCHASED_PAID_MEDIA,
             static::POLL,
             static::POLL_ANSWER,
             static::MY_CHAT_MEMBER,
