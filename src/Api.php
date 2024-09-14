@@ -1068,6 +1068,7 @@ class Api
         int|string $chatId,
         int $starCount,
         array $media, // <= 10
+        ?string $payload = null, // 0-128
         ?string $caption = null, // 0-1024
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
