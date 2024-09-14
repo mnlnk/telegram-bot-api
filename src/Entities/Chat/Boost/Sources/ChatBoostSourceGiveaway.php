@@ -15,6 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method    string getSource()                Источник буста.
  * @method       int getGiveawayMessageId()     Идентификатор сообщения в чате с розыгрышем; сообщение могло быть уже удалено. Может быть 0, если сообщение еще не отправлено.
  * @method User|null getUser()              (+) Объект пользователя, выигравшего приз в розыгрыше призов, если таковой имеется.
+ * @method  int|null getPrizeStarCount()    (+) Количество Telegram Stars, которое будет разделено между победителями розыгрыша.
  * @method bool|null getIsUnclaimed()       (+) Розыгрыш состоялся, но не нашлось пользователя, выигравшего приз.
  */
 #[Required([
