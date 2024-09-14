@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method     bool|null getHasPublicWinners()              (+) Список победителей розыгрыша будет виден всем.
  * @method   string|null getPrizeDescription()              (+) Описание дополнительного приза розыгрыша.
  * @method string[]|null getCountryCodes()                  (+) Список двухбуквенных кодов стран ISO 3166-1 alpha-2, указывающих страны, из которых должны прибыть пользователи, имеющие право на участие в розыгрыше призов.
+ * @method      int|null getPrizeStarCount()                (+) Количество Telegram Stars, которое будет разделено между победителями розыгрыша.
  * @method      int|null getPremiumSubscriptionMonthCount() (+) Количество месяцев, в течение которых будет активна подписка Телеграм Премиум, выигранная в результате розыгрыша.
  */
 #[Required([
