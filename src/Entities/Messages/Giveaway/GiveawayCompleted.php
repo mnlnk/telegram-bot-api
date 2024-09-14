@@ -16,6 +16,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
  * @method          int getWinnerCount()             Количество победителей в розыгрыше.
  * @method     int|null getUnclaimedPrizeCount() (+) Количество нераспределенных призов.
  * @method Message|null getGiveawayMessage()     (+) Объект сообщения с завершенным розыгрышем, если оно (сообщение) не было удалено.
+ * @method    bool|null getIsStarGiveaway()      (+) Является розыгрышем Telegram Stars.
  */
 #[Required([
     'winner_count'
