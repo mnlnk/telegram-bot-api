@@ -15,6 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\PollAnswer;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\MessageReactionCountUpdated;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\MessageReactionUpdated;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaPurchased;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\PreCheckoutQuery;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
 use Manuylenko\Telegram\Bot\Api\Entities\Query\CallbackQuery;
@@ -41,6 +42,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
  * @method               CallbackQuery|null getCallbackQuery()         (+) Объект входящего запроса обратного вызова.
  * @method               ShippingQuery|null getShippingQuery()         (+) Объект входящего запроса на доставку.
  * @method            PreCheckoutQuery|null getPreCheckoutQuery()      (+) Объект входящего запроса предварительной проверки заказа.
+ * @method            PreCheckoutQuery|null getPurchasedPaidMedia()    (+) Объект покупки платного медиа с полезной нагрузкой.
  * @method                        Poll|null getPoll()                  (+) Объект нового состояние опроса.
  * @method                  PollAnswer|null getPollAnswer()            (+) Объект измененного ответа пользователя в не анонимном опросе.
  * @method           ChatMemberUpdated|null getMyChatMember()          (+) Объект обновленного статуса участника чата (самого бота).
@@ -67,6 +69,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
     'callback_query' => CallbackQuery::class,
     'shipping_query' => ShippingQuery::class,
     'pre_checkout_query' => PreCheckoutQuery::class,
+    'purchased_paid_media' => PaidMediaPurchased::class,
     'poll' => Poll::class,
     'poll_answer' => PollAnswer::class,
     'my_chat_member' => ChatMemberUpdated::class,
@@ -197,6 +200,14 @@ class Update extends Entity
     public function isPreCheckoutQuery(): bool
     {
         return $this->getType() == UpdateType::PRE_CHECKOUT_QUERY;
+    }
+
+    /**
+     * Покупка платного медиа.
+     */
+    public function isPurchasedPaidMedia(): bool
+    {
+        return $this->getType() == UpdateType::PURCHASED_PAID_MEDIA;
     }
 
     /**
