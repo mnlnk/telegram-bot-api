@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method         int getWinnerCount()                       Общее количество победителей в розыгрыше.
  * @method      User[] getWinners()                           Массив объектов пользователей (победителей) розыгрыша. Не больше 100.
  * @method    int|null getAdditionalChatCount()           (+) Количество других чатов, к которым пользователь должен был присоединиться, чтобы иметь право на участие в розыгрыше призов.
+ * @method    int|null getPrizeStarCount()                (+) Количество Telegram Stars, которое будет разделено между победителями розыгрыша.
  * @method    int|null getPremiumSubscriptionMonthCount() (+) Количество месяцев, в течение которых будет активна подписка Телеграм Премиум, выигранная в результате розыгрыша.
  * @method    int|null getUnclaimedPrizeCount()           (+) Количество нераспределенных призов.
  * @method   bool|null getOnlyNewMembers()                (+) На победу имели право только пользователи, присоединившиеся к чатам после начала розыгрыша.
