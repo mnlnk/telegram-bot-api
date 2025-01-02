@@ -161,6 +161,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [answerInlineQuery()](https://core.telegram.org/bots/api#answerinlinequery) - Отправляет ответ на встроенный запрос.
 + [answerWebAppQuery()](https://core.telegram.org/bots/api#answerwebappquery) - Отправляет сообщение о результате взаимодействия с веб-приложением.
 
+##### Мини-приложения
++ [savePreparedInlineMessage()](https://core.telegram.org/bots/api#savepreparedinlinemessage) - Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
+
 ##### Платежи
 + [sendInvoice()](https://core.telegram.org/bots/api#sendinvoice) - Отправляет счет на оплату.
 + [createInvoiceLink()](https://core.telegram.org/bots/api#createinvoicelink) - Создает ссылку для счета-фактуры.

@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Members\ChatMember;
 use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
 use Manuylenko\Telegram\Bot\Api\Entities\File;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
@@ -2011,6 +2012,29 @@ class Api
     ): SentWebAppMessage
     {
         return EntityFactory::make(SentWebAppMessage::class, $this->call(func_get_args(), [
+            'result'
+        ]));
+    }
+
+    #endregion
+
+    #region Mini Apps
+
+    /**
+     * Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
+     *
+     * @link https://core.telegram.org/bots/api#savepreparedinlinemessage
+     */
+    public function savePreparedInlineMessage(
+        int $userId,
+        InlineQueryResult $result,
+        ?bool $allowUserChats = null,
+        ?bool $allowBotChats = null,
+        ?bool $allowGroupChats = null,
+        ?bool $allowChannelChats = null
+    ): PreparedInlineMessage
+    {
+        return EntityFactory::make(PreparedInlineMessage::class, $this->call(func_get_args(), [
             'result'
         ]));
     }
