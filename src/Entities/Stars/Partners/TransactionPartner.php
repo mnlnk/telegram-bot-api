@@ -11,9 +11,11 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#transactionpartner
  *
- * @see TransactionPartnerFragment
  * @see TransactionPartnerUser
+ * @see TransactionPartnerAffiliateProgram
+ * @see TransactionPartnerFragment
  * @see TransactionPartnerTelegramAds
+ * @see TransactionPartnerTelegramApi
  * @see TransactionPartnerOther
  */
 #[Concrete]
