@@ -60,6 +60,13 @@ abstract class InlineKeyboardButtonType
     const SWITCH_INLINE_QUERY_CHOSEN_CHAT = 'switch_inline_query_chosen_chat';
 
     /**
+     * Кнопка, копирующая указанный текст в буфер обмена.
+     *
+     * @var string
+     */
+    const COPY_TEXT = 'copy_text';
+
+    /**
      * Кнопка с описанием игры, которая будет запущена, когда пользователь нажмет кнопку.
      *
      * @var string
@@ -90,6 +97,7 @@ abstract class InlineKeyboardButtonType
             static::SWITCH_INLINE_QUERY,
             static::SWITCH_INLINE_QUERY_CURRENT_CHAT,
             static::SWITCH_INLINE_QUERY_CHOSEN_CHAT,
+            static::COPY_TEXT,
             static::CALLBACK_GAME,
             static::PAY
         ];
