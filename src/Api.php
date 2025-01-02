@@ -993,6 +993,7 @@ class Api
         ?string $vcard = null, // 0-2048
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
