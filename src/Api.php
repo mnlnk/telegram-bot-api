@@ -2083,6 +2083,7 @@ class Api
         string $currency, // XTR // https://core.telegram.org/bots/payments#supported-currencies
         array $prices,
         ?int $subscriptionPeriod = null, // 2592000 (30 days)
+        ?string $businessConnectionId = null,
         ?string $providerToken = null,
         ?int $maxTipAmount = null, // https://core.telegram.org/bots/payments/currencies.json
         ?array $suggestedTipAmounts = null, // 1-4
