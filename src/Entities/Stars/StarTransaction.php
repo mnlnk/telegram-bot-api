@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Stars;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
-use Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Partners\TransactionPartner;
+use Manuylenko\Telegram\Bot\Api\Entities\Stars\Partners\TransactionPartner;
 
 /**
  * Представляет транзакцию Telegram Star.

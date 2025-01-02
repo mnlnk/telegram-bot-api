@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\Partners;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Stars\Partners;
 
 /**
  * Типы партнеров транзакции.
