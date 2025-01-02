@@ -10,6 +10,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostRemoved;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostUpdated;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatJoinRequest;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\ChatMemberUpdated;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\CallbackQuery;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\ChosenInlineResult;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQuery;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\PollAnswer;
@@ -18,9 +21,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\MessageReactionUpdate
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaPurchased;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\PreCheckoutQuery;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\CallbackQuery;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\ChosenInlineResult;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQuery;
 
 /**
  * Представляет входящее обновление.

@@ -19,6 +19,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\ForumTopic;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Members\ChatMember;
 use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
 use Manuylenko\Telegram\Bot\Api\Entities\File;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
@@ -41,8 +43,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Passport\Elements\Errors\PassportElemen
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\LabeledPrice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingOption;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Stars\StarTransactions;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\Inline\Result\InlineQueryResult;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\SentWebAppMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Update;
 use Manuylenko\Telegram\Bot\Api\Entities\User;

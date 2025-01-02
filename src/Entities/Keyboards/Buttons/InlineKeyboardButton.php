@@ -6,9 +6,9 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
+use Manuylenko\Telegram\Bot\Api\Entities\Inline\SwitchInlineQueryChosenChat;
 use Manuylenko\Telegram\Bot\Api\Entities\LoginUrl;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\CallbackGame;
-use Manuylenko\Telegram\Bot\Api\Entities\Query\SwitchInlineQueryChosenChat;
 use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
 
 /**
