@@ -28,6 +28,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Media\InputMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Media\InputPaidMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\GameHighScore;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Gifts;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\LinkPreviewOptions;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
@@ -1957,6 +1958,20 @@ class Api
     ): bool
     {
         return $this->call(func_get_args());
+    }
+
+    #endregion
+
+    #region Gifts
+
+    /**
+     * Получает список подарков, которые бот может отправить пользователям.
+     *
+     * @link https://core.telegram.org/bots/api#getavailablegifts
+     */
+    public function getAvailableGifts(): Gifts
+    {
+        return EntityFactory::make(Gifts::class, $this->call());
     }
 
     #endregion

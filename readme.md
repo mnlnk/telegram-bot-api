@@ -156,6 +156,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [deleteStickerSet()](https://core.telegram.org/bots/api#deletestickerset) - Удаляет набор стикеров, созданный ботом.
 + [deleteChatStickerSet()](https://core.telegram.org/bots/api#deletechatstickerset) - Удаляет набор стикеров для группы или супергруппы.
 
+##### Подарки
++ [getAvailableGifts()](https://core.telegram.org/bots/api#getavailablegifts) - Получает список подарков, которые бот может отправить пользователям.
+
 ##### Запросы
 + [answerCallbackQuery()](https://core.telegram.org/bots/api#answercallbackquery) - Отправляет ответ на запрос обратного вызова.
 + [answerInlineQuery()](https://core.telegram.org/bots/api#answerinlinequery) - Отправляет ответ на встроенный запрос.
