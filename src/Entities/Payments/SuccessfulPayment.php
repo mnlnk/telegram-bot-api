@@ -12,13 +12,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#successfulpayment
  *
- * @method         string getCurrency()                    Трех-буквенный код валюты (ISO 4217).
- * @method            int getTotalAmount()                 Общая цена товара в наименьших единицах валюты (целое число, а не число с плавающей запятой/двойное число).
- * @method         string getInvoicePayload()              Полезная нагрузка счет-фактуры, указанная ботом.
- * @method    string|null getShippingOptionId()        (+) Идентификатор варианта доставки, выбранный пользователем.
- * @method OrderInfo|null getOrderInfo()               (+) Объект с информацией о заказе, предоставленной пользователем.
- * @method         string getTelegramPaymentChargeId()     Идентификатор платежа в Телеграм.
- * @method         string getProviderPaymentChargeId()     Идентификатор платежа у поставщика.
+ * @method         string getCurrency()                       Трех-буквенный код валюты (ISO 4217).
+ * @method            int getTotalAmount()                    Общая цена товара в наименьших единицах валюты (целое число, а не число с плавающей запятой/двойное число).
+ * @method         string getInvoicePayload()                 Полезная нагрузка счет-фактуры, указанная ботом.
+ * @method       int|null getSubscriptionExpirationDate() (+) Дата окончания подписки по времени Unix; только для регулярных платежей.
+ * @method    string|null getShippingOptionId()           (+) Идентификатор варианта доставки, выбранный пользователем.
+ * @method OrderInfo|null getOrderInfo()                  (+) Объект с информацией о заказе, предоставленной пользователем.
+ * @method         string getTelegramPaymentChargeId()        Идентификатор платежа в Телеграм.
+ * @method         string getProviderPaymentChargeId()        Идентификатор платежа у поставщика.
  *
  * @see https://core.telegram.org/bots/payments#supported-currencies
  */
