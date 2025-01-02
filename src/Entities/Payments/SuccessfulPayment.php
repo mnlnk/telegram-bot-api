@@ -16,6 +16,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method            int getTotalAmount()                    Общая цена товара в наименьших единицах валюты (целое число, а не число с плавающей запятой/двойное число).
  * @method         string getInvoicePayload()                 Полезная нагрузка счет-фактуры, указанная ботом.
  * @method       int|null getSubscriptionExpirationDate() (+) Дата окончания подписки по времени Unix; только для регулярных платежей.
+ * @method      bool|null getIsRecurring()                (+) Платеж за подписку.
+ * @method      bool|null getIsFirstRecurring()           (+) Первый платеж за подписку.
  * @method    string|null getShippingOptionId()           (+) Идентификатор варианта доставки, выбранный пользователем.
  * @method OrderInfo|null getOrderInfo()                  (+) Объект с информацией о заказе, предоставленной пользователем.
  * @method         string getTelegramPaymentChargeId()        Идентификатор платежа в Телеграм.
