@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Manuylenko\Telegram\Bot\Api\Entities\Stars\Partners;
 
+use Manuylenko\Telegram\Bot\Api\Entities\AffiliateInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Gift;
@@ -14,13 +15,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#transactionpartneruser
  *
- * @method         string getType()                   Тип партнера по транзакции.
- * @method           User getUser()                   Объект с информацией о пользователе.
- * @method    string|null getInvoicePayload()     (+) Полезная нагрузка счет-фактуры, указанная ботом.
- * @method       int|null getSubscriptionPeriod() (+) Продолжительность платной подписки.
- * @method PaidMedia|null getPaidMedia()          (+) Массив объектов с информацией о платных медиа, купленных пользователем.
- * @method    string|null getPaidMediaPayload()   (+) Полезная нагрузка платного медиа, указанная ботом.
- * @method      Gift|null getGift()               (+) Объект подарка, отправленного пользователю ботом.
+ * @method             string getType()                   Тип партнера по транзакции.
+ * @method               User getUser()                   Объект с информацией о пользователе.
+ * @method AffiliateInfo|null getAffiliate()          (+) Объект с информацией о партнере, получившем комиссию по этой транзакции.
+ * @method        string|null getInvoicePayload()     (+) Полезная нагрузка счет-фактуры, указанная ботом.
+ * @method           int|null getSubscriptionPeriod() (+) Продолжительность платной подписки.
+ * @method     PaidMedia|null getPaidMedia()          (+) Массив объектов с информацией о платных медиа, купленных пользователем.
+ * @method        string|null getPaidMediaPayload()   (+) Полезная нагрузка платного медиа, указанная ботом.
+ * @method          Gift|null getGift()               (+) Объект подарка, отправленного пользователю ботом.
  */
 #[Required([
     'type',
@@ -28,6 +30,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
 ])]
 #[Depends([
     'user' => User::class,
+    'affiliate' => AffiliateInfo::class,
     'paid_media' => [PaidMedia::class],
     'gift' => Gift::class
 ])]
