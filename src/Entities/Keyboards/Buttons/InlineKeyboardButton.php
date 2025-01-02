@@ -26,6 +26,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
  * @method                      string|null getSwitchInlineQuery()            (+) Нажатие кнопки предложит пользователю выбрать один из своих чатов, открыть этот чат и вставить юзернейм бота и указанный встроенный запрос в поле ввода.
  * @method                      string|null getSwitchInlineQueryCurrentChat() (+) Нажатие кнопки вставит юзернейм бота и указанный встроенный запрос в поле ввода текущего чата.
  * @method SwitchInlineQueryChosenChat|null getSwitchInlineQueryChosenChat()  (+) Объект предложения пользователю выбрать один из своих чатов указанного типа, открыть этот чат и вставить юзернейм бота и указанный встроенный запрос в поле ввода.
+ * @method              CopyTextButton|null getCopyText()                     (+) Объект кнопки, копирующей указанный текст в буфер обмена.
  * @method                CallbackGame|null getCallbackGame()                 (+) Объект с описанием игры, которая будет запущена, когда пользователь нажмет кнопку.
  * @method                        bool|null getPay()                          (+) Предложение оплатить.
  *
@@ -38,6 +39,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
     'web_app' => WebAppInfo::class,
     'login_url' => LoginUrl::class,
     'switch_inline_query_chosen_chat' => SwitchInlineQueryChosenChat::class,
+    'copy_text' => CopyTextButton::class,
     'callback_game' => CallbackGame::class
 ])]
 class InlineKeyboardButton extends Button
@@ -48,7 +50,7 @@ class InlineKeyboardButton extends Button
     public static function make(
         string $text,
         string $type,
-        WebAppInfo|LoginUrl|SwitchInlineQueryChosenChat|CallbackGame|string|bool $value
+        WebAppInfo|LoginUrl|SwitchInlineQueryChosenChat|CopyTextButton|CallbackGame|string|bool $value
     ): static
     {
         return EntityFactory::make(static::class, [
@@ -120,6 +122,14 @@ class InlineKeyboardButton extends Button
     public static function makeSwitchInlineQueryChosenChat(string $text, SwitchInlineQueryChosenChat $switchInlineQueryChosenChat): static
     {
         return static::make($text, InlineKeyboardButtonType::SWITCH_INLINE_QUERY_CHOSEN_CHAT, $switchInlineQueryChosenChat);
+    }
+
+    /**
+     * Создает кнопку, копирующую указанный текст в буфер обмена.
+     */
+    public static function makeCopyText(string $text, CopyTextButton $copyTextButton): static
+    {
+        return static::make($text, InlineKeyboardButtonType::COPY_TEXT, $copyTextButton);
     }
 
     /**
@@ -211,11 +221,19 @@ class InlineKeyboardButton extends Button
     }
 
     /**
+     * Кнопка, копирующая указанный текст в буфер обмена.
+     */
+    public function isCopyText(): bool
+    {
+        return $this->getType() == InlineKeyboardButtonType::COPY_TEXT;  // 7
+    }
+
+    /**
      * Кнопка с описанием игры, которая будет запущена, когда пользователь нажмет кнопку.
      */
     public function isCallbackGame(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::CALLBACK_GAME;  // 7
+        return $this->getType() == InlineKeyboardButtonType::CALLBACK_GAME;  // 8
     }
 
     /**
@@ -223,6 +241,6 @@ class InlineKeyboardButton extends Button
      */
     public function isPay(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::PAY; // 8
+        return $this->getType() == InlineKeyboardButtonType::PAY; // 9
     }
 }
