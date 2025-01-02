@@ -1974,6 +1974,27 @@ class Api
         return EntityFactory::make(Gifts::class, $this->call());
     }
 
+    /**
+     * Отправляет подарок пользователю.
+     *
+     * @link https://core.telegram.org/bots/api#sendgift
+     *
+     * @param ?MessageEntity[] $textEntities
+     */
+    public function sendGift(
+        int $userId,
+        string $giftId,
+        ?bool $payForUpgrade = null,
+        ?string $text = null, // 0-255
+        ?string $textParseMode = null, // ParseMode::class
+        ?array $textEntities = null
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'text_entities'
+        ]);
+    }
+
     #endregion
 
     #region Queries

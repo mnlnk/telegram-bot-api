@@ -158,6 +158,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 
 ##### Подарки
 + [getAvailableGifts()](https://core.telegram.org/bots/api#getavailablegifts) - Получает список подарков, которые бот может отправить пользователям.
++ [sendGift()](https://core.telegram.org/bots/api#sendgift) - Отправляет подарок пользователю.
 
 ##### Запросы
 + [answerCallbackQuery()](https://core.telegram.org/bots/api#answercallbackquery) - Отправляет ответ на запрос обратного вызова.
