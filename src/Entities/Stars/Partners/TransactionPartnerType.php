@@ -11,18 +11,25 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Stars\Partners;
 abstract class TransactionPartnerType
 {
     /**
-     * Транзакция с Fragment.
-     *
-     * @var string
-     */
-    const FRAGMENT = 'fragment';
-
-    /**
      * Транзакция с пользователем.
      *
      * @var string
      */
     const USER = 'user';
+
+    /**
+     * Транзакция партнерской программы.
+     *
+     * @var string
+     */
+    const AFFILIATE_PROGRAM = 'affiliate_program';
+
+    /**
+     * Транзакция с Fragment.
+     *
+     * @var string
+     */
+    const FRAGMENT = 'fragment';
 
     /**
      * Транзакция с платформой Telegram Ads.
@@ -55,8 +62,9 @@ abstract class TransactionPartnerType
     public static function all(): array
     {
         return [
-            static::FRAGMENT,
             static::USER,
+            static::AFFILIATE_PROGRAM,
+            static::FRAGMENT,
             static::TELEGRAM_ADS,
             static::TELEGRAM_API,
             static::OTHER
