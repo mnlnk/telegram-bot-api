@@ -125,7 +125,7 @@ class Api
     }
 
     /**
-     * Результатом вызова является сообщение или булевое значение.
+     * Результат вызова является сообщением или булевым значением.
      */
     protected function returnMessageOrBool(array|bool $data): Message|bool
     {
