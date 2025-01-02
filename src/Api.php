@@ -1080,6 +1080,7 @@ class Api
         ?bool $showCaptionAboveMedia = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?bool $allowPaidBroadcast = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
