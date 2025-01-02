@@ -2415,7 +2415,7 @@ class Api
      * @link https://core.telegram.org/bots/api#getuserprofilephotos
      */
     public function getUserProfilePhotos(
-        string $userId,
+        int $userId,
         ?int $offset = null,
         ?int $limit = null // 1-100 (100)
     ): UserProfilePhotos
