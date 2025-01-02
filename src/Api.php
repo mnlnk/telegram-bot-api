@@ -2424,6 +2424,20 @@ class Api
     }
 
     /**
+     * Изменяет эмодзи статус пользователя.
+     *
+     * @link https://core.telegram.org/bots/api#setuseremojistatus
+     */
+    public function setUserEmojiStatus(
+        int $userId,
+        ?string $emojiStatusCustomEmojiId = null,
+        ?int $emojiStatusExpirationDate = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
      * Закрывает экземпляр бота перед его перемещением с одного локального сервера на другой.
      *
      * @link https://core.telegram.org/bots/api#close
