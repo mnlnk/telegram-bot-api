@@ -32,6 +32,13 @@ abstract class TransactionPartnerType
     const TELEGRAM_ADS = 'telegram_ads';
 
     /**
+     * Транзакция с оплатой платного вещания.
+     *
+     * @var string
+     */
+    const TELEGRAM_API = 'telegram_api';
+
+    /**
      * Транзакция с неизвестным источником или получателем.
      *
      * @var string
@@ -51,6 +58,7 @@ abstract class TransactionPartnerType
             static::FRAGMENT,
             static::USER,
             static::TELEGRAM_ADS,
+            static::TELEGRAM_API,
             static::OTHER
         ];
     }
