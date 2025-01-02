@@ -168,6 +168,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [answerShippingQuery()](https://core.telegram.org/bots/api#answershippingquery) - Отправляет ответ на запрос доставки.
 + [getStarTransactions()](https://core.telegram.org/bots/api#getstartransactions) - Получает транзакции Telegram Star в хронологическом порядке.
 + [refundStarPayment()](https://core.telegram.org/bots/api#refundstarpayment) - Возвращает успешный платеж в Telegram Stars.
++ [editUserStarSubscription()](https://core.telegram.org/bots/api#edituserstarsubscription) - Отменяет или повторно включает продление оплаченной подписки в Telegram Stars.
 
 ##### Конфигурация бота
 + [getMe()](https://core.telegram.org/bots/api#getme) - Получает основную информацию о боте.

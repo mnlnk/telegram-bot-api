@@ -2167,6 +2167,20 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Отменяет или повторно включает продление оплаченной подписки в Telegram Stars.
+     *
+     * @link https://core.telegram.org/bots/api#edituserstarsubscription
+     */
+    public function editUserStarSubscription(
+        int $userId,
+        string $telegramPaymentChargeId,
+        bool $isCanceled // true - отменить, false - повторно включить
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Passport
