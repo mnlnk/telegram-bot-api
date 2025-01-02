@@ -239,9 +239,9 @@ abstract class Entity
     /**
      * Создает объект сущности из массива аргументов.
      */
-    protected static function fromArgs(array $args): static
+    protected static function fromArgs(array $args, string $method = 'make'): static
     {
-        return EntityFactory::make(static::class, Utils::getFuncArgs(static::class, 'make', $args));
+        return EntityFactory::make(static::class, Utils::getFuncArgs(static::class, $method, $args));
     }
 
     #endregion
