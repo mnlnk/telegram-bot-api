@@ -25,9 +25,10 @@ abstract class TransactionPartner extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            TransactionPartnerType::FRAGMENT     => new TransactionPartnerFragment($data),
             TransactionPartnerType::USER         => new TransactionPartnerUser($data),
+            TransactionPartnerType::FRAGMENT     => new TransactionPartnerFragment($data),
             TransactionPartnerType::TELEGRAM_ADS => new TransactionPartnerTelegramAds($data),
+            TransactionPartnerType::TELEGRAM_API => new TransactionPartnerTelegramApi($data),
             TransactionPartnerType::OTHER        => new TransactionPartnerOther($data),
             default                              => null
         };
