@@ -2021,6 +2021,20 @@ class Api
     #region Mini Apps
 
     /**
+     * Изменяет эмодзи статус пользователя.
+     *
+     * @link https://core.telegram.org/bots/api#setuseremojistatus
+     */
+    public function setUserEmojiStatus(
+        int $userId,
+        ?string $emojiStatusCustomEmojiId = null,
+        ?int $emojiStatusExpirationDate = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
      * Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
      *
      * @link https://core.telegram.org/bots/api#savepreparedinlinemessage
@@ -2445,20 +2459,6 @@ class Api
     ): UserProfilePhotos
     {
         return EntityFactory::make(UserProfilePhotos::class, $this->call(func_get_args()));
-    }
-
-    /**
-     * Изменяет эмодзи статус пользователя.
-     *
-     * @link https://core.telegram.org/bots/api#setuseremojistatus
-     */
-    public function setUserEmojiStatus(
-        int $userId,
-        ?string $emojiStatusCustomEmojiId = null,
-        ?int $emojiStatusExpirationDate = null
-    ): bool
-    {
-        return $this->call(func_get_args());
     }
 
     /**
