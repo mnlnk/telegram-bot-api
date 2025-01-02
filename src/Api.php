@@ -1687,6 +1687,7 @@ class Api
         ?int $messageThreadId = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
