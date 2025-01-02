@@ -963,6 +963,7 @@ class Api
         ?bool $supportsStreaming = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
         ?ReplyParameters $replyParameters = null,
