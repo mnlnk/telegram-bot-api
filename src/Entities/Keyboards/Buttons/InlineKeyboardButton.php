@@ -175,7 +175,7 @@ class InlineKeyboardButton extends Button
      */
     public function isCallbackData(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::CALLBACK_DATA; // 1
+        return $this->getType() == InlineKeyboardButtonType::CALLBACK_DATA;
     }
 
     /**
@@ -183,17 +183,15 @@ class InlineKeyboardButton extends Button
      */
     public function isWebApp(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::WEB_APP; // 2
+        return $this->getType() == InlineKeyboardButtonType::WEB_APP;
     }
 
     /**
      * Кнопка авторизации пользователя.
-     *
-     * @return bool
      */
     public function isLoginUrl(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::LOGIN_URL; // 3
+        return $this->getType() == InlineKeyboardButtonType::LOGIN_URL;
     }
 
     /**
@@ -201,7 +199,7 @@ class InlineKeyboardButton extends Button
      */
     public function isSwitchInlineQuery(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY; // 4
+        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY;
     }
 
     /**
@@ -209,7 +207,7 @@ class InlineKeyboardButton extends Button
      */
     public function isSwitchInlineQueryCurrentChat(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY_CURRENT_CHAT; // 5
+        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY_CURRENT_CHAT;
     }
 
     /**
@@ -217,7 +215,7 @@ class InlineKeyboardButton extends Button
      */
     public function isSwitchInlineQueryChosenChat(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY_CHOSEN_CHAT; // 6
+        return $this->getType() == InlineKeyboardButtonType::SWITCH_INLINE_QUERY_CHOSEN_CHAT;
     }
 
     /**
@@ -225,7 +223,7 @@ class InlineKeyboardButton extends Button
      */
     public function isCopyText(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::COPY_TEXT;  // 7
+        return $this->getType() == InlineKeyboardButtonType::COPY_TEXT;
     }
 
     /**
@@ -233,7 +231,7 @@ class InlineKeyboardButton extends Button
      */
     public function isCallbackGame(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::CALLBACK_GAME;  // 8
+        return $this->getType() == InlineKeyboardButtonType::CALLBACK_GAME;
     }
 
     /**
@@ -241,6 +239,6 @@ class InlineKeyboardButton extends Button
      */
     public function isPay(): bool
     {
-        return $this->getType() == InlineKeyboardButtonType::PAY; // 9
+        return $this->getType() == InlineKeyboardButtonType::PAY;
     }
 }
