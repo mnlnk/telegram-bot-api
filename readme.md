@@ -171,6 +171,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 
 ##### Верификация
 + [verifyUser()](https://core.telegram.org/bots/api#verifyuser) - Проверяет пользователя от имени организации, которую представляет бот.
++ [verifyChat()](https://core.telegram.org/bots/api#verifyuser) - Проверяет чат от имени организации, которую представляет бот. 
 
 ##### Платежи
 + [sendInvoice()](https://core.telegram.org/bots/api#sendinvoice) - Отправляет счет на оплату.

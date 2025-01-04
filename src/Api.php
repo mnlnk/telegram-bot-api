@@ -2100,7 +2100,20 @@ class Api
      */
     public function verifyUser(
         int $userId,
-        ?string $customDescription = null
+        ?string $customDescription = null // 0-70
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
+     * Проверяет чат от имени организации, которую представляет бот.
+     *
+     * @link https://core.telegram.org/bots/api#verifychat
+     */
+    public function verifyChat(
+        int $userId,
+        ?string $customDescription = null // 0-70
     ): bool
     {
         return $this->call(func_get_args());
