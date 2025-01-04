@@ -2131,6 +2131,18 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Удаляет проверку у чата, который в данный момент проверен от имени организации, которую представляет бот.
+     *
+     * @link https://core.telegram.org/bots/api#removechatverification
+     */
+    public function removeChatVerification(
+        int $userId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Payments
