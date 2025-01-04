@@ -20,7 +20,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
  * @method       InputMessageContent getInputMessageContent()     Объект содержимого сообщения, которое будет отправлено.
  * @method InlineKeyboardMarkup|null getReplyMarkup()         (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
  * @method               string|null getUrl()                 (+) Url-адрес результата.
- * @method                 bool|null getHideUrl()             (+) Не отображать Url-адрес в сообщении.
  * @method               string|null getDescription()         (+) Короткое описание результата.
  * @method               string|null getThumbnailUrl()        (+) Url-адрес миниатюры результата.
  * @method                  int|null getThumbnailWidth()      (+) Ширина миниатюры.
@@ -31,7 +30,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
  * @method $this setInputMessageContent(InputMessageContent $inputMessageContent) Объект содержимого сообщения, которое будет отправлено.
  * @method $this setReplyMarkup(InlineKeyboardMarkup $replyMarkup)                Объект встроенной клавиатуры, прикрепленной к сообщению.
  * @method $this setUrl(string $url)                                              Url-адрес результата.
- * @method $this setHideUrl(bool $hideUrl)                                        Не отображать Url-адрес в сообщении.
  * @method $this setDescription(string $description)                              Короткое описание результата.
  * @method $this setThumbnailUrl(string $thumbnailUrl)                            Url-адрес миниатюры результата.
  * @method $this setThumbnailWidth(int $thumbnailWidth)                           Ширина миниатюры.
@@ -70,7 +68,6 @@ class InlineQueryResultResultArticle extends InlineQueryResult
         InputMessageContent $inputMessageContent,
         ?InlineKeyboardMarkup $replyMarkup = null,
         ?string $url = null,
-        ?bool $hideUrl = null,
         ?string $description = null,
         ?string $thumbnailUrl = null,
         ?int $thumbnailWidth = null,
