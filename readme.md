@@ -169,6 +169,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [setUserEmojiStatus()](https://core.telegram.org/bots/api#setuseremojistatus) - Изменяет эмодзи статус пользователя.
 + [savePreparedInlineMessage()](https://core.telegram.org/bots/api#savepreparedinlinemessage) - Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
 
+##### Верификация
++ [verifyUser()](https://core.telegram.org/bots/api#verifyuser) - Проверяет пользователя от имени организации, которую представляет бот.
+
 ##### Платежи
 + [sendInvoice()](https://core.telegram.org/bots/api#sendinvoice) - Отправляет счет на оплату.
 + [createInvoiceLink()](https://core.telegram.org/bots/api#createinvoicelink) - Создает ссылку для счета-фактуры.

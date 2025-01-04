@@ -2091,6 +2091,23 @@ class Api
 
     #endregion
 
+    #region Verification
+
+    /**
+     * Проверяет пользователя от имени организации, которую представляет бот.
+     *
+     * @link https://core.telegram.org/bots/api#verifyuser
+     */
+    public function verifyUser(
+        int $userId,
+        ?string $customDescription = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    #endregion
+
     #region Payments
 
     /**
