@@ -1,4 +1,4 @@
-## Telegram Bot Api v3.0.0 ([8.2](https://core.telegram.org/bots/api-changelog#january-1-2025))
+## Telegram Bot Api v3.1.0 ([8.2](https://core.telegram.org/bots/api-changelog#january-1-2025))
 
 #### Описание:
 Библиотека для работы с [Bot API](https://core.telegram.org/api#bot-api) Telegram.
