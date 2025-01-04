@@ -2107,6 +2107,18 @@ class Api
     }
 
     /**
+     * Удаляет проверку у пользователя, который в данный момент проверен от имени организации, которую представляет бот.
+     *
+     * @link https://core.telegram.org/bots/api#removeuserverification
+     */
+    public function removeUserVerification(
+        int $userId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
      * Проверяет чат от имени организации, которую представляет бот.
      *
      * @link https://core.telegram.org/bots/api#verifychat

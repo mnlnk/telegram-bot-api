@@ -171,6 +171,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 
 ##### Верификация
 + [verifyUser()](https://core.telegram.org/bots/api#verifyuser) - Проверяет пользователя от имени организации, которую представляет бот.
++ [removeUserVerification()](https://core.telegram.org/bots/api#removeuserverification) - Удаляет проверку у пользователя.
 + [verifyChat()](https://core.telegram.org/bots/api#verifyuser) - Проверяет чат от имени организации, которую представляет бот. 
 
 ##### Платежи
