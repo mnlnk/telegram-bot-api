@@ -11,11 +11,11 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction;
 abstract class ReactionEmoji
 {
     /**
-     * Эмоджи реакций.
+     * Набор доступных эмоджи реакций.
      *
      * @return string[]
      */
-    public static function all(): array
+    public static function getAvailable(): array
     {
         return [
             '👍', '👎', '❤', '🔥', '🥰', '👏', '😁', '🤔', '🤯', '😱',
