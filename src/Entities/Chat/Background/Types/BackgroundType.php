@@ -72,11 +72,11 @@ abstract class BackgroundType extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            static::FILL => new BackgroundTypeFill($data),
-            static::WALLPAPER => new BackgroundTypeWallpaper($data),
-            static::PATTERN => new BackgroundTypePattern($data),
+            static::FILL       => new BackgroundTypeFill($data),
+            static::WALLPAPER  => new BackgroundTypeWallpaper($data),
+            static::PATTERN    => new BackgroundTypePattern($data),
             static::CHAT_THEME => new BackgroundTypeChatTheme($data),
-            default => null
+            default            => null
         };
     }
 }
