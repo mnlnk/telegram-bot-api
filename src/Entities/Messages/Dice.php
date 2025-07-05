@@ -27,7 +27,7 @@ class Dice extends Entity
      */
     public function isDarts(): bool
     {
-        return $this->getEmoji() == DEmoji::DARTS;
+        return $this->getEmoji() == DiceEmoji::DARTS;
     }
 
     /**
@@ -37,7 +37,7 @@ class Dice extends Entity
      */
     public function isDice(): bool
     {
-        return $this->getEmoji() == DEmoji::DICE;
+        return $this->getEmoji() == DiceEmoji::DICE;
     }
 
     /**
@@ -47,7 +47,7 @@ class Dice extends Entity
      */
     public function isBasketball(): bool
     {
-        return $this->getEmoji() == DEmoji::BASKETBALL;
+        return $this->getEmoji() == DiceEmoji::BASKETBALL;
     }
 
     /**
@@ -57,7 +57,7 @@ class Dice extends Entity
      */
     public function isBowling(): bool
     {
-        return $this->getEmoji() == DEmoji::BOWLING;
+        return $this->getEmoji() == DiceEmoji::BOWLING;
     }
 
     /**
@@ -67,7 +67,7 @@ class Dice extends Entity
      */
     public function isFootball(): bool
     {
-        return $this->getEmoji() == DEmoji::FOOTBALL;
+        return $this->getEmoji() == DiceEmoji::FOOTBALL;
     }
 
     /**
@@ -77,6 +77,6 @@ class Dice extends Entity
      */
     public function isSlotMachine(): bool
     {
-        return $this->getEmoji() == DEmoji::SLOT_MACHINE;
+        return $this->getEmoji() == DiceEmoji::SLOT_MACHINE;
     }
 }

@@ -8,7 +8,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages;
  *
  * @link https://core.telegram.org/bots/api#dice
  */
-abstract class DEmoji
+abstract class DiceEmoji
 {
     /**
      * Дартс. [1-6]

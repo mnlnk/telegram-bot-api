@@ -1016,7 +1016,7 @@ class Api
      */
     public function sendDice(
         int|string $chatId,
-        ?string $emoji = null, // DEmoji::class
+        ?string $emoji = null, // DiceEmoji::class
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
