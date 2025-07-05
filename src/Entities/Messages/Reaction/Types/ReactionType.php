@@ -13,6 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @see ReactionTypeEmoji
  * @see ReactionTypeCustomEmoji
+ * @see ReactionTypePaid
  */
 #[Concrete]
 abstract class ReactionType extends Entity
