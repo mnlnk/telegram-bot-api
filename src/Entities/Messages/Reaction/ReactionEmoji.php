@@ -8,7 +8,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction;
  *
  * @link https://core.telegram.org/bots/api#reactiontypeemoji
  */
-abstract class REmoji
+abstract class ReactionEmoji
 {
     /**
      * Эмоджи реакций.
