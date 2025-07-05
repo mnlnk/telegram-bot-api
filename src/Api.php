@@ -1982,8 +1982,9 @@ class Api
      * @param ?MessageEntity[] $textEntities
      */
     public function sendGift(
-        int $userId,
         string $giftId,
+        ?int $userId = null,
+        int|string|null $chatId = null,
         ?bool $payForUpgrade = null,
         ?string $text = null, // 0-255
         ?string $textParseMode = null, // ParseMode::class
