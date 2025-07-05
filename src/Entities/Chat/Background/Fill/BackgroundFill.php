@@ -24,10 +24,10 @@ abstract class BackgroundFill extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            BackgroundFillType::SOLID => new BackgroundFillSolid($data),
-            BackgroundFillType::GRADIENT => new BackgroundFillGradient($data),
+            BackgroundFillType::SOLID             => new BackgroundFillSolid($data),
+            BackgroundFillType::GRADIENT          => new BackgroundFillGradient($data),
             BackgroundFillType::FREEFORM_GRADIENT => new BackgroundFillFreeformGradient($data),
-            default => null
+            default                               => null
         };
     }
 }
