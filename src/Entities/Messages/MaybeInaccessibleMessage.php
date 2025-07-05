@@ -20,7 +20,7 @@ abstract class MaybeInaccessibleMessage extends Entity
     /**
      * Конкретная реализация.
      */
-    protected static function getConcrete(array $data): static
+    public static function getConcrete(array $data): static
     {
         return $data['date'] === 0 ? new InaccessibleMessage($data) : new Message($data);
     }
