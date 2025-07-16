@@ -959,6 +959,8 @@ class Api
         ?int $width = null,
         ?int $height = null,
         InputFile|string|null $thumbnail = null, // JPEG, <= 200kB, <= 320x320
+        InputFile|string|null $cover = null,
+        ?int $startTimestamp = null,
         ?string $caption = null, // 0-1024
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
