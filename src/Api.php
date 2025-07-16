@@ -2532,6 +2532,23 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Удаляет сообщения от имени бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#deletebusinessmessages
+     *
+     * @param int[] $messageIds // 1-100
+     */
+    public function deleteBusinessMessages(
+        string $businessConnectionId,
+        array $messageIds
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'message_ids'
+        ]);
+    }
+
     #endregion
 
     #region Other
