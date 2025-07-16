@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Media;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
@@ -9,38 +9,32 @@ use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 
 /**
- * Представляет отправляемое видео.
+ * Представляет отправляемый файл анимации (видео GIF или H.264/MPEG-4 AVC без звука).
  *
- * @link https://core.telegram.org/bots/api#inputmediavideo
+ * @link https://core.telegram.org/bots/api#inputmediaanimation
  *
  * @method                string getType()                      Тип результата.
  * @method                string getMedia()                     Медиа-файл.
  * @method InputFile|string|null getThumbnail()             (+) Миниатюра.
- * @method           string|null getCover()                 (+) Обложка видео.
- * @method              int|null getStartTimestamp()        (+) Начальная временная метка для видео.
  * @method           string|null getCaption()               (+) Подпись файла.
  * @method           string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.
  * @method  MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
  * @method             bool|null getShowCaptionAboveMedia() (+) Показывать подпись над медиа.
- * @method              int|null getWidth()                 (+) Ширина видео.
- * @method              int|null getHeight()                (+) Высота видео.
- * @method              int|null getDuration()              (+) Продолжительность видео в секундах.
- * @method             bool|null getSupportsStreaming()     (+) Подходит для потоковой передачи.
+ * @method              int|null getWidth()                 (+) Ширина анимации.
+ * @method              int|null getHeight()                (+) Высота анимации.
+ * @method              int|null getDuration()              (+) Продолжительность анимации в секундах.
  * @method             bool|null getHasSpoiler()            (+) Закрыто анимацией спойлера.
  *
  * @method $this setMedia(string $media)                               Медиа-файл.
  * @method $this setThumbnail(InputFile|string $thumbnail)             Миниатюра.
- * @method $this setCover(string $cover)                               Обложка видео.
- * @method $this setStartTimestamp(int $startTimestamp)                Начальная временная метка для видео.
  * @method $this setCaption(string $caption)                           Подпись файла.
  * @method $this setParseMode(string $parseMode)                       Режим разбора специальных сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)  Массив объектов специальных сущностей, появляющихся в подписи.
  * @method $this setShowCaptionAboveMedia(bool $showCaptionAboveMedia) Показывать подпись над медиа.
- * @method $this setWidth(int $width)                                  Ширина видео.
- * @method $this setHeight(int $height)                                Высота видео.
- * @method $this setDuration(int $duration)                            Продолжительность видео в секундах.
- * @method $this setSupportsStreaming(bool $supportsStreaming)         Подходит для потоковой передачи.
- * @method $this setHasSpoiler(bool $hasSpoiler)                       Закрывать анимацией спойлера.
+ * @method $this setWidth(int $width)                                  Ширина анимации.
+ * @method $this setHeight(int $height)                                Высота анимации.
+ * @method $this setDuration(int $duration)                            Продолжительность анимации в секундах.
+ * @method $this setHasSpoiler(bool $hasSpoiler)                       Закрыто анимацией спойлера.
  */
 #[Required([
     'type',
@@ -49,14 +43,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 #[Depends([
     'caption_entities' => [MessageEntity::class]
 ])]
-class InputMediaVideo extends InputMedia
+class InputMediaAnimation extends InputMedia
 {
     /**
      * @inheritDoc
      */
     public function __construct(array $data)
     {
-        $data['type'] = InputMediaType::VIDEO;
+        $data['type'] = InputMediaType::ANIMATION;
 
         parent::__construct($data);
     }
@@ -71,8 +65,6 @@ class InputMediaVideo extends InputMedia
     public static function make(
         string $media,
         InputFile|string|null $thumbnail = null,
-        ?string $cover = null,
-        ?int $startTimestamp = null,
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
@@ -80,7 +72,6 @@ class InputMediaVideo extends InputMedia
         ?int $width = null,
         ?int $height = null,
         ?int $duration = null,
-        ?bool $supportsStreaming = null,
         ?bool $hasSpoiler = null
     ): static
     {

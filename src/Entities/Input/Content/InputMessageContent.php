@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Inline\Content;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Content;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Concrete;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;

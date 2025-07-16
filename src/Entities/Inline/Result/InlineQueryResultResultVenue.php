@@ -5,8 +5,8 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Inline\Result;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Inline\Content\InputMessageContent;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultType;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Content\InputMessageContent;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 
 /**

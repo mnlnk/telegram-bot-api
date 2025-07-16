@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Media;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 /**
  * Представляет типы содержимого мультимедийных сообщений.
