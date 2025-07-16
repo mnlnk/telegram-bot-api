@@ -12,6 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @link https://core.telegram.org/bots/api#transactionpartner
  *
  * @see TransactionPartnerUser
+ * @see TransactionPartnerChat
  * @see TransactionPartnerAffiliateProgram
  * @see TransactionPartnerFragment
  * @see TransactionPartnerTelegramAds
@@ -28,6 +29,7 @@ abstract class TransactionPartner extends Entity
     {
         return match ($data['type']) {
             TransactionPartnerType::USER              => new TransactionPartnerUser($data),
+            TransactionPartnerType::CHAT              => new TransactionPartnerChat($data),
             TransactionPartnerType::AFFILIATE_PROGRAM => new TransactionPartnerAffiliateProgram($data),
             TransactionPartnerType::FRAGMENT          => new TransactionPartnerFragment($data),
             TransactionPartnerType::TELEGRAM_ADS      => new TransactionPartnerTelegramAds($data),
