@@ -2549,6 +2549,20 @@ class Api
         ]);
     }
 
+    /**
+     * Изменяет имя и фамилию управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#setbusinessaccountname
+     */
+    public function setBusinessAccountName(
+        string $businessConnectionId,
+        string $firstName, // 1-64
+        ?string $lastName = null // 0-64
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other

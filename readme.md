@@ -202,6 +202,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [getBusinessConnection()](https://core.telegram.org/bots/api#getbusinessconnection) - Получает информацию о подключеннии бота к бизнес-аккаунту.
 + [readBusinessMessage()](https://core.telegram.org/bots/api#readbusinessmessage) - Отмечает входящее сообщение как прочитанное от имени бизнес-аккаунта.
 + [deleteBusinessMessages()](https://core.telegram.org/bots/api#deletebusinessmessages) - Удаляет сообщения от имени бизнес-аккаунта.
++ [setBusinessAccountName()](https://core.telegram.org/bots/api#setbusinessaccountname) - Изменяет имя и фамилию управляемого бизнес-аккаунта.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
