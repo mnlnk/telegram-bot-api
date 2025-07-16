@@ -18,6 +18,13 @@ abstract class TransactionPartnerType
     const USER = 'user';
 
     /**
+     * Транзакция с чатом.
+     *
+     * @var string
+     */
+    const CHAT = 'chat';
+
+    /**
      * Транзакция партнерской программы.
      *
      * @var string
@@ -63,6 +70,7 @@ abstract class TransactionPartnerType
     {
         return [
             static::USER,
+            static::CHAT,
             static::AFFILIATE_PROGRAM,
             static::FRAGMENT,
             static::TELEGRAM_ADS,
