@@ -13,6 +13,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  * @method      string getType()                  Тип медиа.
  * @method      string getMedia()                 Файл для отправки.
  * @method string|null getThumbnail()         (+) Миниатюра отправляемого файла.
+ * @method string|null getCover()             (+) Обложка видео.
+ * @method    int|null getStartTimestamp()    (+) Начальная временная метка для видео.
  * @method    int|null getWidth()             (+) Ширина видео.
  * @method    int|null getHeight()            (+) Высота видео.
  * @method    int|null getDuration()          (+) Продолжительность видео в секундах.
