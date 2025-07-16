@@ -14,23 +14,23 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#businessconnection
  *
- * @method string getId()         Уникальный идентификатор соединения.
- * @method   User getUser()       Объект пользователя бизнес-аккаунта, создавшего соединение.
- * @method    int getUserChatId() Идентификатор приватного чата с пользователем, создавшим соединение.
- * @method    int getDate()       Дата установления соединения по Unix-времени.
- * @method   bool getCanReply()   Бот может действовать от имени бизнес-аккаунта в чатах, которые были активны за последние 24 часа.
- * @method   bool getIsEnabled()  Соединение активно.
+ * @method                 string getId()             Уникальный идентификатор соединения.
+ * @method                   User getUser()           Объект пользователя бизнес-аккаунта, создавшего соединение.
+ * @method                    int getUserChatId()     Идентификатор приватного чата с пользователем, создавшим соединение.
+ * @method                    int getDate()           Дата установления соединения по Unix-времени.
+ * @method BusinessBotRights|null getRights()     (+) Объект доступных прав бизнес-бота.
+ * @method                   bool getIsEnabled()      Соединение активно.
  */
 #[Required([
     'id',
     'user',
     'user_chat_id',
     'date',
-    'can_reply',
     'is_enabled'
 ])]
 #[Depends([
-    'user' => User::class
+    'user' => User::class,
+    'rights' => BusinessBotRights::class
 ])]
 class BusinessConnection extends Entity implements UpdateContext
 {
