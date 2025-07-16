@@ -19,6 +19,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\ForumTopic;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Members\ChatMember;
 use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
 use Manuylenko\Telegram\Bot\Api\Entities\File;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\AcceptedGiftTypes;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
@@ -2617,6 +2618,22 @@ class Api
     ): bool
     {
         return $this->call(func_get_args());
+    }
+
+    /**
+     * Изменяет настройки конфиденциальности входящих подарков в управляемом бизнес-аккаунте.
+     *
+     * @link https://core.telegram.org/bots/api#setbusinessaccountgiftsettings
+     */
+    public function setBusinessAccountGiftSettings(
+        string $businessConnectionId,
+        bool $showGiftButton,
+        AcceptedGiftTypes $acceptedGiftTypes
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'accepted_gift_types'
+        ]);
     }
 
     #endregion
