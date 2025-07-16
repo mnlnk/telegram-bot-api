@@ -2576,6 +2576,19 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Изменяет описание управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#setbusinessaccountbio
+     */
+    public function setBusinessAccountBio(
+        string $businessConnectionId,
+        ?string $bio // 0-140
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
