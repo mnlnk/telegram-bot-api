@@ -2606,6 +2606,19 @@ class Api
         ]);
     }
 
+    /**
+     * Удаляет текущее фото профиля управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#removebusinessaccountprofilephoto
+     */
+    public function removeBusinessAccountProfilePhoto(
+        string $businessConnectionId,
+        ?bool $isPublic = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
