@@ -47,6 +47,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Passport\Elements\Errors\PassportElemen
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\LabeledPrice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingOption;
 use Manuylenko\Telegram\Bot\Api\Entities\SentWebAppMessage;
+use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarAmount;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarTransactions;
 use Manuylenko\Telegram\Bot\Api\Entities\Update;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
@@ -2634,6 +2635,18 @@ class Api
         return $this->call(func_get_args(), [
             'accepted_gift_types'
         ]);
+    }
+
+    /**
+     * Получает количество звёзд Телеграм, принадлежащих управляемому бизнес-аккаунту.
+     *
+     * @link https://core.telegram.org/bots/api#getbusinessaccountstarbalance
+     */
+    public function getBusinessAccountStarBalance(
+        string $businessConnectionId
+    ): StarAmount
+    {
+        return EntityFactory::make(StarAmount::class, $this->call(func_get_args()));
     }
 
     #endregion
