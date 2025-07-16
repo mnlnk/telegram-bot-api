@@ -14,7 +14,7 @@ class Required
     /**
      * Конструктор.
      */
-    public function __construct(protected array $required)
+    public function __construct(protected array $required = [])
     {
         //
     }
