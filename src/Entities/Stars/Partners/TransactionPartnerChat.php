@@ -9,7 +9,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Gift;
 
 /**
- * Представляет транзакцию с пользователем.
+ * Представляет транзакцию с чатом.
  *
  * @link https://core.telegram.org/bots/api#transactionpartnerchat
  *
