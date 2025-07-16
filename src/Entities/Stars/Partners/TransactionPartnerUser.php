@@ -6,7 +6,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Stars\Partners;
 use Manuylenko\Telegram\Bot\Api\Entities\AffiliateInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Messages\Gift;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\Media\PaidMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 
