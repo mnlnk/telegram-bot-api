@@ -2563,6 +2563,19 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Изменяет юзернейм управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#setbusinessaccountusername
+     */
+    public function setBusinessAccountUsername(
+        string $businessConnectionId,
+        ?string $username // 0-32
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
