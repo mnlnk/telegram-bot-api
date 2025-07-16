@@ -2649,6 +2649,19 @@ class Api
         return EntityFactory::make(StarAmount::class, $this->call(func_get_args()));
     }
 
+    /**
+     * Переводит звёзды Телеграм с баланса бизнес-аккаунта на баланс бота.
+     *
+     * @link https://core.telegram.org/bots/api#transferbusinessaccountstars
+     */
+    public function transferBusinessAccountStars(
+        string $businessConnectionId,
+        int $starCount // 1-10000
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
