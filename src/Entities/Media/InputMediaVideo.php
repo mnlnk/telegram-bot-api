@@ -16,6 +16,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  * @method                string getType()                      Тип результата.
  * @method                string getMedia()                     Медиа-файл.
  * @method InputFile|string|null getThumbnail()             (+) Миниатюра.
+ * @method           string|null getCover()                 (+) Обложка видео.
+ * @method              int|null getStartTimestamp()        (+) Начальная временная метка для видео.
  * @method           string|null getCaption()               (+) Подпись файла.
  * @method           string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.
  * @method  MessageEntity[]|null getCaptionEntities()       (+) Массив объектов специальных сущностей, появляющихся в подписи.
@@ -28,6 +30,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @method $this setMedia(string $media)                               Медиа-файл.
  * @method $this setThumbnail(InputFile|string $thumbnail)             Миниатюра.
+ * @method $this setCover(string $cover)                               Обложка видео.
+ * @method $this setStartTimestamp(int $startTimestamp)                Начальная временная метка для видео.
  * @method $this setCaption(string $caption)                           Подпись файла.
  * @method $this setParseMode(string $parseMode)                       Режим разбора специальных сущностей в подписи.
  * @method $this setCaptionEntities(MessageEntity[] $captionEntities)  Массив объектов специальных сущностей, появляющихся в подписи.
@@ -67,6 +71,8 @@ class InputMediaVideo extends InputMedia
     public static function make(
         string $media,
         InputFile|string|null $thumbnail = null,
+        ?string $cover = null,
+        ?int $startTimestamp = null,
         ?string $caption = null,
         ?string $parseMode = null,
         ?array $captionEntities = null,
