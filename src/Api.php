@@ -1379,6 +1379,7 @@ class Api
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
         ?bool $showCaptionAboveMedia = null,
+        ?int $videoStartTimestamp = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
