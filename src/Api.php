@@ -1331,6 +1331,7 @@ class Api
         int|string $fromChatId,
         int $messageId,
         ?int $messageThreadId = null,
+        ?int $videoStartTimestamp = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null
     ): Message
