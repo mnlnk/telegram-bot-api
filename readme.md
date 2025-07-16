@@ -205,6 +205,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [setBusinessAccountName()](https://core.telegram.org/bots/api#setbusinessaccountname) - Изменяет имя и фамилию управляемого бизнес-аккаунта.
 + [setBusinessAccountUsername()](https://core.telegram.org/bots/api#setbusinessaccountusername) - Изменяет юзернейм управляемого бизнес-аккаунта.
 + [setBusinessAccountBio()](https://core.telegram.org/bots/api#setbusinessaccountbio) - Изменяет описание управляемого бизнес-аккаунта.
++ [setBusinessAccountProfilePhoto()](https://core.telegram.org/bots/api#setbusinessaccountprofilephoto) - Изменяет фото профиля управляемого бизнес-аккаунта.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.

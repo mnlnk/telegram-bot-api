@@ -24,6 +24,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputPaidMedia;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Profile\InputProfilePhoto;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
@@ -2587,6 +2588,22 @@ class Api
     ): bool
     {
         return $this->call(func_get_args());
+    }
+
+    /**
+     * Изменяет фото профиля управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#setbusinessaccountprofilephoto
+     */
+    public function setBusinessAccountProfilePhoto(
+        string $businessConnectionId,
+        InputProfilePhoto $photo,
+        ?bool $isPublic = null
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'photo'
+        ]);
     }
 
     #endregion
