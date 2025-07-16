@@ -2518,6 +2518,20 @@ class Api
         return EntityFactory::make(BusinessConnection::class, $this->call(func_get_args()));
     }
 
+    /**
+     * Отмечает входящее сообщение как прочитанное от имени бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#readbusinessmessage
+     */
+    public function readBusinessMessage(
+        string $businessConnectionId,
+        int $chatId,
+        int $messageId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
