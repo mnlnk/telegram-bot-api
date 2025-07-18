@@ -35,6 +35,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\ProximityAlertTrigger
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\WriteAccessAllowed;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMessagePriceChanged;
 use Manuylenko\Telegram\Bot\Api\Entities\Passport\PassportData;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\RefundedPayment;
@@ -132,6 +133,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                      Giveaway|null getGiveaway()                      (+) Объект запланированного розыгрыша призов.
  * @method               GiveawayWinners|null getGiveawayWinners()               (+) Объект завершения розыгрыша с участием публичных победителей.
  * @method             GiveawayCompleted|null getGiveawayCompleted()             (+) Объект сервисного сообщения: розыгрыш завершен без публичных победителей.
+ * @method       PaidMessagePriceChanged|null getPaidMessagePriceChanged()       (+) Объект сервисного сообщения: в чате изменилась стоимость платных сообщений.
  * @method            VideoChatScheduled|null getVideoChatScheduled()            (+) Объект сервисного сообщения: видеочат запланирован.
  * @method              VideoChatStarted|null getVideoChatStarted()              (+) Объект сервисного сообщения: видеочат запущен.
  * @method                VideoChatEnded|null getVideoChatEnded()                (+) Объект сервисного сообщения: видеочат завершен.
@@ -201,6 +203,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'giveaway' => Giveaway::class,
     'giveaway_winners' => GiveawayWinners::class,
     'giveaway_completed' => GiveawayCompleted::class,
+    'paid_message_price_changed' => PaidMessagePriceChanged::class,
     'video_chat_scheduled' => VideoChatScheduled::class,
     'video_chat_started' => VideoChatStarted::class,
     'video_chat_ended' => VideoChatEnded::class,
@@ -626,6 +629,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isGiveawayCompleted(): bool
     {
         return $this->getType() == MessageType::GIVEAWAY_COMPLETED;
+    }
+
+    /**
+     * Сервисное сообщение: в чате изменилась стоимость платных сообщений.
+     */
+    public function isPaidMessagePriceChanged(): bool
+    {
+        return $this->getType() == MessageType::PAID_MESSAGE_PRICE_CHANGED;
     }
 
     /**
