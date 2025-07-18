@@ -218,6 +218,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
 + [editStory()](https://core.telegram.org/bots/api#editstory) - Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
++ [deleteStory()](https://core.telegram.org/bots/api#deletestory) - Удаляет историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.

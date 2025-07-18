@@ -2785,6 +2785,19 @@ class Api
         ]));
     }
 
+    /**
+     * Удаляет историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#deletestory
+     */
+    public function deleteStory(
+        string $businessConnectionId,
+        int $storyId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
