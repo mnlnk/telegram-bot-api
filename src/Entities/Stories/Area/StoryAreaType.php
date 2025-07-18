@@ -18,7 +18,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @see StoryAreaTypeUniqueGift
  */
 #[Concrete]
-class StoryAreaType extends Entity
+abstract class StoryAreaType extends Entity
 {
     /**
      * Локация.
