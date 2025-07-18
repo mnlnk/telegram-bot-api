@@ -19,6 +19,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatEnded;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\Game;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\Giveaway;
@@ -112,6 +113,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method               RefundedPayment|null getRefundedPayment()               (+) Объект с информацией о возвращенном платеже.
  * @method                   UsersShared|null getUsersShared()                   (+) Объект с информацией о пользователях, которыми поделись с ботом.
  * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
+ * @method                          Gift|null getGift()                          (+) Объект отправленного или полученного обычного подарка.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
  * @method            WriteAccessAllowed|null getWriteAccessAllowed()            (+) Объект сервисного сообщения: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
  * @method                  PassportData|null getPassportData()                  (+) Объект данных Телеграм Паспорт.
@@ -180,6 +182,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'refunded_payment' => RefundedPayment::class,
     'users_shared' => UsersShared::class,
     'chat_shared' => ChatShared::class,
+    'gift' => Gift::class,
     'write_access_allowed' => WriteAccessAllowed::class,
     'passport_data' => PassportData::class,
     'proximity_alert_triggered' => ProximityAlertTriggered::class,
@@ -492,6 +495,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isChatShared(): bool
     {
         return $this->getType() == MessageType::CHAT_SHARED;
+    }
+
+    /**
+     * Сервисное сообщение: отправлен или получен обычный подарок.
+     */
+    public function isGift(): bool
+    {
+        return $this->getType() == MessageType::GIFT;
     }
 
     /**
