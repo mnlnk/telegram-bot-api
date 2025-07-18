@@ -15,14 +15,15 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#transactionpartneruser
  *
- * @method             string getType()                   Тип партнера по транзакции.
- * @method               User getUser()                   Объект с информацией о пользователе.
- * @method AffiliateInfo|null getAffiliate()          (+) Объект с информацией о партнере, получившем комиссию по этой транзакции.
- * @method        string|null getInvoicePayload()     (+) Полезная нагрузка счет-фактуры, указанная ботом.
- * @method           int|null getSubscriptionPeriod() (+) Продолжительность платной подписки.
- * @method     PaidMedia|null getPaidMedia()          (+) Массив объектов с информацией о платных медиа, купленных пользователем.
- * @method        string|null getPaidMediaPayload()   (+) Полезная нагрузка платного медиа, указанная ботом.
- * @method          Gift|null getGift()               (+) Объект подарка, отправленного пользователю ботом.
+ * @method             string getType()                            Тип партнера по транзакции.
+ * @method               User getUser()                            Информация о пользователе.
+ * @method AffiliateInfo|null getAffiliate()                   (+) Информация о партнёре, получившем комиссию по этой транзакции.
+ * @method        string|null getInvoicePayload()              (+) Полезная нагрузка счет-фактуры, указанная ботом.
+ * @method           int|null getSubscriptionPeriod()          (+) Продолжительность платной подписки.
+ * @method     PaidMedia|null getPaidMedia()                   (+) Информация о платных медиа, купленных пользователем.
+ * @method        string|null getPaidMediaPayload()            (+) Полезная нагрузка платного медиа, указанная ботом.
+ * @method          Gift|null getGift()                        (+) Подарок, отправленный пользователю ботом.
+ * @method           int|null getPremiumSubscriptionDuration() (+) Количество месяцев, в течение которых будет активна подаренная подписка Телеграм Премиум.
  */
 #[Required([
     'type',
