@@ -38,6 +38,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\RefundedPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\SuccessfulPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
+use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
 use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 use Manuylenko\Telegram\Bot\Api\Entities\UsersShared;

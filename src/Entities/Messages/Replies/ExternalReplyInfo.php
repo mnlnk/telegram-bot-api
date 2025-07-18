@@ -20,7 +20,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Location;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Origin\MessageOrigin;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
-use Manuylenko\Telegram\Bot\Api\Entities\Messages\Story;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Venue;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Video;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\VideoNote;
@@ -28,6 +27,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Voice;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\Invoice;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
+use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
 
 /**
  * Представляет информацию о сообщении, на которое отвечают, которое может прийти из другого чата или темы форума.
