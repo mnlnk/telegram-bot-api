@@ -2008,6 +2008,49 @@ class Api
     }
 
     /**
+     * Конвертирует обычный подарок в звёзды Телеграм.
+     *
+     * @link https://core.telegram.org/bots/api#convertgifttostars
+     */
+    public function convertGiftToStars(
+        string $businessConnectionId,
+        string $ownedGiftId
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
+     * Преобразует обычный подарок в уникальный.
+     *
+     * @link https://core.telegram.org/bots/api#upgradegift
+     */
+    public function upgradeGift(
+        string $businessConnectionId,
+        string $ownedGiftId,
+        ?bool $keepOriginalDetails = null,
+        ?int $starCount = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
+     * Передает уникальный подарок (принадлежащий боту) другому пользователю.
+     *
+     * @link https://core.telegram.org/bots/api#transfergift
+     */
+    public function transferGift(
+        string $businessConnectionId,
+        string $ownedGiftId,
+        int $newOwnerChatId,
+        ?int $starCount = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    /**
      * Дарит подписку Телеграм Премиум указанному пользователю.
      *
      * @link https://core.telegram.org/bots/api#giftpremiumsubscription
@@ -2705,49 +2748,6 @@ class Api
     ): OwnedGifts
     {
         return EntityFactory::make(OwnedGifts::class, $this->call(func_get_args()));
-    }
-
-    /**
-     * Конвертирует обычный подарок в звёзды Телеграм.
-     *
-     * @link https://core.telegram.org/bots/api#convertgifttostars
-     */
-    public function convertGiftToStars(
-        string $businessConnectionId,
-        string $ownedGiftId
-    ): bool
-    {
-        return $this->call(func_get_args());
-    }
-
-    /**
-     * Преобразует обычный подарок в уникальный.
-     *
-     * @link https://core.telegram.org/bots/api#upgradegift
-     */
-    public function upgradeGift(
-        string $businessConnectionId,
-        string $ownedGiftId,
-        ?bool $keepOriginalDetails = null,
-        ?int $starCount = null
-    ): bool
-    {
-        return $this->call(func_get_args());
-    }
-
-    /**
-     * Передает уникальный подарок (принадлежащий боту) другому пользователю.
-     *
-     * @link https://core.telegram.org/bots/api#transfergift
-     */
-    public function transferGift(
-        string $businessConnectionId,
-        string $ownedGiftId,
-        int $newOwnerChatId,
-        ?int $starCount = null
-    ): bool
-    {
-        return $this->call(func_get_args());
     }
 
     #endregion
