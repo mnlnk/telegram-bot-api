@@ -256,6 +256,13 @@ abstract class MessageType
     const CHAT_SHARED = 'chat_shared';
 
     /**
+     * Сервисное сообщение: отправлен или получен обычный подарок.
+     *
+     * @var string
+     */
+    const GIFT = 'gift';
+
+    /**
      * Сервисное сообщение: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
      *
      * @var string
@@ -433,6 +440,7 @@ abstract class MessageType
             static::MIGRATE_FROM_CHAT_ID,
             static::USERS_SHARED,
             static::CHAT_SHARED,
+            static::GIFT,
             static::WRITE_ACCESS_ALLOWED,
             static::PROXIMITY_ALERT_TRIGGERED,
             static::BOOST_ADDED,
