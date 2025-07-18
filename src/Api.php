@@ -2760,6 +2760,31 @@ class Api
         ]));
     }
 
+    /**
+     * Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#editstory
+     *
+     * @param MessageEntity[]|null $captionEntities
+     * @param StoryArea[]|null $areas
+     */
+    public function editStory(
+        string $businessConnectionId,
+        int $storyId,
+        InputStoryContent $content,
+        ?string $caption = null, // 0-2048
+        ?string $parseMode = null, // ParseMode::class
+        ?array $captionEntities = null,
+        ?array $areas = null
+    ): Story
+    {
+        return EntityFactory::make(Story::class, $this->call(func_get_args(), [
+            'content',
+            'caption_entities',
+            'areas'
+        ]));
+    }
+
     #endregion
 
     #region Other
