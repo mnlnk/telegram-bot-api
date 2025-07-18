@@ -1,11 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Stars;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
+use Manuylenko\Telegram\Bot\Api\Entities\Entity;
+use Manuylenko\Telegram\Bot\Api\Entities\User;
 
 /**
  * Представляет информацию о партнере, получившем комиссию за эту транзакцию.
