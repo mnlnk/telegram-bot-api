@@ -28,6 +28,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputPaidMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Profile\InputProfilePhoto;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Story\InputStoryContent;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
@@ -50,6 +51,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingOption;
 use Manuylenko\Telegram\Bot\Api\Entities\SentWebAppMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarAmount;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarTransactions;
+use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
+use Manuylenko\Telegram\Bot\Api\Entities\Stories\StoryArea;
 use Manuylenko\Telegram\Bot\Api\Entities\Update;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 use Manuylenko\Telegram\Bot\Api\Entities\UserProfilePhotos;
@@ -2729,6 +2732,33 @@ class Api
     #endregion
 
     #region Stories
+
+    /**
+     * Публикует историю от имени управляемого бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#poststory
+     *
+     * @param MessageEntity[]|null $captionEntities
+     * @param StoryArea[]|null $areas
+     */
+    public function postStory(
+        string $businessConnectionId,
+        InputStoryContent $content,
+        int $activePeriod, // 6 * 3600, 12 * 3600, 86400 или 2 * 86400
+        ?string $caption = null,  // 0-2048
+        ?string $parseMode = null, // ParseMode::class
+        ?array $captionEntities = null,
+        ?array $areas = null,
+        ?bool $postToChatPage = null,
+        ?bool $protectContent = null
+    ): Story
+    {
+        return EntityFactory::make(Story::class, $this->call(func_get_args(), [
+            'content',
+            'caption_entities',
+            'areas'
+        ]));
+    }
 
     #endregion
 

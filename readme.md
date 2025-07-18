@@ -216,7 +216,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [transferGift()](https://core.telegram.org/bots/api#transfergift) - Передает уникальный подарок (принадлежащий боту) другому пользователю.
 
 ##### Истории
-
++ [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
