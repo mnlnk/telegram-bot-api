@@ -2711,6 +2711,21 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Передает уникальный подарок (принадлежащий боту) другому пользователю.
+     *
+     * @link https://core.telegram.org/bots/api#transfergift
+     */
+    public function transferGift(
+        string $businessConnectionId,
+        string $ownedGiftId,
+        int $newOwnerChatId,
+        ?int $starCount = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other

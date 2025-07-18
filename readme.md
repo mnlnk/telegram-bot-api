@@ -213,6 +213,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [getBusinessAccountGifts()](https://core.telegram.org/bots/api#getbusinessaccountgifts) - Получает список подарков, полученных и принадлежащих управляемому бизнес-аккаунту.
 + [convertGiftToStars()](https://core.telegram.org/bots/api#convertgifttostars) - Конвертирует обычный подарок в звёзды Телеграм.
 + [upgradeGift()](https://core.telegram.org/bots/api#upgradegift) - Преобразует обычный подарок в уникальный.
++ [transferGift()](https://core.telegram.org/bots/api#transfergift) - Передает уникальный подарок (принадлежащий боту) другому пользователю.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
