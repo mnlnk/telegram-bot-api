@@ -74,6 +74,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                          bool|null getIsFromOffline()                 (+) Сообщение было отправлено неявным действием, например, как бизнес-сообщение об отъезде или приветствие.
  * @method                        string|null getMediaGroupId()                  (+) Уникальный идентификатор группы мультимедийных сообщений, к которой принадлежит это сообщение.
  * @method                        string|null getAuthorSignature()               (+) Подпись автора поста для сообщений в каналах или пользовательский заголовок анонимного администратора группы.
+ * @method                           int|null getPaidStarCount()                 (+) Количество звёзд Телеграм, которыми отправитель сообщения заплатил за его отправку.
  * @method                        string|null getText()                          (+) Текст сообщения в формате UTF-8; для текстовых сообщений.
  * @method               MessageEntity[]|null getEntities()                      (+) Массив объектов специальных сущностей; для текстовых сообщений.
  * @method            LinkPreviewOptions|null getLinkPreviewOptions()            (+) Объект параметров, используемых для создания предварительного просмотра ссылки в сообщении.
