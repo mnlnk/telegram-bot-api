@@ -16,6 +16,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @link https://core.telegram.org/bots/api#transactionpartneruser
  *
  * @method             string getType()                            Тип партнера по транзакции.
+ * @method             string getTransactionType()                 Тип партнера по транзакции.
  * @method               User getUser()                            Информация о пользователе.
  * @method AffiliateInfo|null getAffiliate()                   (+) Информация о партнёре, получившем комиссию по этой транзакции.
  * @method        string|null getInvoicePayload()              (+) Полезная нагрузка счет-фактуры, указанная ботом.
@@ -27,6 +28,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  */
 #[Required([
     'type',
+    'transaction_type',
     'user'
 ])]
 #[Depends([
@@ -45,5 +47,46 @@ class TransactionPartnerUser extends TransactionPartner
         $data['type'] = TransactionPartnerType::USER;
 
         parent::__construct($data);
+    }
+
+
+    /**
+     * Платеж по счету.
+     */
+    public function isInvoicePaymentTransaction(): bool
+    {
+        return $this->getTransactionType() == TransactionType::INVOICE_PAYMENT;
+    }
+
+    /**
+     * Платеж за платное медиа.
+     */
+    public function isPaidMediaPaymentTransaction(): bool
+    {
+        return $this->getTransactionType() == TransactionType::PAID_MEDIA_PAYMENT;
+    }
+
+    /**
+     * Подарок отправленый ботом.
+     */
+    public function isGiftPurchaseTransaction(): bool
+    {
+        return $this->getTransactionType() == TransactionType::GIFT_PURCHASE;
+    }
+
+    /**
+     * Подписка Телеграм Премиум подареная ботом.
+     */
+    public function isPremiumPurchaseTransaction(): bool
+    {
+        return $this->getTransactionType() == TransactionType::PREMIUM_PURCHASE;
+    }
+
+    /**
+     * Прямой перевод с управляемого бизнес аккаунта.
+     */
+    public function isBusinessAccountTransferTransaction(): bool
+    {
+        return $this->getTransactionType() == TransactionType::BUSINESS_ACCOUNT_TRANSFER;
     }
 }
