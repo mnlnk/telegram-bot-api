@@ -263,6 +263,13 @@ abstract class MessageType
     const GIFT = 'gift';
 
     /**
+     * Сервисное сообщение: отправлен или получен уникальный подарок.
+     *
+     * @var string
+     */
+    const UNIQUE_GIFT = 'unique_gift';
+
+    /**
      * Сервисное сообщение: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
      *
      * @var string
@@ -441,6 +448,7 @@ abstract class MessageType
             static::USERS_SHARED,
             static::CHAT_SHARED,
             static::GIFT,
+            static::UNIQUE_GIFT,
             static::WRITE_ACCESS_ALLOWED,
             static::PROXIMITY_ALERT_TRIGGERED,
             static::BOOST_ADDED,
