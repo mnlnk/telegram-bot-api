@@ -15,6 +15,11 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method bool getLimitedGifts()        Принимаются лимитированые обычные подарки.
  * @method bool getUniqueGifts()         Принимаются уникальные подарки или подарки, которые можно бесплатно улучшить до уникальных.
  * @method bool getPremiumSubscription() Принимается подписка Telegram Premium.
+ *
+ * @method $this setUnlimitedGifts(bool $unlimitedGifts)           Принимаются неограниченные обычные подарки.
+ * @method $this setLimitedGifts(bool $limitedGifts)               Принимаются лимитированые обычные подарки.
+ * @method $this setUniqueGifts(bool $uniqueGifts)                 Принимаются уникальные подарки или подарки, которые можно бесплатно улучшить до уникальных.
+ * @method $this setPremiumSubscription(bool $premiumSubscription) Принимается подписка Telegram Premium.
  */
 #[Required([
     'unlimited_gifts',
@@ -24,5 +29,16 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 ])]
 class AcceptedGiftTypes extends Entity
 {
-    //
+    /**
+     * Создает объект сущности.
+     */
+    public static function make(
+        bool $unlimitedGifts,
+        bool $limitedGifts,
+        bool $uniqueGifts,
+        bool $premiumSubscription
+    ): static
+    {
+        return static::fromArgs(func_get_args());
+    }
 }
