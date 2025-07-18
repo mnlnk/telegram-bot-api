@@ -21,6 +21,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
 use Manuylenko\Telegram\Bot\Api\Entities\File;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\AcceptedGiftTypes;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gifts;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Owned\OwnedGifts;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
@@ -2660,6 +2661,26 @@ class Api
     ): bool
     {
         return $this->call(func_get_args());
+    }
+
+    /**
+     * Получает список подарков, полученных и принадлежащих управляемому бизнес-аккаунту.
+     *
+     * @link https://core.telegram.org/bots/api#getbusinessaccountgifts
+     */
+    public function getBusinessAccountGifts(
+        string $businessConnectionId,
+        ?bool $excludeUnsaved = null,
+        ?bool $excludeSaved = null,
+        ?bool $excludeUnlimited = null,
+        ?bool $excludeLimited = null,
+        ?bool $excludeUnique = null,
+        ?bool $sortByPrice = null,
+        ?string $offset = null,
+        ?int $limit = null // 1-100
+    ): OwnedGifts
+    {
+        return EntityFactory::make(OwnedGifts::class, $this->call(func_get_args()));
     }
 
     #endregion

@@ -210,6 +210,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [setBusinessAccountGiftSettings()](https://core.telegram.org/bots/api#setbusinessaccountgiftsettings) - Изменяет настройки конфиденциальности входящих подарков в управляемом бизнес-аккаунте.
 + [getBusinessAccountStarBalance()](https://core.telegram.org/bots/api#getbusinessaccountstarbalance) - Получает количество звёзд Телеграм, принадлежащих управляемому бизнес-аккаунту.
 + [transferBusinessAccountStars()](https://core.telegram.org/bots/api#transferbusinessaccountstars) - Переводит звёзды Телеграм с баланса бизнес-аккаунта на баланс бота.
++ [getBusinessAccountGifts()](https://core.telegram.org/bots/api#getbusinessaccountgifts) - Получает список подарков, полученных и принадлежащих управляемому бизнес-аккаунту.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
