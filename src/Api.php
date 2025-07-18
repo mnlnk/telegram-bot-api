@@ -2007,6 +2007,27 @@ class Api
         ]);
     }
 
+    /**
+     * Дарит подписку Телеграм Премиум указанному пользователю.
+     *
+     * @link https://core.telegram.org/bots/api#giftpremiumsubscription
+     *
+     * @param ?MessageEntity[] $textEntities
+     */
+    public function giftPremiumSubscription(
+        int $userId,
+        int $monthCount, // 3, 6, 12
+        int $starCount,
+        ?string $text = null, // 0-128
+        ?string $textParseMode = null, // ParseMode::class
+        ?array $textEntities = null
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'text_entities'
+        ]);
+    }
+
     #endregion
 
     #region Queries
