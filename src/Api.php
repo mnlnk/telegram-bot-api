@@ -2696,6 +2696,21 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Преобразует обычный подарок в уникальный.
+     *
+     * @link https://core.telegram.org/bots/api#upgradegift
+     */
+    public function upgradeGift(
+        string $businessConnectionId,
+        string $ownedGiftId,
+        ?bool $keepOriginalDetails = null,
+        ?int $starCount = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Other
