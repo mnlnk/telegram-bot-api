@@ -15,7 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @see InputStoryContentVideo
  */
 #[Concrete]
-class InputStoryContent extends Entity
+abstract class InputStoryContent extends Entity
 {
     /**
      * Конкретная реализация.
