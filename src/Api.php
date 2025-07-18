@@ -2303,7 +2303,7 @@ class Api
     }
 
     /**
-     * Получает транзакции Telegram Star в хронологическом порядке.
+     * Получает список транзакций Telegram Stars в хронологическом порядке.
      *
      * @link https://core.telegram.org/bots/api#refundstarpayment
      */
@@ -2316,7 +2316,7 @@ class Api
     }
 
     /**
-     * Возвращает успешный платеж в Telegram Stars.
+     * Возврат средств за успешный платеж в Telegram Stars.
      *
      * @link https://core.telegram.org/bots/api#refundstarpayment
      */
