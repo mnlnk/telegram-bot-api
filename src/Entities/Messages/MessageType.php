@@ -368,6 +368,13 @@ abstract class MessageType
     const GIVEAWAY_COMPLETED = 'giveaway_completed';
 
     /**
+     * Сервисное сообщение: в чате изменилась стоимость платных сообщений.
+     *
+     * @var string
+     */
+    const PAID_MESSAGE_PRICE_CHANGED = 'paid_message_price_changed';
+
+    /**
      * Сервисное сообщение: видеочат запланирован.
      *
      * @var string
@@ -463,6 +470,7 @@ abstract class MessageType
             static::GIVEAWAY,
             static::GIVEAWAY_WINNERS,
             static::GIVEAWAY_COMPLETED,
+            static::PAID_MESSAGE_PRICE_CHANGED,
             static::VIDEO_CHAT_SCHEDULED,
             static::VIDEO_CHAT_STARTED,
             static::VIDEO_CHAT_ENDED,
