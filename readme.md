@@ -215,6 +215,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [upgradeGift()](https://core.telegram.org/bots/api#upgradegift) - Преобразует обычный подарок в уникальный.
 + [transferGift()](https://core.telegram.org/bots/api#transfergift) - Передает уникальный подарок (принадлежащий боту) другому пользователю.
 
+##### Истории
+
+
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.
 

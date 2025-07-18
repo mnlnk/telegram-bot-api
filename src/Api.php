@@ -2728,6 +2728,10 @@ class Api
 
     #endregion
 
+    #region Stories
+
+    #endregion
+
     #region Other
 
     /**
