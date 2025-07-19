@@ -216,6 +216,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [transferBusinessAccountStars()](https://core.telegram.org/bots/api#transferbusinessaccountstars) - Переводит звёзды Телеграм с баланса бизнес-аккаунта на баланс бота.
 + [getBusinessAccountGifts()](https://core.telegram.org/bots/api#getbusinessaccountgifts) - Получает список подарков, полученных и принадлежащих управляемому бизнес-аккаунту.
 
+##### Список задач
+
+
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
 + [editStory()](https://core.telegram.org/bots/api#editstory) - Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
