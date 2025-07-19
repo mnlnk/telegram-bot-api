@@ -32,6 +32,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Input\Story\InputStoryContent;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\InputChecklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\GameHighScore;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\LinkPreviewOptions;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
@@ -2753,6 +2754,31 @@ class Api
     #endregion
 
     #region Checklist
+
+    /**
+     * Отправляет список задач (чеклист) от имени подключенного бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#sendchecklist
+     *
+     * @since 9.1
+     */
+    public function sendChecklist(
+        string $businessConnectionId,
+        int $chatId,
+        InputChecklist $checklist,
+        ?bool $disableNotification = null,
+        ?bool $protectContent = null,
+        ?string $messageEffectId = null,
+        ?ReplyParameters $replyParameters = null,
+        ?InlineKeyboardMarkup $replyMarkup = null
+    ): Message
+    {
+        return EntityFactory::make(Message::class, $this->call(func_get_args(),[
+            'checklist',
+            'reply_parameters',
+            'reply_markup'
+        ]));
+    }
 
     #endregion
 
