@@ -23,6 +23,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksDone;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\Game;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\Giveaway;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\GiveawayCompleted;
@@ -126,6 +127,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method       ProximityAlertTriggered|null getProximityAlertTriggered()       (+) Объект сервисного сообщения: пользователь в чате активировал оповещение о приближении другого пользователя во время
  * @method                ChatBoostAdded|null getBoostAdded()                    (+) Объект сервисного сообщения: пользователь забустил чат.
  * @method                ChatBackground|null getChatBackgroundSet()             (+) Объект сервисного сообщения: пользователь установил фон чата.
+ * @method            ChecklistTasksDone|null getChecklistTasksDone()            (+) Объект сервисного сообщения: некоторые задачи в контрольном списке отмечены как выполненные или невыполненные.
  * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Объект сервисного сообщения: тема форума создана.
  * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Объект сервисного сообщения: тема форума отредактирована.
  * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Объект сервисного сообщения: тема форума закрыта.
@@ -197,6 +199,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'proximity_alert_triggered' => ProximityAlertTriggered::class,
     'boost_added' => ChatBoostAdded::class,
     'chat_background_set' => ChatBackground::class,
+    'checklist_tasks_done' => ChecklistTasksDone::class,
     'forum_topic_created' => ForumTopicCreated::class,
     'forum_topic_edited' => ForumTopicEdited::class,
     'forum_topic_closed' => ForumTopicClosed::class,
@@ -561,6 +564,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isChatBackgroundSet(): bool
     {
         return $this->getType() == MessageType::CHAT_BACKGROUND_SET;
+    }
+
+    /**
+     * Сервисное сообщение: некоторые задачи в контрольном списке были отмечены как выполненные или невыполненные.
+     */
+    public function isChecklistTasksDone(): bool
+    {
+        return $this->getType() == MessageType::CHECKLIST_TASKS_DONE;
     }
 
     /**
