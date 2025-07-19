@@ -22,6 +22,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\Game;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\Giveaway;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\GiveawayCompleted;
@@ -93,6 +94,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method               MessageEntity[]|null getCaptionEntities()               (+) Массив объектов с информацией о специальных сущностях в подписи; для сообщений с подписью.
  * @method                          bool|null getShowCaptionAboveMedia()         (+) Показывать подпись над медиа в сообщении.
  * @method                          bool|null getHasMediaSpoiler()               (+) Медиа сообщение закрыто анимацией спойлера.
+ * @method                     Checklist|null getChecklist()                     (+) Объект с информацией о контрольном списке.
  * @method                       Contact|null getContact()                       (+) Объект с информацией о телефонном контакте.
  * @method                          Dice|null getDice()                          (+) Объект с информацией об игральной кости (кубик со случайным значением).
  * @method                          Game|null getGame()                          (+) Объект с информацией об игре.
@@ -171,6 +173,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'video_note' => VideoNote::class,
     'voice' => Voice::class,
     'caption_entities' => [MessageEntity::class],
+    'checklist' => Checklist::class,
     'contact' => Contact::class,
     'dice' => Dice::class,
     'game' => Game::class,
@@ -310,6 +313,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isVideoNote(): bool
     {
         return $this->getType() == MessageType::VIDEO_NOTE;
+    }
+
+    /**
+     * Контрольный список.
+     */
+    public function isChecklist(): bool
+    {
+        return $this->getType() == MessageType::CHECKLIST;
     }
 
     /**
