@@ -9,6 +9,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Animation;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Audio;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Contact;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Dice;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Document;
@@ -49,6 +50,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
  * @method          VideoNote|null getVideoNote()          (+) Объект видеозаметки.
  * @method              Voice|null getVoice()              (+) Объект голосового сообщения.
  * @method               bool|null getHasMediaSpoiler()    (+) Медиа-сообщение закрыто анимацией-спойлером.
+ * @method          Checklist|null getChecklist()          (+) Объект контрольного списка.
  * @method            Contact|null getContact()            (+) Объект контакта.
  * @method               Dice|null getDice()               (+) Объект игральной кости со случайным значением.
  * @method               Game|null getGame()               (+) Объект игры.
@@ -76,6 +78,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
     'video' => Video::class,
     'video_note' => VideoNote::class,
     'voice' => Voice::class,
+    'checklist' => Checklist::class,
     'contact' => Contact::class,
     'dice' => Dice::class,
     'game' => Game::class,
