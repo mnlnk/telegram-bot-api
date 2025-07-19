@@ -1,7 +1,10 @@
-## Telegram Bot Api v4.1.0 ([9.1](https://core.telegram.org/bots/api#july-3-2025))
+## Telegram Bot Api v4.1.0
 
 #### Описание:
-Библиотека для работы с [Bot API](https://core.telegram.org/api#bot-api) Telegram.
+Простая библиотека для работы с [API Телеграм ботов](https://core.telegram.org/api#bot-api).
+
+Написана на чистом PHP и не требует использования сторонних фреймворков.
+Полностью соответствует API версии [[9.1](https://core.telegram.org/bots/api)] от 3 июля 2025 года.
 
 #### Требования:
 + `PHP >= 8.0`
@@ -231,9 +234,9 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 
 ##### Разное
 + [getFile()](https://core.telegram.org/bots/api#getfile) - Получает основную информацию о файле и подготавливает его к загрузке.
-+ [getFileUrl()](https://core.telegram.org/bots/api#file) - (#) Получает URL-ссылку на файл.
++ [getFileUrl()](https://core.telegram.org/bots/api#file) - **(#)** Получает URL-ссылку на файл.
 + [getUserProfilePhotos()](https://core.telegram.org/bots/api#getuserprofilephotos) - Получает список всех изображений профиля пользователя.
 + [close()](https://core.telegram.org/bots/api#close) - Закрывает экземпляр бота перед перемещением его с одного локального ясервера на другой.
 + [logOut()](https://core.telegram.org/bots/api#logout) - Бот выходит с облачного сервера API бота перед локальным запуском бота.
 
-Методы отмеченые символом (#) отсутствуют в нативном API сервера, но реализованы в данной библиотеке.
+Методы отмеченые символом **(#)** отсутствуют в нативном API Телеграм, но реализованы в данной библиотеке.
