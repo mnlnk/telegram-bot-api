@@ -305,6 +305,13 @@ abstract class MessageType
     const CHAT_BACKGROUND_SET = 'chat_background_set';
 
     /**
+     * Сервисное сообщение: некоторые задачи в контрольном списке были отмечены как выполненные или невыполненные.
+     *
+     * @var string
+     */
+    const CHECKLIST_TASKS_DONE = 'checklist_tasks_done';
+
+    /**
      * Сервисное сообщение: тема форума создана.
      *
      * @var string
@@ -468,6 +475,7 @@ abstract class MessageType
             static::PROXIMITY_ALERT_TRIGGERED,
             static::BOOST_ADDED,
             static::CHAT_BACKGROUND_SET,
+            static::CHECKLIST_TASKS_DONE,
             static::FORUM_TOPIC_CREATED,
             static::FORUM_TOPIC_EDITED,
             static::FORUM_TOPIC_CLOSED,
