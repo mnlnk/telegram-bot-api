@@ -184,6 +184,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 + [createInvoiceLink()](https://core.telegram.org/bots/api#createinvoicelink) - Создает ссылку для счета-фактуры.
 + [answerPreCheckoutQuery()](https://core.telegram.org/bots/api#answerprecheckoutquery) - Отправляет ответ на запросы предварительной проверки заказа.
 + [answerShippingQuery()](https://core.telegram.org/bots/api#answershippingquery) - Отправляет ответ на запрос доставки.
++ [getMyStarBalance()](https://core.telegram.org/bots/api#getmystarbalance) - Получает текущий баланса звёзд Телеграм бота.
 + [getStarTransactions()](https://core.telegram.org/bots/api#getstartransactions) - Получает список транзакций Telegram Stars в хронологическом порядке.
 + [refundStarPayment()](https://core.telegram.org/bots/api#refundstarpayment) - Возврат средств за успешный платеж в Telegram Stars.
 + [editUserStarSubscription()](https://core.telegram.org/bots/api#edituserstarsubscription) - Отменяет или повторно включает продление оплаченной подписки в Telegram Stars.

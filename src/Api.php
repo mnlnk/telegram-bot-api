@@ -2347,6 +2347,18 @@ class Api
     }
 
     /**
+     * Получает текущий баланса звёзд Телеграм бота.
+     *
+     * @link https://core.telegram.org/bots/api#getmystarbalance
+     *
+     * @since 9.1
+     */
+    public function getMyStarBalance(): StarAmount
+    {
+        return EntityFactory::make(StarAmount::class, $this->call(func_get_args()));
+    }
+
+    /**
      * Получает список транзакций Telegram Stars в хронологическом порядке.
      *
      * @link https://core.telegram.org/bots/api#refundstarpayment
