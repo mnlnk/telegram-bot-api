@@ -2780,6 +2780,27 @@ class Api
         ]));
     }
 
+    /**
+     * Редактирует список задач (чеклист) от имени подключенного бизнес-аккаунта.
+     *
+     * @link https://core.telegram.org/bots/api#editmessagechecklist
+     *
+     * @since 9.1
+     */
+    public function editMessageChecklist(
+        string $businessConnectionId,
+        int $chatId,
+        ?string $messageId,
+        InputChecklist $checklist,
+        ?InlineKeyboardMarkup $replyMarkup = null
+    ): Message
+    {
+        return EntityFactory::make(Message::class, $this->call(func_get_args(),[
+            'checklist',
+            'reply_markup'
+        ]));
+    }
+
     #endregion
 
     #region Stories

@@ -218,6 +218,7 @@ $api->sendDocument('@channelname', InputFile::make('C:\Some\File.zip'));
 
 ##### Список задач
 + [sendChecklist()](https://core.telegram.org/bots/api#sendchecklist) - Отправляет список задач (чеклист) от имени подключенного бизнес-аккаунта.
++ [editMessageChecklist()](https://core.telegram.org/bots/api#editmessagechecklist) - Редактирует список задач (чеклист) от имени подключенного бизнес-аккаунта.
 
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
