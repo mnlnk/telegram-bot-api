@@ -312,6 +312,13 @@ abstract class MessageType
     const CHECKLIST_TASKS_DONE = 'checklist_tasks_done';
 
     /**
+     * Сервисное сообщение: задачи были добавлены в контрольный список.
+     *
+     * @var string
+     */
+    const CHECKLIST_TASKS_ADDED = 'checklist_tasks_added';
+
+    /**
      * Сервисное сообщение: тема форума создана.
      *
      * @var string
@@ -476,6 +483,7 @@ abstract class MessageType
             static::BOOST_ADDED,
             static::CHAT_BACKGROUND_SET,
             static::CHECKLIST_TASKS_DONE,
+            static::CHECKLIST_TASKS_ADDED,
             static::FORUM_TOPIC_CREATED,
             static::FORUM_TOPIC_EDITED,
             static::FORUM_TOPIC_CLOSED,
