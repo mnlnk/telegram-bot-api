@@ -319,6 +319,13 @@ abstract class MessageType
     const CHECKLIST_TASKS_ADDED = 'checklist_tasks_added';
 
     /**
+     * Сервисное сообщение: изменилась цена платных сообщений в соответствующем чате личных сообщений канала.
+     *
+     * @var string
+     */
+    const DIRECT_MESSAGE_PRICE_CHANGED = 'direct_message_price_changed';
+
+    /**
      * Сервисное сообщение: тема форума создана.
      *
      * @var string
@@ -484,6 +491,7 @@ abstract class MessageType
             static::CHAT_BACKGROUND_SET,
             static::CHECKLIST_TASKS_DONE,
             static::CHECKLIST_TASKS_ADDED,
+            static::DIRECT_MESSAGE_PRICE_CHANGED,
             static::FORUM_TOPIC_CREATED,
             static::FORUM_TOPIC_EDITED,
             static::FORUM_TOPIC_CLOSED,
