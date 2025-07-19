@@ -37,6 +37,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\MessageAutoDeleteTime
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\ProximityAlertTriggered;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\WriteAccessAllowed;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\DirectMessagePriceChanged;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMessagePriceChanged;
 use Manuylenko\Telegram\Bot\Api\Entities\Passport\PassportData;
@@ -130,6 +131,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                ChatBackground|null getChatBackgroundSet()             (+) Объект сервисного сообщения: пользователь установил фон чата.
  * @method            ChecklistTasksDone|null getChecklistTasksDone()            (+) Объект сервисного сообщения: некоторые задачи в контрольном списке отмечены как выполненные или невыполненные.
  * @method           ChecklistTasksAdded|null getChecklistTasksAdded()           (+) Объект сервисного сообщения: в контрольный список добавлены новые задачи.
+ * @method     DirectMessagePriceChanged|null getDirectMessagePriceChanged()     (+) Объект сервисного сообщения: изменилась цена платных сообщений в соответствующем чате личных сообщений канала.
  * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Объект сервисного сообщения: тема форума создана.
  * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Объект сервисного сообщения: тема форума отредактирована.
  * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Объект сервисного сообщения: тема форума закрыта.
@@ -203,6 +205,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'chat_background_set' => ChatBackground::class,
     'checklist_tasks_done' => ChecklistTasksDone::class,
     'checklist_tasks_added' => ChecklistTasksAdded::class,
+    'direct_message_price_changed' => DirectMessagePriceChanged::class,
     'forum_topic_created' => ForumTopicCreated::class,
     'forum_topic_edited' => ForumTopicEdited::class,
     'forum_topic_closed' => ForumTopicClosed::class,
@@ -583,6 +586,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isChecklistTasksAdded(): bool
     {
         return $this->getType() == MessageType::CHECKLIST_TASKS_ADDED;
+    }
+
+    /**
+     * Сервисное сообщение: изменилась цена платных сообщений в соответствующем чате личных сообщений канала.
+     */
+    public function isDirectMessagePriceChanged(): bool
+    {
+        return $this->getType() == MessageType::DIRECT_MESSAGE_PRICE_CHANGED;
     }
 
     /**
