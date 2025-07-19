@@ -23,6 +23,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksAdded;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksDone;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\Game;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\Giveaway;
@@ -128,6 +129,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                ChatBoostAdded|null getBoostAdded()                    (+) Объект сервисного сообщения: пользователь забустил чат.
  * @method                ChatBackground|null getChatBackgroundSet()             (+) Объект сервисного сообщения: пользователь установил фон чата.
  * @method            ChecklistTasksDone|null getChecklistTasksDone()            (+) Объект сервисного сообщения: некоторые задачи в контрольном списке отмечены как выполненные или невыполненные.
+ * @method           ChecklistTasksAdded|null getChecklistTasksAdded()           (+) Объект сервисного сообщения: в контрольный список добавлены новые задачи.
  * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Объект сервисного сообщения: тема форума создана.
  * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Объект сервисного сообщения: тема форума отредактирована.
  * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Объект сервисного сообщения: тема форума закрыта.
@@ -200,6 +202,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'boost_added' => ChatBoostAdded::class,
     'chat_background_set' => ChatBackground::class,
     'checklist_tasks_done' => ChecklistTasksDone::class,
+    'checklist_tasks_added' => ChecklistTasksAdded::class,
     'forum_topic_created' => ForumTopicCreated::class,
     'forum_topic_edited' => ForumTopicEdited::class,
     'forum_topic_closed' => ForumTopicClosed::class,
@@ -572,6 +575,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isChecklistTasksDone(): bool
     {
         return $this->getType() == MessageType::CHECKLIST_TASKS_DONE;
+    }
+
+    /**
+     * Сервисное сообщение: в контрольный список добавлены новые задачи.
+     */
+    public function isChecklistTasksAdded(): bool
+    {
+        return $this->getType() == MessageType::CHECKLIST_TASKS_ADDED;
     }
 
     /**
