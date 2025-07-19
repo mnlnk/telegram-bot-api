@@ -16,6 +16,10 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  * @method               string getText()              Текст опции
  * @method          string|null getTextParseMode() (+) Режим разбора специальных сущностей в тексте.
  * @method MessageEntity[]|null getTextEntities()  (+) Массив специальных сущностей, которые появляются в тексте варианта ответа.
+ *
+ * @method $this setText(string $text)                           Текст опции; 1-100 символов.
+ * @method $this setTextParseMode(string $textParseMode)         Режим разбора специальных сущностей в тексте.
+ * @method $this setTextEntities(MessageEntity[] $textEntities)  Массив специальных сущностей, которые появляются в тексте варианта ответа.
  */
 #[Required([
     'text'
@@ -25,5 +29,17 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 ])]
 class InputPollOption extends Entity
 {
-    //
+    /**
+     * Создает объект сущности.
+     *
+     * @param MessageEntity[]|null $textEntities
+     */
+    public static function make(
+        string $text, // 1-100
+        ?string $textParseMode = null, // ParseMode::class
+        ?array $textEntities = null
+    ): static
+    {
+        return static::fromArgs(func_get_args());
+    }
 }
