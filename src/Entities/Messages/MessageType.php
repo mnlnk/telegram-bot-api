@@ -312,7 +312,7 @@ abstract class MessageType
     const CHECKLIST_TASKS_DONE = 'checklist_tasks_done';
 
     /**
-     * Сервисное сообщение: задачи были добавлены в контрольный список.
+     * Сервисное сообщение: в контрольный список добавлены новые задачи.
      *
      * @var string
      */
