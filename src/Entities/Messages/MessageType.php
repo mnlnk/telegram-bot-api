@@ -88,6 +88,13 @@ abstract class MessageType
     const VIDEO_NOTE = 'video_note';
 
     /**
+     * Контрольный список.
+     *
+     * @var string
+     */
+    const CHECKLIST = 'checklist';
+
+    /**
      * Телефонный контакт.
      *
      * @var string
@@ -430,6 +437,7 @@ abstract class MessageType
             static::VOICE,
             static::VIDEO,
             static::VIDEO_NOTE,
+            static::CHECKLIST,
             static::CONTACT,
             static::LOCATION,
             static::VENUE,
