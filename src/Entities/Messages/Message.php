@@ -79,6 +79,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
  * @method                          bool|null getIsFromOffline()                 (+) Сообщение было отправлено неявным действием, например, как бизнес-сообщение об отъезде или приветствие.
+ * @method                          bool|null getIsPaidPost()                    (+) Сообщение является платным постом.
  * @method                        string|null getMediaGroupId()                  (+) Уникальный идентификатор группы мультимедийных сообщений, к которой принадлежит это сообщение.
  * @method                        string|null getAuthorSignature()               (+) Подпись автора поста для сообщений в каналах или пользовательский заголовок анонимного администратора группы.
  * @method                           int|null getPaidStarCount()                 (+) Количество звёзд Телеграм, которыми отправитель сообщения заплатил за его отправку.
