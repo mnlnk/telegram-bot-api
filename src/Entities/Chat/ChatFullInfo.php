@@ -80,6 +80,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
     'business_intro' => BusinessIntro::class,
     'business_location' => BusinessLocation::class,
     'business_opening_hours' => BusinessOpeningHours::class,
+    'personal_chat' => Chat::class,
     'parent_chat' => Chat::class,
     'available_reactions' => [ReactionType::class],
     'pinned_message' => Message::class,
