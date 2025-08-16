@@ -870,6 +870,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -905,6 +906,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -941,6 +943,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -980,6 +983,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1008,6 +1012,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1032,6 +1037,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1063,6 +1069,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1095,6 +1102,8 @@ class Api
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
+        ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1125,6 +1134,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?string $businessConnectionId = null
     ): array
@@ -1155,6 +1165,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1183,6 +1194,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1213,6 +1225,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1245,6 +1258,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1274,6 +1288,7 @@ class Api
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
         int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
@@ -1339,6 +1354,7 @@ class Api
         int|string $fromChatId,
         int $messageId,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?int $videoStartTimestamp = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null
@@ -1362,6 +1378,7 @@ class Api
         int|string $fromChatId,
         array $messageIds, // 1-100
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null
     ): array
@@ -1383,6 +1400,7 @@ class Api
         int|string $fromChatId,
         int $messageId,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?string $caption = null, // 0-1024
         ?string $parseMode = null, // ParseMode::class
         ?array $captionEntities = null,
@@ -1416,6 +1434,7 @@ class Api
         int|string $fromChatId,
         array $messageIds, // 1-100
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $removeCaption = null
@@ -1709,6 +1728,7 @@ class Api
         InputFile|string $sticker, // WEBP|TGS|WEBM
         ?string $emoji = null,
         ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
@@ -2260,6 +2280,7 @@ class Api
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
+        ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?InlineKeyboardMarkup $replyMarkup = null
     ): Message
