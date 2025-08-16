@@ -47,6 +47,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\RefundedPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\SuccessfulPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 use Manuylenko\Telegram\Bot\Api\Entities\UsersShared;
@@ -86,6 +87,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                        string|null getText()                          (+) Текст сообщения в формате UTF-8; для текстовых сообщений.
  * @method               MessageEntity[]|null getEntities()                      (+) Массив объектов специальных сущностей; для текстовых сообщений.
  * @method            LinkPreviewOptions|null getLinkPreviewOptions()            (+) Объект параметров, используемых для создания предварительного просмотра ссылки в сообщении.
+ * @method             SuggestedPostInfo|null getSuggestedPostInfo()             (+) Информация о параметрах рекомендуемой публикации, если сообщение является рекомендуемой публикацией в чате личных сообщений канала.
  * @method                        string|null getEffectId()                      (+) Уникальный идентификатор эффекта сообщения.
  * @method                     Animation|null getAnimation()                     (+) Объект с информацией об анимации.
  * @method                         Audio|null getAudio()                         (+) Объект с информацией о звуковом файле.
@@ -173,6 +175,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'via_bot' => User::class,
     'entities' => [MessageEntity::class],
     'link_preview_options' => LinkPreviewOptions::class,
+    'suggested_post_info' => SuggestedPostInfo::class,
     'animation' => Animation::class,
     'audio' => Audio::class,
     'document' => Document::class,
