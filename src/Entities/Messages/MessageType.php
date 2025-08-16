@@ -396,6 +396,41 @@ abstract class MessageType
     const GIVEAWAY_COMPLETED = 'giveaway_completed';
 
     /**
+     * Сервисное сообщение: предложенный пост был одобрен.
+     *
+     * @var string
+     */
+    const SUGGESTED_POST_APPROVED  = 'suggested_post_approved';
+
+    /**
+     * Сервисное сообщение: одобрение предложенного поста не удалось.
+     *
+     * @var string
+     */
+    const SUGGESTED_POST_APPROVAL_FAILED  = 'suggested_post_approval_failed';
+
+    /**
+     * Сервисное сообщение: предложенный пост был отклонен.
+     *
+     * @var string
+     */
+    const SUGGESTED_POST_DECLINED  = 'suggested_post_declined';
+
+    /**
+     * Сервисное сообщение: оплата за предложенный пост была получена.
+     *
+     * @var string
+     */
+    const SUGGESTED_POST_PAID  = 'suggested_post_paid';
+
+    /**
+     * Сервисное сообщение: оплата за предложенный пост возвращена.
+     *
+     * @var string
+     */
+    const SUGGESTED_POST_REFUNDED  = 'suggested_post_refunded';
+
+    /**
      * Сервисное сообщение: в чате изменилась стоимость платных сообщений.
      *
      * @var string
@@ -502,6 +537,11 @@ abstract class MessageType
             static::GIVEAWAY,
             static::GIVEAWAY_WINNERS,
             static::GIVEAWAY_COMPLETED,
+            static::SUGGESTED_POST_APPROVED,
+            static::SUGGESTED_POST_APPROVAL_FAILED,
+            static::SUGGESTED_POST_DECLINED,
+            static::SUGGESTED_POST_PAID,
+            static::SUGGESTED_POST_REFUNDED,
             static::PAID_MESSAGE_PRICE_CHANGED,
             static::VIDEO_CHAT_SCHEDULED,
             static::VIDEO_CHAT_STARTED,
