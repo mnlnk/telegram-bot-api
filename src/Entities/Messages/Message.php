@@ -58,6 +58,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  *
  * @method                                int getMessageId()                         Уникальный идентификатор сообщения.
  * @method                           int|null getMessageThreadId()               (+) Уникальный идентификатор цепочки сообщений, к которой принадлежит сообщение; только для супергрупп.
+ * @method           DirectMessagesTopic|null getDirectMessagesTopic()           (+) Информация о теме чата личных сообщений, содержащей сообщение.
  * @method                          User|null getFrom()                          (+) Объект отправителя сообщения (пусто для сообщений, отправленных на каналы).
  * @method                          Chat|null getSenderChat()                    (+) Объект чата отправителя сообщения, отправленного от имени чата.
  * @method                           int|null getSenderBoostCount()              (+) Количество бустов, добавленных пользователем, если отправитель сообщения бустил чат.
@@ -157,6 +158,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'chat'
 ])]
 #[Depends([
+    'direct_messages_topic' => DirectMessagesTopic::class,
     'from' => User::class,
     'sender_chat' => Chat::class,
     'sender_business_bot' => User::class,
