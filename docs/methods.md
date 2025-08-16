@@ -185,6 +185,9 @@
 + [sendChecklist()](https://core.telegram.org/bots/api#sendchecklist) - Отправляет список задач (чеклист) от имени подключенного бизнес-аккаунта.
 + [editMessageChecklist()](https://core.telegram.org/bots/api#editmessagechecklist) - Редактирует список задач (чеклист) от имени подключенного бизнес-аккаунта.
 
+##### Предложения
++ [approveSuggestedPost()](https://core.telegram.org/bots/api#approvesuggestedpost) - Одобряет публикацию, предложенную в чате личных сообщений.
+
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
 + [editStory()](https://core.telegram.org/bots/api#editstory) - Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.

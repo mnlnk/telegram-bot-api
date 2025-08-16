@@ -2872,6 +2872,26 @@ class Api
 
     #endregion
 
+    #region Suggestions
+
+    /**
+     * Одобряет публикацию, предложенную в чате личных сообщений.
+     *
+     * @link https://core.telegram.org/bots/api#approvesuggestedpost
+     *
+     * @since 9.2
+     */
+    public function approveSuggestedPost(
+        int $chatId,
+        int $messageId,
+        ?int $sendDate = null // <= 2678400 сек. (<= 30 дн)
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
+    #endregion
+
     #region Stories
 
     /**
