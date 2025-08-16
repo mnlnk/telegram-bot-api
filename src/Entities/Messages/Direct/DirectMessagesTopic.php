@@ -15,6 +15,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @method       int getTopicId()     Уникальный идентификатор темы.
  * @method User|null getUser()    (+) Информация о пользователе, создавшем тему.
+ *
+ * @since 9.2
  */
 #[Required([
     'topic_id'
