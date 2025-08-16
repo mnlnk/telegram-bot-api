@@ -26,6 +26,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method               string|null getFirstName()                          (+) Имя собеседника в приватном чате.
  * @method               string|null getLastName()                           (+) Фамилия собеседника в приватном чате.
  * @method                 bool|null getIsForum()                            (+) Супергруппа является форумом (с включенными темами).
+ * @method                 bool|null getIsDirectMessages()                   (+) Чат для личных сообщений канала.
+ * @method                       int getAccentColorId()                          Идентификатор цвета акцента для имени чата и фона фотографии чата, заголовка ответа и предварительного просмотра ссылки.
  * @method                       int getMaxReactionCount()                       Максимальное количество реакций, которое можно установить на сообщение в чате.
  * @method            ChatPhoto|null getPhoto()                              (+) Объект фото чата.
  * @method             string[]|null getActiveUsernames()                    (+) Список всех активных пользователей чата; для приватных чатов, супергрупп и каналов.
@@ -35,7 +37,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method BusinessOpeningHours|null getBusinessOpeningHours()               (+) Объект часов работы бизнеса.
  * @method                 Chat|null getPersonalChat()                       (+) Объект чата личного канала пользователя; для приватных чатов.
  * @method       ReactionType[]|null getAvailableReactions()                 (+) Массив объектов доступных реакций, разрешенных в чате.
- * @method                       int getAccentColorId()                          Идентификатор цвета акцента для имени чата и фона фотографии чата, заголовка ответа и предварительного просмотра ссылки.
  * @method               string|null getBackgroundCustomEmojiId()            (+) Пользовательский идентификатор эмоджи, выбранного чатом для заголовка ответа и фона предварительного просмотра ссылки.
  * @method                  int|null getProfileAccentColorId()               (+) Идентификатор акцентного цвета фона профиля чата.
  * @method               string|null getProfileBackgroundCustomEmojiId()     (+) Пользовательский идентификатор эмоджи, выбранного чатом для фона своего профиля.
