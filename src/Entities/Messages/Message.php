@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksAdded;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksDone;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Direct\DirectMessagesTopic;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Game\Game;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\Giveaway;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\GiveawayCompleted;
