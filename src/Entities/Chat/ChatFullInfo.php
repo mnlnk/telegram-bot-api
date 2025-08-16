@@ -36,6 +36,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method     BusinessLocation|null getBusinessLocation()                   (+) Объект местоположения бизнеса.
  * @method BusinessOpeningHours|null getBusinessOpeningHours()               (+) Объект часов работы бизнеса.
  * @method                 Chat|null getPersonalChat()                       (+) Объект чата личного канала пользователя; для приватных чатов.
+ * @method                 Chat|null getParentChat()                         (+) Объект родительского чата; только для чатов личных сообщений.
  * @method       ReactionType[]|null getAvailableReactions()                 (+) Массив объектов доступных реакций, разрешенных в чате.
  * @method               string|null getBackgroundCustomEmojiId()            (+) Пользовательский идентификатор эмоджи, выбранного чатом для заголовка ответа и фона предварительного просмотра ссылки.
  * @method                  int|null getProfileAccentColorId()               (+) Идентификатор акцентного цвета фона профиля чата.
@@ -79,7 +80,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
     'business_intro' => BusinessIntro::class,
     'business_location' => BusinessLocation::class,
     'business_opening_hours' => BusinessOpeningHours::class,
-    'personal_chat' => Chat::class,
+    'parent_chat' => Chat::class,
     'available_reactions' => [ReactionType::class],
     'pinned_message' => Message::class,
     'permissions' => ChatPermissions::class,
