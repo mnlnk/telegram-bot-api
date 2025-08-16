@@ -1077,6 +1077,7 @@ class Api
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
         ?int $messageThreadId = null,
         ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
@@ -1086,6 +1087,7 @@ class Api
     {
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
             'caption_entities',
+            'suggested_post_parameters',
             'reply_parameters',
             'reply_markup'
         ]));
