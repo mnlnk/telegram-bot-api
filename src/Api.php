@@ -1436,12 +1436,14 @@ class Api
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null
     ): MessageId
     {
         return EntityFactory::make(MessageId::class, $this->call(func_get_args(), [
             'caption_entities',
+            'suggested_post_parameters',
             'reply_parameters',
             'reply_markup'
         ]));
