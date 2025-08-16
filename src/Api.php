@@ -54,6 +54,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarAmount;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\StarTransactions;
 use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
 use Manuylenko\Telegram\Bot\Api\Entities\Stories\StoryArea;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostParameters;
 use Manuylenko\Telegram\Bot\Api\Entities\Update;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 use Manuylenko\Telegram\Bot\Api\Entities\UserProfilePhotos;
@@ -869,6 +870,7 @@ class Api
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
         ?int $messageThreadId = null,
         ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
@@ -879,6 +881,7 @@ class Api
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
             'link_preview_options',
             'entities',
+            'suggested_post_parameters',
             'reply_parameters',
             'reply_markup'
         ]));
