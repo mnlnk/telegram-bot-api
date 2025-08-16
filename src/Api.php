@@ -1384,10 +1384,13 @@ class Api
         ?int $directMessagesTopicId = null,
         ?int $videoStartTimestamp = null,
         ?bool $disableNotification = null,
-        ?bool $protectContent = null
+        ?bool $protectContent = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null
     ): Message
     {
-        return EntityFactory::make(Message::class, $this->call(func_get_args()));
+        return EntityFactory::make(Message::class, $this->call(func_get_args(), [
+            'suggested_post_parameters'
+        ]));
     }
 
     /**
