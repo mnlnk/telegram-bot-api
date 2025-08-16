@@ -11,13 +11,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#chat
  *
- * @method         int getId()            Уникальный идентификатор чата.
- * @method      string getType()          Тип чата.
- * @method string|null getTitle()     (+) Название; для супергрупп, каналов и групповых чатов.
- * @method string|null getUsername()  (+) Юзернейм пользователя; для приватных чатов, супергрупп и каналов, если они доступны.
- * @method string|null getFirstName() (+) Имя собеседника в приватном чате.
- * @method string|null getLastName()  (+) Фамилия собеседника в приватном чате.
- * @method   bool|null getIsForum()   (+) Супергруппа является форумом (с включенными темами).
+ * @method         int getId()                   Уникальный идентификатор чата.
+ * @method      string getType()                 Тип чата.
+ * @method string|null getTitle()            (+) Название; для супергрупп, каналов и групповых чатов.
+ * @method string|null getUsername()         (+) Юзернейм пользователя; для приватных чатов, супергрупп и каналов, если они доступны.
+ * @method string|null getFirstName()        (+) Имя собеседника в приватном чате.
+ * @method string|null getLastName()         (+) Фамилия собеседника в приватном чате.
+ * @method   bool|null getIsForum()          (+) Супергруппа является форумом (с включенными темами).
+ * @method   bool|null getIsDirectMessages() (+) Чат для личных сообщений канала.
  */
 #[Required([
     'id',
