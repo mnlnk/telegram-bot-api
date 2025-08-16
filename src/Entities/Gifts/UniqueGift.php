@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Gifts;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 
 /**
@@ -12,12 +13,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#uniquegift
  *
- * @method             string getBaseName() Человекочитаемое название обычного подарка, из которого был улучшен этот уникальный подарок.
- * @method             string getName()     Уникальное название подарка. Его можно использовать в ссылках https://t.me/nft/... и разделах с историями.
- * @method                int getNumber()   Уникальный номер улучшенного подарка среди подарков, улучшенных с одного и того же обычного подарка.
- * @method    UniqueGiftModel getModel()    Объект модели уникального подарка
- * @method   UniqueGiftSymbol getSymbol()   Объект символа уникального подарка.
- * @method UniqueGiftBackdrop getBackdrop() Объект заднего фона уникального подарка.
+ * @method             string getBaseName()          Человекочитаемое название обычного подарка, из которого был улучшен этот уникальный подарок.
+ * @method             string getName()              Уникальное название подарка. Его можно использовать в ссылках https://t.me/nft/... и разделах с историями.
+ * @method                int getNumber()            Уникальный номер улучшенного подарка среди подарков, улучшенных с одного и того же обычного подарка.
+ * @method    UniqueGiftModel getModel()             Объект модели уникального подарка
+ * @method   UniqueGiftSymbol getSymbol()            Объект символа уникального подарка.
+ * @method UniqueGiftBackdrop getBackdrop()          Объект заднего фона уникального подарка.
+ * @method          Chat|null getPublisherChat() (+) Информация о чате, опубликовавшем подарок.
+ *
  */
 #[Required([
     'base_name',
@@ -30,7 +33,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 #[Depends([
     'model' => UniqueGiftModel::class,
     'symbol' => UniqueGiftSymbol::class,
-    'backdrop' => UniqueGiftBackdrop::class
+    'backdrop' => UniqueGiftBackdrop::class,
+    'publisher_chat' => Chat::class
 ])]
 class UniqueGift extends Entity
 {
