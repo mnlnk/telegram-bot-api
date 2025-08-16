@@ -2309,6 +2309,7 @@ class Api
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
         ?int $directMessagesTopicId = null,
         ?ReplyParameters $replyParameters = null,
         ?InlineKeyboardMarkup $replyMarkup = null
@@ -2318,6 +2319,7 @@ class Api
             'prices',
             'suggested_tip_amounts',
             'provider_data',
+            'suggested_post_parameters',
             'reply_parameters',
             'reply_markup'
         ]));
