@@ -1748,12 +1748,14 @@ class Api
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
         ?string $messageEffectId = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
         ?ReplyParameters $replyParameters = null,
         ?KeyboardMarkup $replyMarkup = null,
         ?string $businessConnectionId = null
     ): Message
     {
         return EntityFactory::make(Message::class, $this->call(func_get_args(), [
+            'suggested_post_parameters',
             'reply_parameters',
             'reply_markup'
         ]));
