@@ -47,7 +47,12 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\RefundedPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\Payments\SuccessfulPayment;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostApprovalFailed;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostApproved;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostDeclined;
 use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostInfo;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostPaid;
+use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostRefunded;
 use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 use Manuylenko\Telegram\Bot\Api\Entities\UsersShared;
@@ -148,6 +153,11 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                      Giveaway|null getGiveaway()                      (+) Объект запланированного розыгрыша призов.
  * @method               GiveawayWinners|null getGiveawayWinners()               (+) Объект завершения розыгрыша с участием публичных победителей.
  * @method             GiveawayCompleted|null getGiveawayCompleted()             (+) Объект сервисного сообщения: розыгрыш завершен без публичных победителей.
+ * @method         SuggestedPostApproved|null getSuggestedPostApproved()         (+) Объект сервисного сообщения: предложенный пост был одобрен.
+ * @method   SuggestedPostApprovalFailed|null getSuggestedPostApprovalFailed()   (+) Объект сервисного сообщения: одобрение предложенного поста не удалось.
+ * @method         SuggestedPostDeclined|null getSuggestedPostDeclined()         (+) Объект сервисного сообщения: предложенный пост был отклонен.
+ * @method             SuggestedPostPaid|null getSuggestedPostPaid()             (+) Объект сервисного сообщения: оплата за предложенный пост была получена.
+ * @method         SuggestedPostRefunded|null getSuggestedPostRefunded()         (+) Объект сервисного сообщения: оплата за предложенный пост возвращена.
  * @method       PaidMessagePriceChanged|null getPaidMessagePriceChanged()       (+) Объект сервисного сообщения: в чате изменилась стоимость платных сообщений.
  * @method            VideoChatScheduled|null getVideoChatScheduled()            (+) Объект сервисного сообщения: видеочат запланирован.
  * @method              VideoChatStarted|null getVideoChatStarted()              (+) Объект сервисного сообщения: видеочат запущен.
@@ -224,6 +234,11 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'giveaway' => Giveaway::class,
     'giveaway_winners' => GiveawayWinners::class,
     'giveaway_completed' => GiveawayCompleted::class,
+    'suggested_post_approved' => SuggestedPostApproved::class,
+    'suggested_post_approval_failed' => SuggestedPostApprovalFailed::class,
+    'suggested_post_declined' => SuggestedPostDeclined::class,
+    'suggested_post_paid' => SuggestedPostPaid::class,
+    'suggested_post_refunded' => SuggestedPostRefunded::class,
     'paid_message_price_changed' => PaidMessagePriceChanged::class,
     'video_chat_scheduled' => VideoChatScheduled::class,
     'video_chat_started' => VideoChatStarted::class,
@@ -682,6 +697,46 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isGiveawayCompleted(): bool
     {
         return $this->getType() == MessageType::GIVEAWAY_COMPLETED;
+    }
+
+    /**
+     * Сервисное сообщение: предложенный пост был одобрен.
+     */
+    public function isSuggestedPostApproved(): bool
+    {
+        return $this->getType() == MessageType::SUGGESTED_POST_APPROVED;
+    }
+
+    /**
+     * Сервисное сообщение: одобрение предложенного поста не удалось.
+     */
+    public function isSuggestedPostApprovalFailed(): bool
+    {
+        return $this->getType() == MessageType::SUGGESTED_POST_APPROVAL_FAILED;
+    }
+
+    /**
+     * Сервисное сообщение: предложенный пост был отклонен.
+     */
+    public function isSuggestedPostDeclined(): bool
+    {
+        return $this->getType() == MessageType::SUGGESTED_POST_DECLINED;
+    }
+
+    /**
+     * Сервисное сообщение: оплата за предложенный пост была получена.
+     */
+    public function isSuggestedPostPaid(): bool
+    {
+        return $this->getType() == MessageType::SUGGESTED_POST_PAID;
+    }
+
+    /**
+     * Сервисное сообщение: оплата за предложенный пост возвращена.
+     */
+    public function isSuggestedPostRefunded(): bool
+    {
+        return $this->getType() == MessageType::SUGGESTED_POST_REFUNDED;
     }
 
     /**
