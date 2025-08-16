@@ -187,6 +187,7 @@
 
 ##### Предложения
 + [approveSuggestedPost()](https://core.telegram.org/bots/api#approvesuggestedpost) - Одобряет публикацию, предложенную в чате личных сообщений.
++ [declineSuggestedPost()](https://core.telegram.org/bots/api#declinesuggestedpost) - Отклоняет публикацию, предложенную в чате личных сообщений.
 
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.

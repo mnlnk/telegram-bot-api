@@ -2890,6 +2890,22 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Отклоняет публикацию, предложенную в чате личных сообщений.
+     *
+     * @link https://core.telegram.org/bots/api#declinesuggestedpost
+     *
+     * @since 9.2
+     */
+    public function declineSuggestedPost(
+        int $chatId,
+        int $messageId,
+        ?string $comment = null // [0-128]
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Stories
