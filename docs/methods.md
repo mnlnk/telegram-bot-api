@@ -1,5 +1,5 @@
-### Доступные методы: [[ 9.1 ](https://core.telegram.org/bots/api)]
-
+### Доступные методы:
+[Официальная документация](https://core.telegram.org/bots/api#available-methods) [v. 9.1]
 
 ##### Обновления
 + [getUpdates()](https://core.telegram.org/bots/api#getupdates) - Получает массив входящих обновлений.
@@ -185,9 +185,9 @@
 + [sendChecklist()](https://core.telegram.org/bots/api#sendchecklist) - Отправляет список задач (чеклист) от имени подключенного бизнес-аккаунта.
 + [editMessageChecklist()](https://core.telegram.org/bots/api#editmessagechecklist) - Редактирует список задач (чеклист) от имени подключенного бизнес-аккаунта.
 
-##### Предложения
-+ [approveSuggestedPost()](https://core.telegram.org/bots/api#approvesuggestedpost) - Одобряет публикацию, предложенную в чате личных сообщений.
-+ [declineSuggestedPost()](https://core.telegram.org/bots/api#declinesuggestedpost) - Отклоняет публикацию, предложенную в чате личных сообщений.
+##### Предложенные посты
++ [approveSuggestedPost()](https://core.telegram.org/bots/api#approvesuggestedpost) - Одобряет предложенный пост.
++ [declineSuggestedPost()](https://core.telegram.org/bots/api#declinesuggestedpost) - Отклоняет предложенный пост.
 
 ##### Истории
 + [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
