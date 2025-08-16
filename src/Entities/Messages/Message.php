@@ -72,6 +72,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method             ExternalReplyInfo|null getExternalReply()                 (+) Объект с информацией о сообщении, на которое отвечают, которое может прийти из другого чата или темы форума.
  * @method                     TextQuote|null getQuote()                         (+) Объект цитируемой части сообщения; для ответов.
  * @method                         Story|null getReplyToStory()                  (+) Объект оригинальной истории; для ответов на историю.
+ * @method                           int|null getReplyToChecklistTaskId()        (+) Идентификатор конкретной задачи в чеклисте, на которую дается ответ.
  * @method                          User|null getViaBot()                        (+) Объект пользователя (бота), через которого было отправлено сообщение.
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
