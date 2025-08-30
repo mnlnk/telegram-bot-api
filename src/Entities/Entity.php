@@ -229,7 +229,7 @@ abstract class Entity
      */
     public function toJson(): string
     {
-        return json_encode($this->simplify($this->_data));
+        return json_encode($this->simplify($this->_data), JSON_THROW_ON_ERROR);
     }
 
     #endregion
