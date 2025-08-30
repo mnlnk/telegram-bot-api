@@ -1,4 +1,4 @@
-### Telegram Bot Api v4.2.0
+### Telegram Bot Api v4.3.0
 
 
 #### Описание:
