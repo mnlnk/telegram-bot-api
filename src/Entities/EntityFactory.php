@@ -62,16 +62,4 @@ abstract class EntityFactory
 
         return $a;
     }
-
-    # # #
-
-    /**
-     * Создает объект сущности из Json-строки.
-     *
-     * @return Entity
-     */
-    public static function makeFromJson(string $class, string $json): mixed
-    {
-        return static::make($class, json_decode($json, true, 512, JSON_THROW_ON_ERROR));
-    }
 }

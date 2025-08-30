@@ -244,5 +244,15 @@ abstract class Entity
         return EntityFactory::make(static::class, Utils::getFuncArgs(static::class, $method, $args));
     }
 
+    /**
+     * Создает объект сущности из Json-строки.
+     *
+     * @return Entity
+     */
+    public static function fromJson(string $json): mixed
+    {
+        return EntityFactory::make(static::class, json_decode($json, true, 512, JSON_THROW_ON_ERROR));
+    }
+
     #endregion
 }
