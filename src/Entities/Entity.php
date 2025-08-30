@@ -17,9 +17,9 @@ use ReflectionClass;
 abstract class Entity
 {
     /**
-     * Массив полей.
+     * Массив сырых данных.
      */
-    protected array $fields = [];
+    protected array $_data = [];
 
 
     #region Init
@@ -94,7 +94,7 @@ abstract class Entity
      */
     protected function set(string $field, Entity|array|string|int|float|bool $value): static
     {
-        $this->fields[$field] = $value;
+        $this->_data[$field] = $value;
 
         return $this;
     }
@@ -104,7 +104,7 @@ abstract class Entity
      */
     protected function get(string $field): Entity|array|string|int|float|bool|null
     {
-        return $this->fields[$field] ?? null;
+        return $this->_data[$field] ?? null;
     }
 
     /**
@@ -112,7 +112,7 @@ abstract class Entity
      */
     protected function has(string $field): bool
     {
-        return isset($this->fields[$field]);
+        return isset($this->_data[$field]);
     }
 
     /**
@@ -120,7 +120,7 @@ abstract class Entity
      */
     protected function remove(string $field): void
     {
-        unset($this->fields[$field]);
+        unset($this->_data[$field]);
     }
 
     #endregion
@@ -212,7 +212,7 @@ abstract class Entity
     protected function simplify(Entity|array|string|int|float|bool $data): array|string|int|float|bool
     {
         if ($data instanceof Entity) {
-            $data = $data->fields;
+            $data = $data->_data;
         }
 
         if (is_array($data)) {
@@ -229,7 +229,7 @@ abstract class Entity
      */
     public function toJson(): string
     {
-        return json_encode($this->simplify($this->fields));
+        return json_encode($this->simplify($this->_data));
     }
 
     #endregion
