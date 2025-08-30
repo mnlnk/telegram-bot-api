@@ -17,7 +17,7 @@ use ReflectionClass;
 abstract class Entity
 {
     /**
-     * Массив сырых данных.
+     * Массив данных.
      */
     protected array $_data = [];
 
@@ -150,7 +150,9 @@ abstract class Entity
             return null;
         }
 
-        if ($data instanceof Entity) {
+        if ($data instanceof Entity ||
+            (is_array($data) && isset($data[0]) && $data[0] instanceof Entity)
+        ) {
             return $data;
         }
 
