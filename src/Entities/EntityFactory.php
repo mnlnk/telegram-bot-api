@@ -72,6 +72,6 @@ abstract class EntityFactory
      */
     public static function makeFromJson(string $class, string $json): mixed
     {
-        return static::make($class, json_decode($json, true));
+        return static::make($class, json_decode($json, true, 512, JSON_THROW_ON_ERROR));
     }
 }
