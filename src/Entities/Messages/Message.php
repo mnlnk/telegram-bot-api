@@ -260,6 +260,30 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
+     * Получает команду из текста или подписи.
+     */
+    public function getCommand(int $offset = 0): ?string
+    {
+        $text = $this->getText();
+        $entities = $this->getEntities();
+
+        if ($entities === null) {
+            $text = $this->getCaption();
+            $entities = $this->getCaptionEntities();
+        }
+
+        if ($entities !== null) {
+            foreach ($entities as $entity) {
+                if ($entity->isBotCommand() && $entity->getOffset() === $offset) {
+                    return substr($text, $entity->getOffset(), $entity->getLength());
+                }
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Текст.
      */
     public function isText(): bool
