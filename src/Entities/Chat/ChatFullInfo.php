@@ -11,6 +11,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessLocation;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessOpeningHours;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\AcceptedGiftTypes;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGiftColors;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
@@ -68,6 +69,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
  * @method                  int|null getLinkedChatId()                       (+) Уникальный идентификатор связанного чата, т.е. идентификатор группы обсуждения для канала и наоборот; для супергрупп и чатов каналов.
  * @method         ChatLocation|null getLocation()                           (+) Местоположение (локация), к которому привязана супергруппа.
  * @method           UserRating|null getRating()                             (+) Рейтинг пользователя, если таковой имеется (отображается личных чатах).
+ * @method     UniqueGiftColors|null getUniqueGiftColors()                   (+) Цветовая схема основаная на уникальном подарке, который используется для названия чата, ответов на сообщения и предварительного просмотра ссылок.
  */
 #[Required([
     'id',
@@ -89,7 +91,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
     'permissions' => ChatPermissions::class,
     'accepted_gift_types' => AcceptedGiftTypes::class,
     'location' => ChatLocation::class,
-    'rating' => UserRating::class
+    'rating' => UserRating::class,
+    'unique_gift_colors' => UniqueGiftColors::class
 ])]
 class ChatFullInfo extends Entity
 {
