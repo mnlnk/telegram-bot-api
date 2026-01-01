@@ -1893,6 +1893,8 @@ class Api
      * Получает набор стикеров.
      *
      * @link https://core.telegram.org/bots/api#getstickerset
+     *
+     * @since 3.2
      */
     public function getStickerSet(
         string $name
@@ -1923,6 +1925,8 @@ class Api
      * Загружает файл со стикером для последующего использования в методах {@link createNewStickerSet()} и {@link addStickerToSet()}
      *
      * @link https://core.telegram.org/bots/api#uploadstickerfile
+     *
+     * @since 3.2
      */
     public function uploadStickerFile(
         int $userId,
@@ -1939,6 +1943,8 @@ class Api
      * @link https://core.telegram.org/bots/api#createnewstickerset
      *
      * @param InputSticker[] $stickers
+     *
+     * @since 3.2
      */
     public function createNewStickerSet(
         int $userId,
@@ -1958,6 +1964,8 @@ class Api
      * Добавляет новый стикер в набор, созданный ботом.
      *
      * @link https://core.telegram.org/bots/api#addstickertoset
+     *
+     * @since 3.2
      */
     public function addStickerToSet(
         int $userId,
@@ -1974,6 +1982,8 @@ class Api
      * Перемещает стикер в наборе, созданном ботом, в определенное место.
      *
      * @link https://core.telegram.org/bots/api#setstickerpositioninset
+     *
+     * @since 3.2
      */
     public function setStickerPositionInSet(
         string $sticker,
@@ -2121,6 +2131,8 @@ class Api
      * Удаляет стикер из набора, созданного ботом.
      *
      * @link https://core.telegram.org/bots/api#deletestickerfromset
+     *
+     * @since 3.2
      */
     public function deleteStickerFromSet(
         string $sticker
