@@ -3106,6 +3106,8 @@ class Api
      * Получает список подарков, полученных и принадлежащих управляемому бизнес-аккаунту.
      *
      * @link https://core.telegram.org/bots/api#getbusinessaccountgifts
+     *
+     * @since 9.0
      */
     public function getBusinessAccountGifts(
         string $businessConnectionId,
