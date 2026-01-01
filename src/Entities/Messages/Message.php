@@ -20,7 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
-use Manuylenko\Telegram\Bot\Api\Entities\Gifts\UniqueGift;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksAdded;

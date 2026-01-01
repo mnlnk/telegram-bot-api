@@ -5,7 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Gifts\Owned;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Gifts\UniqueGift;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
 
 /**

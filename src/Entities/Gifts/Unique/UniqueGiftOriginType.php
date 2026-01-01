@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Gifts;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique;
 
 /**
  * Представляет типы происхождения уникального подарка.
