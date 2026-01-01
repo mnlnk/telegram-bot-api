@@ -1090,6 +1090,8 @@ class Api
      * Отправляет контакт.
      *
      * @link https://core.telegram.org/bots/api#sendcontact
+     *
+     * @since 4.0
      */
     public function sendContact(
         int|string $chatId,
@@ -1151,6 +1153,8 @@ class Api
      * @link https://core.telegram.org/bots/api#senddocument
      *
      * @param ?MessageEntity[] $captionEntities
+     *
+     * @since 4.0
      */
     public function sendDocument(
         int|string $chatId,
@@ -1350,6 +1354,8 @@ class Api
      * Отправляет информацию о месте встречи.
      *
      * @link https://core.telegram.org/bots/api#sendvenue
+     *
+     * @since 4.0
      */
     public function sendVenue(
         int|string $chatId,
