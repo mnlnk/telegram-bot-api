@@ -291,6 +291,8 @@ class Api
      * Очищает список закрепленных сообщений в чате.
      *
      * @link https://core.telegram.org/bots/api#unpinallchatmessages
+     *
+     * @since 5.0
      */
     public function unpinAllChatMessages(
         int|string $chatId
@@ -1498,6 +1500,8 @@ class Api
      * @link https://core.telegram.org/bots/api#copymessage
      *
      * @param ?MessageEntity[] $captionEntities
+     *
+     * @since 5.0
      */
     public function copyMessage(
         int|string $chatId,
@@ -3243,6 +3247,8 @@ class Api
      * Закрывает экземпляр бота перед его перемещением с одного локального сервера на другой.
      *
      * @link https://core.telegram.org/bots/api#close
+     *
+     * @since 5.0
      */
     public function close(): bool
     {
@@ -3253,6 +3259,8 @@ class Api
      * Выходит из облачного сервера API бота перед локальным запуском бота.
      *
      * @link https://core.telegram.org/bots/api#logout
+     *
+     * @since 5.0
      */
     public function logOut(): bool
     {
