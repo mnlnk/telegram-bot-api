@@ -315,6 +315,8 @@ class Api
      * Отзывает пригласительную ссылку созданную ботом.
      *
      * @link https://core.telegram.org/bots/api#revokechatinvitelink
+     *
+     * @since 5.1
      */
     public function revokeChatInviteLink(
         int|string $chatId,
@@ -328,6 +330,8 @@ class Api
      * Создает дополнительную ссылку для приглашения в чат.
      *
      * @link https://core.telegram.org/bots/api#createchatinvitelink
+     *
+     * @since 5.1
      */
     public function createChatInviteLink(
         int|string $chatId,
@@ -344,6 +348,8 @@ class Api
      * Редактирует дополнительную пригласительную ссылку, созданную ботом.
      *
      * @link https://core.telegram.org/bots/api#editchatinvitelink
+     *
+     * @since 5.1
      */
     public function editChatInviteLink(
         int|string $chatId,
