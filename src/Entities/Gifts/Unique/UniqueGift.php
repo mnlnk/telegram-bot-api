@@ -13,7 +13,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#uniquegift
  *
- * @method             string getBaseName()          Человекочитаемое название обычного подарка, из которого был улучшен этот уникальный подарок.
+ * @method             string getGiftId()            Идентификатор обычного подарка, из которого получился улучшеный.
+ * @method             string getBaseName()          Человеко-читаемое название обычного подарка, из которого был улучшен этот уникальный подарок.
  * @method             string getName()              Уникальное название подарка. Его можно использовать в ссылках https://t.me/nft/... и разделах с историями.
  * @method                int getNumber()            Уникальный номер улучшенного подарка среди подарков, улучшенных с одного и того же обычного подарка.
  * @method    UniqueGiftModel getModel()             Объект модели уникального подарка
@@ -23,6 +24,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  */
 #[Required([
+    'gift_id',
     'base_name',
     'name',
     'number',
