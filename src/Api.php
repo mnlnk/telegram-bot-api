@@ -2009,6 +2009,8 @@ class Api
      * Заменяет существующий стикер в наборе стикеров на новый.
      *
      * @link https://core.telegram.org/bots/api#replacestickerinset
+     *
+     * @since 7.2
      */
     public function replaceStickerInSet(
         int $userId,
@@ -2753,6 +2755,8 @@ class Api
      * Получает информацию о подключении бота к бизнес-аккаунту.
      *
      * @link https://core.telegram.org/bots/api#getbusinessconnection
+     *
+     * @since 7.2
      */
     public function getBusinessConnection(
         string $businessConnectionId
