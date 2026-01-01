@@ -2528,6 +2528,8 @@ class Api
      * Возврат средств за успешный платеж в Telegram Stars.
      *
      * @link https://core.telegram.org/bots/api#refundstarpayment
+     *
+     * @since 7.4
      */
     public function refundStarPayment(
         int $userId,
