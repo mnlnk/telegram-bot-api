@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
@@ -17,8 +18,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method                  int getId()                  Уникальный идентификатор задачи.
  * @method               string getText()                Текст задачи.
  * @method MessageEntity[]|null getTextEntities()    (+) Специальные сущности, которые появляются в тексте задачи.
- * @method            User|null getCompletedByUser() (+) Пользователь, выполнивший задачу; не указывается, если задача не была выполнена.
- * @method             int|null getCompletionDate()  (+) Момент времени (временная метка Unix), когда задача была завершена; 0, если задача не была завершена.
+ * @method            User|null getCompletedByUser() (+) Пользователь, выполнивший задачу; отсутствует, если задача не была выполнена пользователем.
+ * @method            Chat|null getCompletedByChat() (+) Чат, в котором было выполнено задание; отсутствует, если задание не было выполнено в чате.
+ * @method             int|null getCompletionDate()  (+) Момент времени (Unix), когда задача была завершена; 0, если задача не была завершена.
  *
  * @since 9.1
  */
@@ -28,7 +30,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
 ])]
 #[Depends([
     'text_entities' => [MessageEntity::class],
-    'completed_by_user' => User::class
+    'completed_by_user' => User::class,
+    'completed_by_chat' => Chat::class
 ])]
 class ChecklistTask extends Entity
 {
