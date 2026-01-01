@@ -15,12 +15,12 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @link https://core.telegram.org/bots/api#ownedgiftregular
  *
  * @method               string getType()                        Тип подарка.
- * @method                 Gift getGift()                        Объект с информацией о чате.
+ * @method                 Gift getGift()                        Обычный подарок.
  * @method          string|null getOwnedGiftId()             (+) Уникальный идентификатор подарка для бота; только для подарков, полученных от имени бизнес-аккаунта.
- * @method            User|null getSenderUser()              (+) Объект пользователя (отправителя) подарка, если это известный пользователь.
+ * @method            User|null getSenderUser()              (+) Отправитель подарка, если это известный пользователь.
  * @method                  int getSendDate()                    Дата отправки подарка в формате Unix.
  * @method          string|null getText()                    (+) Текст сообщения, добавленного к подарку.
- * @method MessageEntity[]|null getEntities()                (+) Массив объектов специальных сущностей, которые появляются в тексте.
+ * @method MessageEntity[]|null getEntities()                (+) Специальные сущности, которые появляются в тексте.
  * @method            bool|null getIsPrivate()               (+) Отправитель и текст подарка видны только получателю подарка; в противном случае их смогут увидеть все.
  * @method            bool|null getIsSaved()                 (+) Подарок отображается на странице профиля учётной записи; только для подарков, полученных от имени бизнес-аккаунта.
  * @method            bool|null getCanBeUpgraded()           (+) Подарок можно преобразовать в уникальный; только для подарков, полученных от имени бизнес-аккаунта.
