@@ -1866,6 +1866,8 @@ class Api
      * @param string[] $customEmojiIds
      *
      * @return Sticker[]
+     *
+     * @since 6.2
      */
     public function getCustomEmojiStickers(
         array $customEmojiIds // 1-200
