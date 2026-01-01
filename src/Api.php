@@ -2072,6 +2072,8 @@ class Api
      * @link https://core.telegram.org/bots/api#sendgift
      *
      * @param ?MessageEntity[] $textEntities
+     *
+     * @since 8.0
      */
     public function sendGift(
         string $giftId,
@@ -2533,6 +2535,8 @@ class Api
      * Отменяет или повторно включает продление оплаченной подписки в Telegram Stars.
      *
      * @link https://core.telegram.org/bots/api#edituserstarsubscription
+     *
+     * @since 8.0
      */
     public function editUserStarSubscription(
         int $userId,
