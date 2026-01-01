@@ -2485,6 +2485,9 @@ class Api
      *
      * @param LabeledPrice[] $prices
      * @param int[] $suggestedTipAmounts
+     *
+     *
+     * @since 6.1
      */
     public function createInvoiceLink(
         string $title, // 1-32
