@@ -172,6 +172,8 @@ class Api
      * Получает информацию о текущем статусе Webhook.
      *
      * @link https://core.telegram.org/bots/api#getwebhookinfo
+     *
+     * @since 2.2
      */
     public function getWebhookInfo(): WebhookInfo
     {
@@ -1822,6 +1824,8 @@ class Api
      * Отправляет игру.
      *
      * @link https://core.telegram.org/bots/api#sendgame
+     *
+     * @since 2.2
      */
     public function sendGame(
         int $chatId,
@@ -1848,6 +1852,8 @@ class Api
      * @link https://core.telegram.org/bots/api#getgamehighscores
      *
      * @return GameHighScore[]
+     *
+     * @since 2.2
      */
     public function getGameHighScores(
         int $userId,
@@ -1863,6 +1869,8 @@ class Api
      * Устанавливает счет пользователя в игре.
      *
      * @link https://core.telegram.org/bots/api#setgamescore
+     *
+     * @since 2.2
      */
     public function setGameScore(
         int $userId,
