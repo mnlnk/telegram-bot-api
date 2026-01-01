@@ -13,6 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\AcceptedGiftTypes;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
+use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
 
 /**
  * Представляет полную информацию о чате.
@@ -66,6 +67,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
  * @method               string|null getCustomEmojiStickerSetName()          (+) Название пользовательского набора эмоджи-стикеров группы; для супергрупп.
  * @method                  int|null getLinkedChatId()                       (+) Уникальный идентификатор связанного чата, т.е. идентификатор группы обсуждения для канала и наоборот; для супергрупп и чатов каналов.
  * @method         ChatLocation|null getLocation()                           (+) Местоположение (локация), к которому привязана супергруппа.
+ * @method           UserRating|null getRating()                             (+) Рейтинг пользователя, если таковой имеется (отображается личных чатах).
  */
 #[Required([
     'id',
@@ -86,7 +88,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
     'pinned_message' => Message::class,
     'permissions' => ChatPermissions::class,
     'accepted_gift_types' => AcceptedGiftTypes::class,
-    'location' => ChatLocation::class
+    'location' => ChatLocation::class,
+    'rating' => UserRating::class
 ])]
 class ChatFullInfo extends Entity
 {
