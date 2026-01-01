@@ -1409,6 +1409,7 @@ class Api
         ?int $videoStartTimestamp = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
+        ?bool $messageEffectId = null,
         ?SuggestedPostParameters $suggestedPostParameters = null
     ): Message
     {
