@@ -263,7 +263,7 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#pinchatmessage
      *
-     * @since 4.2
+     * @since 3.1
      */
     public function pinChatMessage(
         int|string $chatId,
@@ -280,7 +280,7 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#unpinchatmessage
      *
-     * @since 4.2
+     * @since 3.1
      */
     public function unpinChatMessage(
         int|string $chatId,
@@ -309,6 +309,8 @@ class Api
      * Создает новую ссылку для приглашения в чат.
      *
      * @link https://core.telegram.org/bots/api#exportchatinvitelink
+     *
+     * @since 3.1
      */
     public function exportChatInviteLink(
         int|string $chatId
@@ -489,6 +491,8 @@ class Api
      * Ограничивает пользователя в супергруппе.
      *
      * @link https://core.telegram.org/bots/api#restrictchatmember
+     *
+     * @since 3.1
      */
     public function restrictChatMember(
         int|string $chatId,
@@ -507,6 +511,8 @@ class Api
      * Изменяет права пользователя в супергруппе или канале.
      *
      * @link https://core.telegram.org/bots/api#promotechatmember
+     *
+     * @since 3.1
      */
     public function promoteChatMember(
         int|string $chatId,
@@ -612,6 +618,8 @@ class Api
      * Устанавливает заголовок чата.
      *
      * @link https://core.telegram.org/bots/api#setchattitle
+     *
+     * @since 3.1
      */
     public function setChatTitle(
         int|string $chatId,
@@ -625,6 +633,8 @@ class Api
      * Устанавливает фотографию чата.
      *
      * @link https://core.telegram.org/bots/api#setchatphoto
+     *
+     * @since 3.1
      */
     public function setChatPhoto(
         int|string $chatId,
@@ -638,6 +648,8 @@ class Api
      * Устанавливает описание группы, супергруппы или канала.
      *
      * @link https://core.telegram.org/bots/api#setchatdescription
+     *
+     * @since 3.1
      */
     public function setChatDescription(
         int|string $chatId,
@@ -700,6 +712,8 @@ class Api
      * Удаляет фотографию чата.
      *
      * @link https://core.telegram.org/bots/api#deletechatphoto
+     *
+     * @since 3.1
      */
     public function deleteChatPhoto(
         int|string $chatId
