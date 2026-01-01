@@ -429,6 +429,8 @@ class Api
      * Отклоняет запрос на присоединение пользователя к чату.
      *
      * @link https://core.telegram.org/bots/api#declinechatjoinrequest
+     *
+     * @since 5.4
      */
     public function declineChatJoinRequest(
         int|string $chatId,
@@ -556,6 +558,8 @@ class Api
      * Блокирует пользователя в группе, супергруппе или канале.
      *
      * @link https://core.telegram.org/bots/api#banchatmember
+     *
+     * @since 5.3
      */
     public function banChatMember(
         int|string $chatId,
@@ -622,6 +626,8 @@ class Api
      * Получает текущее значение кнопки меню бота.
      *
      * @link https://core.telegram.org/bots/api#getchatmenubutton
+     *
+     * @since 6.0
      */
     public function getChatMenuButton(
         ?int $chatId = null
@@ -713,6 +719,8 @@ class Api
      * Изменяет кнопку меню бота в приватном чате или кнопку меню по умолчанию.
      *
      * @link https://core.telegram.org/bots/api#setchatmenubutton
+     *
+     * @since 6.0
      */
     public function setChatMenuButton(
         ?int $chatId = null,
@@ -1183,8 +1191,6 @@ class Api
      * @link https://core.telegram.org/bots/api#senddocument
      *
      * @param ?MessageEntity[] $captionEntities
-     *
-     * @since 4.0
      */
     public function sendDocument(
         int|string $chatId,
@@ -2043,6 +2049,8 @@ class Api
      * Устанавливает эскиз (превью) набора стикеров.
      *
      * @link https://core.telegram.org/bots/api#setstickersetthumbnail
+     *
+     * @since 6.6
      */
     public function setStickerSetThumbnail(
         string $name,
@@ -2421,6 +2429,8 @@ class Api
      * Отправляет сообщение о результате взаимодействия с веб-приложением.
      *
      * @link https://core.telegram.org/bots/api#answerwebappquery
+     *
+     * @since 6.0
      */
     public function answerWebAppQuery(
         string $webAppQueryId,
@@ -2456,6 +2466,8 @@ class Api
      * Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
      *
      * @link https://core.telegram.org/bots/api#savepreparedinlinemessage
+     *
+     * @since 8.0
      */
     public function savePreparedInlineMessage(
         int $userId,
@@ -2768,6 +2780,8 @@ class Api
      * Получает текущее имя бота.
      *
      * @link https://core.telegram.org/bots/api#getmyname
+     *
+     * @since 6.7
      */
     public function getMyName(
         ?string $languageCode = null // 2, ISO 639-1
@@ -2780,6 +2794,8 @@ class Api
      * Получает краткое описание бота.
      *
      * @link https://core.telegram.org/bots/api#getmyshortdescription
+     *
+     * @since 6.6
      */
     public function getMyShortDescription(
         ?string $languageCode = null // 2, ISO 639-1
@@ -2792,6 +2808,8 @@ class Api
      * Получает текущее описание бота.
      *
      * @link https://core.telegram.org/bots/api#getmydescription
+     *
+     * @since 6.6
      */
     public function getMyDescription(
         ?string $languageCode = null // 2, ISO 639-1
@@ -2823,6 +2841,8 @@ class Api
      * Получает текущие права администратора бота по умолчанию.
      *
      * @link https://core.telegram.org/bots/api#getmydefaultadministratorrights
+     *
+     * @since 6.0
      */
     public function getMyDefaultAdministratorRights(
         ?bool $forChannels = null
@@ -2835,6 +2855,8 @@ class Api
      * Изменяет имя бота.
      *
      * @link https://core.telegram.org/bots/api#setmyname
+     *
+     * @since 6.7
      */
     public function setMyName(
         ?string $name = null, // 0-64
@@ -2848,6 +2870,8 @@ class Api
      * Изменяет краткое описание бота, которое отображается на странице профиля бота и отправляется вместе со ссылкой.
      *
      * @link https://core.telegram.org/bots/api#setmyshortdescription
+     *
+     * @since 6.6
      */
     public function setMyShortDescription(
         ?string $shortDescription = null, // 0-120
@@ -2861,6 +2885,8 @@ class Api
      * Изменяет описание бота, которое отображается в чате с ботом, если чат пуст.
      *
      * @link https://core.telegram.org/bots/api#setmydescription
+     *
+     * @since 6.6
      */
     public function setMyDescription(
         ?string $description = null, // 0-512
@@ -2895,6 +2921,8 @@ class Api
      * Изменяет права администратора по умолчанию, запрашиваемые ботом при его добавлении в качестве администратора в группы или каналы.
      *
      * @link https://core.telegram.org/bots/api#setmydefaultadministratorrights
+     *
+     * @since 6.0
      */
     public function setMyDefaultAdministratorRights(
         ?ChatAdministratorRights $rights = null,
