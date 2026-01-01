@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\GiftInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
@@ -134,6 +135,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
  * @method                          Gift|null getGift()                          (+) Объект отправленного или полученного обычного подарка.
  * @method                    UniqueGift|null getUniqueGift()                    (+) Объект отправленного или полученного уникального подарка.
+ * @method                      GiftInfo|null getGiftUpgradeSent()               (+) Cервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
  * @method            WriteAccessAllowed|null getWriteAccessAllowed()            (+) Объект сервисного сообщения: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
  * @method                  PassportData|null getPassportData()                  (+) Объект данных Телеграм Паспорт.
@@ -216,6 +218,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'chat_shared' => ChatShared::class,
     'gift' => Gift::class,
     'unique_gift' => UniqueGift::class,
+    'gift_upgrade_sent' => GiftInfo::class,
     'write_access_allowed' => WriteAccessAllowed::class,
     'passport_data' => PassportData::class,
     'proximity_alert_triggered' => ProximityAlertTriggered::class,
@@ -585,6 +588,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isUniqueGift(): bool
     {
         return $this->getType() == MessageType::UNIQUE_GIFT;
+    }
+
+    /**
+     * Сервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
+     */
+    public function isGiftUpgradeSent(): bool
+    {
+        return $this->getType() == MessageType::GIFT_UPGRADE_SENT;
     }
 
     /**
