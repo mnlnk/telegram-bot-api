@@ -14,17 +14,18 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
  *
  * @link https://core.telegram.org/bots/api#gift
  *
- * @method    string getId()                         Уникальный идентификатор подарка.
- * @method   Sticker getSticker()                    Стикер, символизирующий подарок.
- * @method       int getStarCount()                  Количество звезд Телеграм, которое необходимо заплатить для отправки стикера.
- * @method  int|null getUpgradeStarCount()       (+) Количество звезд Телеграм, которое необходимо заплатить, чтобы сделать подарок уникальным.
- * @method bool|null getIsPremium()              (+) Подарок могут приобрести только подписчики Телеграм Премиум.
- * @method bool|null getHasColors()              (+) Подарок можно использовать (после улучшения) для персонализации внешнего вида пользователя.
- * @method  int|null getTotalCount()             (+) Общее количество подарков данного типа, которое можно отправить; только для ограниченных подарков.
- * @method  int|null getRemainingCount()         (+) Количество оставшихся подарков данного типа, которые можно отправить; только для ограниченных подарков.
- * @method  int|null getPersonalTotalCount()     (+) Общее количество подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
- * @method  int|null getPersonalRemainingCount() (+) Количество оставшихся подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
- * @method Chat|null getPublisherChat()          (+) Чат, опубликовавший подарок.
+ * @method              string getId()                         Уникальный идентификатор подарка.
+ * @method             Sticker getSticker()                    Стикер, символизирующий подарок.
+ * @method                 int getStarCount()                  Количество звезд Телеграм, которое необходимо заплатить для отправки стикера.
+ * @method            int|null getUpgradeStarCount()       (+) Количество звезд Телеграм, которое необходимо заплатить, чтобы сделать подарок уникальным.
+ * @method           bool|null getIsPremium()              (+) Подарок могут приобрести только подписчики Телеграм Премиум.
+ * @method           bool|null getHasColors()              (+) Подарок можно использовать (после улучшения) для персонализации внешнего вида пользователя.
+ * @method            int|null getTotalCount()             (+) Общее количество подарков данного типа, которое можно отправить; только для ограниченных подарков.
+ * @method            int|null getRemainingCount()         (+) Количество оставшихся подарков данного типа, которые можно отправить; только для ограниченных подарков.
+ * @method            int|null getPersonalTotalCount()     (+) Общее количество подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
+ * @method            int|null getPersonalRemainingCount() (+) Количество оставшихся подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
+ * @method GiftBackground|null getBackground()             (+) Фон подарка.
+ * @method           Chat|null getPublisherChat()          (+) Чат, опубликовавший подарок.
  */
 #[Required([
     'id',
@@ -33,6 +34,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
 ])]
 #[Depends([
     'sticker' => Sticker::class,
+    'background' => GiftBackground::class,
     'publisher_chat' => Chat::class
 ])]
 class Gift extends Entity
