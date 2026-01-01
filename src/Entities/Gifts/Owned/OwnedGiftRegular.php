@@ -27,6 +27,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method            bool|null getWasRefunded()             (+) Подарок был возвращен и больше недоступен.
  * @method             int|null getConvertStarCount()        (+) Количество звезд Телеграм, которые получатель может получить вместо подарка; не указывается, если подарок нельзя конвертировать в звезды Телеграм.
  * @method             int|null getPrepaidUpgradeStarCount() (+) Количество звёзд Телеграм, уплаченных отправителем за возможность улучшить подарок.
+ * @method            bool|null getIsUpgradeSeparate()       (+) Улучшение подарка было приобретено после отправки подарка; только для подарков, полученных от имени бизнес аккаунтов.
  */
 #[Required([
     'type',
