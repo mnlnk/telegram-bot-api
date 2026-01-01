@@ -2796,6 +2796,8 @@ class Api
      * Удаляет список команд бота.
      *
      * @link https://core.telegram.org/bots/api#deletemycommands
+     *
+     * @since 5.3
      */
     public function deleteMyCommands(
         ?BotCommandScope $scope = null,
