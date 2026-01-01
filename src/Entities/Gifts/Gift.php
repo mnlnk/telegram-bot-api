@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
  * @method            int|null getPersonalTotalCount()     (+) Общее количество подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
  * @method            int|null getPersonalRemainingCount() (+) Количество оставшихся подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
  * @method GiftBackground|null getBackground()             (+) Фон подарка.
+ * @method            int|null getUniqueGiftVariantCount() (+) Общее количество различных уникальных подарков, которые можно получить, улучшив подарок.
  * @method           Chat|null getPublisherChat()          (+) Чат, опубликовавший подарок.
  */
 #[Required([
