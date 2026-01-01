@@ -193,9 +193,10 @@
 + [declineSuggestedPost()](https://core.telegram.org/bots/api#declinesuggestedpost) - Отклоняет предложенный пост.
 
 ##### Истории
-+ [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени управляемого бизнес-аккаунта.
-+ [editStory()](https://core.telegram.org/bots/api#editstory) - Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
-+ [deleteStory()](https://core.telegram.org/bots/api#deletestory) - Удаляет историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
++ [postStory()](https://core.telegram.org/bots/api#poststory) - Публикует историю от имени бизнес-аккаунта.
++ [repostStory()](https://core.telegram.org/bots/api#repoststory) - Репостит историю от имени бизнес-аккаунта с другого бизнес-аккаунта.
++ [editStory()](https://core.telegram.org/bots/api#editstory) - Редактирует историю, ранее опубликованную ботом от имени бизнес-аккаунта.
++ [deleteStory()](https://core.telegram.org/bots/api#deletestory) - Удаляет историю, ранее опубликованную ботом от имени бизнес-аккаунта.
 
 ##### Телеграм Паспорт
 + [setPassportDataErrors()](https://core.telegram.org/bots/api#setpassportdataerrors) - Сообщает пользователю, о возникших ошибках в элементах Телеграм Паспорт.

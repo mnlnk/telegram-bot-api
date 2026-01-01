@@ -2983,7 +2983,7 @@ class Api
     #region Stories
 
     /**
-     * Публикует историю от имени управляемого бизнес-аккаунта.
+     * Публикует историю от имени бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#poststory
      *
@@ -3010,7 +3010,27 @@ class Api
     }
 
     /**
-     * Редактирует историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
+     * Репостит историю от имени бизнес-аккаунта с другого бизнес-аккаунта.
+     * Оба бизнес-аккаунта должны управляться одним и тем же ботом, и история в исходном аккаунте должна быть опубликована (или репостнута) ботом.
+     *
+     * @link https://core.telegram.org/bots/api#repoststory
+     *
+     * @since 9.3
+     */
+    public function repostStory(
+        string $businessConnectionId,
+        int $fromChatId,
+        int $fromStoryId,
+        int $activePeriod, // 6 * 3600, 12 * 3600, 86400, или 2 * 86400
+        ?bool $postToChatPage = null,
+        ?bool $protectContent = null
+    ): Story
+    {
+        return EntityFactory::make(Story::class, $this->call(func_get_args()));
+    }
+
+    /**
+     * Редактирует историю, ранее опубликованную ботом от имени бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#editstory
      *
@@ -3035,7 +3055,7 @@ class Api
     }
 
     /**
-     * Удаляет историю, ранее опубликованную ботом от имени управляемого бизнес-аккаунта.
+     * Удаляет историю, ранее опубликованную ботом от имени бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#deletestory
      */
