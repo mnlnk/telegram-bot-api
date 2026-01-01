@@ -14,18 +14,21 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method bool getUnlimitedGifts()      Принимаются неограниченные обычные подарки.
  * @method bool getLimitedGifts()        Принимаются лимитированые обычные подарки.
  * @method bool getUniqueGifts()         Принимаются уникальные подарки или подарки, которые можно бесплатно улучшить до уникальных.
- * @method bool getPremiumSubscription() Принимается подписка Telegram Premium.
+ * @method bool getPremiumSubscription() Принимается подписка Телеграм Премиум.
+ * @method bool getGiftsFromChannels()   Принимаются уникальные подарки из каналов.
  *
  * @method $this setUnlimitedGifts(bool $unlimitedGifts)           Принимаются неограниченные обычные подарки.
  * @method $this setLimitedGifts(bool $limitedGifts)               Принимаются лимитированые обычные подарки.
  * @method $this setUniqueGifts(bool $uniqueGifts)                 Принимаются уникальные подарки или подарки, которые можно бесплатно улучшить до уникальных.
- * @method $this setPremiumSubscription(bool $premiumSubscription) Принимается подписка Telegram Premium.
+ * @method $this setPremiumSubscription(bool $premiumSubscription) Принимается подписка Телеграм Премиум.
+ * @method $this setGiftsFromChannels(bool $giftsFromChannels)     Принимаются уникальные подарки из каналов.
  */
 #[Required([
     'unlimited_gifts',
     'limited_gifts',
     'unique_gifts',
-    'premium_subscription'
+    'premium_subscription',
+    'gifts_from_channels'
 ])]
 class AcceptedGiftTypes extends Entity
 {
@@ -36,7 +39,8 @@ class AcceptedGiftTypes extends Entity
         bool $unlimitedGifts,
         bool $limitedGifts,
         bool $uniqueGifts,
-        bool $premiumSubscription
+        bool $premiumSubscription,
+        bool $giftsFromChannels
     ): static
     {
         return static::fromArgs(func_get_args());
