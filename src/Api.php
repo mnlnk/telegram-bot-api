@@ -2515,6 +2515,8 @@ class Api
      * Получает список транзакций Telegram Stars в хронологическом порядке.
      *
      * @link https://core.telegram.org/bots/api#refundstarpayment
+     *
+     * @since 7.5
      */
     public function getStarTransactions(
         ?int $offset = null,
