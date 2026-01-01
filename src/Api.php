@@ -224,6 +224,8 @@ class Api
      * Получает основную информацию о чате.
      *
      * @link https://core.telegram.org/bots/api#getchat
+     *
+     * @since 2.1
      */
     public function getChat(
         int|string $chatId
@@ -440,6 +442,8 @@ class Api
      * Бот выходит из группы, супергруппы или канала.
      *
      * @link https://core.telegram.org/bots/api#leavechat
+     *
+     * @since 2.1
      */
     public function leaveChat(
         int|string $chatId
@@ -456,6 +460,8 @@ class Api
      * Получает количество участников в чате.
      *
      * @link https://core.telegram.org/bots/api#getchatmembercount
+     *
+     * @since 2.1
      */
     public function getChatMemberCount(
         int|string $chatId
@@ -468,6 +474,8 @@ class Api
      * Получает информацию об участнике чата.
      *
      * @link https://core.telegram.org/bots/api#getchatmember
+     *
+     * @since 2.1
      */
     public function getChatMember(
         int|string $chatId,
@@ -483,6 +491,8 @@ class Api
      * @link https://core.telegram.org/bots/api#getchatadministrators
      *
      * @return ChatMember[]
+     *
+     * @since 2.1
      */
     public function getChatAdministrators(
         int|string $chatId
