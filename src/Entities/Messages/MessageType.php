@@ -277,6 +277,13 @@ abstract class MessageType
     const UNIQUE_GIFT = 'unique_gift';
 
     /**
+     * Сервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
+     *
+     * @var string
+     */
+    const GIFT_UPGRADE_SENT = 'gift_upgrade_sent';
+
+    /**
      * Сервисное сообщение: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
      *
      * @var string
@@ -520,6 +527,7 @@ abstract class MessageType
             static::CHAT_SHARED,
             static::GIFT,
             static::UNIQUE_GIFT,
+            static::GIFT_UPGRADE_SENT,
             static::WRITE_ACCESS_ALLOWED,
             static::PROXIMITY_ALERT_TRIGGERED,
             static::BOOST_ADDED,
