@@ -17,9 +17,9 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method             string getBaseName()          Человеко-читаемое название обычного подарка, из которого был улучшен этот уникальный подарок.
  * @method             string getName()              Уникальное название подарка. Его можно использовать в ссылках https://t.me/nft/... и разделах с историями.
  * @method                int getNumber()            Уникальный номер улучшенного подарка среди подарков, улучшенных с одного и того же обычного подарка.
- * @method    UniqueGiftModel getModel()             Объект модели уникального подарка
- * @method   UniqueGiftSymbol getSymbol()            Объект символа уникального подарка.
- * @method UniqueGiftBackdrop getBackdrop()          Объект заднего фона уникального подарка.
+ * @method    UniqueGiftModel getModel()             Модель уникального подарка
+ * @method   UniqueGiftSymbol getSymbol()            Символ уникального подарка.
+ * @method UniqueGiftBackdrop getBackdrop()          Задний фон уникального подарка.
  * @method          Chat|null getPublisherChat() (+) Информация о чате, опубликовавшем подарок.
  *
  */
