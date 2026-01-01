@@ -19,7 +19,6 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatEnded;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
-use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Gift;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\GiftInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGift;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
@@ -133,7 +132,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method               RefundedPayment|null getRefundedPayment()               (+) Объект с информацией о возвращенном платеже.
  * @method                   UsersShared|null getUsersShared()                   (+) Объект с информацией о пользователях, которыми поделись с ботом.
  * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
- * @method                          Gift|null getGift()                          (+) Объект отправленного или полученного обычного подарка.
+ * @method                      GiftInfo|null getGift()                          (+) Cервисное сообщение: был отправлен или получен обычный подарок.
  * @method                    UniqueGift|null getUniqueGift()                    (+) Объект отправленного или полученного уникального подарка.
  * @method                      GiftInfo|null getGiftUpgradeSent()               (+) Cервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
@@ -216,7 +215,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'refunded_payment' => RefundedPayment::class,
     'users_shared' => UsersShared::class,
     'chat_shared' => ChatShared::class,
-    'gift' => Gift::class,
+    'gift' => GiftInfo::class,
     'unique_gift' => UniqueGift::class,
     'gift_upgrade_sent' => GiftInfo::class,
     'write_access_allowed' => WriteAccessAllowed::class,
