@@ -2092,6 +2092,8 @@ class Api
      * Конвертирует обычный подарок в звёзды Телеграм.
      *
      * @link https://core.telegram.org/bots/api#convertgifttostars
+     *
+     * @since 9.0
      */
     public function convertGiftToStars(
         string $businessConnectionId,
@@ -2105,6 +2107,8 @@ class Api
      * Преобразует обычный подарок в уникальный.
      *
      * @link https://core.telegram.org/bots/api#upgradegift
+     *
+     * @since 9.0
      */
     public function upgradeGift(
         string $businessConnectionId,
@@ -2120,6 +2124,8 @@ class Api
      * Передает уникальный подарок (принадлежащий боту) другому пользователю.
      *
      * @link https://core.telegram.org/bots/api#transfergift
+     *
+     * @since 9.0
      */
     public function transferGift(
         string $businessConnectionId,
@@ -2137,6 +2143,8 @@ class Api
      * @link https://core.telegram.org/bots/api#giftpremiumsubscription
      *
      * @param ?MessageEntity[] $textEntities
+     *
+     * @since 9.0
      */
     public function giftPremiumSubscription(
         int $userId,
@@ -2735,6 +2743,8 @@ class Api
      * Отмечает входящее сообщение как прочитанное от имени бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#readbusinessmessage
+     *
+     * @since 9.0
      */
     public function readBusinessMessage(
         string $businessConnectionId,
@@ -2751,6 +2761,8 @@ class Api
      * @link https://core.telegram.org/bots/api#deletebusinessmessages
      *
      * @param int[] $messageIds // 1-100
+     *
+     * @since 9.0
      */
     public function deleteBusinessMessages(
         string $businessConnectionId,
@@ -2766,6 +2778,8 @@ class Api
      * Изменяет имя и фамилию управляемого бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#setbusinessaccountname
+     *
+     * @since 9.0
      */
     public function setBusinessAccountName(
         string $businessConnectionId,
@@ -2780,6 +2794,8 @@ class Api
      * Изменяет юзернейм управляемого бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#setbusinessaccountusername
+     *
+     * @since 9.0
      */
     public function setBusinessAccountUsername(
         string $businessConnectionId,
@@ -2793,6 +2809,8 @@ class Api
      * Изменяет описание управляемого бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#setbusinessaccountbio
+     *
+     * @since 9.0
      */
     public function setBusinessAccountBio(
         string $businessConnectionId,
@@ -2806,6 +2824,8 @@ class Api
      * Изменяет фото профиля управляемого бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#setbusinessaccountprofilephoto
+     *
+     * @since 9.0
      */
     public function setBusinessAccountProfilePhoto(
         string $businessConnectionId,
@@ -2822,6 +2842,8 @@ class Api
      * Удаляет текущее фото профиля управляемого бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#removebusinessaccountprofilephoto
+     *
+     * @since 9.0
      */
     public function removeBusinessAccountProfilePhoto(
         string $businessConnectionId,
@@ -2835,6 +2857,8 @@ class Api
      * Изменяет настройки конфиденциальности входящих подарков в управляемом бизнес-аккаунте.
      *
      * @link https://core.telegram.org/bots/api#setbusinessaccountgiftsettings
+     *
+     * @since 9.0
      */
     public function setBusinessAccountGiftSettings(
         string $businessConnectionId,
@@ -2851,6 +2875,8 @@ class Api
      * Получает количество звёзд Телеграм, принадлежащих управляемому бизнес-аккаунту.
      *
      * @link https://core.telegram.org/bots/api#getbusinessaccountstarbalance
+     *
+     * @since 9.0
      */
     public function getBusinessAccountStarBalance(
         string $businessConnectionId
@@ -2863,6 +2889,8 @@ class Api
      * Переводит звёзды Телеграм с баланса бизнес-аккаунта на баланс бота.
      *
      * @link https://core.telegram.org/bots/api#transferbusinessaccountstars
+     *
+     * @since 9.0
      */
     public function transferBusinessAccountStars(
         string $businessConnectionId,
@@ -2991,6 +3019,8 @@ class Api
      *
      * @param MessageEntity[]|null $captionEntities
      * @param StoryArea[]|null $areas
+     *
+     * @since 9.0
      */
     public function postStory(
         string $businessConnectionId,
@@ -3038,6 +3068,8 @@ class Api
      *
      * @param MessageEntity[]|null $captionEntities
      * @param StoryArea[]|null $areas
+     *
+     * @since 9.0
      */
     public function editStory(
         string $businessConnectionId,
@@ -3060,6 +3092,8 @@ class Api
      * Удаляет историю, ранее опубликованную ботом от имени бизнес-аккаунта.
      *
      * @link https://core.telegram.org/bots/api#deletestory
+     *
+     * @since 9.0
      */
     public function deleteStory(
         string $businessConnectionId,
