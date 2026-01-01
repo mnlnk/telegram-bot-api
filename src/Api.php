@@ -2883,6 +2883,7 @@ class Api
         ?bool $xcludeLimitedUpgradable = null,
         ?bool $excludeLimitedNonUpgradable = null,
         ?bool $excludeUnique = null,
+        ?bool $excludeFromBlockchain = null,
         ?bool $sortByPrice = null,
         ?string $offset = null,
         ?int $limit = null // 1-100
