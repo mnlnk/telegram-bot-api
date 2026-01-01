@@ -1306,6 +1306,8 @@ class Api
      * Отправляет видеозаметку.
      *
      * @link https://core.telegram.org/bots/api#sendvideonote
+     *
+     * @since 3.0
      */
     public function sendVideoNote(
         int|string $chatId,
@@ -1754,6 +1756,8 @@ class Api
      * Удаляет сообщение.
      *
      * @link https://core.telegram.org/bots/api#deletemessage
+     *
+     * @since 3.0
      */
     public function deleteMessage(
         int|string $chatId,
@@ -2510,6 +2514,8 @@ class Api
      *
      * @param LabeledPrice[] $prices
      * @param int[] $suggestedTipAmounts
+     *
+     * @since 3.0
      */
     public function sendInvoice(
         string|int $chatId,
@@ -2602,6 +2608,8 @@ class Api
      * Отправляет ответ на запросы перед оформлением заказа.
      *
      * @link https://core.telegram.org/bots/api#answerprecheckoutquery
+     *
+     * @since 3.0
      */
     public function answerPreCheckoutQuery(
         string $preCheckoutQueryId,
@@ -2618,6 +2626,8 @@ class Api
      * @link https://core.telegram.org/bots/api#answershippingquery
      *
      * @param ShippingOption[] $shippingOptions
+     *
+     * @since 3.0
      */
     public function answerShippingQuery(
         string $shippingQueryId,
