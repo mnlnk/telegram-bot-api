@@ -232,6 +232,8 @@ class Api
      * Получает список бустов, добавленных пользователем в чат канала.
      *
      * @link https://core.telegram.org/bots/api#getuserchatboosts
+     *
+     * @since 7.0
      */
     public function getUserChatBoosts(
         int|string $chatId,
@@ -1433,6 +1435,8 @@ class Api
      * @param int[] $messageIds
      *
      * @return MessageId[]
+     *
+     * @since 7.0
      */
     public function forwardMessages(
         int|string $chatId,
@@ -1492,6 +1496,8 @@ class Api
      * @param int[] $messageIds
      *
      * @return MessageId[]
+     *
+     * @since 7.0
      */
     public function copyMessages(
         int|string $chatId,
@@ -1681,6 +1687,8 @@ class Api
      * @link https://core.telegram.org/bots/api#deletemessages
      *
      * @param int[] $messageIds
+     *
+     * @since 7.0
      */
     public function deleteMessages(
         int|string $chatId,
@@ -1702,6 +1710,8 @@ class Api
      * @link https://core.telegram.org/bots/api#setmessagereaction
      *
      * @param ReactionType[] $reaction
+     *
+     * @since 7.0
      */
     public function setMessageReaction(
         int|string $chatId,
