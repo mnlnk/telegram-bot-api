@@ -889,6 +889,29 @@ class Api
     }
 
     /**
+     * Отправляет пользователю часть сообщения во время его генерации; поддерживается только ботами с включенным режимом темы форума.
+     *
+     * @link https://core.telegram.org/bots/api#sendmessagedraft
+     *
+     * @param ?MessageEntity[] $entities
+     *
+     * @since 9.3
+     */
+    public function sendMessageDraft(
+        int $chatId,
+        ?int $draftId, // != 0
+        string $text, // 1-4096
+        ?int $messageThreadId  = null,
+        ?string $parseMode = null, // ParseMode::class
+        ?array $entities = null
+    ): bool
+    {
+        return (bool) $this->call(func_get_args(), [
+            'entities'
+        ]);
+    }
+
+    /**
      * Отправляет аудио-файл.
      *
      * @link https://core.telegram.org/bots/api#sendaudio

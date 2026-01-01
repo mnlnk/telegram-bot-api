@@ -62,6 +62,7 @@
 
 ##### Сообщения
 + [sendMessage()](https://core.telegram.org/bots/api#sendmessage) - Отправляет текстовое сообщение.
++ [sendMessageDraft()](https://core.telegram.org/bots/api#sendmessagedraft) - Отправляет пользователю часть сообщения во время его генерации.
 + [sendAudio()](https://core.telegram.org/bots/api#sendaudio) - Отправляет аудиофайл.
 + [sendAnimation()](https://core.telegram.org/bots/api#sendanimation) - Отправляет анимацию.
 + [sendVideo()](https://core.telegram.org/bots/api#sendvideo) - Отправляет видео.
