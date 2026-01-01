@@ -2308,6 +2308,8 @@ class Api
      * Проверяет пользователя от имени организации, которую представляет бот.
      *
      * @link https://core.telegram.org/bots/api#verifyuser
+     *
+     * @since 8.2
      */
     public function verifyUser(
         int $userId,
@@ -2321,6 +2323,8 @@ class Api
      * Удаляет проверку у пользователя, который в данный момент проверен от имени организации, которую представляет бот.
      *
      * @link https://core.telegram.org/bots/api#removeuserverification
+     *
+     * @since 8.2
      */
     public function removeUserVerification(
         int $userId
@@ -2333,6 +2337,8 @@ class Api
      * Проверяет чат от имени организации, которую представляет бот.
      *
      * @link https://core.telegram.org/bots/api#verifychat
+     *
+     * @since 8.2
      */
     public function verifyChat(
         int $userId,
@@ -2346,6 +2352,8 @@ class Api
      * Удаляет проверку у чата, который в данный момент проверен от имени организации, которую представляет бот.
      *
      * @link https://core.telegram.org/bots/api#removechatverification
+     *
+     * @since 8.2
      */
     public function removeChatVerification(
         int $userId
