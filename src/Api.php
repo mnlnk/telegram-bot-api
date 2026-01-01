@@ -663,6 +663,8 @@ class Api
      * Устанавливает пользовательское название (роль) для администратора в супергруппе.
      *
      * @link https://core.telegram.org/bots/api#setchatadministratorcustomtitle
+     *
+     * @since 4.5
      */
     public function setChatAdministratorCustomTitle(
         int|string $chatId,
