@@ -836,6 +836,8 @@ class Api
      * Очищает список закрепленных сообщений в "Основной" теме форума.
      *
      * @link https://core.telegram.org/bots/api#unpinallgeneralforumtopicmessages
+     *
+     * @since 6.8
      */
     public function unpinAllGeneralForumTopicMessages(
         int|string $chatId
