@@ -22,7 +22,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method UniqueGiftBackdrop getBackdrop()             Задний фон уникального подарка.
  * @method          bool|null getIsPremium()        (+) Оригинальный обычный подарок был доступен исключительно подписчикам Телеграм Премиум.
  * @method          bool|null getIsFromBlockchain() (+) Подарок создан на основе данных из блокчейна TON и его нельзя перепродать или передать через Телеграм, это может привести к ошибке.
- * @method          Chat|null getPublisherChat()    (+) Информация о чате, опубликовавшем подарок.
+ * @method          Chat|null getPublisherChat()    (+) Чат, опубликовавшый подарок.
  *
  */
 #[Required([
