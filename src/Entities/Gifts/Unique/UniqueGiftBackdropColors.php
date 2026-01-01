@@ -11,10 +11,10 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  *
  * @link https://core.telegram.org/bots/api#uniquegiftbackdropcolors
  *
- * @method int getCenterColor() Цвет в центре заднего фона в формате RGB.
- * @method int getEdgeColor()   Цвет по краям заднего фона в формате RGB.
- * @method int getSymbolColor() Цвет, который будет применен к символу в формате RGB.
- * @method int getTextColor()   Цвет текста на заднем фоне в формате RGB.
+ * @method int getCenterColor() Цвет в центре заднего фона (RGB).
+ * @method int getEdgeColor()   Цвет по краям заднего фона (RGB).
+ * @method int getSymbolColor() Цвет, который будет применен к символу (RGB).
+ * @method int getTextColor()   Цвет текста на заднем фоне (RGB).
  */
 #[Required([
     'center_color',
