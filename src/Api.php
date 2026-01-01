@@ -571,6 +571,8 @@ class Api
      * Разблокирует ранее заблокированного пользователя в супергруппе или канале.
      *
      * @link https://core.telegram.org/bots/api#unbanchatmember
+     *
+     * @since 2.0
      */
     public function unbanChatMember(
         int|string $chatId,
@@ -1119,7 +1121,7 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendcontact
      *
-     * @since 4.0
+     * @since 2.0
      */
     public function sendContact(
         int|string $chatId,
@@ -1387,7 +1389,7 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendvenue
      *
-     * @since 4.0
+     * @since 2.0
      */
     public function sendVenue(
         int|string $chatId,
@@ -1620,6 +1622,8 @@ class Api
      * @link https://core.telegram.org/bots/api#editmessagetext
      *
      * @param ?MessageEntity[] $entities
+     *
+     * @since 2.0
      */
     public function editMessageText(
         string $text, // 1-4096
@@ -1646,6 +1650,8 @@ class Api
      * @link https://core.telegram.org/bots/api#editmessagecaption
      *
      * @param ?MessageEntity[] $captionEntities
+     *
+     * @since 2.0
      */
     public function editMessageCaption(
         string $caption, // 0-1024
@@ -1691,6 +1697,8 @@ class Api
      * Редактирует клавиатуру сообщения.
      *
      * @link https://core.telegram.org/bots/api#editmessagereplymarkup
+     *
+     * @since 2.0
      */
     public function editMessageReplyMarkup(
         int|string|null $chatId = null, // !$inlineMessageId
@@ -2373,6 +2381,8 @@ class Api
      * Отправляет ответ на запрос обратного вызова, отправленный со встроенной клавиатуры.
      *
      * @link https://core.telegram.org/bots/api#answercallbackquery
+     *
+     * @since 2.0
      */
     public function answerCallbackQuery(
         string $callbackQuery_id,
