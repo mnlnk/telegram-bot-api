@@ -2150,6 +2150,28 @@ class Api
         ]);
     }
 
+    /**
+     * Получает подарки, принадлежащие пользователю и размещенные им.
+     *
+     * @link https://core.telegram.org/bots/api#getusergifts
+     *
+     * @since 9.3
+     */
+    public function getUserGifts(
+        int $userId,
+        ?bool $excludeUnlimited = null,
+        ?bool $excludeLimitedUpgradable = null,
+        ?bool $excludeLimitedNonUpgradable = null,
+        ?bool $excludeFromBlockchain = null,
+        ?bool $excludeUnique = null,
+        ?bool $sortByPrice = null,
+        ?string $offset = null,
+        ?int $limit = null // 1-100
+    ): OwnedGifts
+    {
+        return EntityFactory::make(OwnedGifts::class,$this->call(func_get_args()));
+    }
+
     #endregion
 
     #region Queries
