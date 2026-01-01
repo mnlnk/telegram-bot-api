@@ -359,6 +359,8 @@ class Api
      * Создает ссылку-приглашение на подписку для канала.
      *
      * @link https://core.telegram.org/bots/api#createchatsubscriptioninvitelink
+     *
+     * @since 7.9
      */
     public function createChatSubscriptionInviteLink(
         int|string $chatId,
@@ -374,6 +376,8 @@ class Api
      * Редактирует ссылку-приглашение на подписку для канала.
      *
      * @link https://core.telegram.org/bots/api#editchatsubscriptioninvitelink
+     *
+     * @since 7.9
      */
     public function editChatSubscriptionInviteLink(
         int|string $chatId,
