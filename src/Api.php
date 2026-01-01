@@ -394,6 +394,8 @@ class Api
      * Одобряет запрос на присоединение пользователя к чату.
      *
      * @link https://core.telegram.org/bots/api#approvechatjoinrequest
+     *
+     * @since 5.4
      */
     public function approveChatJoinRequest(
         int|string $chatId,
