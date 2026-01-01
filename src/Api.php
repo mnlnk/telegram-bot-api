@@ -2172,6 +2172,30 @@ class Api
         return EntityFactory::make(OwnedGifts::class,$this->call(func_get_args()));
     }
 
+    /**
+     * Получает подарки, принадлежащие чату.
+     *
+     * @link https://core.telegram.org/bots/api#getchatgifts
+     *
+     * @since 9.3
+     */
+    public function getChatGifts(
+        int|string $chatId,
+        ?bool $excludeUnsaved = null,
+        ?bool $excludeSaved = null,
+        ?bool $excludeUnlimited = null,
+        ?bool $excludeLimitedUpgradable = null,
+        ?bool $excludeLimitedNonUpgradable = null,
+        ?bool $excludeFromBlockchain = null,
+        ?bool $excludeUnique = null,
+        ?bool $sortByPrice = null,
+        ?string $offset = null,
+        ?int $limit = null // 1-100
+    ): OwnedGifts
+    {
+        return EntityFactory::make(OwnedGifts::class,$this->call(func_get_args()));
+    }
+
     #endregion
 
     #region Queries

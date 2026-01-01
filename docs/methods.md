@@ -129,6 +129,7 @@
 + [transferGift()](https://core.telegram.org/bots/api#transfergift) - Передает уникальный подарок (принадлежащий боту) другому пользователю.
 + [giftPremiumSubscription()](https://core.telegram.org/bots/api#giftpremiumsubscription) - Дарит подписку Телеграм Премиум указанному пользователю.
 + [getUserGifts()](https://core.telegram.org/bots/api#getusergifts) - Получает подарки, принадлежащие пользователю и размещенные им.
++ [getChatGifts()](https://core.telegram.org/bots/api#getchatgifts) - Получает подарки, принадлежащие чату.
 
 ##### Запросы
 + [answerCallbackQuery()](https://core.telegram.org/bots/api#answercallbackquery) - Отправляет ответ на запрос обратного вызова.
