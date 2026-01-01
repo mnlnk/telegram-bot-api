@@ -647,6 +647,8 @@ class Api
      * Устанавливает разрешения по умолчанию для всех участников.
      *
      * @link https://core.telegram.org/bots/api#setchatpermissions
+     *
+     * @since 4.4
      */
     public function setChatPermissions(
         int|string $chatId,
