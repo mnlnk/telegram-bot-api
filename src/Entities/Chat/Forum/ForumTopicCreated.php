@@ -14,6 +14,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method      string getName()                  Название темы.
  * @method         int getIconColor()             Цвет иконки темы в формате RGB.
  * @method string|null getIconCustomEmojiId() (+) Уникальный идентификатор пользовательского эмоджи, отображаемого в виде иконки темы.
+ * @method   bool|null getIsNameImplicit()    (+) Название темы не было явно указано её создателем, и вероятно, его необходимо изменить ботом.
  */
 #[Required([
     'name',
