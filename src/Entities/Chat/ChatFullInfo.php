@@ -70,6 +70,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
  * @method         ChatLocation|null getLocation()                           (+) Местоположение (локация), к которому привязана супергруппа.
  * @method           UserRating|null getRating()                             (+) Рейтинг пользователя, если таковой имеется (отображается личных чатах).
  * @method     UniqueGiftColors|null getUniqueGiftColors()                   (+) Цветовая схема основаная на уникальном подарке, который используется для названия чата, ответов на сообщения и предварительного просмотра ссылок.
+ * @method                  int|null getPaidMessageStarCount()               (+) Количество звезд Телеграм, которое обычный пользователь должен заплатить за отправку сообщения в чат.
  */
 #[Required([
     'id',
