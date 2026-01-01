@@ -1110,6 +1110,8 @@ class Api
      * Отправляет игральную кость, которая отображает случайное значение.
      *
      * @link https://core.telegram.org/bots/api#senddice
+     *
+     * @since 4.7
      */
     public function sendDice(
         int|string $chatId,
@@ -2706,6 +2708,8 @@ class Api
      * @link https://core.telegram.org/bots/api#getmycommands
      *
      * @return BotCommand[]
+     *
+     * @since 4.7
      */
     public function getMyCommands(
         ?BotCommandScope $scope = null,
@@ -2774,6 +2778,8 @@ class Api
      * @link https://core.telegram.org/bots/api#setmycommands
      *
      * @param BotCommand[] $commands
+     *
+     * @since 4.7
      */
     public function setMyCommands(
         array $commands, // 1-100
