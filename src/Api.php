@@ -262,6 +262,8 @@ class Api
      * Добавляет сообщение в список закрепленных сообщений чата.
      *
      * @link https://core.telegram.org/bots/api#pinchatmessage
+     *
+     * @since 4.2
      */
     public function pinChatMessage(
         int|string $chatId,
@@ -277,6 +279,8 @@ class Api
      * Удаляет сообщение из списка закрепленных сообщений в чате.
      *
      * @link https://core.telegram.org/bots/api#unpinchatmessage
+     *
+     * @since 4.2
      */
     public function unpinChatMessage(
         int|string $chatId,
@@ -1416,6 +1420,8 @@ class Api
      * @param InputPollOption[] $options
      * @param ?MessageEntity[] $questionEntities
      * @param ?MessageEntity[] $explanationEntities
+     *
+     * @since 4.2
      */
     public function sendPoll(
         int|string $chatId,
@@ -1707,6 +1713,8 @@ class Api
      * Останавливает отправленный ранее опрос.
      *
      * @link https://core.telegram.org/bots/api#stoppoll
+     *
+     * @since 4.2
      */
     public function stopPoll(
         int|string $chatId,
