@@ -65,23 +65,23 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  *
  * @method                                int getMessageId()                         Уникальный идентификатор сообщения.
  * @method                           int|null getMessageThreadId()               (+) Уникальный идентификатор цепочки сообщений, к которой принадлежит сообщение; только для супергрупп.
- * @method           DirectMessagesTopic|null getDirectMessagesTopic()           (+) Информация о теме чата личных сообщений, содержащей сообщение.
- * @method                          User|null getFrom()                          (+) Объект отправителя сообщения (пусто для сообщений, отправленных на каналы).
- * @method                          Chat|null getSenderChat()                    (+) Объект чата отправителя сообщения, отправленного от имени чата.
+ * @method           DirectMessagesTopic|null getDirectMessagesTopic()           (+) Тема чата личных сообщений, содержащая сообщение.
+ * @method                          User|null getFrom()                          (+) Отправитель сообщения (пусто для сообщений, отправленных на каналы).
+ * @method                          Chat|null getSenderChat()                    (+) Чат отправителя сообщения, отправленного от имени чата.
  * @method                           int|null getSenderBoostCount()              (+) Количество бустов, добавленных пользователем, если отправитель сообщения бустил чат.
- * @method                          User|null getSenderBusinessBot()             (+) Объект пользователя-бота отправшего сообщение от имени бизнес-аккаунта.
+ * @method                          User|null getSenderBusinessBot()             (+) Пользователь-бот отправивший сообщение от имени бизнес-аккаунта.
  * @method                                int getDate()                              Дата отправки сообщения (Unix).
  * @method                        string|null getBusinessConnectionId()          (+) Уникальный идентификатор бизнес-соединения, от которого было получено сообщение.
- * @method                               Chat getChat()                              Объект чата, которому принадлежит сообщение.
- * @method                 MessageOrigin|null getForwardOrigin()                 (+) Объект с информацией об исходном сообщении для пересылаемых сообщений.
+ * @method                               Chat getChat()                              Чат, которому принадлежит сообщение.
+ * @method                 MessageOrigin|null getForwardOrigin()                 (+) Исходное сообщение; для пересылаемых сообщений.
  * @method                          bool|null getIsTopicMessage()                (+) Сообщение отправлено в тему форума.
  * @method                          bool|null getIsAutomaticForward()            (+) Сообщение представляет собой публикацию канала, которая была автоматически перенаправлена в подключенную группу обсуждения.
- * @method                       Message|null getReplyToMessage()                (+) Объект исходного сообщение; для ответов.
- * @method             ExternalReplyInfo|null getExternalReply()                 (+) Объект с информацией о сообщении, на которое отвечают, которое может прийти из другого чата или темы форума.
- * @method                     TextQuote|null getQuote()                         (+) Объект цитируемой части сообщения; для ответов.
- * @method                         Story|null getReplyToStory()                  (+) Объект оригинальной истории; для ответов на историю.
+ * @method                       Message|null getReplyToMessage()                (+) Исходное сообщение; для ответов.
+ * @method             ExternalReplyInfo|null getExternalReply()                 (+) Сообщение, на которое отвечают, которое может прийти из другого чата или темы форума.
+ * @method                     TextQuote|null getQuote()                         (+) Цитируемая часть сообщения; для ответов.
+ * @method                         Story|null getReplyToStory()                  (+) Оригинальная история; для ответов на историю.
  * @method                           int|null getReplyToChecklistTaskId()        (+) Идентификатор конкретной задачи в чеклисте, на которую дается ответ.
- * @method                          User|null getViaBot()                        (+) Объект пользователя (бота), через которого было отправлено сообщение.
+ * @method                          User|null getViaBot()                        (+) Пользователь (бот), через которого было отправлено сообщение.
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
  * @method                          bool|null getIsFromOffline()                 (+) Сообщение было отправлено неявным действием, например, как бизнес-сообщение об отъезде или приветствие.
@@ -90,82 +90,82 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                        string|null getAuthorSignature()               (+) Подпись автора поста для сообщений в каналах или пользовательский заголовок анонимного администратора группы.
  * @method                           int|null getPaidStarCount()                 (+) Количество звёзд Телеграм, которыми отправитель сообщения заплатил за его отправку.
  * @method                        string|null getText()                          (+) Текст сообщения в формате UTF-8; для текстовых сообщений.
- * @method               MessageEntity[]|null getEntities()                      (+) Массив объектов специальных сущностей; для текстовых сообщений.
- * @method            LinkPreviewOptions|null getLinkPreviewOptions()            (+) Объект параметров, используемых для создания предварительного просмотра ссылки в сообщении.
- * @method             SuggestedPostInfo|null getSuggestedPostInfo()             (+) Информация о параметрах рекомендуемой публикации, если сообщение является рекомендуемой публикацией в чате личных сообщений канала.
+ * @method               MessageEntity[]|null getEntities()                      (+) Специальные сущности; для текстовых сообщений.
+ * @method            LinkPreviewOptions|null getLinkPreviewOptions()            (+) Параметры используемые для создания предварительного просмотра ссылки в сообщении.
+ * @method             SuggestedPostInfo|null getSuggestedPostInfo()             (+) Параметры рекомендуемой публикации, если сообщение является рекомендуемой публикацией в чате личных сообщений канала.
  * @method                        string|null getEffectId()                      (+) Уникальный идентификатор эффекта сообщения.
- * @method                     Animation|null getAnimation()                     (+) Объект с информацией об анимации.
- * @method                         Audio|null getAudio()                         (+) Объект с информацией о звуковом файле.
- * @method                      Document|null getDocument()                      (+) Объект с информацией о документе (простом файле).
- * @method                 PaidMediaInfo|null getPaidMedia()                     (+) Объект с информацией о платном медиафайле.
- * @method                   PhotoSize[]|null getPhoto()                         (+) Массив объектов с информацией о фото (доступные размеры фото).
- * @method                       Sticker|null getSticker()                       (+) Объект с информацией о стикере.
- * @method                         Story|null getStory()                         (+) Объект с информацией о пересланной истории.
- * @method                         Video|null getVideo()                         (+) Объект с информацией о видео.
- * @method                     VideoNote|null getVideoNote()                     (+) Объект с информацией о видеозаметке.
- * @method                         Voice|null getVoice()                         (+) Объект с информацией о голосовом сообщении.
+ * @method                     Animation|null getAnimation()                     (+) Анимация.
+ * @method                         Audio|null getAudio()                         (+) Звуковой файле (музыка).
+ * @method                      Document|null getDocument()                      (+) Документ (простй файл).
+ * @method                 PaidMediaInfo|null getPaidMedia()                     (+) Платный медиафайл.
+ * @method                   PhotoSize[]|null getPhoto()                         (+) Фото (массив доступных размеров).
+ * @method                       Sticker|null getSticker()                       (+) Стикер.
+ * @method                         Story|null getStory()                         (+) История.
+ * @method                         Video|null getVideo()                         (+) Видео.
+ * @method                     VideoNote|null getVideoNote()                     (+) Видеозаметка (кружок).
+ * @method                         Voice|null getVoice()                         (+) Голосовое сообщение.
  * @method                        string|null getCaption()                       (+) Подпись к анимации, аудио, документу, фото, видео или голосовой заметке.
- * @method               MessageEntity[]|null getCaptionEntities()               (+) Массив объектов с информацией о специальных сущностях в подписи; для сообщений с подписью.
+ * @method               MessageEntity[]|null getCaptionEntities()               (+) Массив специальных сущностей в подписи; для сообщений с подписью.
  * @method                          bool|null getShowCaptionAboveMedia()         (+) Показывать подпись над медиа в сообщении.
  * @method                          bool|null getHasMediaSpoiler()               (+) Медиа сообщение закрыто анимацией спойлера.
- * @method                     Checklist|null getChecklist()                     (+) Объект с информацией о контрольном списке.
- * @method                       Contact|null getContact()                       (+) Объект с информацией о телефонном контакте.
- * @method                          Dice|null getDice()                          (+) Объект с информацией об игральной кости (кубик со случайным значением).
- * @method                          Game|null getGame()                          (+) Объект с информацией об игре.
- * @method                          Poll|null getPoll()                          (+) Объект с информацией об опросе.
- * @method                         Venue|null getVenue()                         (+) Объект с информацией о месте проведения.
- * @method                      Location|null getLocation()                      (+) Объект с информацией о местоположении (локации).
- * @method                        User[]|null getNewChatMembers()                (+) Массив объектов новых участников, которые были добавлены в группу или супергруппу (сам бот может быть одним из этих участников).
- * @method                          User|null getLeftChatMember()                (+) Объект пользователя удаленного из группы (сам бот может быть одним из этих участников).
+ * @method                     Checklist|null getChecklist()                     (+) Контрольный список.
+ * @method                       Contact|null getContact()                       (+) Телефонный контакт.
+ * @method                          Dice|null getDice()                          (+) Игральная кость (кубик со случайным значением).
+ * @method                          Game|null getGame()                          (+) Игра.
+ * @method                          Poll|null getPoll()                          (+) Опрос.
+ * @method                         Venue|null getVenue()                         (+) Месте проведения.
+ * @method                      Location|null getLocation()                      (+) Местоположении (локации).
+ * @method                        User[]|null getNewChatMembers()                (+) Массив новых участников, которые были добавлены в группу или супергруппу (сам бот может быть одним из этих участников).
+ * @method                          User|null getLeftChatMember()                (+) Пользователь, удаленный из группы (сам бот может быть одним из этих участников).
  * @method                        string|null getNewChatTitle()                  (+) Новый заголовок (название) чата.
- * @method                   PhotoSize[]|null getNewChatPhoto()                  (+) Массив объектов новой фотографии чата (доступные размеры фото).
+ * @method                   PhotoSize[]|null getNewChatPhoto()                  (+) Новое фото чата (массив доступных размеров).
  * @method                          bool|null getDeleteChatPhoto()               (+) Сервисное сообщение: фото чата удалено.
  * @method                          bool|null getGroupChatCreated()              (+) Сервисное сообщение: группа создана.
  * @method                          bool|null getSupergroupChatCreated()         (+) Сервисное сообщение: супергруппа создана.
  * @method                          bool|null getChannelChatCreated()            (+) Сервисное сообщение: канал создан.
- * @method MessageAutoDeleteTimerChanged|null getMessageAutoDeleteTimerChanged() (+) Объект с информацией о новых настройках таймера автоудаления в чате.
+ * @method MessageAutoDeleteTimerChanged|null getMessageAutoDeleteTimerChanged() (+) Новые настройки таймера автоудаления в чате.
  * @method                           int|null getMigrateToChatId()               (+) Идентификатор супергруппы, которая была перенесена из группы.
  * @method                           int|null getMigrateFromChatId()             (+) Идентификатор группы, которая была перенесена в супергруппу.
- * @method      MaybeInaccessibleMessage|null getPinnedMessage()                 (+) Объект закрепленного сообщения.
- * @method                       Invoice|null getInvoice()                       (+) Объект с информацией о счете на оплату.
- * @method             SuccessfulPayment|null getSuccessfulPayment()             (+) Объект с информацией об успешном платеже.
- * @method               RefundedPayment|null getRefundedPayment()               (+) Объект с информацией о возвращенном платеже.
- * @method                   UsersShared|null getUsersShared()                   (+) Объект с информацией о пользователях, которыми поделись с ботом.
- * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
- * @method                      GiftInfo|null getGift()                          (+) Cервисное сообщение: был отправлен или получен обычный подарок.
- * @method                UniqueGiftInfo|null getUniqueGift()                    (+) Cервисное сообщение: был отправлен или получен уникальный подарок.
+ * @method      MaybeInaccessibleMessage|null getPinnedMessage()                 (+) Закрепленное сообщение.
+ * @method                       Invoice|null getInvoice()                       (+) Счет на оплату.
+ * @method             SuccessfulPayment|null getSuccessfulPayment()             (+) Подтверждение успешного платежа.
+ * @method               RefundedPayment|null getRefundedPayment()               (+) Возвращаемый платеж.
+ * @method                   UsersShared|null getUsersShared()                   (+) Cервисное сообщение: пользователи переданы боту.
+ * @method                    ChatShared|null getChatShared()                    (+) Cервисное сообщение: чат передан боту.
+ * @method                      GiftInfo|null getGift()                          (+) Cервисное сообщение: отправлен или получен обычный подарок.
+ * @method                UniqueGiftInfo|null getUniqueGift()                    (+) Cервисное сообщение: отправлен или получен уникальный подарок.
  * @method                      GiftInfo|null getGiftUpgradeSent()               (+) Cервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
- * @method            WriteAccessAllowed|null getWriteAccessAllowed()            (+) Объект сервисного сообщения: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
- * @method                  PassportData|null getPassportData()                  (+) Объект данных Телеграм Паспорт.
- * @method       ProximityAlertTriggered|null getProximityAlertTriggered()       (+) Объект сервисного сообщения: пользователь в чате активировал оповещение о приближении другого пользователя во время
- * @method                ChatBoostAdded|null getBoostAdded()                    (+) Объект сервисного сообщения: пользователь забустил чат.
- * @method                ChatBackground|null getChatBackgroundSet()             (+) Объект сервисного сообщения: пользователь установил фон чата.
- * @method            ChecklistTasksDone|null getChecklistTasksDone()            (+) Объект сервисного сообщения: некоторые задачи в контрольном списке отмечены как выполненные или невыполненные.
- * @method           ChecklistTasksAdded|null getChecklistTasksAdded()           (+) Объект сервисного сообщения: в контрольный список добавлены новые задачи.
- * @method     DirectMessagePriceChanged|null getDirectMessagePriceChanged()     (+) Объект сервисного сообщения: изменилась цена платных сообщений в соответствующем чате личных сообщений канала.
- * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Объект сервисного сообщения: тема форума создана.
- * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Объект сервисного сообщения: тема форума отредактирована.
- * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Объект сервисного сообщения: тема форума закрыта.
- * @method            ForumTopicReopened|null getForumTopicReopened()            (+) Объект сервисного сообщения: тема форума снова открыта.
- * @method       GeneralForumTopicHidden|null getGeneralForumTopicHidden()       (+) Объект сервисного сообщения: основная "General" тема форума скрыта.
- * @method     GeneralForumTopicUnhidden|null getGeneralForumTopicUnhidden()     (+) Объект сервисного сообщения: основная "General" тема форума снова открыта.
- * @method               GiveawayCreated|null getGiveawayCreated()               (+) Объект сервисного сообщения: создан запланированный розыгрыш призов.
- * @method                      Giveaway|null getGiveaway()                      (+) Объект запланированного розыгрыша призов.
- * @method               GiveawayWinners|null getGiveawayWinners()               (+) Объект завершения розыгрыша с участием публичных победителей.
- * @method             GiveawayCompleted|null getGiveawayCompleted()             (+) Объект сервисного сообщения: розыгрыш завершен без публичных победителей.
- * @method         SuggestedPostApproved|null getSuggestedPostApproved()         (+) Объект сервисного сообщения: предложенный пост был одобрен.
- * @method   SuggestedPostApprovalFailed|null getSuggestedPostApprovalFailed()   (+) Объект сервисного сообщения: одобрение предложенного поста не удалось.
- * @method         SuggestedPostDeclined|null getSuggestedPostDeclined()         (+) Объект сервисного сообщения: предложенный пост был отклонен.
- * @method             SuggestedPostPaid|null getSuggestedPostPaid()             (+) Объект сервисного сообщения: оплата за предложенный пост была получена.
- * @method         SuggestedPostRefunded|null getSuggestedPostRefunded()         (+) Объект сервисного сообщения: оплата за предложенный пост возвращена.
- * @method       PaidMessagePriceChanged|null getPaidMessagePriceChanged()       (+) Объект сервисного сообщения: в чате изменилась стоимость платных сообщений.
- * @method            VideoChatScheduled|null getVideoChatScheduled()            (+) Объект сервисного сообщения: видеочат запланирован.
- * @method              VideoChatStarted|null getVideoChatStarted()              (+) Объект сервисного сообщения: видеочат запущен.
- * @method                VideoChatEnded|null getVideoChatEnded()                (+) Объект сервисного сообщения: видеочат завершен.
- * @method  VideoChatParticipantsInvited|null getVideoChatParticipantsInvited()  (+) Объект сервисного сообщения: новые участники приглашены в видеочат.
- * @method                    WebAppData|null getWebAppData()                    (+) Объект данных, отправленных веб-приложением.
- * @method          InlineKeyboardMarkup|null getReplyMarkup()                   (+) Объект встроенной клавиатуры, прикрепленной к сообщению.
+ * @method            WriteAccessAllowed|null getWriteAccessAllowed()            (+) Cервисное сообщение: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
+ * @method                  PassportData|null getPassportData()                  (+) Телеграм Паспорт.
+ * @method       ProximityAlertTriggered|null getProximityAlertTriggered()       (+) Cервисное сообщение: пользователь в чате активировал оповещение о приближении другого пользователя во время
+ * @method                ChatBoostAdded|null getBoostAdded()                    (+) Cервисное сообщение: пользователь забустил чат.
+ * @method                ChatBackground|null getChatBackgroundSet()             (+) Cервисное сообщение: пользователь установил фон чата.
+ * @method            ChecklistTasksDone|null getChecklistTasksDone()            (+) Cервисное сообщение: некоторые задачи в контрольном списке отмечены как выполненные или невыполненные.
+ * @method           ChecklistTasksAdded|null getChecklistTasksAdded()           (+) Cервисное сообщение: в контрольный список добавлены новые задачи.
+ * @method     DirectMessagePriceChanged|null getDirectMessagePriceChanged()     (+) Cервисное сообщение: изменилась цена платных сообщений в соответствующем чате личных сообщений канала.
+ * @method             ForumTopicCreated|null getForumTopicCreated()             (+) Cервисное сообщение: тема форума создана.
+ * @method              ForumTopicEdited|null getForumTopicEdited()              (+) Cервисное сообщение: тема форума отредактирована.
+ * @method              ForumTopicClosed|null getForumTopicClosed()              (+) Cервисное сообщение: тема форума закрыта.
+ * @method            ForumTopicReopened|null getForumTopicReopened()            (+) Cервисное сообщение: тема форума снова открыта.
+ * @method       GeneralForumTopicHidden|null getGeneralForumTopicHidden()       (+) Cервисное сообщение: основная "General" тема форума скрыта.
+ * @method     GeneralForumTopicUnhidden|null getGeneralForumTopicUnhidden()     (+) Cервисное сообщение: основная "General" тема форума снова открыта.
+ * @method               GiveawayCreated|null getGiveawayCreated()               (+) Cервисное сообщение: создан запланированный розыгрыш призов.
+ * @method                      Giveaway|null getGiveaway()                      (+) Запланированный розыгрыш призов.
+ * @method               GiveawayWinners|null getGiveawayWinners()               (+) Завершенный розыгрыш с участием публичных победителей.
+ * @method             GiveawayCompleted|null getGiveawayCompleted()             (+) Cервисное сообщение: розыгрыш завершен без публичных победителей.
+ * @method         SuggestedPostApproved|null getSuggestedPostApproved()         (+) Cервисное сообщение: предложенный пост был одобрен.
+ * @method   SuggestedPostApprovalFailed|null getSuggestedPostApprovalFailed()   (+) Cервисное сообщение: одобрение предложенного поста не удалось.
+ * @method         SuggestedPostDeclined|null getSuggestedPostDeclined()         (+) Cервисное сообщение: предложенный пост был отклонен.
+ * @method             SuggestedPostPaid|null getSuggestedPostPaid()             (+) Cервисное сообщение: оплата за предложенный пост была получена.
+ * @method         SuggestedPostRefunded|null getSuggestedPostRefunded()         (+) Cервисное сообщение: оплата за предложенный пост возвращена.
+ * @method       PaidMessagePriceChanged|null getPaidMessagePriceChanged()       (+) Cервисное сообщение: в чате изменилась стоимость платных сообщений.
+ * @method            VideoChatScheduled|null getVideoChatScheduled()            (+) Cервисное сообщение: видеочат запланирован.
+ * @method              VideoChatStarted|null getVideoChatStarted()              (+) Cервисное сообщение: видеочат запущен.
+ * @method                VideoChatEnded|null getVideoChatEnded()                (+) Cервисное сообщение: видеочат завершен.
+ * @method  VideoChatParticipantsInvited|null getVideoChatParticipantsInvited()  (+) Cервисное сообщение: новые участники приглашены в видеочат.
+ * @method                    WebAppData|null getWebAppData()                    (+) Данные, отправленные веб-приложением.
+ * @method          InlineKeyboardMarkup|null getReplyMarkup()                   (+) Встроенная клавиатура, прикрепленная к сообщению.
  */
 #[Required([
     'message_id',
@@ -454,7 +454,7 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
-     * Данные телеграм паспорт.
+     * Телеграм паспорт.
      */
     public function isPassportData(): bool
     {
@@ -558,7 +558,7 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
-     * Сервисное сообщение: с ботом поделились пользователями.
+     * Сервисное сообщение: пользователи переданы боту.
      */
     public function isUsersShared(): bool
     {
@@ -566,7 +566,7 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
-     * Сервисное сообщение: с ботом поделились чатом.
+     * Сервисное сообщение: чат передан боту.
      */
     public function isChatShared(): bool
     {
@@ -718,7 +718,7 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
-     * Завершение розыгрыша с участием публичных победителей.
+     * Завершенный розыгрыш с участием публичных победителей.
      */
     public function isGiveawayWinners(): bool
     {
