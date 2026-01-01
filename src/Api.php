@@ -775,6 +775,8 @@ class Api
      * Редактирует название "Основной" темы форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#editgeneralforumtopic
+     *
+     * @since 6.4
      */
     public function editGeneralForumTopic(
         int|string $chatId,
@@ -788,6 +790,8 @@ class Api
      * Закрывает открытую "Основную" тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#closegeneralforumtopic
+     *
+     * @since 6.4
      */
     public function closeGeneralForumTopic(
         int|string $chatId
@@ -800,6 +804,8 @@ class Api
      * Повторно открывает закрытую "Основную" тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#reopengeneralforumtopic
+     *
+     * @since 6.4
      */
     public function reopenGeneralForumTopic(
         int|string $chatId
@@ -812,6 +818,8 @@ class Api
      * Скрывает "Основную" тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#hidegeneralforumtopic
+     *
+     * @since 6.4
      */
     public function hideGeneralForumTopic(
         int|string $chatId
@@ -824,6 +832,8 @@ class Api
      * Отображает скрытую "Основную" тему в чате супергруппы форума.
      *
      * @link https://core.telegram.org/bots/api#unhidegeneralforumtopic
+     *
+     * @since 6.4
      */
     public function unhideGeneralForumTopic(
         int|string $chatId
