@@ -14,13 +14,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
  *
  * @link https://core.telegram.org/bots/api#gift
  *
- * @method    string getId()                   Уникальный идентификатор подарка.
- * @method   Sticker getSticker()              Объект стикера, символизирующий подарок.
- * @method       int getStarCount()            Количество Telegram Stars, которое необходимо заплатить для отправки стикера.
- * @method  int|null getUpgradeStarCount() (+) Количество Telegram Stars, которое необходимо заплатить, чтобы сделать подарок уникальным.
- * @method  int|null getTotalCount()       (+) Общее количество подарков данного типа, которое можно отправить; только для ограниченных подарков.
- * @method  int|null getRemainingCount()   (+) Количество оставшихся подарков данного типа, которые можно отправить; только для ограниченных подарков.
- * @method Chat|null getPublisherChat()    (+) Информация о чате, опубликовавшем подарок.
+ * @method    string getId()                     Уникальный идентификатор подарка.
+ * @method   Sticker getSticker()                Объект стикера, символизирующий подарок.
+ * @method       int getStarCount()              Количество Telegram Stars, которое необходимо заплатить для отправки стикера.
+ * @method  int|null getUpgradeStarCount()   (+) Количество Telegram Stars, которое необходимо заплатить, чтобы сделать подарок уникальным.
+ * @method  int|null getTotalCount()         (+) Общее количество подарков данного типа, которое можно отправить; только для ограниченных подарков.
+ * @method  int|null getRemainingCount()     (+) Количество оставшихся подарков данного типа, которые можно отправить; только для ограниченных подарков.
+ * @method  int|null getPersonalTotalCount() (+) Общее количество подарков этого типа, которые может отправить бот; только для ограниченного количества подарков.
+ * @method Chat|null getPublisherChat()      (+) Информация о чате, опубликовавшем подарок.
  */
 #[Required([
     'id',
