@@ -551,6 +551,9 @@ class Api
      * Блокирует чат канала в супергруппе или на канале.
      *
      * @link https://core.telegram.org/bots/api#banchatsenderchat
+     *
+     *
+     * @since 5.5
      */
     public function banChatSenderChat(
         int|string $chatId,
@@ -564,6 +567,8 @@ class Api
      * Разблокирует канальный чат в супергруппе или на канале.
      *
      * @link https://core.telegram.org/bots/api#unbanchatsenderchat
+     *
+     * @since 5.5
      */
     public function unbanChatSenderChat(
         int|string $chatId,
