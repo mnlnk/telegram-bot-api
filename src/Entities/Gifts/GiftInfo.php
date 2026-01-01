@@ -13,7 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @link https://core.telegram.org/bots/api#giftinfo
  *
- * @method                 Gift getGift()                        Информация о подарке.
+ * @method                 Gift getGift()                        Подарке.
  * @method          string|null getOwnedGiftId()             (+) Уникальный идентификатор полученного подарка для бота; присутствует только для подарков, полученных от имени бизнес-аккаунта.
  * @method             int|null getConvertStarCount()        (+) Количество звёзд Телеграм, которые получатель может получить, конвертировав подарок; не указывается, если конвертация в звёзд Телеграм невозможна.
  * @method             int|null getPrepaidUpgradeStarCount() (+) Количество звёзд Телеграм, которые были предоплачены отправителем за возможность улучшить подарок.
@@ -22,6 +22,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  * @method          string|null getText()                    (+) Текст сообщения, добавленного к подарку.
  * @method MessageEntity[]|null getEntities()                (+) Специальные сущности, которые появляются в тексте.
  * @method            bool|null getIsPrivate()               (+) Отправитель и текст подарка видны только получателю подарка; в противном случае их смогут увидеть все.
+ * @method             int|null getUniqueGiftNumber()        (+) Уникальный номер этого подарка, зарезервированный при его улучшении.
  */
 #[Required([
     'gift'
