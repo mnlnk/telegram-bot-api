@@ -2002,6 +2002,8 @@ class Api
      * Устанавливает новый набор групповых стикеров для супергруппы.
      *
      * @link https://core.telegram.org/bots/api#setchatstickerset
+     *
+     * @since 3.4
      */
     public function setChatStickerSet(
         int|string $chatId,
@@ -2145,6 +2147,8 @@ class Api
      * Удаляет набор групповых стикеров из супергруппы.
      *
      * @link https://core.telegram.org/bots/api#deletechatstickerset
+     *
+     * @since 3.4
      */
     public function deleteChatStickerSet(
         int|string $chatId
