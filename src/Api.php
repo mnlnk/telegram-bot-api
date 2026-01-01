@@ -693,6 +693,8 @@ class Api
      * Создает тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#createforumtopic
+     *
+     * @since 6.3
      */
     public function createForumTopic(
         int|string $chatId,
@@ -708,6 +710,8 @@ class Api
      * Редактирует название и значек темы форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#editforumtopic
+     *
+     * @since 6.3
      */
     public function editForumTopic(
         int|string $chatId,
@@ -723,6 +727,8 @@ class Api
      * Закрывает тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#closeforumtopic
+     *
+     * @since 6.3
      */
     public function closeForumTopic(
         int|string $chatId,
@@ -736,6 +742,8 @@ class Api
      * Открывает закрытую ранее тему форума в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#reopenforumtopic
+     *
+     * @since 6.3
      */
     public function reopenForumTopic(
         int|string $chatId,
@@ -749,6 +757,8 @@ class Api
      * Удаляет тему форума вместе со всеми ее сообщениями в чате супергруппы.
      *
      * @link https://core.telegram.org/bots/api#deleteforumtopic
+     *
+     * @since 6.3
      */
     public function deleteForumTopic(
         int|string $chatId,
@@ -762,6 +772,8 @@ class Api
      * Очисщает список закрепленных сообщений в теме форума.
      *
      * @link https://core.telegram.org/bots/api#unpinallforumtopicmessages
+     *
+     * @since 6.3
      */
     public function unpinAllForumTopicMessages(
         int|string $chatId,
@@ -862,6 +874,8 @@ class Api
      * @link https://core.telegram.org/bots/api#getforumtopiciconstickers
      *
      * @return Sticker[]
+     *
+     * @since 6.3
      */
     public function getForumTopicIconStickers(): array
     {
