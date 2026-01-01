@@ -1001,6 +1001,8 @@ class Api
      * @link https://core.telegram.org/bots/api#sendanimation
      *
      * @param ?MessageEntity[] $captionEntities
+     *
+     * @since 4.0
      */
     public function sendAnimation(
         int|string $chatId,
@@ -1619,6 +1621,8 @@ class Api
      * Редактирует мультимедийное сообщение.
      *
      * @link https://core.telegram.org/bots/api#editmessagemedia
+     *
+     * @since 4.0
      */
     public function editMessageMedia(
         InputMedia $media,
