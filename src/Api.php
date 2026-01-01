@@ -204,6 +204,8 @@ class Api
      * Удаляет интеграцию Webhook.
      *
      * @link https://core.telegram.org/bots/api#deletewebhook
+     *
+     * @since 2.3.1
      */
     public function deleteWebhook(
         ?bool $dropPendingUpdates = null
