@@ -1231,6 +1231,8 @@ class Api
      * @param InputMedia[] $media
      *
      * @return Message[]
+     *
+     * @since 3.5
      */
     public function sendMediaGroup(
         int|string $chatId,
