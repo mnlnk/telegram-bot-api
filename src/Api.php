@@ -2177,6 +2177,8 @@ class Api
      * Получает список подарков, которые бот может отправить пользователям.
      *
      * @link https://core.telegram.org/bots/api#getavailablegifts
+     *
+     * @since 8.0
      */
     public function getAvailableGifts(): Gifts
     {
@@ -2390,6 +2392,8 @@ class Api
      * Изменяет эмодзи статус пользователя.
      *
      * @link https://core.telegram.org/bots/api#setuseremojistatus
+     *
+     * @since 8.0
      */
     public function setUserEmojiStatus(
         int $userId,
