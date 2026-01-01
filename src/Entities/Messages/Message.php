@@ -20,7 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\GiftInfo;
-use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGift;
+use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGiftInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksAdded;
@@ -133,7 +133,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                   UsersShared|null getUsersShared()                   (+) Объект с информацией о пользователях, которыми поделись с ботом.
  * @method                    ChatShared|null getChatShared()                    (+) Объект чата, которым поделись с ботом.
  * @method                      GiftInfo|null getGift()                          (+) Cервисное сообщение: был отправлен или получен обычный подарок.
- * @method                    UniqueGift|null getUniqueGift()                    (+) Объект отправленного или полученного уникального подарка.
+ * @method                UniqueGiftInfo|null getUniqueGift()                    (+) Cервисное сообщение: был отправлен или получен уникальный подарок.
  * @method                      GiftInfo|null getGiftUpgradeSent()               (+) Cервисное сообщение: после отправки подарка была приобретена услуга обновления подарочного сертификата.
  * @method                        string|null getConnectedWebsite()              (+) Доменное имя веб-сайта, на котором пользователь вошел в систему.
  * @method            WriteAccessAllowed|null getWriteAccessAllowed()            (+) Объект сервисного сообщения: пользователь разрешил боту, добавленному в меню вложений, писать сообщения.
@@ -216,7 +216,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'users_shared' => UsersShared::class,
     'chat_shared' => ChatShared::class,
     'gift' => GiftInfo::class,
-    'unique_gift' => UniqueGift::class,
+    'unique_gift' => UniqueGiftInfo::class,
     'gift_upgrade_sent' => GiftInfo::class,
     'write_access_allowed' => WriteAccessAllowed::class,
     'passport_data' => PassportData::class,
