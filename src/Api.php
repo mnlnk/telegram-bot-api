@@ -1132,6 +1132,8 @@ class Api
      *
      * @param InputPaidMedia[] $media
      * @param MessageEntity[]|null $captionEntities
+     *
+     * @since 7.6
      */
     public function sendPaidMedia(
         int|string $chatId,
