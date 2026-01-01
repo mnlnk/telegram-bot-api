@@ -1946,6 +1946,8 @@ class Api
      * Устанавливает миниатюру пользовательского набора стикеров с эмоджи.
      *
      * @link https://core.telegram.org/bots/api#setcustomemojistickersetthumbnail
+     *
+     * @since 6.6
      */
     public function setCustomEmojiStickerSetThumbnail(
         string $name,
@@ -1959,6 +1961,8 @@ class Api
      * Устанавливает название созданного набора стикеров.
      *
      * @link https://core.telegram.org/bots/api#setstickersettitle
+     *
+     * @since 6.6
      */
     public function setStickerSetTitle(
         string $name,
@@ -1974,6 +1978,8 @@ class Api
      * @link https://core.telegram.org/bots/api#setstickeremojilist
      *
      * @param string[] $emojiList
+     *
+     * @since 6.6
      */
     public function setStickerEmojiList(
         string $sticker,
@@ -1991,6 +1997,8 @@ class Api
      * @link https://core.telegram.org/bots/api#setstickerkeywords
      *
      * @param ?string[] $keywords
+     *
+     * @since 6.6
      */
     public function setStickerKeywords(
         string $sticker,
@@ -2006,6 +2014,8 @@ class Api
      * Изменяет положение маски стикера.
      *
      * @link https://core.telegram.org/bots/api#setstickermaskposition
+     *
+     * @since 6.6
      */
     public function setStickerMaskPosition(
         string $sticker,
@@ -2052,6 +2062,8 @@ class Api
      * Удаляет набор стикеров, созданный ботом.
      *
      * @link https://core.telegram.org/bots/api#deletestickerset
+     *
+     * @since 6.6
      */
     public function deleteStickerSet(
         string $name
