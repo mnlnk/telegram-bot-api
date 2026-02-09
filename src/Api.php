@@ -2967,6 +2967,18 @@ class Api
         ]);
     }
 
+    /**
+     * Удаляет фотографию профиля бота.
+     *
+     * @link https://core.telegram.org/bots/api#removemyprofilephoto
+     *
+     * @since 9.4
+     */
+    public function removeMyProfilePhoto(): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Business
