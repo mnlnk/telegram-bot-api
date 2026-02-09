@@ -13,9 +13,10 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
  *
  * @link https://core.telegram.org/bots/api#uniquegiftmodel
  *
- * @method  string getName()           Название модели.
- * @method Sticker getSticker()        Объект стикера, представляющего уникальный подарок.
- * @method     int getRarityPerMille() Количество уникальных подарков, которые получают эту модель, на каждые 1000 улучшенных подарков.
+ * @method      string getName()               Название модели.
+ * @method     Sticker getSticker()            Объект стикера, представляющего уникальный подарок.
+ * @method         int getRarityPerMille()     Количество уникальных подарков, которые получают эту модель, на каждые 1000 улучшенных подарков.
+ * @method string|null getRarity()         (+) Редкость модели, если это модель, созданная вручную.
  */
 #[Required([
     'name',
