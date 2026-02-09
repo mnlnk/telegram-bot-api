@@ -28,5 +28,35 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
 ])]
 class UniqueGiftModel extends Entity
 {
-    //
+    /**
+     * Необычный.
+     */
+    public function isUncommon(): bool
+    {
+        return $this->getRarity() == UniqueGiftRarity::UNCOMMON;
+    }
+
+    /**
+     * Редкий.
+     */
+    public function isRare(): bool
+    {
+        return $this->getRarity() == UniqueGiftRarity::RARE;
+    }
+
+    /**
+     * Эпический.
+     */
+    public function isEpic(): bool
+    {
+        return $this->getRarity() == UniqueGiftRarity::EPIC;
+    }
+
+    /**
+     * Легендарный.
+     */
+    public function isLegendary(): bool
+    {
+        return $this->getRarity() == UniqueGiftRarity::LEGENDARY;
+    }
 }
