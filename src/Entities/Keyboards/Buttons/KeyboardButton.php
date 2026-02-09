@@ -18,6 +18,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
  *
  * @method                          string getText()                  Текст кнопки.
  * @method                     string|null getIconCustomEmojiId() (+) Уникальный идентификатор пользовательского эмодзи, отображаемого перед текстом кнопки.
+ * @method                     string|null getStyle()             (+) Стиль кнопки.
  * @method KeyboardButtonRequestUsers|null getRequestUsers()      (+) Объект запроса пользователя, нажатие на кнопку откроет список подходящих пользователей.
  * @method  KeyboardButtonRequestChat|null getRequestChat()       (+) Объект запроса чата, нажатие на кнопку откроет список подходящих чатов.
  * @method                       bool|null getRequestContact()    (+) Запрос номера телефона пользователя.
@@ -45,12 +46,14 @@ class KeyboardButton extends Button
         string $text,
         ?string $type = null,
         KeyboardButtonRequestUsers|KeyboardButtonRequestChat|KeyboardButtonPollType|WebAppInfo|bool|null $value = null,
-        ?string $iconCustomEmojiId = null
+        ?string $iconCustomEmojiId = null,
+        ?string $style = null // ButtonStyle
     ): static
     {
         $entity = EntityFactory::make(static::class, [
             'text' => $text,
-            'icon_custom_emoji_id' => $iconCustomEmojiId
+            'icon_custom_emoji_id' => $iconCustomEmojiId,
+            'style' => $style
         ]);
 
         if ($type !== null && $value !== null) {
