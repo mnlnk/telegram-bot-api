@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
  *
  * @method                           string getText()                             Текст кнопки.
  * @method                      string|null getIconCustomEmojiId()            (+) Уникальный идентификатор пользовательского эмодзи, отображаемого перед текстом кнопки.
+ * @method                      string|null getStyle()                        (+) Стиль кнопки.
  * @method                      string|null getUrl()                          (+) Http или tg:// Url-адрес, который будет открыт при нажатии кнопки.
  * @method                      string|null getCallbackData()                 (+) Данные для отправки в callback-запросе боту при нажатии кнопки.
  * @method                  WebAppInfo|null getWebApp()                       (+) Объект с описанием веб-приложения, которое будет запущено, когда пользователь нажмет кнопку.
@@ -52,12 +53,14 @@ class InlineKeyboardButton extends Button
         string $text,
         string $type,
         WebAppInfo|LoginUrl|SwitchInlineQueryChosenChat|CopyTextButton|CallbackGame|string|bool $value,
-        ?string $iconCustomEmojiId = null
+        ?string $iconCustomEmojiId = null,
+        ?string $style = null // ButtonStyle
     ): static
     {
         return EntityFactory::make(static::class, [
             'text' => $text,
             'icon_custom_emoji_id' => $iconCustomEmojiId,
+            'style' => $style,
             $type => $value
         ]);
     }
