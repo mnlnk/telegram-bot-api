@@ -16,13 +16,14 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
  *
  * @link https://core.telegram.org/bots/api#keyboardbutton
  *
- * @method                          string getText()                Текст кнопки.
- * @method KeyboardButtonRequestUsers|null getRequestUsers()    (+) Объект запроса пользователя, нажатие на кнопку откроет список подходящих пользователей.
- * @method  KeyboardButtonRequestChat|null getRequestChat()     (+) Объект запроса чата, нажатие на кнопку откроет список подходящих чатов.
- * @method                       bool|null getRequestContact()  (+) Запрос номера телефона пользователя.
- * @method                       bool|null getRequestLocation() (+) Запрос текущего местоположения пользователя.
- * @method     KeyboardButtonPollType|null getRequestPoll()     (+) Объект предложения создать опрос и отправить его боту.
- * @method                 WebAppInfo|null getWebApp()          (+) Объект с описанием веб-приложения.
+ * @method                          string getText()                  Текст кнопки.
+ * @method                     string|null getIconCustomEmojiId() (+) Уникальный идентификатор пользовательского эмодзи, отображаемого перед текстом кнопки.
+ * @method KeyboardButtonRequestUsers|null getRequestUsers()      (+) Объект запроса пользователя, нажатие на кнопку откроет список подходящих пользователей.
+ * @method  KeyboardButtonRequestChat|null getRequestChat()       (+) Объект запроса чата, нажатие на кнопку откроет список подходящих чатов.
+ * @method                       bool|null getRequestContact()    (+) Запрос номера телефона пользователя.
+ * @method                       bool|null getRequestLocation()   (+) Запрос текущего местоположения пользователя.
+ * @method     KeyboardButtonPollType|null getRequestPoll()       (+) Объект предложения создать опрос и отправить его боту.
+ * @method                 WebAppInfo|null getWebApp()            (+) Объект с описанием веб-приложения.
  *
  * @method $this setText(string $text) Текст кнопки.
  */
@@ -43,11 +44,13 @@ class KeyboardButton extends Button
     public static function make(
         string $text,
         ?string $type = null,
-        KeyboardButtonRequestUsers|KeyboardButtonRequestChat|KeyboardButtonPollType|WebAppInfo|bool|null $value = null
+        KeyboardButtonRequestUsers|KeyboardButtonRequestChat|KeyboardButtonPollType|WebAppInfo|bool|null $value = null,
+        ?string $iconCustomEmojiId = null
     ): static
     {
         $entity = EntityFactory::make(static::class, [
-            'text' => $text
+            'text' => $text,
+            'icon_custom_emoji_id' => $iconCustomEmojiId
         ]);
 
         if ($type !== null && $value !== null) {
