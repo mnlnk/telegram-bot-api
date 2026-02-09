@@ -75,7 +75,7 @@ class Api
     /**
      * Текущая версия Bot API.
      */
-    const BOT_API_VERSION = '9.3';
+    const BOT_API_VERSION = '9.4';
 
     /**
      * Url запроса.

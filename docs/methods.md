@@ -1,5 +1,5 @@
 ### Доступные методы:
-[Официальная документация](https://core.telegram.org/bots/api#available-methods) [ [9.3](https://core.telegram.org/bots/api#december-31-2025) ]
+[Официальная документация](https://core.telegram.org/bots/api#available-methods) [ [9.4](https://core.telegram.org/bots/api#february-9-2026) ]
 
 ##### Обновления
 + [getUpdates()](https://core.telegram.org/bots/api#getupdates) - Получает массив входящих обновлений.
