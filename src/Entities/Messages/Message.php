@@ -15,6 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\ForumTopicEdited;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\ForumTopicReopened;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\GeneralForumTopicHidden;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Forum\GeneralForumTopicUnhidden;
+use Manuylenko\Telegram\Bot\Api\Entities\Chat\Owner\ChatOwnerLeft;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatEnded;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatParticipantsInvited;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatScheduled;
@@ -117,6 +118,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                      Location|null getLocation()                      (+) Местоположении (локации).
  * @method                        User[]|null getNewChatMembers()                (+) Массив новых участников, которые были добавлены в группу или супергруппу (сам бот может быть одним из этих участников).
  * @method                          User|null getLeftChatMember()                (+) Пользователь, удаленный из группы (сам бот может быть одним из этих участников).
+ * @method                 ChatOwnerLeft|null getChatOwnerLeft()                 (+) Сервисное сообщение: владелец чата покинул его.
  * @method                        string|null getNewChatTitle()                  (+) Новый заголовок (название) чата.
  * @method                   PhotoSize[]|null getNewChatPhoto()                  (+) Новое фото чата (массив доступных размеров).
  * @method                          bool|null getDeleteChatPhoto()               (+) Сервисное сообщение: фото чата удалено.
@@ -207,6 +209,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'location' => Location::class,
     'new_chat_members' => [User::class],
     'left_chat_member' => User::class,
+    'chat_owner_left' => ChatOwnerLeft::class,
     'new_chat_photo' => [PhotoSize::class],
     'message_auto_delete_timer_changed' => MessageAutoDeleteTimerChanged::class,
     'pinned_message' => MaybeInaccessibleMessage::class,
