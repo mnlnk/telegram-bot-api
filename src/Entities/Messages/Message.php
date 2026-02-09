@@ -494,6 +494,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     }
 
     /**
+     * Сервисное сообщение: сменился владелец чата.
+     */
+    public function isChatOwnerChanged(): bool
+    {
+        return $this->getType() == MessageType::CHAT_OWNER_CHANGED;
+    }
+
+    /**
      * Сервисное сообщение: установлен новый заголовок (название) чата.
      */
     public function isNewChatTitle(): bool
