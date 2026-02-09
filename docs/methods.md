@@ -207,6 +207,7 @@
 + [getFile()](https://core.telegram.org/bots/api#getfile) - Получает основную информацию о файле и подготавливает его к загрузке.
 + [getFileUrl()](https://core.telegram.org/bots/api#file) - **(#)** Получает URL-ссылку на файл.
 + [getUserProfilePhotos()](https://core.telegram.org/bots/api#getuserprofilephotos) - Получает список всех изображений профиля пользователя.
++ [getUserProfileAudios()](https://core.telegram.org/bots/api#getuserprofileaudios) - Получает список аудиофайлов профиля пользователя.
 + [close()](https://core.telegram.org/bots/api#close) - Закрывает экземпляр бота перед перемещением его с одного локального ясервера на другой.
 + [logOut()](https://core.telegram.org/bots/api#logout) - Бот выходит с облачного сервера API бота перед локальным запуском бота.
 

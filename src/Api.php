@@ -57,6 +57,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\StoryArea;
 use Manuylenko\Telegram\Bot\Api\Entities\Suggestions\SuggestedPostParameters;
 use Manuylenko\Telegram\Bot\Api\Entities\Update;
 use Manuylenko\Telegram\Bot\Api\Entities\User;
+use Manuylenko\Telegram\Bot\Api\Entities\UserProfileAudios;
 use Manuylenko\Telegram\Bot\Api\Entities\UserProfilePhotos;
 use Manuylenko\Telegram\Bot\Api\Entities\WebhookInfo;
 use Manuylenko\Telegram\Bot\Api\Exceptions\ResponseException;
@@ -3403,6 +3404,22 @@ class Api
     ): UserProfilePhotos
     {
         return EntityFactory::make(UserProfilePhotos::class, $this->call(func_get_args()));
+    }
+
+    /**
+     * Получает список аудиофайлов профиля пользователя.
+     *
+     * @link https://core.telegram.org/bots/api#getuserprofileaudios
+     *
+     * @since 9.4
+     */
+    public function getUserProfileAudios(
+        int $userId,
+        ?int $offset = null,
+        ?int $limit = null // 1-100 (100)
+    ): UserProfileAudios
+    {
+        return EntityFactory::make(UserProfileAudios::class, $this->call(func_get_args()));
     }
 
     /**
