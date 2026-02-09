@@ -12,6 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessOpeningHours;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\AcceptedGiftTypes;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGiftColors;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Audio;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
@@ -69,6 +70,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
  * @method                  int|null getLinkedChatId()                       (+) Уникальный идентификатор связанного чата, т.е. идентификатор группы обсуждения для канала и наоборот; для супергрупп и чатов каналов.
  * @method         ChatLocation|null getLocation()                           (+) Местоположение (локация), к которому привязана супергруппа.
  * @method           UserRating|null getRating()                             (+) Рейтинг пользователя, если таковой имеется (отображается личных чатах).
+ * @method                Audio|null getFirstProfileAudio()                  (+) Первый аудиофайл профиля чата; для приватных чатов.
  * @method     UniqueGiftColors|null getUniqueGiftColors()                   (+) Цветовая схема основаная на уникальном подарке, который используется для названия чата, ответов на сообщения и предварительного просмотра ссылок.
  * @method                  int|null getPaidMessageStarCount()               (+) Количество звезд Телеграм, которое обычный пользователь должен заплатить за отправку сообщения в чат.
  */
@@ -93,6 +95,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stars\UserRating;
     'accepted_gift_types' => AcceptedGiftTypes::class,
     'location' => ChatLocation::class,
     'rating' => UserRating::class,
+    'first_profile_audio' => Audio::class,
     'unique_gift_colors' => UniqueGiftColors::class
 ])]
 class ChatFullInfo extends Entity
