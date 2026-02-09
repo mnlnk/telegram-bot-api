@@ -10,20 +10,21 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  *
  * @link https://core.telegram.org/bots/api#user
  *
- * @method         int getId()                          Уникальный идентификатор пользователя или бота.
- * @method        bool getIsBot()                       Пользователь ботом.
- * @method      string getFirstName()                   Имя пользователя или бота.
- * @method string|null getLastName()                (+) Фамилия пользователя или бота.
- * @method string|null getUsername()                (+) Юзернейм пользователя или бота.
- * @method string|null getLanguageCode()            (+) Языковой тег IETF для языка пользователя.
- * @method   bool|null getIsPremium()               (+) Пользователь является пользователем Телеграм Премиум.
- * @method   bool|null getAddedToAttachmentMenu()   (+) Пользователь добавил бота в меню вложений.
- * @method   bool|null getCanJoinGroups()           (+) Бота можно приглашать в группы. Возвращается только в Api::getMe().
- * @method   bool|null getCanReadAllGroupMessages() (+) Для бота отключен режим приватности. Возвращается только в Api::getMe().
- * @method   bool|null getSupportsInlineQueries()   (+) Бот поддерживает встроенные запросы. Возвращается только в Api::getMe().
- * @method   bool|null getCanConnectToBusiness()    (+) Бота можно подключить к аккаунту Телеграм Бизнес для получения его сообщений. Возвращается только в Api::getMe().
- * @method   bool|null getHasMainWebApp()           (+) У бота есть основное веб-приложение. Возвращается только в Api::getMe().
- * @method   bool|null getHasTopicsEnabled()        (+) У бота включен режим обсуждения тем на форуме в личных чатах. Возвращается только в Api::getMe().
+ * @method         int getId()                            Уникальный идентификатор пользователя или бота.
+ * @method        bool getIsBot()                         Пользователь ботом.
+ * @method      string getFirstName()                     Имя пользователя или бота.
+ * @method string|null getLastName()                  (+) Фамилия пользователя или бота.
+ * @method string|null getUsername()                  (+) Юзернейм пользователя или бота.
+ * @method string|null getLanguageCode()              (+) Языковой тег IETF для языка пользователя.
+ * @method   bool|null getIsPremium()                 (+) Пользователь является пользователем Телеграм Премиум.
+ * @method   bool|null getAddedToAttachmentMenu()     (+) Пользователь добавил бота в меню вложений.
+ * @method   bool|null getCanJoinGroups()             (+) Бота можно приглашать в группы. Возвращается только в Api::getMe().
+ * @method   bool|null getCanReadAllGroupMessages()   (+) Для бота отключен режим приватности. Возвращается только в Api::getMe().
+ * @method   bool|null getSupportsInlineQueries()     (+) Бот поддерживает встроенные запросы. Возвращается только в Api::getMe().
+ * @method   bool|null getCanConnectToBusiness()      (+) Бота можно подключить к аккаунту Телеграм Бизнес для получения его сообщений. Возвращается только в Api::getMe().
+ * @method   bool|null getHasMainWebApp()             (+) У бота есть основное веб-приложение. Возвращается только в Api::getMe().
+ * @method   bool|null getHasTopicsEnabled()          (+) У бота включен режим обсуждения тем на форуме в личных чатах. Возвращается только в Api::getMe().
+ * @method   bool|null getAllowsUsersToCreateTopics() (+) Бот позволяет пользователям создавать и удалять темы в личных чатах. Возвращается только в Api::getMe().
  *
  * @method $this setId(int $id)                                        Уникальный идентификатор пользователя или бота.
  * @method $this setIsBot(bool $isBot)                                 Пользователь ботом.
