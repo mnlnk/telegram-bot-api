@@ -193,6 +193,13 @@ abstract class MessageType
     const CHAT_OWNER_LEFT = 'chat_owner_left';
 
     /**
+     * Сервисное сообщение: сменился владелец чата.
+     *
+     * @var string
+     */
+    const CHAT_OWNER_CHANGED = 'chat_owner_changed';
+
+    /**
      * Сервисное сообщение: новый заголовок (название) чата.
      *
      * @var string
@@ -522,6 +529,7 @@ abstract class MessageType
             static::NEW_CHAT_MEMBERS,
             static::LEFT_CHAT_MEMBER,
             static::CHAT_OWNER_LEFT,
+            static::CHAT_OWNER_CHANGED,
             static::NEW_CHAT_TITLE,
             static::NEW_CHAT_PHOTO,
             static::DELETE_CHAT_PHOTO,
