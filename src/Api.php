@@ -2951,6 +2951,22 @@ class Api
         ]);
     }
 
+    /**
+     * Изменяет фотографию профиля бота.
+     *
+     * @link https://core.telegram.org/bots/api#setmyprofilephoto
+     *
+     * @since 9.4
+     */
+    public function setMyProfilePhoto(
+        InputProfilePhoto $photo
+    ): bool
+    {
+        return $this->call(func_get_args(), [
+            'photo'
+        ]);
+    }
+
     #endregion
 
     #region Business

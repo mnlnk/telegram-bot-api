@@ -169,6 +169,7 @@
 + [setMyCommands()](https://core.telegram.org/bots/api#setmycommands) - Устанавливает список команд бота.
 + [setMyDefaultAdministratorRights()](https://core.telegram.org/bots/api#getmydefaultadministratorrights) - Устанавливает права администратора по умолчанию, запрашиваемые ботом.
 + [deleteMyCommands()](https://core.telegram.org/bots/api#deletemycommands) - Удаляет список команд бота.
++ [setMyProfilePhoto()](https://core.telegram.org/bots/api#setmyprofilephoto) - Изменяет фотографию профиля бота.
 
 ##### Бизнес аккаунт
 + [getBusinessConnection()](https://core.telegram.org/bots/api#getbusinessconnection) - Получает информацию о подключеннии бота к бизнес-аккаунту.
