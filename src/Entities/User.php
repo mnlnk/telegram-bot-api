@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  * @method   bool|null getHasMainWebApp()             (+) У бота есть основное веб-приложение. Возвращается только в Api::getMe().
  * @method   bool|null getHasTopicsEnabled()          (+) У бота включен режим обсуждения тем на форуме в личных чатах. Возвращается только в Api::getMe().
  * @method   bool|null getAllowsUsersToCreateTopics() (+) Бот позволяет пользователям создавать и удалять темы в личных чатах. Возвращается только в Api::getMe().
+ * @method   bool|null getCanManageBots()             (+) Бот позволяет создать других ботов, управляемых этим ботом. Возвращается только в Api::getMe().
  *
  * @method $this setId(int $id)                                        Уникальный идентификатор пользователя или бота.
  * @method $this setIsBot(bool $isBot)                                 Пользователь ботом.
