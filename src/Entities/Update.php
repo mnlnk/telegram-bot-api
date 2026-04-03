@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Bot\ManagedBotUpdated;
 use Manuylenko\Telegram\Bot\Api\Entities\Business\BusinessConnection;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostRemoved;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostUpdated;
@@ -50,6 +51,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
  * @method             ChatJoinRequest|null getChatJoinRequest()       (+) Объект запроса на вступление в чат.
  * @method            ChatBoostUpdated|null getChatBoost()             (+) Объект добавления или измененения буста чата.
  * @method            ChatBoostRemoved|null getRemovedChatBoost()      (+) Объект удаления буста из чата.
+ * @method           ManagedBotUpdated|null getManagedBot()            (+) Был создан новый бот для управления ботом или изменен токен бота.
  */
 #[Required([
     'update_id'
@@ -76,7 +78,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
     'chat_member' => ChatMemberUpdated::class,
     'chat_join_request' => ChatJoinRequest::class,
     'chat_boost' => ChatBoostUpdated::class,
-    'removed_chat_boost' => ChatBoostRemoved::class
+    'removed_chat_boost' => ChatBoostRemoved::class,
+    'managed_bot' => ManagedBotUpdated::class
 ])]
 class Update extends Entity
 {
@@ -264,5 +267,13 @@ class Update extends Entity
     public function isRemovedChatBoost(): bool
     {
         return $this->getType() == UpdateType::REMOVED_CHAT_BOOST;
+    }
+
+    /**
+     * Был создан новый бот, управляемый этим ботом, или же был изменен токен бота.
+     */
+    public function isManagedBot(): bool
+    {
+        return $this->getType() == UpdateType::MANAGED_BOT;
     }
 }
