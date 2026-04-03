@@ -164,6 +164,13 @@ abstract class UpdateType
      */
     const REMOVED_CHAT_BOOST = 'removed_chat_boost';
 
+    /**
+     * Был создан новый бот, управляемый этим ботом, или же был изменен токен бота.
+     *
+     * @var string
+     */
+    const MANAGED_BOT = 'managed_bot';
+
     # # #
 
     /**
@@ -195,7 +202,8 @@ abstract class UpdateType
             static::CHAT_MEMBER,
             static::CHAT_JOIN_REQUEST,
             static::CHAT_BOOST,
-            static::REMOVED_CHAT_BOOST
+            static::REMOVED_CHAT_BOOST,
+            static::MANAGED_BOT
         ];
     }
 }
