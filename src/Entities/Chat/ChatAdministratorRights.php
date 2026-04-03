@@ -27,6 +27,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method bool|null getCanDeleteStories()        (+) Администратору разрешено удалять истории, опубликованные другими пользователями; только для каналов и супергрупп.
  * @method bool|null getCanManageTopics()         (+) Администратору разрешено создавать, переименовывать, закрывать и повторно открывать темы форума; только для супергрупп.
  * @method bool|null getCanManageDirectMessages() (+) Администратору разрешено управлять личными сообщениями канала и отклонять предлагаемые публикации; только для каналов.
+ * @method bool|null getCanManageTags()           (+) Администратору разрешено редактировать теги обычных участников; только для групп и супергрупп.
  *
  * @method $this setIsAnonymous(bool $isAnonymous)                         Присутствие администратора в чате скрыто.
  * @method $this setCanManageChat(bool $canManageChat)                     Администратору разрешено получать доступ к журналу событий чата, статистике чата, статистике сообщений в каналах, видеть участников канала, видеть анонимных администраторов в супергруппах и игнорировать медленный режим.
@@ -44,6 +45,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method $this setCanDeleteStories(bool $canDeleteStories)               Администратору разрешено удалять истории, опубликованные другими пользователями; только для каналов и супергрупп.
  * @method $this setCanManageTopics(bool $canManageTopics)                 Администратору разрешено создавать, переименовывать, закрывать и повторно открывать темы форума; только для супергрупп.
  * @method $this setCanManageDirectMessages(bool $canManageDirectMessages) Администратору разрешено управлять личными сообщениями канала и отклонять предлагаемые публикации; только для каналов.
+ * @method $this setCanManageTags(bool $canManageTags)                     Администратору разрешено редактировать теги обычных участников; только для групп и супергрупп.
  */
 #[Required([
     'is_anonymous',
@@ -76,7 +78,8 @@ class ChatAdministratorRights extends Entity
         ?bool $canEditStories = null,
         ?bool $canDeleteStories = null,
         ?bool $canManageTopics = null,
-        ?bool $canManageDirectMessages = null
+        ?bool $canManageDirectMessages = null,
+        ?bool $canManageTags = null
     ):static
     {
         return static::fromArgs(func_get_args());
