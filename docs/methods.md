@@ -140,6 +140,7 @@
 ##### Мини-приложения
 + [setUserEmojiStatus()](https://core.telegram.org/bots/api#setuseremojistatus) - Изменяет эмодзи статус пользователя.
 + [savePreparedInlineMessage()](https://core.telegram.org/bots/api#savepreparedinlinemessage) - Сохранаяет сообщение, которое может отправить пользователь мини-приложения.
++ [savePreparedKeyboardButton()](https://core.telegram.org/bots/api#savepreparedkeyboardbutton) - Сохраняет кнопку клавиатуры, которую пользователь может использовать в мини-приложении.
 
 ##### Верификация
 + [verifyUser()](https://core.telegram.org/bots/api#verifyuser) - Проверяет пользователя от имени организации, которую представляет бот.

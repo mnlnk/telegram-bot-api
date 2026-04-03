@@ -30,6 +30,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputPaidMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Profile\InputProfilePhoto;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Story\InputStoryContent;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
+use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\KeyboardButton;
+use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\PreparedKeyboardButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\KeyboardMarkup;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\InputChecklist;
@@ -2498,6 +2500,23 @@ class Api
     {
         return EntityFactory::make(PreparedInlineMessage::class, $this->call(func_get_args(), [
             'result'
+        ]));
+    }
+
+    /**
+     * Сохраняет кнопку клавиатуры, которую пользователь может использовать в мини-приложении.
+     *
+     * @link https://core.telegram.org/bots/api#savepreparedkeyboardbutton
+     *
+     * @since 9.6
+     */
+    public function savePreparedKeyboardButton(
+        int $userId,
+        KeyboardButton $button
+    ): PreparedKeyboardButton
+    {
+        return EntityFactory::make(PreparedKeyboardButton::class, $this->call(func_get_args(), [
+            'button'
         ]));
     }
 
