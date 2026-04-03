@@ -8,6 +8,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\EntityFactory;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButtonPollType;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButtonRequestChat;
+use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButtonRequestManagedBot;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\Buttons\Actions\KeyboardButtonRequestUsers;
 use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
 
@@ -16,15 +17,16 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
  *
  * @link https://core.telegram.org/bots/api#keyboardbutton
  *
- * @method                          string getText()                  Текст кнопки.
- * @method                     string|null getIconCustomEmojiId() (+) Уникальный идентификатор пользовательского эмодзи, отображаемого перед текстом кнопки.
- * @method                     string|null getStyle()             (+) Стиль кнопки.
- * @method KeyboardButtonRequestUsers|null getRequestUsers()      (+) Объект запроса пользователя, нажатие на кнопку откроет список подходящих пользователей.
- * @method  KeyboardButtonRequestChat|null getRequestChat()       (+) Объект запроса чата, нажатие на кнопку откроет список подходящих чатов.
- * @method                       bool|null getRequestContact()    (+) Запрос номера телефона пользователя.
- * @method                       bool|null getRequestLocation()   (+) Запрос текущего местоположения пользователя.
- * @method     KeyboardButtonPollType|null getRequestPoll()       (+) Объект предложения создать опрос и отправить его боту.
- * @method                 WebAppInfo|null getWebApp()            (+) Объект с описанием веб-приложения.
+ * @method                               string getText()                  Текст кнопки.
+ * @method                          string|null getIconCustomEmojiId() (+) Уникальный идентификатор пользовательского эмодзи, отображаемого перед текстом кнопки.
+ * @method                          string|null getStyle()             (+) Стиль кнопки.
+ * @method      KeyboardButtonRequestUsers|null getRequestUsers()      (+) Объект запроса пользователя, нажатие на кнопку откроет список подходящих пользователей.
+ * @method       KeyboardButtonRequestChat|null getRequestChat()       (+) Объект запроса чата, нажатие на кнопку откроет список подходящих чатов.
+ * @method KeyboardButtonRequestManagedBot|null getRequestManagedBot() (+) Предложение пользователю создать и поделиться ботом, который будет управляться текущим ботом.
+ * @method                            bool|null getRequestContact()    (+) Запрос номера телефона пользователя.
+ * @method                            bool|null getRequestLocation()   (+) Запрос текущего местоположения пользователя.
+ * @method          KeyboardButtonPollType|null getRequestPoll()       (+) Объект предложения создать опрос и отправить его боту.
+ * @method                      WebAppInfo|null getWebApp()            (+) Объект с описанием веб-приложения.
  *
  * @method $this setText(string $text) Текст кнопки.
  */
@@ -34,6 +36,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppInfo;
 #[Depends([
     'request_users' => KeyboardButtonRequestUsers::class,
     'request_chat' => KeyboardButtonRequestChat::class,
+    'request_managed_bot' => KeyboardButtonRequestManagedBot::class,
     'request_poll' => KeyboardButtonPollType::class,
     'web_app' => WebAppInfo::class
 ])]
@@ -45,7 +48,7 @@ class KeyboardButton extends Button
     public static function make(
         string $text,
         ?string $type = null,
-        KeyboardButtonRequestUsers|KeyboardButtonRequestChat|KeyboardButtonPollType|WebAppInfo|bool|null $value = null,
+        KeyboardButtonRequestUsers|KeyboardButtonRequestChat|KeyboardButtonRequestManagedBot|KeyboardButtonPollType|WebAppInfo|bool|null $value = null,
         ?string $iconCustomEmojiId = null,
         ?string $style = null // ButtonStyle
     ): static
@@ -81,6 +84,14 @@ class KeyboardButton extends Button
     public static function makeRequestChat(string $text, KeyboardButtonRequestChat $requestChat): static
     {
         return static::make($text, KeyboardButtonType::REQUEST_CHAT, $requestChat);
+    }
+
+    /**
+     * Создает кнопку с предложением пользователю создать и поделиться ботом, который будет управляться текущим ботом.
+     */
+    public static function makeRequestManagedBot(string $text, KeyboardButtonRequestManagedBot $requestManagedBot): static
+    {
+        return static::make($text, KeyboardButtonType::REQUEST_MANAGED_BOT, $requestManagedBot);
     }
 
     /**
@@ -148,6 +159,14 @@ class KeyboardButton extends Button
     public function isRequestChat(): bool
     {
         return $this->getType() == KeyboardButtonType::REQUEST_CHAT;
+    }
+
+    /**
+     * Кнопка с предложением пользователю создать и предоставить доступ к боту.
+     */
+    public function isRequestManagedBot(): bool
+    {
+        return $this->getType() == KeyboardButtonType::REQUEST_MANAGED_BOT;
     }
 
     /**
