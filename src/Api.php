@@ -3011,6 +3011,20 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Отзывает текущий токен управляемого бота и генерирует новый.
+     *
+     * @link https://core.telegram.org/bots/api#replacemanagedbottoken
+     *
+     * @since 9.6
+     */
+    public function replaceManagedBotToken(
+        int $userId
+    ): string
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Business
