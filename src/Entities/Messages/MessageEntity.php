@@ -49,7 +49,9 @@ class MessageEntity extends Entity
         ?string $url = null,
         ?User $user = null,
         ?string $language = null,
-        ?string $customEmojiId = null
+        ?string $customEmojiId = null,
+        ?int $unixTime = null,
+        ?string $dateTimeFormat = null // https://core.telegram.org/bots/api#date-time-entity-formatting
     ): static
     {
         return static::fromArgs(func_get_args());
