@@ -28,6 +28,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method        bool getCanSendPolls()              Пользователю разрешено отправлять опросы.
  * @method        bool getCanSendOtherMessages()      Пользователю разрешено отправлять анимации, игры, стикеры и использовать встроенных ботов.
  * @method        bool getCanAddWebPagePreviews()     Пользователю разрешено добавлять превью веб-страницы к своим сообщениям.
+ * @method        bool getCanEditTag()                Пользователю разрешено редактировать свой собственный тег.
  * @method        bool getCanChangeInfo()             Пользователю разрешено изменять название чата, фото и другие настройки.
  * @method        bool getCanInviteUsers()            Пользователю разрешено приглашать новых пользователей в чат.
  * @method        bool getCanPinMessages()            Пользователю разрешено закреплять сообщения.
@@ -48,6 +49,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
     'can_send_polls',
     'can_send_other_messages',
     'can_add_web_page_previews',
+    'can_edit_tag',
     'can_change_info',
     'can_invite_users',
     'can_pin_messages',
