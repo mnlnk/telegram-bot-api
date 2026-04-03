@@ -25,6 +25,13 @@ abstract class KeyboardButtonType
     const REQUEST_CHAT = 'request_chat';
 
     /**
+     * Кнопка с предложением пользователю создать и предоставить доступ к боту.
+     *
+     * @var string
+     */
+    const REQUEST_MANAGED_BOT = 'request_managed_bot';
+
+    /**
      * Кнопка запроса телефонного контакта пользователя.
      *
      * @var string
@@ -64,6 +71,7 @@ abstract class KeyboardButtonType
         return [
             static::REQUEST_USERS,
             static::REQUEST_CHAT,
+            static::REQUEST_MANAGED_BOT,
             static::REQUEST_CONTACT,
             static::REQUEST_LOCATION,
             static::REQUEST_POLL,
