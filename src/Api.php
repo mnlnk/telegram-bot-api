@@ -2997,6 +2997,20 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Получает токен управляемого бота.
+     *
+     * @link https://core.telegram.org/bots/api#getmanagedbottoken
+     *
+     * @since 9.6
+     */
+    public function getManagedBotToken(
+        int $userId
+    ): string
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Business
