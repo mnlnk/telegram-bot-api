@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Messages;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Bot\ManagedBotCreated;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Background\ChatBackground;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Boost\ChatBoostAdded;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
@@ -159,6 +160,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                      Giveaway|null getGiveaway()                      (+) Запланированный розыгрыш призов.
  * @method               GiveawayWinners|null getGiveawayWinners()               (+) Завершенный розыгрыш с участием публичных победителей.
  * @method             GiveawayCompleted|null getGiveawayCompleted()             (+) Cервисное сообщение: розыгрыш завершен без публичных победителей.
+ * @method             ManagedBotCreated|null getManagedBotCreated()             (+) Cервисное сообщение: пользователь создал бота, которым будет управлять текущий бот.
  * @method         SuggestedPostApproved|null getSuggestedPostApproved()         (+) Cервисное сообщение: предложенный пост был одобрен.
  * @method   SuggestedPostApprovalFailed|null getSuggestedPostApprovalFailed()   (+) Cервисное сообщение: одобрение предложенного поста не удалось.
  * @method         SuggestedPostDeclined|null getSuggestedPostDeclined()         (+) Cервисное сообщение: предложенный пост был отклонен.
@@ -243,6 +245,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'giveaway' => Giveaway::class,
     'giveaway_winners' => GiveawayWinners::class,
     'giveaway_completed' => GiveawayCompleted::class,
+    'managed_bot_created' => ManagedBotCreated::class,
     'suggested_post_approved' => SuggestedPostApproved::class,
     'suggested_post_approval_failed' => SuggestedPostApprovalFailed::class,
     'suggested_post_declined' => SuggestedPostDeclined::class,
@@ -754,6 +757,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isGiveawayCompleted(): bool
     {
         return $this->getType() == MessageType::GIVEAWAY_COMPLETED;
+    }
+
+    /**
+     * Сервисное сообщение: пользователь создал бота, которым будет управлять текущий бот.
+     */
+    public function isManagedBotCreated(): bool
+    {
+        return $this->getType() == MessageType::MANAGED_BOT_CREATED;
     }
 
     /**
