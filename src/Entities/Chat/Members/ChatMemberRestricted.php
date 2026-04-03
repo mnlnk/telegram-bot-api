@@ -14,24 +14,25 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#chatmemberrestricted
  *
- * @method string getStatus()                Статус участника чата.
- * @method   User getUser()                  Объект с информацией о пользователе.
- * @method   bool getIsMember()              Пользователь является участником чата на момент запроса.
- * @method   bool getCanSendMessages()       Пользователю разрешено отправлять текстовые сообщения, контакты, счета, местоположения и места проведения.
- * @method   bool getCanSendAudios()         Пользователю разрешено отправлять аудио.
- * @method   bool getCanSendDocuments()      Пользователю разрешено отправлять документы.
- * @method   bool getCanSendPhotos()         Пользователю разрешено отправлять фотографии.
- * @method   bool getCanSendVideos()         Пользователю разрешено отправлять видео.
- * @method   bool getCanSendVideoNotes()     Пользователю разрешено отправлять видео-заметки.
- * @method   bool getCanSendVoiceNotes()     Пользователю разрешено отправлять голосовые заметки.
- * @method   bool getCanSendPolls()          Пользователю разрешено отправлять опросы.
- * @method   bool getCanSendOtherMessages()  Пользователю разрешено отправлять анимации, игры, стикеры и использовать встроенных ботов.
- * @method   bool getCanAddWebPagePreviews() Пользователю разрешено добавлять превью веб-страницы к своим сообщениям.
- * @method   bool getCanChangeInfo()         Пользователю разрешено изменять название чата, фото и другие настройки.
- * @method   bool getCanInviteUsers()        Пользователю разрешено приглашать новых пользователей в чат.
- * @method   bool getCanPinMessages()        Пользователю разрешено закреплять сообщения.
- * @method   bool getCanManageTopics()       Пользователю разрешено создавать темы на форуме.
- * @method    int getUntilDate()             Дата снятия ограничений для этого пользователя; (Unix). Если 0, то пользователь забанен навсегда.
+ * @method      string getStatus()                    Статус участника чата.
+ * @method string|null getTag()                   (+) Тег участника.
+ * @method        User getUser()                      Объект с информацией о пользователе.
+ * @method        bool getIsMember()                  Пользователь является участником чата на момент запроса.
+ * @method        bool getCanSendMessages()           Пользователю разрешено отправлять текстовые сообщения, контакты, счета, местоположения и места проведения.
+ * @method        bool getCanSendAudios()             Пользователю разрешено отправлять аудио.
+ * @method        bool getCanSendDocuments()          Пользователю разрешено отправлять документы.
+ * @method        bool getCanSendPhotos()             Пользователю разрешено отправлять фотографии.
+ * @method        bool getCanSendVideos()             Пользователю разрешено отправлять видео.
+ * @method        bool getCanSendVideoNotes()         Пользователю разрешено отправлять видео-заметки.
+ * @method        bool getCanSendVoiceNotes()         Пользователю разрешено отправлять голосовые заметки.
+ * @method        bool getCanSendPolls()              Пользователю разрешено отправлять опросы.
+ * @method        bool getCanSendOtherMessages()      Пользователю разрешено отправлять анимации, игры, стикеры и использовать встроенных ботов.
+ * @method        bool getCanAddWebPagePreviews()     Пользователю разрешено добавлять превью веб-страницы к своим сообщениям.
+ * @method        bool getCanChangeInfo()             Пользователю разрешено изменять название чата, фото и другие настройки.
+ * @method        bool getCanInviteUsers()            Пользователю разрешено приглашать новых пользователей в чат.
+ * @method        bool getCanPinMessages()            Пользователю разрешено закреплять сообщения.
+ * @method        bool getCanManageTopics()           Пользователю разрешено создавать темы на форуме.
+ * @method         int getUntilDate()                 Дата снятия ограничений для этого пользователя; (Unix). Если 0, то пользователь забанен навсегда.
  */
 #[Required([
     'status',
