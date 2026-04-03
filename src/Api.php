@@ -549,7 +549,8 @@ class Api
         ?bool $canEditStories = null,
         ?bool $canDeleteStories = null,
         ?bool $canManageTopics = null,
-        ?bool $canManageDirectMessages = null
+        ?bool $canManageDirectMessages = null,
+        ?bool $canManageTags = null
     ): bool
     {
         return $this->call(func_get_args());
