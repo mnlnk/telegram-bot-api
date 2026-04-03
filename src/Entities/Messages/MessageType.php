@@ -417,6 +417,13 @@ abstract class MessageType
     const GIVEAWAY_COMPLETED = 'giveaway_completed';
 
     /**
+     * Сервисное сообщение: пользователь создал бота, которым будет управлять текущий бот.
+     *
+     * @var string
+     */
+    const MANAGED_BOT_CREATED = 'managed_bot_created';
+
+    /**
      * Сервисное сообщение: предложенный пост был одобрен.
      *
      * @var string
@@ -561,6 +568,7 @@ abstract class MessageType
             static::GIVEAWAY,
             static::GIVEAWAY_WINNERS,
             static::GIVEAWAY_COMPLETED,
+            static::MANAGED_BOT_CREATED,
             static::SUGGESTED_POST_APPROVED,
             static::SUGGESTED_POST_APPROVAL_FAILED,
             static::SUGGESTED_POST_DECLINED,
