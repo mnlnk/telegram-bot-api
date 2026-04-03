@@ -619,6 +619,22 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Устанавливает тег для участника группы или супергруппы.
+     *
+     * @link https://core.telegram.org/bots/api#setchatmembertag
+     *
+     * @since 9.5
+     */
+    public function setChatMemberTag(
+        int|string $chatId,
+        int $userId,
+        ?string $tag = null // 0-16
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region ChatSettings

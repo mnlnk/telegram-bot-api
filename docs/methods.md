@@ -34,6 +34,7 @@
 + [unbanChatMember()](https://core.telegram.org/bots/api#unbanchatmember) - Разблокирует ранее удаленного пользователя в супергруппе или канале.
 + [banChatSenderChat()](https://core.telegram.org/bots/api#banchatsenderchat) - Блокирует канал в супергруппе или на канале.
 + [unbanChatSenderChat()](https://core.telegram.org/bots/api#unbanchatsenderchat) - Разблокирует канал в супергруппе или на канале.
++ [setChatMemberTag()](https://core.telegram.org/bots/api#setchatmembertag) - Устанавливает тег для участника группы или супергруппы.
 
 ##### Параметры чата
 + [getChatMenuButton()](https://core.telegram.org/bots/api#getchatmenubutton) - Получает текущее значение кнопки меню бота.
