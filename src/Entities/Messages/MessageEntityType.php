@@ -143,6 +143,13 @@ abstract class MessageEntityType
      */
     const CUSTOM_EMOJI = 'custom_emoji';
 
+    /**
+     * Отформатированная дата.
+     *
+     * @var string
+     */
+    const DATE_TIME = 'date_time';
+
     # # #
 
     /**
@@ -171,7 +178,8 @@ abstract class MessageEntityType
             static::PRE,
             static::TEXT_LINK,
             static::TEXT_MENTION,
-            static::CUSTOM_EMOJI
+            static::CUSTOM_EMOJI,
+            static::DATE_TIME
         ];
     }
 }

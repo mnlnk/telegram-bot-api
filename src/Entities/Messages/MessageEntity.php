@@ -209,4 +209,12 @@ class MessageEntity extends Entity
     {
         return $this->getType() == MessageEntityType::CUSTOM_EMOJI;
     }
+
+    /**
+     * Форматированные дата или время.
+     */
+    public function isDateTime(): bool
+    {
+        return $this->getType() == MessageEntityType::DATE_TIME;
+    }
 }
