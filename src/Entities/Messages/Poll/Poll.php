@@ -29,6 +29,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении (имена пользователей, URL-адреса, команды ботов и т.д.).
  * @method             int|null getOpenPeriod()            (+) Время в секундах, в течение которого опрос будет активен после создания.
  * @method             int|null getCloseDate()             (+) Метка времени (Unix), когда опрос будет автоматически закрыт.
+ * @method          string|null getDescription()           (+) Описание опроса; только для опросов внутри объекта Message.
  */
 #[Required([
     'id',
