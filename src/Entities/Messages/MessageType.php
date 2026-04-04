@@ -431,6 +431,13 @@ abstract class MessageType
     const POLL_OPTION_ADDED = 'poll_option_added';
 
     /**
+     * Сервисное сообщение: вариант ответа был удален из опроса.
+     *
+     * @var string
+     */
+    const POLL_OPTION_DELETED = 'poll_option_deleted';
+
+    /**
      * Сервисное сообщение: предложенный пост был одобрен.
      *
      * @var string
@@ -577,6 +584,7 @@ abstract class MessageType
             static::GIVEAWAY_COMPLETED,
             static::MANAGED_BOT_CREATED,
             static::POLL_OPTION_ADDED,
+            static::POLL_OPTION_DELETED,
             static::SUGGESTED_POST_APPROVED,
             static::SUGGESTED_POST_APPROVAL_FAILED,
             static::SUGGESTED_POST_DECLINED,
