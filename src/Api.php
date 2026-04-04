@@ -1502,6 +1502,7 @@ class Api
         ?bool $allowsRevoting = null,
         ?bool $shuffleOptions = null,
         ?bool $allowAddingOptions = null,
+        ?bool $hideResultsUntilCloses = null,
         ?array $correctOptionIds = null, // [0..]
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
