@@ -1485,6 +1485,7 @@ class Api
      *
      * @param InputPollOption[] $options
      * @param ?MessageEntity[] $questionEntities
+     * @param ?int[] $correctOptionIds
      * @param ?MessageEntity[] $explanationEntities
      *
      * @since 4.2
@@ -1498,7 +1499,7 @@ class Api
         ?array $questionEntities = null,
         ?string $type = null, // PollType::class
         ?bool $allowsMultipleAnswers = null,
-        ?int $correctOptionId = null, // 0..
+        ?array $correctOptionIds = null, // [0..]
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
         ?array $explanationEntities = null,
