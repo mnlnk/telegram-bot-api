@@ -1501,6 +1501,7 @@ class Api
         ?bool $allowsMultipleAnswers = null,
         ?bool $allowsRevoting = null,
         ?bool $shuffleOptions = null,
+        ?bool $allowAddingOptions = null,
         ?array $correctOptionIds = null, // [0..]
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
