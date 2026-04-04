@@ -424,6 +424,13 @@ abstract class MessageType
     const MANAGED_BOT_CREATED = 'managed_bot_created';
 
     /**
+     * Сервисное сообщение: в опрос добавлен вариант ответа.
+     *
+     * @var string
+     */
+    const POLL_OPTION_ADDED = 'poll_option_added';
+
+    /**
      * Сервисное сообщение: предложенный пост был одобрен.
      *
      * @var string
@@ -569,6 +576,7 @@ abstract class MessageType
             static::GIVEAWAY_WINNERS,
             static::GIVEAWAY_COMPLETED,
             static::MANAGED_BOT_CREATED,
+            static::POLL_OPTION_ADDED,
             static::SUGGESTED_POST_APPROVED,
             static::SUGGESTED_POST_APPROVAL_FAILED,
             static::SUGGESTED_POST_DECLINED,
