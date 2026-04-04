@@ -87,6 +87,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                     TextQuote|null getQuote()                         (+) Цитируемая часть сообщения; для ответов.
  * @method                         Story|null getReplyToStory()                  (+) Оригинальная история; для ответов на историю.
  * @method                           int|null getReplyToChecklistTaskId()        (+) Идентификатор конкретной задачи в чеклисте, на которую дается ответ.
+ * @method                        string|null getReplyToPollOptionId()           (+) Постоянный идентификатор конкретного варианта ответа в опросе.
  * @method                          User|null getViaBot()                        (+) Пользователь (бот), через которого было отправлено сообщение.
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
