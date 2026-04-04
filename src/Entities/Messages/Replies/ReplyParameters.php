@@ -21,6 +21,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  * @method MessageEntity[]|null getQuoteEntities()            (+) Массив объектов специальных сущностей, которые появляются в цитате.
  * @method             int|null getQuotePosition()            (+) Позиция цитаты в исходном сообщении в UTF-16.
  * @method             int|null getChecklistTaskId()          (+) Идентификатор конкретной задачи чеклиста, на которую нужно ответить.
+ * @method          string|null getPollOptionId()             (+) Постоянный идентификатор конкретного варианта ответа в опросе.
  *
  * @method $this setMessageId(int $messageId)                                Идентификатор сообщения, на которое будет дан ответ в текущем или в указанном чате.
  * @method $this setChatId(int|string $chatId)                               Уникальный идентификатор чата или юзернейм канала.
@@ -30,6 +31,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  * @method $this setQuoteEntities(MessageEntity[] $quoteEntities)            Массив объектов специальных сущностей, которые появляются в цитате.
  * @method $this setQuotePosition(int $quotePosition)                        Позиция цитаты в исходном сообщении в UTF-16.
  * @method $this setChecklistTaskId(int $checklistTaskId)                    Идентификатор конкретной задачи чеклиста, на которую нужно ответить.
+ * @method $this setPollOptionId(string $pollOptionId)                       Постоянный идентификатор конкретного варианта ответа в опросе.
  */
 #[Required([
     'message_id'
@@ -52,7 +54,8 @@ class ReplyParameters extends Entity
         ?string $quoteParseMode = null, // ParseMode::class
         array|null $quoteEntities = null,
         ?int $quotePosition = null,
-        ?int $checklistTaskId = null
+        ?int $checklistTaskId = null,
+        ?string $pollOptionId = null
     ): static
     {
         return static::fromArgs(func_get_args());
