@@ -15,14 +15,16 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  *
  * @link https://core.telegram.org/bots/api#pollanswer
  *
- * @method    string getPollId()        Уникальный идентификатор опроса.
- * @method Chat|null getVoterChat() (+) Объект чата, изменившего ответ на опрос, если голосовал анонимный пользователь.
- * @method User|null getUser()      (+) Объект пользователя, изменившего ответ на опрос.
- * @method     int[] getOptionIds()     Идентификаторы вариантов ответов, выбранных пользователем (отсчитываемые от 0). Может быть пустым, если пользователь отозвал свой голос.
+ * @method    string getPollId()                  Уникальный идентификатор опроса.
+ * @method Chat|null getVoterChat()           (+) Объект чата, изменившего ответ на опрос, если голосовал анонимный пользователь.
+ * @method User|null getUser()                (+) Объект пользователя, изменившего ответ на опрос.
+ * @method     int[] getOptionIds()               Идентификаторы вариантов ответов, выбранных пользователем (отсчитываемые от 0). Может быть пустым, если пользователь отозвал свой голос.
+ * @method  string[] getOptionPersistentIds()     Постоянные идентификаторы выбранных вариантов ответа. Может быть пустым, если голос был отозван.
  */
 #[Required([
     'poll_id',
-    'option_ids'
+    'option_ids',
+    'option_persistent_ids'
 ])]
 #[Depends([
     'voter_chat' => Chat::class,
