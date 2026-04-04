@@ -1499,6 +1499,7 @@ class Api
         ?array $questionEntities = null,
         ?string $type = null, // PollType::class
         ?bool $allowsMultipleAnswers = null,
+        ?bool $allowsRevoting = null,
         ?array $correctOptionIds = null, // [0..]
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
