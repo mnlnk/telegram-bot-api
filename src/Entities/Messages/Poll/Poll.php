@@ -23,6 +23,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method                 bool getIsAnonymous()               Опрос является анонимным.
  * @method               string getType()                      Тип опроса.
  * @method                 bool getAllowsMultipleAnswers()     Опрос допускает выбор нескольких ответов.
+ * @method                 bool getAllowsRevoting()            В опросе предусмотрена возможность изменения выбранных вариантов ответа.
  * @method           int[]|null getCorrectOptionIds()      (+) Массив идентификаторов правильных вариантов ответа, начинающийся с 0.
  * @method          string|null getExplanation()           (+) Текст (подсказка), отображается когда пользователь выбирает неправильный ответ или нажимает значок лампы в викторине.
  * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении (имена пользователей, URL-адреса, команды ботов и т.д.).
@@ -37,7 +38,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
     'is_closed',
     'is_anonymous',
     'type',
-    'allows_multiple_answers'
+    'allows_multiple_answers',
+    'allows_revoting'
 ])]
 #[Depends([
     'question_entities' => [MessageEntity::class],
