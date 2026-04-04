@@ -37,6 +37,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Giveaway\GiveawayWinners;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Origin\MessageOrigin;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\PollOptionAdded;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\PollOptionDeleted;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Replies\ExternalReplyInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\MessageAutoDeleteTimerChanged;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Services\ProximityAlertTriggered;
@@ -169,6 +170,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method         SuggestedPostRefunded|null getSuggestedPostRefunded()         (+) Cервисное сообщение: оплата за предложенный пост возвращена.
  * @method       PaidMessagePriceChanged|null getPaidMessagePriceChanged()       (+) Cервисное сообщение: в чате изменилась стоимость платных сообщений.
  * @method               PollOptionAdded|null getPollOptionAdded()               (+) Cервисное сообщение: в опрос добавлен вариант ответа.
+ * @method             PollOptionDeleted|null getPollOptionDeleted()             (+) Cервисное сообщение: вариант ответа был удален из опроса.
  * @method            VideoChatScheduled|null getVideoChatScheduled()            (+) Cервисное сообщение: видеочат запланирован.
  * @method              VideoChatStarted|null getVideoChatStarted()              (+) Cервисное сообщение: видеочат запущен.
  * @method                VideoChatEnded|null getVideoChatEnded()                (+) Cервисное сообщение: видеочат завершен.
@@ -255,6 +257,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'suggested_post_refunded' => SuggestedPostRefunded::class,
     'paid_message_price_changed' => PaidMessagePriceChanged::class,
     'poll_option_added' => PollOptionAdded::class,
+    'poll_option_deleted' => PollOptionDeleted::class,
     'video_chat_scheduled' => VideoChatScheduled::class,
     'video_chat_started' => VideoChatStarted::class,
     'video_chat_ended' => VideoChatEnded::class,
@@ -824,6 +827,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isPollOptionAdded(): bool
     {
         return $this->getType() == MessageType::POLL_OPTION_ADDED;
+    }
+
+    /**
+     * Сервисное сообщение: вариант ответа был удален из опроса.
+     */
+    public function isPollOptionDeleted(): bool
+    {
+        return $this->getType() == MessageType::POLL_OPTION_DELETED;
     }
 
     /**
