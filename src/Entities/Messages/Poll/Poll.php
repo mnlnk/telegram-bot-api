@@ -30,6 +30,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method             int|null getOpenPeriod()            (+) Время в секундах, в течение которого опрос будет активен после создания.
  * @method             int|null getCloseDate()             (+) Метка времени (Unix), когда опрос будет автоматически закрыт.
  * @method          string|null getDescription()           (+) Описание опроса; только для опросов внутри объекта Message.
+ * @method MessageEntity[]|null getDescriptionEntities()   (+) Специальные сущности, такие как имена пользователей, URL-адреса, команды бота и т.д., которые отображаются в описании.
  */
 #[Required([
     'id',
@@ -45,7 +46,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
 #[Depends([
     'question_entities' => [MessageEntity::class],
     'options' => [PollOption::class],
-    'explanation_entities' => [MessageEntity::class]
+    'explanation_entities' => [MessageEntity::class],
+    'description_entities' => [MessageEntity::class]
 ])]
 class Poll extends Entity implements UpdateContext
 {
