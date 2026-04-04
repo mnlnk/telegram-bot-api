@@ -1510,6 +1510,7 @@ class Api
         ?int $openPeriod = null, // 5-600
         ?int $closeDate = null, // time() + [5-600]
         ?bool $isClosed = null,
+        ?string $description = null, // 0-1024
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
