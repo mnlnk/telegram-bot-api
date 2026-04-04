@@ -13,11 +13,13 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @link https://core.telegram.org/bots/api#polloption
  *
+ * @method               string getPersistentId()     Уникальный идентификатор опции, сохраняющийся при добавлении и удалении опции.
  * @method               string getText()             Текст опции.
  * @method MessageEntity[]|null getTextEntities() (+) Массив специальных сущностей, которые появляются в тексте варианта (только пользовательские эмодзи).
  * @method                  int getVoterCount()       Количество пользователей, проголосовавших за этот вариант.
  */
 #[Required([
+    'persistent_id',
     'text',
     'voter_count'
 ])]
