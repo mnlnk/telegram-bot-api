@@ -1511,6 +1511,7 @@ class Api
         ?int $closeDate = null, // time() + [5-600]
         ?bool $isClosed = null,
         ?string $description = null, // 0-1024
+        ?string $descriptionParseMode = null, // ParseMode::class
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
