@@ -21,6 +21,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method                  int getVoterCount()       Количество пользователей, проголосовавших за этот вариант.
  * @method            User|null getAddedByUser()  (+) Пользователь, добавивший опцию; если опция не была добавлена пользователем после создания опроса, она не указывается.
  * @method            Chat|null getAddedByChat()  (+) Чат, добавивший эту опцию; опускается, если опция не была добавлена чатом после создания опроса.
+ * @method             int|null getAdditionDate() (+) Метка времени (Unix), когда опция была добавлена; опускается, если опция существовала в исходном опросе.
  */
 #[Required([
     'persistent_id',
