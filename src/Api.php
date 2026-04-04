@@ -1487,6 +1487,7 @@ class Api
      * @param ?MessageEntity[] $questionEntities
      * @param ?int[] $correctOptionIds
      * @param ?MessageEntity[] $explanationEntities
+     * @param ?MessageEntity[] $descriptionEntities
      *
      * @since 4.2
      */
@@ -1512,6 +1513,7 @@ class Api
         ?bool $isClosed = null,
         ?string $description = null, // 0-1024
         ?string $descriptionParseMode = null, // ParseMode::class
+        ?array $descriptionEntities = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
@@ -1526,6 +1528,7 @@ class Api
             'options',
             'question_entities',
             'explanation_entities',
+            'description_entities',
             'reply_parameters',
             'reply_markup'
         ]));
