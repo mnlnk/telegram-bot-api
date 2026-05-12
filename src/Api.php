@@ -1889,6 +1889,22 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Удаляет до 10000 недавних реакций в групповом или супергрупповом чате, добавленных определенным пользователем или чатом.
+     *
+     * @link https://core.telegram.org/bots/api#deleteallmessagereactions
+     *
+     * @since 10.0
+     */
+    public function deleteAllMessageReactions(
+        int|string $chatId,
+        ?int $userId = null,
+        ?int $actorChatId = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Games
