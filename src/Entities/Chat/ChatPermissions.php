@@ -21,6 +21,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method bool|null getCanSendPolls()          (+) Пользователю разрешено отправлять опросы.
  * @method bool|null getCanSendOtherMessages()  (+) Пользователю разрешено отправлять анимации, игры, стикеры и использовать встроенных ботов.
  * @method bool|null getCanAddWebPagePreviews() (+) Пользователю разрешено добавлять превью веб-страницы к своим сообщениям.
+ * @method bool|null getCanReactToMessages()    (+) Пользователю разрешено оставлять реакции на сообщения.
  * @method bool|null getCanEditTag()            (+) Пользователю разрешено редактировать свой собственный тег.
  * @method bool|null getCanChangeInfo()         (+) Пользователю разрешено изменять название чата, фото и другие настройки.
  * @method bool|null getCanInviteUsers()        (+) Пользователю разрешено приглашать новых пользователей в чат.
@@ -37,6 +38,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @method $this setCanSendPolls(bool $canSendPolls)                   Пользователю разрешено отправлять опросы.
  * @method $this setCanSendOtherMessages(bool $canSendOtherMessages)   Пользователю разрешено отправлять анимации, игры, стикеры и использовать встроенных ботов.
  * @method $this setCanAddWebPagePreviews(bool $canAddWebPagePreviews) Пользователю разрешено добавлять превью веб-страницы к своим сообщениям.
+ * @method $this setCanReactToMessages(bool $canReactToMessages)       Пользователю разрешено оставлять реакции на сообщения.
  * @method $this setCanEditTag(bool $canEditTag)                       Пользователю разрешено редактировать свой собственный тег.
  * @method $this setCanChangeInfo(bool $canChangeInfo)                 Пользователю разрешено изменять название чата, фото и другие настройки.
  * @method $this setCanInviteUsers(bool $canInviteUsers)               Пользователю разрешено приглашать новых пользователей в чат.
@@ -59,6 +61,7 @@ class ChatPermissions extends Entity
         ?bool $canSendPolls = null,
         ?bool $canSendOtherMessages = null,
         ?bool $canAddWebPagePreviews = null,
+        ?bool $canReactToMessages = null,
         ?bool $canEditTag = null,
         ?bool $canChangeInfo = null,
         ?bool $canInviteUsers = null,
