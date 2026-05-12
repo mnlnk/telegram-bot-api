@@ -136,6 +136,7 @@
 + [answerCallbackQuery()](https://core.telegram.org/bots/api#answercallbackquery) - Отправляет ответ на запрос обратного вызова.
 + [answerInlineQuery()](https://core.telegram.org/bots/api#answerinlinequery) - Отправляет ответ на встроенный запрос.
 + [answerWebAppQuery()](https://core.telegram.org/bots/api#answerwebappquery) - Отправляет сообщение о результате взаимодействия с веб-приложением.
++ [answerGuestQuery()](https://core.telegram.org/bots/api#answerguestquery) - Отправляет ответ на полученное сообщение от гостя.
 
 ##### Мини-приложения
 + [setUserEmojiStatus()](https://core.telegram.org/bots/api#setuseremojistatus) - Изменяет эмодзи статус пользователя.

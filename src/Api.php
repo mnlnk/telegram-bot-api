@@ -44,6 +44,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\InputPollOption;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Replies\ReplyParameters;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\SentGuestMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\InputSticker;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\MaskPosition;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Stickers\Sticker;
@@ -2468,6 +2469,23 @@ class Api
     ): SentWebAppMessage
     {
         return EntityFactory::make(SentWebAppMessage::class, $this->call(func_get_args(), [
+            'result'
+        ]));
+    }
+
+    /**
+     * Отправляет ответ на полученное сообщение от гостя.
+     *
+     * @link https://core.telegram.org/bots/api#answerguestquery
+     *
+     * @since 10.0
+     */
+    public function answerGuestQuery(
+        string $guestQueryId,
+        InlineQueryResult $result
+    ): SentGuestMessage
+    {
+        return EntityFactory::make(SentGuestMessage::class, $this->call(func_get_args(), [
             'result'
         ]));
     }
