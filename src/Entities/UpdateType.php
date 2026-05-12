@@ -60,6 +60,13 @@ abstract class UpdateType
     const EDITED_BUSINESS_MESSAGE = 'edited_business_message';
 
     /**
+     * Новое гостевое сообщение.
+     *
+     * @var string
+     */
+    const GUEST_MESSAGE = 'guest_message';
+
+    /**
      * Изменение реакции на сообщении пользователем.
      *
      * @var string
@@ -188,6 +195,7 @@ abstract class UpdateType
             static::BUSINESS_CONNECTION,
             static::BUSINESS_MESSAGE,
             static::EDITED_BUSINESS_MESSAGE,
+            static::GUEST_MESSAGE,
             static::MESSAGE_REACTION,
             static::MESSAGE_REACTION_COUNT,
             static::INLINE_QUERY,
