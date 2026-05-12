@@ -77,6 +77,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                          User|null getSenderBusinessBot()             (+) Пользователь-бот отправивший сообщение от имени бизнес-аккаунта.
  * @method                        string|null getSenderTag()                     (+) Тег или пользовательский заголовок отправителя сообщения; только для супергрупп.
  * @method                                int getDate()                              Дата отправки сообщения (Unix).
+ * @method                        string|null getGuestQueryId()                  (+) Уникальный идентификатор запроса гостя.
  * @method                        string|null getBusinessConnectionId()          (+) Уникальный идентификатор бизнес-соединения, от которого было получено сообщение.
  * @method                               Chat getChat()                              Чат, которому принадлежит сообщение.
  * @method                 MessageOrigin|null getForwardOrigin()                 (+) Исходное сообщение; для пересылаемых сообщений.
