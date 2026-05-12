@@ -96,6 +96,7 @@
 
 ##### Реакции
 + [setMessageReaction()](https://core.telegram.org/bots/api#setmessagereaction) - Изменяет выбранные реакции у сообщения.
++ [deleteMessageReaction()](https://core.telegram.org/bots/api#deletemessagereaction) - Удаляет реакцию из сообщения в групповом или супергрупповом чате.
 
 ##### Игры
 + [sendGame()](https://core.telegram.org/bots/api#sendgame) - Отправляет игру.

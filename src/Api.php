@@ -1872,6 +1872,23 @@ class Api
         ]);
     }
 
+    /**
+     * Удаляет реакцию из сообщения в групповом или супергрупповом чате.
+     *
+     * @link https://core.telegram.org/bots/api#deletemessagereaction
+     *
+     * @since 10.0
+     */
+    public function deleteMessageReaction(
+        int|string $chatId,
+        int $messageId,
+        ?int $userId = null,
+        ?int $actorChatId = null
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Games
