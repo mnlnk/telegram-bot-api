@@ -501,7 +501,8 @@ class Api
      * @since 2.1
      */
     public function getChatAdministrators(
-        int|string $chatId
+        int|string $chatId,
+        ?bool $returnBots = null
     ): array
     {
         return EntityFactory::makeArray(ChatMember::class, $this->call(func_get_args()));
