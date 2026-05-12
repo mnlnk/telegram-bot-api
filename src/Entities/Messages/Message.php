@@ -89,6 +89,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                           int|null getReplyToChecklistTaskId()        (+) Идентификатор конкретной задачи в чеклисте, на которую дается ответ.
  * @method                        string|null getReplyToPollOptionId()           (+) Постоянный идентификатор конкретного варианта ответа в опросе.
  * @method                          User|null getViaBot()                        (+) Пользователь (бот), через которого было отправлено сообщение.
+ * @method                          User|null getGuestBotCallerUser()            (+) Пользователь, чье исходное сообщение вызвало ответ бота; для сообщения, отправленного гостевым ботом.
  * @method                           int|null getEditDate()                      (+) Дата последнего редактирования сообщения (Unix).
  * @method                          bool|null getHasProtectedContent()           (+) Сообщение не может быть перенаправлено.
  * @method                          bool|null getIsFromOffline()                 (+) Сообщение было отправлено неявным действием, например, как бизнес-сообщение об отъезде или приветствие.
@@ -196,6 +197,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'quote' => TextQuote::class,
     'reply_to_story' => Story::class,
     'via_bot' => User::class,
+    'guest_bot_caller_user' => User::class,
     'entities' => [MessageEntity::class],
     'link_preview_options' => LinkPreviewOptions::class,
     'suggested_post_info' => SuggestedPostInfo::class,
