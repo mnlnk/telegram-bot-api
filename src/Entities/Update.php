@@ -36,6 +36,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
  * @method          BusinessConnection|null getBusinessConnection()    (+) Объект соединения бизнес-аккаунта с ботом (подключение, отключение, редактирование).
  * @method                     Message|null getBusinessMessage()       (+) Объект сообщения от подключенного бизнес-аккаунта.
  * @method                     Message|null getEditedBusinessMessage() (+) Объект отредактированного сообщения от подключенного бизнес-аккаунта.
+ * @method                     Message|null getGuestMessage()          (+) Объект нового гостевого сообщения.
  * @method      MessageReactionUpdated|null getMessageReaction()       (+) Объект измененной реакции на сообщение.
  * @method MessageReactionCountUpdated|null getMessageReactionCount()  (+) Объект измененной реакции на сообщение с анонимными реакциями.
  * @method                 InlineQuery|null getInlineQuery()           (+) Объект входящего встроенного запроса.
@@ -64,6 +65,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Payments\ShippingQuery;
     'business_connection' => BusinessConnection::class,
     'business_message' => Message::class,
     'edited_business_message' => Message::class,
+    'guest_message' => Message::class,
     'message_reaction' => MessageReactionUpdated::class,
     'message_reaction_count' => MessageReactionCountUpdated::class,
     'inline_query' => InlineQuery::class,
@@ -147,6 +149,14 @@ class Update extends Entity
     public function isEditedBusinessMessage(): bool
     {
         return $this->getType() == UpdateType::EDITED_BUSINESS_MESSAGE;
+    }
+
+    /**
+     * Новое гостевое сообщение.
+     */
+    public function isGuestMessage(): bool
+    {
+        return $this->getType() == UpdateType::GUEST_MESSAGE;
     }
 
     /**
