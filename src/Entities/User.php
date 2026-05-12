@@ -20,6 +20,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  * @method   bool|null getAddedToAttachmentMenu()     (+) Пользователь добавил бота в меню вложений.
  * @method   bool|null getCanJoinGroups()             (+) Бота можно приглашать в группы. Возвращается только в Api::getMe().
  * @method   bool|null getCanReadAllGroupMessages()   (+) Для бота отключен режим приватности. Возвращается только в Api::getMe().
+ * @method   bool|null getSupportsGuestQueries()      (+) Бот поддерживает гостевые запросы из чатов, в которых он не является участником. Возвращается только в Api::getMe().
  * @method   bool|null getSupportsInlineQueries()     (+) Бот поддерживает встроенные запросы. Возвращается только в Api::getMe().
  * @method   bool|null getCanConnectToBusiness()      (+) Бота можно подключить к аккаунту Телеграм Бизнес для получения его сообщений. Возвращается только в Api::getMe().
  * @method   bool|null getHasMainWebApp()             (+) У бота есть основное веб-приложение. Возвращается только в Api::getMe().
