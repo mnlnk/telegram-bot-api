@@ -31,6 +31,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method             int|null getCloseDate()             (+) Метка времени (Unix), когда опрос будет автоматически закрыт.
  * @method          string|null getDescription()           (+) Описание опроса; только для опросов внутри объекта Message.
  * @method MessageEntity[]|null getDescriptionEntities()   (+) Специальные сущности, такие как имена пользователей, URL-адреса, команды бота и т.д., которые отображаются в описании.
+ * @method       PollMedia|null getMedia()                 (+) Медиа добавленное в описание опроса; только для опросов, размещенных внутри объекта Message.
  */
 #[Required([
     'id',
@@ -47,7 +48,8 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
     'question_entities' => [MessageEntity::class],
     'options' => [PollOption::class],
     'explanation_entities' => [MessageEntity::class],
-    'description_entities' => [MessageEntity::class]
+    'description_entities' => [MessageEntity::class],
+    'media' => PollMedia::class
 ])]
 class Poll extends Entity implements UpdateContext
 {
