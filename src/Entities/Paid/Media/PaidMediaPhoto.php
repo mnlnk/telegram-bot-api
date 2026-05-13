@@ -12,7 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
  *
  * @link https://core.telegram.org/bots/api#paidmediaphoto
  *
- * @method      string getType()  Тип платного медиа.
+ * @method      string getType()  Тип платного медиа. (Всегда "photo".)
  * @method PhotoSize[] getPhoto() Массив объектов фотографий.
  */
 #[Required([
