@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Chat\Video\VideoChatStarted;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\GiftInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Unique\UniqueGiftInfo;
 use Manuylenko\Telegram\Bot\Api\Entities\Keyboards\InlineKeyboardMarkup;
+use Manuylenko\Telegram\Bot\Api\Entities\LivePhoto;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksAdded;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\ChecklistTasksDone;
@@ -107,6 +108,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
  * @method                     Animation|null getAnimation()                     (+) Анимация.
  * @method                         Audio|null getAudio()                         (+) Звуковой файле (музыка).
  * @method                      Document|null getDocument()                      (+) Документ (простй файл).
+ * @method                     LivePhoto|null getLivePhoto()                     (+) Живое фото.
  * @method                 PaidMediaInfo|null getPaidMedia()                     (+) Платный медиафайл.
  * @method                   PhotoSize[]|null getPhoto()                         (+) Фото (массив доступных размеров).
  * @method                       Sticker|null getSticker()                       (+) Стикер.
@@ -207,6 +209,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\WebAppData;
     'animation' => Animation::class,
     'audio' => Audio::class,
     'document' => Document::class,
+    'live_photo' => LivePhoto::class,
     'paid_media' => PaidMediaInfo::class,
     'photo' => [PhotoSize::class],
     'sticker' => Sticker::class,
@@ -329,6 +332,14 @@ class Message extends MaybeInaccessibleMessage implements UpdateContext
     public function isDocument(): bool
     {
         return $this->getType() == MessageType::DOCUMENT;
+    }
+
+    /**
+     * Живое фото.
+     */
+    public function isLivePhoto(): bool
+    {
+        return $this->getType() == MessageType::LIVE_PHOTO;
     }
 
     /**
