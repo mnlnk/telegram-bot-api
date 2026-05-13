@@ -59,6 +59,13 @@ abstract class InputMediaType
      */
     const LOCATION = 'location';
 
+    /**
+     * Место встречи.
+     *
+     * @var string
+     */
+    const VENUE = 'venue';
+
     # # #
 
     /**
@@ -75,7 +82,8 @@ abstract class InputMediaType
             self::AUDIO,
             self::DOCUMENT,
             self::STICKER,
-            self::LOCATION
+            self::LOCATION,
+            self::VENUE
         ];
     }
 }
