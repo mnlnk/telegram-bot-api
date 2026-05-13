@@ -66,6 +66,13 @@ abstract class InputType
      */
     const VENUE = 'venue';
 
+    /**
+     * Живое фото.
+     *
+     * @var string
+     */
+    const LIVE_PHOTO = 'live_photo';
+
     # # #
 
     /**
@@ -83,7 +90,8 @@ abstract class InputType
             self::DOCUMENT,
             self::STICKER,
             self::LOCATION,
-            self::VENUE
+            self::VENUE,
+            self::LIVE_PHOTO
         ];
     }
 }
