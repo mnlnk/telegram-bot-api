@@ -15,6 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
  * @see InputMediaAnimation
  * @see InputMediaAudio
  * @see InputMediaDocument
+ * @see InputMediaLivePhoto
  * @see InputMediaPhoto
  * @see InputMediaVideo
  */
@@ -27,12 +28,13 @@ abstract class InputMedia extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            InputType::ANIMATION => new InputMediaAnimation($data),
-            InputType::AUDIO     => new InputMediaAudio($data),
-            InputType::DOCUMENT  => new InputMediaDocument($data),
-            InputType::PHOTO     => new InputMediaPhoto($data),
-            InputType::VIDEO     => new InputMediaVideo($data),
-            default              => null
+            InputType::ANIMATION  => new InputMediaAnimation($data),
+            InputType::AUDIO      => new InputMediaAudio($data),
+            InputType::DOCUMENT   => new InputMediaDocument($data),
+            InputType::LIVE_PHOTO => new InputMediaLivePhoto($data),
+            InputType::PHOTO      => new InputMediaPhoto($data),
+            InputType::VIDEO      => new InputMediaVideo($data),
+            default               => null
         };
     }
 }
