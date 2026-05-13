@@ -14,6 +14,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Entity;
  * @see InputMediaAnimation
  * @see InputMediaAudio
  * @see InputMediaDocument
+ * @see InputMediaLocation
  * @see InputMediaPhoto
  * @see InputMediaSticker
  * @see InputMediaVideo
@@ -30,6 +31,7 @@ abstract class InputMedia extends Entity
             InputMediaType::ANIMATION => new InputMediaAnimation($data),
             InputMediaType::AUDIO     => new InputMediaAudio($data),
             InputMediaType::DOCUMENT  => new InputMediaDocument($data),
+            InputMediaType::LOCATION  => new InputMediaLocation($data),
             InputMediaType::PHOTO     => new InputMediaPhoto($data),
             InputMediaType::STICKER   => new InputMediaSticker($data),
             InputMediaType::VIDEO     => new InputMediaVideo($data),
