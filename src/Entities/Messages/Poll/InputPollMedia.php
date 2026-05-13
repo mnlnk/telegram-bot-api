@@ -1,0 +1,43 @@
+<?php
+declare(strict_types=1);
+
+namespace Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll;
+
+use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Concrete;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMedia;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaAnimation;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaAudio;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaDocument;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaLivePhoto;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaLocation;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaPhoto;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaVenue;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaVideo;
+
+/**
+ * Представляет содержимое описания опроса или пояснения к викторине, которое будет отправлено.
+ *
+ * @link https://core.telegram.org/bots/api#inputpollmedia
+ *
+ * @see InputMediaAnimation
+ * @see InputMediaAudio
+ * @see InputMediaDocument
+ * @see InputMediaLivePhoto
+ * @see InputMediaLocation
+ * @see InputMediaPhoto
+ * @see InputMediaVenue
+ * @see InputMediaVideo
+ *
+ * @since 10.0
+ */
+#[Concrete]
+abstract class InputPollMedia extends InputMedia
+{
+    /**
+     * Конкретная реализация.
+     */
+    public static function getConcrete(array $data): ?static
+    {
+        return parent::getConcrete($data);
+    }
+}
