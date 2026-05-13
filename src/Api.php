@@ -1021,7 +1021,7 @@ class Api
     public function sendMessageDraft(
         int $chatId,
         ?int $draftId, // != 0
-        string $text, // 1-4096
+        string $text, // 0-4096 // Передайте пустой текст, чтобы отобразить текст-заполнитель «Размышляю…»
         ?int $messageThreadId  = null,
         ?string $parseMode = null, // ParseMode::class
         ?array $entities = null
