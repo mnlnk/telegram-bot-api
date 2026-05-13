@@ -7,7 +7,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaType;
 
 /**
- * Представляет платные медиа (видео).
+ * Представляет платное медиа (видео).
  *
  * @link https://core.telegram.org/bots/api#inputpaidmediavideo
  *
