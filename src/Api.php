@@ -1488,6 +1488,7 @@ class Api
      *
      * @param InputPollOption[] $options
      * @param ?MessageEntity[] $questionEntities
+     * @param ?string[] $countryCodes
      * @param ?int[] $correctOptionIds
      * @param ?MessageEntity[] $explanationEntities
      * @param ?MessageEntity[] $descriptionEntities
@@ -1508,6 +1509,7 @@ class Api
         ?bool $allowAddingOptions = null,
         ?bool $hideResultsUntilCloses = null,
         ?bool $membersOnly = null,
+        ?array $countryCodes = null, // [0..12]
         ?array $correctOptionIds = null, // [0..]
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
