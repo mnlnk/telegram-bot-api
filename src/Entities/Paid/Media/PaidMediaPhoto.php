@@ -5,7 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaType;
 use Manuylenko\Telegram\Bot\Api\Entities\PhotoSize;
 
 /**
@@ -30,7 +30,7 @@ class PaidMediaPhoto extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidType::PHOTO;
+        $data['type'] = PaidMediaType::PHOTO;
 
         parent::__construct($data);
     }

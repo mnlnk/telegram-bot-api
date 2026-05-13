@@ -5,7 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Input;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Concrete;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
-use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaType;
 
 /**
  * Представляет платные медиа, добавленные в сообщение.
@@ -24,8 +24,8 @@ abstract class InputPaidMedia extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            PaidType::PHOTO => new InputPaidMediaPhoto($data),
-            PaidType::VIDEO => new InputPaidMediaVideo($data),
+            PaidMediaType::PHOTO => new InputPaidMediaPhoto($data),
+            PaidMediaType::VIDEO => new InputPaidMediaVideo($data),
             default               => null
         };
     }

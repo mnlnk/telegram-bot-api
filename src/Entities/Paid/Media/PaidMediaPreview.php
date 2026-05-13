@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaType;
 
 /**
  * Платное медиа недоступное до оплаты.
@@ -26,7 +26,7 @@ class PaidMediaPreview extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidType::PREVIEW;
+        $data['type'] = PaidMediaType::PREVIEW;
 
         parent::__construct($data);
     }

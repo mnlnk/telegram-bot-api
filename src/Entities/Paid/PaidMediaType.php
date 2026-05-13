@@ -10,7 +10,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid;
  *
  * @see PaidMedia
  */
-abstract class PaidType
+abstract class PaidMediaType
 {
     /**
      * Платное живое фото.
