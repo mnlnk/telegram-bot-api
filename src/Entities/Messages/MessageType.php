@@ -39,6 +39,13 @@ abstract class MessageType
     const DOCUMENT = 'document';
 
     /**
+     * Живое фото.
+     *
+     * @var string
+     */
+    const LIVE_PHOTO = 'live_photo';
+
+    /**
      * Платный медиафайл
      *
      * @var string
@@ -528,6 +535,7 @@ abstract class MessageType
             static::AUDIO,
             static::ANIMATION,
             static::DOCUMENT,
+            static::LIVE_PHOTO,
             static::PAID_MEDIA,
             static::GAME ,
             static::PHOTO,
