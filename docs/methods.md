@@ -35,6 +35,7 @@
 + [banChatSenderChat()](https://core.telegram.org/bots/api#banchatsenderchat) - Блокирует канал в супергруппе или на канале.
 + [unbanChatSenderChat()](https://core.telegram.org/bots/api#unbanchatsenderchat) - Разблокирует канал в супергруппе или на канале.
 + [setChatMemberTag()](https://core.telegram.org/bots/api#setchatmembertag) - Устанавливает тег для участника группы или супергруппы.
++ [getUserPersonalChatMessages()](https://core.telegram.org/bots/api#getuserpersonalchatmessages) - Получает последние сообщения из личного чата конкретного пользователя.
 
 ##### Параметры чата
 + [getChatMenuButton()](https://core.telegram.org/bots/api#getchatmenubutton) - Получает текущее значение кнопки меню бота.

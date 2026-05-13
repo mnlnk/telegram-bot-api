@@ -647,6 +647,23 @@ class Api
         return $this->call(func_get_args());
     }
 
+    /**
+     * Получает последние сообщения из личного чата (то есть чата, добавленного в профиль пользователя) конкретного пользователя.
+     *
+     * @link https://core.telegram.org/bots/api#getuserpersonalchatmessages
+     *
+     * @return Message[]
+     *
+     * @since 10.0
+     */
+    public function getUserPersonalChatMessages(
+        int $userId,
+        int $limit // 1-20
+    ): array
+    {
+        return EntityFactory::makeArray(Message::class, $this->call(func_get_args()));
+    }
+
     #endregion
 
     #region ChatSettings
