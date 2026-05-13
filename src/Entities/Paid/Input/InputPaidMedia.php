@@ -12,6 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidMediaType;
  *
  * @link https://core.telegram.org/bots/api#inputpaidmedia
  *
+ * @see InputPaidMediaLivePhoto
  * @see InputPaidMediaPhoto
  * @see InputPaidMediaVideo
  */
@@ -24,9 +25,10 @@ abstract class InputPaidMedia extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            PaidMediaType::PHOTO => new InputPaidMediaPhoto($data),
-            PaidMediaType::VIDEO => new InputPaidMediaVideo($data),
-            default               => null
+            PaidMediaType::LIVE_PHOTO => new InputPaidMediaLivePhoto($data),
+            PaidMediaType::PHOTO      => new InputPaidMediaPhoto($data),
+            PaidMediaType::VIDEO      => new InputPaidMediaVideo($data),
+            default                   => null
         };
     }
 }
