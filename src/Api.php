@@ -1511,6 +1511,7 @@ class Api
         ?string $explanation = null, // 0-200, <= \n
         ?string $explanationParseMode = null,
         ?array $explanationEntities = null,
+        ?InputPollMedia $explanationMedia  = null,
         ?int $openPeriod = null, // 5-600
         ?int $closeDate = null, // time() + [5-600]
         ?bool $isClosed = null,
@@ -1532,6 +1533,7 @@ class Api
             'options',
             'question_entities',
             'explanation_entities',
+            'explanation_media',
             'description_entities',
             'media',
             'reply_parameters',
