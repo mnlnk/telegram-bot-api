@@ -26,6 +26,11 @@ use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMedia;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaAudio;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaDocument;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaLivePhoto;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaPhoto;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaVideo;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Profile\InputProfilePhoto;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Story\InputStoryContent;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
@@ -1287,7 +1292,7 @@ class Api
      *
      * @link https://core.telegram.org/bots/api#sendmediagroup
      *
-     * @param InputMedia[] $media
+     * @param InputMediaAudio[]|InputMediaDocument[]|InputMediaLivePhoto[]|InputMediaPhoto[]|InputMediaVideo $media
      *
      * @return Message[]
      *
