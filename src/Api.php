@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Manuylenko\Telegram\Bot\Api;
 
+use Manuylenko\Telegram\Bot\Api\Entities\Bot\BotAccessSettings;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\BotDescription;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\BotName;
 use Manuylenko\Telegram\Bot\Api\Entities\Bot\BotShortDescription;
@@ -3155,6 +3156,20 @@ class Api
     ): string
     {
         return $this->call(func_get_args());
+    }
+
+    /**
+     * Получает настройки доступа управляемого бота.
+     *
+     * @link https://core.telegram.org/bots/api#getmanagedbotaccesssettings
+     *
+     * @since 10.0
+     */
+    public function getManagedBotAccessSettings(
+        int $userId
+    ): BotAccessSettings
+    {
+        return EntityFactory::make(BotAccessSettings::class, $this->call(func_get_args()));
     }
 
     #endregion

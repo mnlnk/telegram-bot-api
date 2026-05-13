@@ -179,6 +179,7 @@
 + [removeMyProfilePhoto()](https://core.telegram.org/bots/api#removemyprofilephoto) - Удаляет фотографию профиля бота.
 + [getManagedBotToken()](https://core.telegram.org/bots/api#getmanagedbottoken) - Получает токен управляемого бота.
 + [replaceManagedBotToken()](https://core.telegram.org/bots/api#replacemanagedbottoken) - Отзывает текущий токен управляемого бота и генерирует новый.
++ [getManagedBotAccessSettings()](https://core.telegram.org/bots/api#getmanagedbotaccesssettings) - Получает настройки доступа управляемого бота.
 
 ##### Бизнес аккаунт
 + [getBusinessConnection()](https://core.telegram.org/bots/api#getbusinessconnection) - Получает информацию о подключеннии бота к бизнес-аккаунту.
