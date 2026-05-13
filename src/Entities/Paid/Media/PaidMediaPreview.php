@@ -10,7 +10,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  *
  * @link https://core.telegram.org/bots/api#paidmediapreview
  *
- * @method string getType()         Тип платного медиа.
+ * @method string getType()         Тип платного медиа. (Всегда "preview".)
  * @method    int getWidth()    (+) Ширина медиа, определяемая отправителем.
  * @method    int getHeight()   (+) Высота медиа, определяемая отправителем
  * @method    int getDuration() (+) Продолжительность медиа в секундах, определяемая отправителем.
