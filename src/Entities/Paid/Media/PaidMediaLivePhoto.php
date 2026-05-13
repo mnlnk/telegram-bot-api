@@ -31,7 +31,7 @@ class PaidMediaLivePhoto extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidMediaType::LIVE_PHOTO;
+        $data['type'] = PaidType::LIVE_PHOTO;
 
         parent::__construct($data);
     }

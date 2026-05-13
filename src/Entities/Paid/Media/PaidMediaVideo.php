@@ -29,7 +29,7 @@ class PaidMediaVideo extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidMediaType::VIDEO;
+        $data['type'] = PaidType::VIDEO;
 
         parent::__construct($data);
     }

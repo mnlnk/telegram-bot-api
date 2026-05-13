@@ -25,7 +25,7 @@ class PaidMediaPreview extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidMediaType::PREVIEW;
+        $data['type'] = PaidType::PREVIEW;
 
         parent::__construct($data);
     }

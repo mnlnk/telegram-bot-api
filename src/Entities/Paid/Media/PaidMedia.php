@@ -25,10 +25,10 @@ abstract class PaidMedia extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            PaidMediaType::LIVE_PHOTO => new PaidMediaLivePhoto($data),
-            PaidMediaType::PHOTO      => new PaidMediaPhoto($data),
-            PaidMediaType::PREVIEW    => new PaidMediaPreview($data),
-            PaidMediaType::VIDEO      => new PaidMediaVideo($data),
+            PaidType::LIVE_PHOTO => new PaidMediaLivePhoto($data),
+            PaidType::PHOTO      => new PaidMediaPhoto($data),
+            PaidType::PREVIEW    => new PaidMediaPreview($data),
+            PaidType::VIDEO      => new PaidMediaVideo($data),
             default                   => null
         };
     }

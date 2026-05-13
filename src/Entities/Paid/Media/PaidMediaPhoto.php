@@ -29,7 +29,7 @@ class PaidMediaPhoto extends PaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = PaidMediaType::PHOTO;
+        $data['type'] = PaidType::PHOTO;
 
         parent::__construct($data);
     }
