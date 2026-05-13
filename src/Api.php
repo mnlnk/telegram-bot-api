@@ -3172,6 +3172,24 @@ class Api
         return EntityFactory::make(BotAccessSettings::class, $this->call(func_get_args()));
     }
 
+    /**
+     * Изменяет настройки доступа управляемого бота.
+     *
+     * @link https://core.telegram.org/bots/api#setmanagedbotaccesssettings
+     *
+     * @param int[]|null $addedUserIds
+     *
+     * @since 10.0
+     */
+    public function setManagedBotAccessSettings(
+        int $userId,
+        bool $isAccessRestricted,
+        ?array $addedUserIds = null // <= 10
+    ): bool
+    {
+        return $this->call(func_get_args());
+    }
+
     #endregion
 
     #region Business
