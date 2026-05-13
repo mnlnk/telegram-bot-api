@@ -7,15 +7,17 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
  * Типы платных медиа.
  *
  * @link https://core.telegram.org/bots/api#paidmedia
+ *
+ * @see PaidMedia
  */
 abstract class PaidMediaType
 {
     /**
-     * Платное медиа недоступное до оплаты.
+     * Платное живое фото.
      *
      * @var string
      */
-    const PREVIEW = 'preview';
+    const LIVE_PHOTO = 'live_photo';
 
     /**
      * Платное фото.
@@ -23,6 +25,13 @@ abstract class PaidMediaType
      * @var string
      */
     const PHOTO = 'photo';
+
+    /**
+     * Платное медиа недоступное до оплаты.
+     *
+     * @var string
+     */
+    const PREVIEW = 'preview';
 
     /**
      * Платное видео.
@@ -41,8 +50,9 @@ abstract class PaidMediaType
     public static function all(): array
     {
         return [
-            static::PREVIEW,
+            static::LIVE_PHOTO,
             static::PHOTO,
+            static::PREVIEW,
             static::VIDEO
         ];
     }
