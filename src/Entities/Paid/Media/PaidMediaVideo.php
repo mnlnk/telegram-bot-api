@@ -6,6 +6,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Video;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
 
 /**
  * Представляет платное медиа (видео).

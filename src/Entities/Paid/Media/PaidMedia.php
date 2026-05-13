@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Concrete;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
 
 /**
  * Представляет платные медиа.

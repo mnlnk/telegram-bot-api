@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Paid;
 
 /**
  * Типы платных медиа.

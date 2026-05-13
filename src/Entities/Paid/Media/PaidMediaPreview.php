@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Paid\PaidType;
 
 /**
  * Платное медиа недоступное до оплаты.
