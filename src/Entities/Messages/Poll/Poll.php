@@ -27,6 +27,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method           int[]|null getCorrectOptionIds()      (+) Массив идентификаторов правильных вариантов ответа, начинающийся с 0.
  * @method          string|null getExplanation()           (+) Текст (подсказка), отображается когда пользователь выбирает неправильный ответ или нажимает значок лампы в викторине.
  * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении (имена пользователей, URL-адреса, команды ботов и т.д.).
+ * @method       PollMedia|null getExplanationMedia()      (+) Медиа добавленные в пояснение к викторине.
  * @method             int|null getOpenPeriod()            (+) Время в секундах, в течение которого опрос будет активен после создания.
  * @method             int|null getCloseDate()             (+) Метка времени (Unix), когда опрос будет автоматически закрыт.
  * @method          string|null getDescription()           (+) Описание опроса; только для опросов внутри объекта Message.
@@ -48,6 +49,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
     'question_entities' => [MessageEntity::class],
     'options' => [PollOption::class],
     'explanation_entities' => [MessageEntity::class],
+    'explanation_media' => PollMedia::class,
     'description_entities' => [MessageEntity::class],
     'media' => PollMedia::class
 ])]
