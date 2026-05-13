@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Input;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
-use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaType;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
 
 /**
  * Представляет платные медиа (видео).
@@ -32,7 +32,7 @@ class InputPaidMediaVideo extends InputPaidMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = InputMediaType::VIDEO;
+        $data['type'] = InputType::VIDEO;
 
         parent::__construct($data);
     }

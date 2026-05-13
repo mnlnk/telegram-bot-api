@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
 
 /**
  * Представляет файл стикера.
@@ -30,7 +31,7 @@ class InputMediaSticker extends InputMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = InputMediaType::STICKER;
+        $data['type'] = InputType::STICKER;
 
         parent::__construct($data);
     }

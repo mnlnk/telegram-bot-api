@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
 use Manuylenko\Telegram\Bot\Api\Entities\InputFile;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 
@@ -56,7 +57,7 @@ class InputMediaVideo extends InputMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = InputMediaType::VIDEO;
+        $data['type'] = InputType::VIDEO;
 
         parent::__construct($data);
     }

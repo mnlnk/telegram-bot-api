@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
 
 /**
  * Представляет место проведение.
@@ -47,7 +48,7 @@ class InputMediaVenue extends InputMedia
      */
     public function __construct(array $data)
     {
-        $data['type'] = InputMediaType::VENUE;
+        $data['type'] = InputType::VENUE;
 
         parent::__construct($data);
     }

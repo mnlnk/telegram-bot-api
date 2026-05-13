@@ -5,6 +5,7 @@ namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Concrete;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
 
 /**
  * Представляет содержимое отправляемого мультимедийного сообщения.
@@ -29,15 +30,15 @@ abstract class InputMedia extends Entity
     public static function getConcrete(array $data): ?static
     {
         return match ($data['type']) {
-            InputMediaType::ANIMATION => new InputMediaAnimation($data),
-            InputMediaType::AUDIO     => new InputMediaAudio($data),
-            InputMediaType::DOCUMENT  => new InputMediaDocument($data),
-            InputMediaType::LOCATION  => new InputMediaLocation($data),
-            InputMediaType::PHOTO     => new InputMediaPhoto($data),
-            InputMediaType::STICKER   => new InputMediaSticker($data),
-            InputMediaType::VENUE     => new InputMediaVenue($data),
-            InputMediaType::VIDEO     => new InputMediaVideo($data),
-            default                   => null
+            InputType::ANIMATION => new InputMediaAnimation($data),
+            InputType::AUDIO     => new InputMediaAudio($data),
+            InputType::DOCUMENT  => new InputMediaDocument($data),
+            InputType::LOCATION  => new InputMediaLocation($data),
+            InputType::PHOTO     => new InputMediaPhoto($data),
+            InputType::STICKER   => new InputMediaSticker($data),
+            InputType::VENUE     => new InputMediaVenue($data),
+            InputType::VIDEO     => new InputMediaVideo($data),
+            default              => null
         };
     }
 }

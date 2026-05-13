@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Input;
 
 /**
  * Представляет типы содержимого мультимедийных сообщений.
  *
  * @link https://core.telegram.org/bots/api#inputmedia
  */
-abstract class InputMediaType
+abstract class InputType
 {
     /**
      * Изображение (фото).
