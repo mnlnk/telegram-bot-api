@@ -52,6 +52,13 @@ abstract class InputMediaType
      */
     const STICKER = 'sticker';
 
+    /**
+     * Локация.
+     *
+     * @var string
+     */
+    const LOCATION = 'location';
+
     # # #
 
     /**
@@ -62,12 +69,13 @@ abstract class InputMediaType
     public static function all(): array
     {
         return [
-            static::PHOTO,
-            static::VIDEO,
-            static::ANIMATION,
-            static::AUDIO,
-            static::DOCUMENT,
-            static::STICKER
+            self::PHOTO,
+            self::VIDEO,
+            self::ANIMATION,
+            self::AUDIO,
+            self::DOCUMENT,
+            self::STICKER,
+            self::LOCATION
         ];
     }
 }
