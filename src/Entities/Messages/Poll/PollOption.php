@@ -18,6 +18,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
  * @method               string getPersistentId()     Уникальный идентификатор опции, сохраняющийся при добавлении и удалении опции.
  * @method               string getText()             Текст опции.
  * @method MessageEntity[]|null getTextEntities() (+) Массив специальных сущностей, которые появляются в тексте варианта (только пользовательские эмодзи).
+ * @method       PollMedia|null getMedia()        (+) Медиа добавленные в вариант опроса.
  * @method                  int getVoterCount()       Количество пользователей, проголосовавших за этот вариант.
  * @method            User|null getAddedByUser()  (+) Пользователь, добавивший опцию; если опция не была добавлена пользователем после создания опроса, она не указывается.
  * @method            Chat|null getAddedByChat()  (+) Чат, добавивший эту опцию; опускается, если опция не была добавлена чатом после создания опроса.
@@ -30,6 +31,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\User;
 ])]
 #[Depends([
     'text_entities' => [MessageEntity::class],
+    'media' => PollMedia::class,
     'added_by_user' => User::class,
     'added_by_chat' => Chat::class
 ])]
