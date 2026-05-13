@@ -78,14 +78,14 @@ use Manuylenko\Telegram\Bot\Api\Helpers\Utils;
 /**
  * Класс API.
  *
- * @link https://core.telegram.org/bots/api#april-3-2026
+ * @link https://core.telegram.org/bots/api#may-8-2026
  */
 class Api
 {
     /**
      * Текущая версия Bot API.
      */
-    const BOT_API_VERSION = '9.6';
+    const BOT_API_VERSION = '10.0';
 
     /**
      * Url запроса.

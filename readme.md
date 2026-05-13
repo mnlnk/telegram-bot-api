@@ -1,11 +1,11 @@
-### Telegram Bot Api v4.8.0
+### Telegram Bot Api v5.0.0
 
 
 #### Описание:
 Простая библиотека для работы с [Bot API Телеграм](https://core.telegram.org/api#bot-api).
 
 Написана на чистом PHP и не требует использования сторонних фреймворков.
-Полностью соответствует Bot API версии [[9.6](https://core.telegram.org/bots/api#april-3-2026)].
+Полностью соответствует Bot API версии [[10.0](https://core.telegram.org/bots/api#may-8-2026)].
 
 #### Требования:
 + `PHP >= 8.0`
