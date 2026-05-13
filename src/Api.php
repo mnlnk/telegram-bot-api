@@ -25,7 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Gifts\Owned\OwnedGifts;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\InlineQueryResultsButton;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\PreparedInlineMessage;
 use Manuylenko\Telegram\Bot\Api\Entities\Inline\Result\InlineQueryResult;
-use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMedia;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaAnimation;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaAudio;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaDocument;
 use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaLivePhoto;
@@ -1768,7 +1768,7 @@ class Api
      * @since 4.0
      */
     public function editMessageMedia(
-        InputMedia $media,
+        InputMediaAnimation|InputMediaAudio|InputMediaDocument|InputMediaLivePhoto|InputMediaPhoto|InputMediaVideo $media,
         int|string|null $chatId = null, // !$inlineMessageId
         ?int $messageId = null, // !$inlineMessageId
         ?string $inlineMessageId = null, // !$chatId && !$messageId
