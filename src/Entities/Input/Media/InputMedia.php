@@ -15,10 +15,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Input\InputType;
  * @see InputMediaAnimation
  * @see InputMediaAudio
  * @see InputMediaDocument
- * @see InputMediaLocation
  * @see InputMediaPhoto
- * @see InputMediaSticker
- * @see InputMediaVenue
  * @see InputMediaVideo
  */
 #[Concrete]
@@ -33,10 +30,7 @@ abstract class InputMedia extends Entity
             InputType::ANIMATION => new InputMediaAnimation($data),
             InputType::AUDIO     => new InputMediaAudio($data),
             InputType::DOCUMENT  => new InputMediaDocument($data),
-            InputType::LOCATION  => new InputMediaLocation($data),
             InputType::PHOTO     => new InputMediaPhoto($data),
-            InputType::STICKER   => new InputMediaSticker($data),
-            InputType::VENUE     => new InputMediaVenue($data),
             InputType::VIDEO     => new InputMediaVideo($data),
             default              => null
         };
