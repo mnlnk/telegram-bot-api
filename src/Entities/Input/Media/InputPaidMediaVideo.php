@@ -10,7 +10,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  *
  * @link https://core.telegram.org/bots/api#inputpaidmediavideo
  *
- * @method      string getType()                  Тип медиа.
+ * @method      string getType()                  Тип медиа. (Всегда "video".)
  * @method      string getMedia()                 Файл для отправки.
  * @method string|null getThumbnail()         (+) Миниатюра отправляемого файла.
  * @method string|null getCover()             (+) Обложка видео.

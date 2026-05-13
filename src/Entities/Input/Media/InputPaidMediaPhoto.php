@@ -10,7 +10,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
  *
  * @link https://core.telegram.org/bots/api#inputpaidmediaphoto
  *
- * @method string getType()  Тип медиа.
+ * @method string getType()  Тип медиа. (Всегда "photo".)
  * @method string getMedia() Файл для отправки.
  */
 #[Required([

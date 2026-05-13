@@ -12,7 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @link https://core.telegram.org/bots/api#inputmediaphoto
  *
- * @method               string getType()                      Тип результата.
+ * @method               string getType()                      Тип результата. (Всегда "photo".)
  * @method               string getMedia()                     Медиа-файл.
  * @method          string|null getCaption()               (+) Подпись файла.
  * @method          string|null getParseMode()             (+) Режим разбора специальных сущностей в подписи.

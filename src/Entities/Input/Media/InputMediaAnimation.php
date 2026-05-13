@@ -13,7 +13,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @link https://core.telegram.org/bots/api#inputmediaanimation
  *
- * @method                string getType()                      Тип результата.
+ * @method                string getType()                      Тип результата. (Всегда "animation".)
  * @method                string getMedia()                     Медиа-файл.
  * @method InputFile|string|null getThumbnail()             (+) Миниатюра.
  * @method           string|null getCaption()               (+) Подпись файла.
