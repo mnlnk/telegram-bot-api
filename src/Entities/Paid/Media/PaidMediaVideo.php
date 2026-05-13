@@ -12,7 +12,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\Video;
  *
  * @link https://core.telegram.org/bots/api#paidmediavideo
  *
- * @method string getType()  Тип платного медиа.
+ * @method string getType()  Тип платного медиа. (Всегда "video".)
  * @method  Video getVideo() Объект видео.
  */
 #[Required([
