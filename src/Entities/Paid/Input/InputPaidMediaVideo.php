@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Manuylenko\Telegram\Bot\Api\Entities\Input\Media;
+namespace Manuylenko\Telegram\Bot\Api\Entities\Paid\Input;
 
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
+use Manuylenko\Telegram\Bot\Api\Entities\Input\Media\InputMediaType;
 
 /**
  * Представляет платные медиа (видео).
