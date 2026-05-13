@@ -36,32 +36,32 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
  *
  * @link https://core.telegram.org/bots/api#externalreplyinfo
  *
- * @method           MessageOrigin getOrigin()                 Объект происхождения сообщения, на которое ответило данное сообщение.
- * @method               Chat|null getChat()               (+) Объект чата, которому принадлежит исходное сообщение.
+ * @method           MessageOrigin getOrigin()                 Источник сообщения, на которое было отправлено ответное сообщение.
+ * @method               Chat|null getChat()               (+) Чат, которому принадлежит исходное сообщение.
  * @method                int|null getMessageId()          (+) Уникальный идентификатор сообщения внутри исходного чата.
- * @method LinkPreviewOptions|null getLinkPreviewOptions() (+) Объект параметров, используемые для создания предварительного просмотра ссылки для исходного сообщения, если это текстовое сообщение.
- * @method          Animation|null getAnimation()          (+) Объект анимации.
- * @method              Audio|null getAudio()              (+) Объект аудиофайла.
- * @method           Document|null getDocument()           (+) Объект документа (файла).
+ * @method LinkPreviewOptions|null getLinkPreviewOptions() (+) Параметры, используемые для создания предварительного просмотра ссылки для исходного сообщения, если это текстовое сообщение.
+ * @method          Animation|null getAnimation()          (+) Анимация.
+ * @method              Audio|null getAudio()              (+) Фудиофайл.
+ * @method           Document|null getDocument()           (+) Документ (файла).
  * @method          LivePhoto|null getLivePhoto()          (+) Живое фото.
- * @method      PaidMediaInfo|null getPaidMedia()          (+) Объект платного медиафайла.
- * @method        PhotoSize[]|null getPhoto()              (+) Массив объектов фотографии, доступные размеры фотографии.
- * @method            Sticker|null getSticker()            (+) Объект стикера.
- * @method              Story|null getStory()              (+) Объект пересланной истории.
- * @method              Video|null getVideo()              (+) Объект видео.
- * @method          VideoNote|null getVideoNote()          (+) Объект видеозаметки.
- * @method              Voice|null getVoice()              (+) Объект голосового сообщения.
+ * @method      PaidMediaInfo|null getPaidMedia()          (+) Платный медиафайл.
+ * @method        PhotoSize[]|null getPhoto()              (+) Массив фотографии (доступные размеры фотографии).
+ * @method            Sticker|null getSticker()            (+) Стикер.
+ * @method              Story|null getStory()              (+) История.
+ * @method              Video|null getVideo()              (+) Видео.
+ * @method          VideoNote|null getVideoNote()          (+) Видеозаметка.
+ * @method              Voice|null getVoice()              (+) Голосовое сообщение.
  * @method               bool|null getHasMediaSpoiler()    (+) Медиа-сообщение закрыто анимацией-спойлером.
- * @method          Checklist|null getChecklist()          (+) Объект контрольного списка.
- * @method            Contact|null getContact()            (+) Объект контакта.
- * @method               Dice|null getDice()               (+) Объект игральной кости со случайным значением.
- * @method               Game|null getGame()               (+) Объект игры.
- * @method           Giveaway|null getGiveaway()           (+) Объект запланированного розыгрыша, информация о розыгрыше.
- * @method    GiveawayWinners|null getGiveawayWinners()    (+) Объект завершеного розыгрыша с участием публичных победителей.
- * @method            Invoice|null getInvoice()            (+) Объект счета на оплату.
- * @method           Location|null getLocation()           (+) Объект местоположения.
- * @method               Poll|null getPoll()               (+) Объект опроса.
- * @method              Venue|null getVenue()              (+) Объект места проведения.
+ * @method          Checklist|null getChecklist()          (+) Контрольный список.
+ * @method            Contact|null getContact()            (+) Контакт.
+ * @method               Dice|null getDice()               (+) Игральная кость со случайным значением.
+ * @method               Game|null getGame()               (+) Игра.
+ * @method           Giveaway|null getGiveaway()           (+) Запланированный розыгрыш (информация о розыгрыше).
+ * @method    GiveawayWinners|null getGiveawayWinners()    (+) Завершеный розыгрыш с участием публичных победителей.
+ * @method            Invoice|null getInvoice()            (+) Счета на оплату.
+ * @method           Location|null getLocation()           (+) Местоположение (локация).
+ * @method               Poll|null getPoll()               (+) Опрос.
+ * @method              Venue|null getVenue()              (+) Место проведения (встречи).
  */
 #[Required([
     'origin'
