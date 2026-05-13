@@ -45,6 +45,13 @@ abstract class InputMediaType
      */
     const DOCUMENT = 'document';
 
+    /**
+     * Стикер.
+     *
+     * @var string
+     */
+    const STICKER = 'sticker';
+
     # # #
 
     /**
@@ -59,7 +66,8 @@ abstract class InputMediaType
             static::VIDEO,
             static::ANIMATION,
             static::AUDIO,
-            static::DOCUMENT
+            static::DOCUMENT,
+            static::STICKER
         ];
     }
 }
