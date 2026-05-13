@@ -25,6 +25,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\UpdateContext;
  * @method                 bool getAllowsMultipleAnswers()     Опрос допускает выбор нескольких ответов.
  * @method                 bool getAllowsRevoting()            В опросе предусмотрена возможность изменения выбранных вариантов ответа.
  * @method                 bool getMembersOnly()               Голосование ограничено пользователями, которые являются участниками чата, куда был отправлен опрос.
+ * @method        string[]|null getCountryCodes()          (+) Список двухбуквенных кодов стран ISO 3166-1 alpha-2, указывающих страны, из которых пользователи могут голосовать в опросе.
  * @method           int[]|null getCorrectOptionIds()      (+) Массив идентификаторов правильных вариантов ответа, начинающийся с 0.
  * @method          string|null getExplanation()           (+) Текст (подсказка), отображается когда пользователь выбирает неправильный ответ или нажимает значок лампы в викторине.
  * @method MessageEntity[]|null getExplanationEntities()   (+) Объекты специальных сущностей, которые появляются в объяснении (имена пользователей, URL-адреса, команды ботов и т.д.).
