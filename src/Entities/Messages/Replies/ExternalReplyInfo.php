@@ -7,6 +7,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Depends;
 use Manuylenko\Telegram\Bot\Api\Entities\Attributes\Required;
 use Manuylenko\Telegram\Bot\Api\Entities\Chat\Chat;
 use Manuylenko\Telegram\Bot\Api\Entities\Entity;
+use Manuylenko\Telegram\Bot\Api\Entities\LivePhoto;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Animation;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Audio;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Checklist\Checklist;
@@ -42,6 +43,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
  * @method          Animation|null getAnimation()          (+) Объект анимации.
  * @method              Audio|null getAudio()              (+) Объект аудиофайла.
  * @method           Document|null getDocument()           (+) Объект документа (файла).
+ * @method          LivePhoto|null getLivePhoto()          (+) Живое фото.
  * @method      PaidMediaInfo|null getPaidMedia()          (+) Объект платного медиафайла.
  * @method        PhotoSize[]|null getPhoto()              (+) Массив объектов фотографии, доступные размеры фотографии.
  * @method            Sticker|null getSticker()            (+) Объект стикера.
@@ -71,6 +73,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Stories\Story;
     'animation' => Animation::class,
     'audio' => Audio::class,
     'document' => Document::class,
+    'live_photo' => LivePhoto::class,
     'paid_media' => PaidMediaInfo::class,
     'photo' => [PhotoSize::class],
     'sticker' => Sticker::class,
