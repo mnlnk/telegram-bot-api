@@ -13,19 +13,22 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
  *
  * @link https://core.telegram.org/bots/api#inputpolloption
  *
- * @method               string getText()              Текст опции
- * @method          string|null getTextParseMode() (+) Режим разбора специальных сущностей в тексте.
- * @method MessageEntity[]|null getTextEntities()  (+) Массив специальных сущностей, которые появляются в тексте варианта ответа.
+ * @method                    string getText()              Текст опции
+ * @method               string|null getTextParseMode() (+) Режим разбора специальных сущностей в тексте.
+ * @method      MessageEntity[]|null getTextEntities()  (+) Массив специальных сущностей, которые появляются в тексте варианта ответа.
+ * @method InputPollOptionMedia|null getMedia()         (+) Медиа добавленное в вариант опроса.
  *
  * @method $this setText(string $text)                           Текст опции; 1-100 символов.
  * @method $this setTextParseMode(string $textParseMode)         Режим разбора специальных сущностей в тексте.
  * @method $this setTextEntities(MessageEntity[] $textEntities)  Массив специальных сущностей, которые появляются в тексте варианта ответа.
+ * @method $this setMedia(InputPollOptionMedia $media)           Медиа добавленное в вариант опроса.
  */
 #[Required([
     'text'
 ])]
 #[Depends([
-    'text_entities' => [MessageEntity::class]
+    'text_entities' => [MessageEntity::class],
+    'media' => InputPollOptionMedia::class
 ])]
 class InputPollOption extends Entity
 {
@@ -37,7 +40,8 @@ class InputPollOption extends Entity
     public static function make(
         string $text, // 1-100
         ?string $textParseMode = null, // ParseMode::class
-        ?array $textEntities = null
+        ?array $textEntities = null,
+        ?InputPollOptionMedia $media = null
     ): static
     {
         return static::fromArgs(func_get_args());
