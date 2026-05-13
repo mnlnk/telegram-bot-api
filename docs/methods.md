@@ -73,6 +73,7 @@
 + [sendPaidMedia()](https://core.telegram.org/bots/api#sendpaidmedia) - Отправляет платные медиа в чат канала.
 + [sendMediaGroup()](https://core.telegram.org/bots/api#sendmediagroup) - Отправляет группу фотографий или видео в виде альбома.
 + [sendPhoto()](https://core.telegram.org/bots/api#sendphoto) - Отправляет фотографию.
++ [sendLivePhoto()](https://core.telegram.org/bots/api#sendlivephoto) - Отправляет живую фотографию.
 + [sendVideoNote()](https://core.telegram.org/bots/api#sendvideonote) - Отправляет видеозаметку.
 + [sendVoice()](https://core.telegram.org/bots/api#sendvoice) - Отправляет голосовую заметку.
 + [sendVenue()](https://core.telegram.org/bots/api#sendvenue) - Отправляет место встречи.

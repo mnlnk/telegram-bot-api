@@ -1348,6 +1348,44 @@ class Api
     }
 
     /**
+     * Отправляет живую фотографию.
+     *
+     * @link https://core.telegram.org/bots/api#sendlivephoto
+     *
+     * @param ?MessageEntity[] $captionEntities
+     *
+     * @since 10.0
+     */
+    public function sendLivePhoto(
+        int|string $chatId,
+        InputFile|string $livePhoto, // <= 10mB, <= 10s
+        InputFile|string $photo, // <= 10mB, W+H <= 10000, W/H <= 20
+        ?int $messageThreadId = null,
+        ?int $directMessagesTopicId = null,
+        ?string $caption = null, // 0-1024
+        ?string $parseMode = null, // ParseMode::class
+        ?array $captionEntities = null,
+        ?bool $showCaptionAboveMedia = null,
+        ?bool $hasSpoiler = null,
+        ?bool $disableNotification = null,
+        ?bool $protectContent = null,
+        ?bool $allowPaidBroadcast = null,
+        ?string $messageEffectId = null,
+        ?SuggestedPostParameters $suggestedPostParameters = null,
+        ?ReplyParameters $replyParameters = null,
+        ?KeyboardMarkup $replyMarkup = null,
+        ?string $businessConnectionId = null
+    ): Message
+    {
+        return EntityFactory::make(Message::class, $this->call(func_get_args(), [
+            'caption_entities',
+            'suggested_post_parameters',
+            'reply_parameters',
+            'reply_markup'
+        ]));
+    }
+
+    /**
      * Отправляет видеозаметку.
      *
      * @link https://core.telegram.org/bots/api#sendvideonote
