@@ -39,6 +39,7 @@ use Manuylenko\Telegram\Bot\Api\Entities\Messages\LinkPreviewOptions;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Message;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageEntity;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\MessageId;
+use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\InputPollMedia;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\InputPollOption;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Poll\Poll;
 use Manuylenko\Telegram\Bot\Api\Entities\Messages\Reaction\Types\ReactionType;
@@ -1516,6 +1517,7 @@ class Api
         ?string $description = null, // 0-1024
         ?string $descriptionParseMode = null, // ParseMode::class
         ?array $descriptionEntities = null,
+        ?InputPollMedia $media = null,
         ?bool $disableNotification = null,
         ?bool $protectContent = null,
         ?bool $allowPaidBroadcast = null,
@@ -1531,6 +1533,7 @@ class Api
             'question_entities',
             'explanation_entities',
             'description_entities',
+            'media',
             'reply_parameters',
             'reply_markup'
         ]));
